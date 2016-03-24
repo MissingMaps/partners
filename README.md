@@ -1,0 +1,1 @@
+# mm-partner-page
