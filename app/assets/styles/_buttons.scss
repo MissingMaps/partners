@@ -1,0 +1,141 @@
+.btn{
+  background-color: $ButtonColor;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  display:inline-block;
+  cursor:pointer;
+  transition: active 0.25s;
+  color: white;
+  padding: 8px 14px 6px 14px;
+  margin: 10px 8px 6px 0px;
+  font-size: 0.8em;
+  font-weight: 400;
+  font-family: 'Lato';
+  text-decoration:none;
+  letter-spacing: 0.06em;
+  transition-property: background;
+  transition-duration: 0.12s;
+  transition-timing-function: linear;
+  line-height: 23px;
+  a{
+    color: white;
+    font-size: 1em;
+    &:hover{
+      color: white;
+    }
+    &:active{
+      color:white;
+    }
+    &:visited{
+      color: white;
+    }
+  }
+}
+
+.btn-blue{
+  background-color: $mmTeal;
+  color: white;
+
+  &:hover{
+    background-color: darken($ButtonColor, 12%);
+    color: white;
+  }
+  &:active{
+    background-color: darken($ButtonColor, 15%);
+    color: white;
+  }
+  &:focus{
+    background-color: darken($ButtonColor, 12%);
+    color: white;
+  }
+}
+
+.btn-grn{
+  background-color: $mmGreen;
+  color: white;
+  &:hover{
+    background-color: darken($mmGreen, 12%);
+    color:white;
+  }
+  &:active{
+    background-color: darken($mmGreen, 15%);
+    color:white;
+  }
+  &:focus{
+    background-color: darken($mmGreen, 12%);
+    color:white;
+  }
+}
+
+.invert-btn-blue{
+  background-color: rgba(0,0,0,0);
+  border: 1px solid $mmTeal;
+  color: $mmTeal;
+  &:hover{
+    background-color: rgba(35, 188, 193, 0.2);
+  }
+  &:active{
+    background-color: rgba(35, 188, 193, 0.2);
+  }
+  &:focus{
+    background-color: rgba(35, 188, 193, 0.2);
+  }
+  a{
+    color: $mmTeal;
+    &:hover{
+      color: white;   
+    }
+    &:visited{
+      color: $mmTeal;
+    }
+  }
+}
+
+.invert-btn-grn{
+  background-color: rgba(0,0,0,0);
+  border: 1px solid darken($mmGreen, 10);
+  color: darken($mmGreen, 10);
+  &:hover{
+    background-color: lighten($mmGreen, 24);
+  }
+  &:active{
+    background-color: lighten($mmGreen, 24);
+  }
+  &:focus{
+    background-color: lighten($mmGreen, 24);
+  }
+  a{
+    color: darken($mmGreen, 10);
+    &:hover{
+      color: white;   
+    }
+    &:visited{
+      color: darken($mmGreen, 10);
+    }
+  }
+}
+
+.invert-btn-white{
+  background-color: rgba(0,0,0,0);
+  border: 1px solid white;
+  color: white;
+  &:hover{
+    background-color: lighten($mmTeal, 20);
+  }
+  &:active{
+    background-color: lighten($mmTeal, 20);
+  }
+  &:focus{
+    background-color: lighten($mmTeal, 20);
+  }
+  a{
+    color: darken($mmTeal, 60);
+    &:hover{
+      color: darken($mmTeal, 60);   
+    }
+    &:visited{
+      color: darken($mmTeal, 60);
+    }
+  }
+}

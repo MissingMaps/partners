@@ -29,29 +29,46 @@ section{
 
 #Hero{
   padding-top: 1.6em;
-  height: 300px;
+  padding-bottom: 0;
 }
 
 .Hero-image{
   background-color: $debug;
-  height: 274px;
-  position: absolute;
   width:100%;
+  background-image: url("/assets/graphics/content/flickr_img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 320px;
+      -webkit-filter: grayscale(1); 
+      -webkit-filter: grayscale(100%); 
+      -moz-filter: grayscale(100%);
+      filter: gray; 
+      filter: grayscale(100%);
+      filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
   .Partner-title{
     position: relative;
     text-align: center;
-    top: 130px;
+    top: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 1px 1px #8a8a8a;
+    color: white;
   }
   .btn{
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 60px;
+  }
+  @media screen and (max-width: 600px) {
+    background-position: top;
   }
 }
 
 #Primary{
   width: 100%;
   background-color: $debug;
+  padding: 1em 0 0.5em 0;
 }
 
 .Primary_Container{
@@ -60,34 +77,14 @@ section{
 }
 
 
-.Primary-Logo{
-  width: 260px;
-  height: 150px;
-  background-color: red;
+.Primary-logo{
   display: inline-block;
+  width: 260px;
+  margin: 2em 0;
 }
 
 #Events{
   background-color: $mmTeal;
-}
-
-.HOTTask{
-  float: left;
-  background-color: $debug;
-  width: 60%;
-  height: 200px;
-}
-
-.GetInvolved{
-  float: right;
-  background-color: $debug;
-  width: 30%;
-  height: 200px;
-}
-
-.Projects-Container{
-  @include container;
-  height: 220px;
 }
 
 .Team-Container{
@@ -114,8 +111,15 @@ section{
   min-width: 200px;
 }
 
+.Community{
+  background-color: $darkgrey;
+}
+
 .Community-Container{
-  @include container
+  @include container;
+  h1{
+    color: $lightgrey;
+  }
 }
 
 .Community-Flickr{
@@ -131,6 +135,70 @@ section{
   background-color: $debug;
   margin-left: auto;
   margin-right: auto;
+}
+
+.GetInvolved{
+  float: right;
+  background-color: $debug;
+  width: 240px;
+  height: 200px;
+}
+
+.Projects-Container{
+  @include container;
+}
+
+.HOT-Task{
+  float: left;
+  background-color: $debug;
+  width: 700px;
+  height: 216px;
+  margin-bottom: 3em;
+}
+
+.HOT-Map{
+  height: 200px;
+  width: 200px;
+  border: 2px red solid;
+  margin: 0.5em;
+  float: left;
+}
+
+.HOT-Title{
+  float: left;
+  text-align: left;
+  border: 2px red solid;
+  width: 460px;
+  margin: 0.5em;
+}
+
+.HOT-Description{
+  float:left;
+  text-align:left;
+  width: 460px;
+  border: 2px red solid;
+  margin: 0.5em;
+}
+
+.Team-Nav{
+  cursor: pointer;
+  .Selected{
+    border-bottom:3px solid $mmGreen;
+  }
+  p{
+  &:hover{
+    color: black;
+    }
+  }
+}
+
+h1{
+  font-family: 'Hind';
+  font-weight: 700;
+  font-size: 2em;
+  color: $darkgrey;
+  margin: 0 0 1em 0;
+  display: inline-block;
 }
 
 /*----------------------------------------------*/
@@ -281,7 +349,7 @@ section{
 .Stat-Item{
   width: 260px;
   display: inline-block;
-  margin: 2em 0;
+  margin: 0 0 1em 0;
   .title{
     margin-top: 10px;
     font-size: 1.2em;
