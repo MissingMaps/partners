@@ -1,5 +1,5 @@
 # Site settings
-title: missingmaps
+title: mm-partner
 safe:           false
 source:         app
 exclude:
@@ -10,11 +10,10 @@ exclude:
 timezone: America/New_York
 highlighter: false 
 
-baseurl: ".."
+baseurl: ""
 
 collections:
-  subhashtags:
+  partner:
     output: true
-
-  tm-projects:
-    output: true
+    permalink: /:path/
+    lang: en
