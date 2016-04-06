@@ -1,0 +1,776 @@
+section{
+  width: 100%;
+  padding: 2em 0 2em 0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+@mixin container{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+#site-title{
+  span{
+    border: 0 none;
+    clip: rect(0px,0px,0px,0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+#Hero{
+  padding-top: 1.6em;
+  padding-bottom: 0;
+}
+
+.Hero-image{
+  background-color: $debug;
+  width:100%;
+  background-image: url("/assets/graphics/content/flickr_img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 320px;
+      -webkit-filter: grayscale(1); 
+      -webkit-filter: grayscale(100%); 
+      -moz-filter: grayscale(100%);
+      filter: gray; 
+      filter: grayscale(100%);
+      filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+  .Partner-title{
+    position: relative;
+    text-align: center;
+    top: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 1px 1px #8a8a8a;
+    color: white;
+  }
+  .btn{
+    position: absolute;
+    right: 20px;
+    top: 60px;
+  }
+  @media screen and (max-width: 600px) {
+    background-position: top;
+  }
+}
+
+#Primary{
+  width: 100%;
+  background-color: $debug;
+  padding: 1em 0 0.5em 0;
+}
+
+.Primary_Container{
+  width: 100%;
+  text-align: center;
+}
+
+
+.Primary-logo{
+  display: inline-block;
+  width: 260px;
+  margin: 2em 0;
+}
+
+#Events{
+  background-color: $mmTeal;
+}
+
+.Team-Container{
+  @include container;
+}
+
+.Team-Nav{
+  width: 100%;
+  height: 36px;
+  clear: both;
+  p{
+    display: inline-block;
+    margin-right: 3em;
+    float: left;
+  }
+}
+
+.Team-Graph{
+  background-color: $debug;
+  height: 200px;
+  width: 30%;
+  display: inline-block;
+  clear: both;
+  min-width: 200px;
+}
+
+.Community{
+  background-color: $darkgrey;
+}
+
+.Community-Container{
+  @include container;
+  h1{
+    color: $lightgrey;
+  }
+}
+
+.Community-Flickr{
+  width: 100%;
+  height: 340px;
+  background-color: $debug;
+}
+
+.Community-Links{
+  margin: 2em 0 0 0;
+  width: 300px;
+  height: 40px;
+  background-color: $debug;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.GetInvolved{
+  float: right;
+  background-color: $debug;
+  width: 240px;
+  height: 200px;
+}
+
+.Projects-Container{
+  @include container;
+}
+
+.HOT-Task{
+  float: left;
+  background-color: $debug;
+  width: 700px;
+  height: 216px;
+  margin-bottom: 3em;
+}
+
+.HOT-Map{
+  height: 200px;
+  width: 200px;
+  border: 2px red solid;
+  margin: 0.5em;
+  float: left;
+}
+
+.HOT-Title{
+  float: left;
+  text-align: left;
+  border: 2px red solid;
+  width: 460px;
+  margin: 0.5em;
+}
+
+.HOT-Description{
+  float:left;
+  text-align:left;
+  width: 460px;
+  border: 2px red solid;
+  margin: 0.5em;
+}
+
+.Team-Nav{
+  cursor: pointer;
+  .Selected{
+    border-bottom:3px solid $mmGreen;
+  }
+  p{
+  &:hover{
+    color: black;
+    }
+  }
+}
+
+h1{
+  font-family: 'Hind';
+  font-weight: 700;
+  font-size: 2em;
+  color: $darkgrey;
+  margin: 0 0 1em 0;
+  display: inline-block;
+}
+
+/*----------------------------------------------*/
+/* Explanatory Bits */
+/*----------------------------------------------*/
+.explanatory{
+  width: 800px;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.explanatory-bg{
+  z-index: -1;
+  width:100%;
+  height: 240px;
+}
+/*----------------------------------------------*/
+/* Actionable Bits */
+/*----------------------------------------------*/
+.action-container{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px;
+  padding: 10px 0px 10px 15px;
+  max-width: 1000px;
+  border-radius: 20px;
+  .textbox{
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .columns {
+    padding-left: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 80px;
+  }
+}
+
+.contribute-base {
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.image-action {
+  @media screen and (max-width: 340px) {
+    width: 200px;
+  }
+}
+
+.contribute-container {
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0px 20px 0px;
+}
+
+.actions-img{
+  text-align: center;
+}
+
+.contribute-image{
+  p {
+    margin-top:10px;
+  }
+@media screen and (max-width: 1024px) {
+    width: 100%;
+    text-align: center;
+}
+}
+
+.right-box{
+  text-align: right;
+}
+
+@media screen and (min-width: 64em){
+  .large-push-4 {
+    left: -33.333%;
+  }
+}
+/*----------------------------------------------*/
+/* OSM Analytics */
+/*----------------------------------------------*/
+.osmanalytic-container{
+  width: 100%;
+  background-color: $darkestgrey;
+  padding-bottom: 3em;
+  margin-top: 2em;
+  padding-top: 1em;
+  margin: auto;
+  text-align: center;
+  .title, .section-header, .textbox{
+    color: $lightgrey;
+  }
+  .textbox{
+    p{
+    color: #797b7b;
+    }
+  }
+  ::selection{
+    background: rgba(247, 224, 127, 0.10);
+  }
+}
+
+.osmanalytic-item-container{
+  padding: 30px 15px 20px;
+  text-align: center;
+  border-radius: 20px;
+  .title {
+    display: block;
+    margin-top: .6em;
+  }
+}
+
+.userprof-nav-input{
+    position: relative;
+    padding-top: 20px;
+  input{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:60px;
+  }
+}
+
+.alt-svg{
+  bottom: 2px;
+  position: absolute;
+  right: 0px;
+  pointer-events: none;
+}
+
+.Discover-Stats{
+  width: 100%;
+}
+
+.Discover-Split{
+  display: inline-block;
+}
+
+.Stat-Item{
+  width: 260px;
+  display: inline-block;
+  margin: 0 0 1em 0;
+  .title{
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #797b7b;
+  }
+  .emphasizedNumber{
+    color: $mmTeal;
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 20px;
+    padding-top:10px;
+    padding-bottom: 2px;
+  }
+  img{
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+}
+
+.Discover-Title{
+  font-size: 1.3em;
+  color: #797b7b;
+  font-family: "Hind";
+  padding-bottom: 1em;
+}
+
+.Discover-Sub{
+  font-size: 1.3em;
+  color: #797b7b;
+  font-family: "Hind";
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.Discover-Tools{
+  padding-bottom: 4em;
+  .title{
+    width:100%;
+    padding-top:0.5em;
+  }
+}
+
+/*----------------------------------------------*/
+/* Events Analytics */
+/*----------------------------------------------*/
+.events-container{
+  padding: 30px 10px;
+  background-color: $mmTeal;
+  text-align: center;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}
+
+.events-panel {
+  background-color: $mmTeal;
+  text-align: center;
+  width: 100%;
+}
+
+.event-top-section{
+  background-color: lighten($darkgrey, 48);;
+  padding: 5px 10px;
+  border-radius: 2px 2px 0 0;
+
+  @media screen and (max-width: 450px) {
+      padding: 0px 6px 15px 10px;
+    }
+
+  .sub-head{
+    float: left;
+    padding-bottom: 0;
+    width: 100%;
+    text-align: left;
+    @media screen and (max-width: 580px) {
+      font-size: 1.2em;
+    }
+  }
+  .btn-grn{
+    float: right;
+    line-height: 12px;
+    font-size: .55em;
+    margin: 5px 0 5px 0;
+    @media screen and (max-width: 580px) {
+      font-size: 0.7em;
+      margin-top: 7px;
+    }
+  }
+}
+
+.event-sub-container{
+  max-width: 600px;
+  background-color: white;
+  border-radius: 2px;
+  margin-bottom: 1.5em;
+  box-shadow: 0px 1px $lightgrey;
+  border: 1px solid $border-grey;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 470px) {
+    margin: 0 10px 20px;
+  }
+}
+
+.event-images {
+  float: left;
+  display: block;
+  margin-right: 10px;
+  padding-top: 9px;
+}
+
+.event-header {
+  float: left;
+  width: 50%;
+  padding-top: 5px;
+  line-height: 26px;
+  margin-bottom: 4px;
+}
+
+.event-page{
+  width: auto;
+  background-color: lighten($lightgrey,10%);
+  padding-bottom: 60px;
+}
+
+.event-details-left{
+  padding: 10px 20px;
+  float: left;
+  margin-top: 15px;
+  border-right: solid 1px $lightgrey;
+  .emphasizedNumber{
+    color: $darkgrey;
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 20px;
+    margin-top:2px;
+    padding-top:15px;
+  }
+}
+
+.event-details-right{
+  float: left;
+  padding: 8px 0 14px 20px;
+  width: 75%;
+  text-align: left;
+
+  @media screen and (max-width: 470px) {
+    width: 60%;
+  }
+  p{
+    padding: 0;
+    line-height: 1.3em;
+  }
+  .event-details {
+    font-size: .8em;
+    margin-top: 5px;
+  }
+  button{
+    position:absolute;
+    top:0;
+    left:0;
+  }
+}
+
+.event-maindetails {
+  padding: 10px;
+}
+
+.event-block{
+  height:50px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.header-image{
+  .welcome-svg{
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+/*----------------------------------------------*/
+/* About Analytics */
+/*----------------------------------------------*/
+.about-container{
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  padding: 0px 0px 2em 0px;
+  @media screen and (max-width: 710px) {
+    width: 100%;
+  }
+  p{
+    margin-bottom: 8px;
+  };
+  img{
+    margin: 0px 16px 0px 16px;
+    margin-bottom: 10px;
+  };
+  &.top{
+    margin-bottom:0px;
+  }
+  .sub-head{
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+
+.about-textbox{
+  padding-left: 14px;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+  h1{
+    display: inline;
+  }
+  li{
+    padding-bottom:10px;
+    list-style-position: inside;
+  }
+}
+
+.about-textboxfirst{
+  width:70%;
+  padding-left: 14px;
+  padding-bottom: 20px;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+  h1{
+    display: inline;
+  }
+}
+
+/*----------------------------------------------*/
+/* Footer Analytics */
+/*----------------------------------------------*/
+.footer-container{
+  padding: 30px 0px 0px 0px;
+  background-color: $lightgrey;
+  width: 100%;
+  .sectionheader{
+    padding-bottom: 36px;
+    padding-top: 20px;
+  }
+}
+
+.footer-mm{
+  margin-top:50px;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  color: $lightgrey;
+  background-color: $darkestgrey;
+}
+
+/*----------------------------------------------*/
+/* Map Guides */
+/*----------------------------------------------*/
+.pageheader{
+  margin-top: 50px;
+  padding-top: 10px;
+  margin-bottom: 28px;
+  font-size: 35px;
+}
+
+.linebreak{
+  max-width: 500px;
+  margin: 2px auto 0px auto;
+  padding-bottom: 20px;
+}
+
+.contribute-options{
+  max-width: 500px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  a{
+    margin: 0;
+  }
+  img{
+    width: 150px;
+  }
+  .contribute-button{
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.videobox{
+  padding: 10px 30px 60px 30px;
+  .sub-head{
+    padding-top: 10px;
+    font-size: 1.2em;
+  }
+  .textbox{
+    p{
+      color: #797b7b;
+    }
+  }
+  hr{
+    margin: 2px 0px 10px 0px;
+  }
+}
+
+ol{
+  padding-left: 20px;
+}
+
+hr{
+  margin: 40px 0px 0px 0px;
+}
+
+.mmvideo{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+}
+
+.host-button-box{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.host-container{
+  background-color: lighten($lightgrey, 10%);
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.host-textbox{
+  text-align:left;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  input{
+      width: 13px;
+      height: 13px;
+      padding:0;
+      margin: 0;
+      margin-right: 4px;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+      overflow: hidden;
+      background-color: lighten($lightgrey, 10%);
+  }
+}
+
+.host-image{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.host-materials{
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  text-align: center;
+  li {
+  background-color: lighten($lightgrey, 10%);
+  }
+}
+
+.OSM-logo{
+  img{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.about-button{
+  margin-top:40px;
+}
+
+.padding-extra{
+  margin-top: 40px;
+}
+
+.arw{
+  position: relative;
+  padding-right: 30px;
+  img{
+  width: 15px;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  }
+}

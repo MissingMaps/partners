@@ -1,0 +1,19 @@
+# Site settings
+title: mm-partner
+safe:           false
+source:         app
+exclude:
+  - assets/scripts
+  - assets/vendor
+  - assets/styles
+  - README.md
+timezone: America/New_York
+highlighter: false 
+
+baseurl: ""
+
+collections:
+  partner:
+    output: true
+    permalink: /:path/
+    lang: en
