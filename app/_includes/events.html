@@ -4,7 +4,7 @@
 	{% if event_date >= current_date %}
 		{% assign count = count | plus: 1 %}
 
-		<div class="event-sub-container">
+		<div class="event-sub-container {% if count >= 2 %}hidden{% endif %}">
 			<div class="event-top-section clearfix">
 				<div class="sub-head">
 					<img class="event-images" src="{{ site.baseurl }}/assets/graphics/flags/4x3/{{ e.flag }}.svg" width="24px" />
@@ -35,7 +35,7 @@
 			</div>
 		</div>
 
-		{% if count == 1 %}
+		{% if count == 4 %}
 			{% break %}
 		{% endif %}
 	{% endif %}
