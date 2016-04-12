@@ -1,0 +1,21 @@
+language: node_js
+
+node_js:
+  - '0.11'
+  - '0.10'
+
+script:
+  - gulp prod
+
+deploy:
+  provider: s3
+  access_key_id: AKIAIBL642BNSTVEUHXA
+  secret_access_key:
+    secure: IZGA3DlRwy/Z0wLzwTCg9AWMtTC/4yk8hH4qecIeFFkOGK+ZyOmapWwNeamxJh+upA4alW2bKGc21MQFADBLBf3KPtKgi5krqN3KXev1ewJyjYpZi6DVnkaVbse5fAmc3FqWT5OCiC/LNGkJDFGFlKKD8tydw8SNfX7CeFFVGwrAH8Ok/qddJGJKQma80+LaM+J6FQ96PvZrBVYxPb/oZUweM70wQXdc1sKYKnuDSz/p2kL6C/c1iUtEtnsQCMsw2arFzgh+/IpPZlES/iuVgt49HPyNaXpnwAeFsZYXAsFGXZdLr4goZ8IrM+PIOnpxb3lvTtsFcqYi4vZph8sthnoP5yxcmLN059nBba48L1FT2MlEJdrsRG2mtXNjjTvroOaIqOJcxUqFJZrBHRTLQvKGcqFSFp5dR1ojI3Or4iioEDIzbyy21cEwpVxSUyLMLzzqKLFPwjrhs565m/OySX7h3JjocGvtyej7nbV4GxUIzI3Z5NGT30S9hPKIULEfV55a05R5cS3uMewAoNUgdkQ9KSWj+saBzCwVviU3KFRpK2i0/h9v9gY87WW9v9zj7aePATANdqJIAhYWztv0pvjq0w4DaUyTonvifDKALc4G4Mx9c2HQVgRK3o/lFvlxc3YnfGi2LnClFI+PO0lheUMdgZgVdltgF0q6+CBKcAc=
+  bucket: ds-mm-partner
+  local-dir: _site
+  upload-dir: _site
+  acl: public_read
+  on:
+    repo: developmentseed/mm-partner-page
+    branch: develop
