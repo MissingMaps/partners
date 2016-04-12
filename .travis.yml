@@ -15,7 +15,6 @@ deploy:
   skip_cleanup: true
   region: us-east-1
   local-dir: _site
-  upload-dir: _site
   acl: public_read
   on:
     repo: developmentseed/mm-partner-page
