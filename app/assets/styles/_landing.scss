@@ -395,14 +395,12 @@ h1{
   }
 }
 
-Community-Flickr{
-  width: 100%;
-  height: 500px;
-  background-image: url("/assets/graphics/content/flickr_img.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-color: rgba(0,0,0,0.4);
+#Community-Flickr{
+  max-width:800px;
+  max-height: 536px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $darkestgrey;
 }
 
 .Community-Links{

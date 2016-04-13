@@ -1,0 +1,25 @@
+.flexslider{
+  border: 0;
+}
+
+.flex-direction-nav {
+  display: none;
+}
+
+.flex-direction-nav .flex-disabled { 
+  opacity: 0 !important;
+  cursor: default; 
+}
+
+.flex-control-nav li a{
+	background-color: rgba(0,0,0,0);
+	border: 1px solid $lightgrey;
+	&:hover{
+		background-color: darken($mmTeal,8);
+	}
+}
+
+
+.flex-control-paging li a.flex-active{
+	background-color: lighten($mmTeal, 8);
+}
