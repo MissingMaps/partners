@@ -361,6 +361,18 @@ h1{
 
 .Team-Graph {
   margin-top: 10px;
+  svg {
+    rect {
+      fill: lighten($darkgrey, 20%);
+    }
+    .Graph-Label-Hashtag {
+      font-size: 13px;
+    }
+    .Graph-Label-Value {
+      font-weight: bold;
+      font-size: 13px;
+    }
+  }
 }
 
 .Team-Stat-Item{

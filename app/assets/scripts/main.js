@@ -54,67 +54,103 @@ $('.events-more').click(function(){
 
 
 
+
 /*-------------------------------------------------------
 -------------------- Activity Graphs --------------------
 -------------------------------------------------------*/
 
-function getHashtags (hashtags) {
+function ingestHashtags (hashtags) {
+  // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const url = 'http://osmstats.redcross.org/group-summaries/' + hashtags.join(',');
   $.getJSON(url, function (hashtagData) {
+
+    // For each hashtag, sum the total edits across all categories
     const totalSum = hashtags.map(function (ht) {
       const vals = hashtagData[ht];
-      const sum = Number(vals.building_count_add) +
+      const sum = Math.round(Number(vals.building_count_add) +
                   Number(vals.building_count_mod) +
                   Number(vals.road_count_add) +
                   Number(vals.road_count_mod) +
                   Number(vals.waterway_count_add) +
-                  Number(vals.poi_count_add);
-
+                  Number(vals.poi_count_add));
       return {name: ht, value: sum};
     });
 
+    // For each hashtag, sum the total building edits
     const bldngSum = hashtags.map(function (ht) {
       const vals = hashtagData[ht];
-      const sum = Number(vals.building_count_add) +
-                  Number(vals.building_count_mod);
-
+      const sum = Math.round(Number(vals.building_count_add) +
+                  Number(vals.building_count_mod));
       return {name: ht, value: sum};
     });
 
-    const roadKmSum = hashtags.map(function (ht) {
+    // For each hashtag, sum the total road kilometers edited
+    const roadsSum = hashtags.map(function (ht) {
       const vals = hashtagData[ht];
-      const sum = Number(vals.road_km_add) +
-                  Number(vals.road_km_mod);
-
+      const sum = Math.round(Number(vals.road_km_add) +
+                  Number(vals.road_km_mod));
       return {name: ht, value: sum};
     });
 
-    //Width and height
-    const width = 280;
-    const height = 200;
-    const barPadding = 20;
+    // Send the total, building, and road metrics to
+    // the barchart builder
+    initializeBarchart(totalSum, '#Team-Total-Graph');
+    initializeBarchart(bldngSum, '#Team-Bldng-Graph');
+    initializeBarchart(roadsSum, '#Team-Roads-Graph');
 
-    const xScale = d3.scale.linear()
-      .range([0, height])
-      .domain([0, d3.max(totalSum, (d) => d.value )]);
-
-    //Make empty SVG container
-    var svg = d3.select('#Team-Total-Graph')
-      .append('svg')
-      .attr('width', width)
-      .attr('height', height);
-
-    // Add bars to container
-    svg.selectAll('rect')
-      .data(totalSum)
-      .enter()
-      .append('rect')
-      .attr('y', (d, i) => i * (height / totalSum.length))
-      .attr('width', (d) => width - xScale(d.value))
-      .attr('height', height / totalSum.length - barPadding);
   });
 }
 
-const hashtags = ['peacecorps', 'majorroads', 'mapgive', 'redcross'];
-getHashtags(hashtags);
+// Builds a barchart given an array in the form of
+// [{name: *hashtag*, value:*value*}, ..], along with
+// the name of a DOM target to place the barchart
+function initializeBarchart (data, targetElement) {
+  const width = 280;
+  const height = 210;
+  const barPadding = 17;
 
+  const barHeight = height / data.length - barPadding;
+
+  const xScale = d3.scale.linear()
+    .range([height, 0])
+    .domain([0, d3.max(data, (d) => d.value )]);
+
+  let svg = d3.select(targetElement)
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height);
+
+  let bar = svg.selectAll('g')
+    .data(data)
+    .enter()
+    .append('g')
+    .attr('class', 'bar')
+    .attr('cx', 0)
+    .attr('transform', (d, i) => {
+      return `translate(0,${i * (barHeight + barPadding)})`;
+    });
+
+  bar.append('rect')
+    .attr('height', barHeight)
+    .attr('width', (d) => width - xScale(d.value));
+
+  bar.append('text')
+    .attr('class', 'Graph-Label-Hashtag')
+    .attr('x', 5)
+    .attr('y', barHeight / 2)
+    .attr('dy', '.35em')
+    .text((d) => '#' + d.name);
+
+  bar.append('text')
+    .attr('class', 'Graph-Label-Value')
+    .attr('x', 275)
+    .attr('y', barHeight / 2)
+    .attr('dy', '.35em')
+    .text((d) => d.value.toLocaleString())
+    .attr('text-anchor', 'end');
+}
+
+// The example list of hashtags below should actually be drawn from
+// the Jekyll subhashtag variables found in the _partners directory
+const hashtags = ['peacecorps', 'majorroads', 'mapgive', 'redcross'];
+ingestHashtags(hashtags);
