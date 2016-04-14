@@ -60,16 +60,61 @@ $('.events-more').click(function(){
 
 function getHashtags (hashtags) {
   const url = 'http://osmstats.redcross.org/group-summaries/' + hashtags.join(',');
-  $.getJSON(url, function (response) {
-    const teamTotalGraph = $('#Team-Total-Graph');
-    const teamBldngGraph = $('#Team-Bldng-Graph');
-    const teamRoadsGraph = $('#Team-Roads-Graph');
+  $.getJSON(url, function (hashtagData) {
+    const totalSum = hashtags.map(function (ht) {
+      const vals = hashtagData[ht];
+      const sum = Number(vals.building_count_add) +
+                  Number(vals.building_count_mod) +
+                  Number(vals.road_count_add) +
+                  Number(vals.road_count_mod) +
+                  Number(vals.waterway_count_add) +
+                  Number(vals.poi_count_add);
 
+      return {name: ht, value: sum};
+    });
+
+    const bldngSum = hashtags.map(function (ht) {
+      const vals = hashtagData[ht];
+      const sum = Number(vals.building_count_add) +
+                  Number(vals.building_count_mod);
+
+      return {name: ht, value: sum};
+    });
+
+    const roadKmSum = hashtags.map(function (ht) {
+      const vals = hashtagData[ht];
+      const sum = Number(vals.road_km_add) +
+                  Number(vals.road_km_mod);
+
+      return {name: ht, value: sum};
+    });
+
+    //Width and height
+    const w = 280;
+    const h = 200;
+    const barPadding = 5;
+
+    var y = d3.scale.linear().range([h, 0])
+      .domain([0, d3.max(totalSum, (d) => d.value )]);
+
+    //Make empty SVG container
+    var svg = d3.select('#Team-Total-Graph')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
+
+    // Add bars to container
+    svg.selectAll('rect')
+      .data(totalSum)
+      .enter()
+      .append('rect')
+      .attr('x', (d, i) => i * (w / totalSum.length))
+      .attr('y', (d) => y(d.value))
+      .attr('width', w / totalSum.length - barPadding)
+      .attr('height', (d) => h - y(d.value));
   });
-};
+}
 
-const hashtags = ['redcross', 'mapgive', 'hotosm-project-1467', 'hotosm-project-1504'];
+const hashtags = ['peacecorps', 'majorroads', 'mapgive', 'redcross'];
 getHashtags(hashtags);
-
-
 

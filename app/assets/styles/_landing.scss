@@ -359,6 +359,10 @@ h1{
   }
 }
 
+.Team-Graph {
+  margin-top: 10px;
+}
+
 .Team-Stat-Item{
   background-color: $debug;
   width: 320px;
@@ -367,7 +371,6 @@ h1{
   flex-shrink: 0;
   margin: 1em;
 }
-
 
 .Team-Nav{
   cursor: pointer;
