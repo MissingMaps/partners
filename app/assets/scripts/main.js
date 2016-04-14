@@ -90,28 +90,28 @@ function getHashtags (hashtags) {
     });
 
     //Width and height
-    const w = 280;
-    const h = 200;
-    const barPadding = 5;
+    const width = 280;
+    const height = 200;
+    const barPadding = 20;
 
-    var y = d3.scale.linear().range([h, 0])
+    const xScale = d3.scale.linear()
+      .range([0, height])
       .domain([0, d3.max(totalSum, (d) => d.value )]);
 
     //Make empty SVG container
     var svg = d3.select('#Team-Total-Graph')
       .append('svg')
-      .attr('width', w)
-      .attr('height', h);
+      .attr('width', width)
+      .attr('height', height);
 
     // Add bars to container
     svg.selectAll('rect')
       .data(totalSum)
       .enter()
       .append('rect')
-      .attr('x', (d, i) => i * (w / totalSum.length))
-      .attr('y', (d) => y(d.value))
-      .attr('width', w / totalSum.length - barPadding)
-      .attr('height', (d) => h - y(d.value));
+      .attr('y', (d, i) => i * (height / totalSum.length))
+      .attr('width', (d) => width - xScale(d.value))
+      .attr('height', height / totalSum.length - barPadding);
   });
 }
 
