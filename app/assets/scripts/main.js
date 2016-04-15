@@ -107,7 +107,6 @@ function ingestHashtags (hashtags) {
     initializeBarchart(totalSum, '#Team-Total-Graph');
     initializeBarchart(bldngSum, '#Team-Bldng-Graph');
     initializeBarchart(roadsSum, '#Team-Roads-Graph');
-
   });
 }
 
@@ -122,8 +121,8 @@ function initializeBarchart (data, targetElement) {
   const barHeight = height / data.length - barPadding;
 
   const xScale = d3.scale.linear()
-    .range([height, 0])
-    .domain([0, d3.max(data, (d) => d.value )]);
+    .range([0, width])
+    .domain([0, d3.max(data, (d) => d.value)]);
 
   let svg = d3.select(targetElement)
     .append('svg')
@@ -142,7 +141,7 @@ function initializeBarchart (data, targetElement) {
 
   bar.append('rect')
     .attr('height', barHeight)
-    .attr('width', (d) => width - xScale(d.value));
+    .attr('width', (d) => xScale(d.value));
 
   bar.append('text')
     .attr('class', 'Graph-Label-Hashtag')
