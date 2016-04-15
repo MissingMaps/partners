@@ -7,16 +7,21 @@
 //   console.log('STAGING');
 // }
 
-var apikey = '09023a48037b7882a3683cb1c2043c50', //Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
-		setId = '72157666852477155'; // ID of photo album you're grabbing photos from. Will only display photos that are public.
+ //Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
+var apikey = '09023a48037b7882a3683cb1c2043c50',
+// ID of photo album you're grabbing photos from. Will only display photos that are public.
+  setId = '72157666852477155',
+// Primary Hashtag name.
+  primaryhash = "hotosm-project-1465";
 
+getPrimaryStats(primaryhash);
 getImgs(setId);
 
-  // Add Flexslider to Projects Section
-  $('.Projects-slider').flexslider({
-      animation: "slide",
-      directionNav: false,
-  });
+// Add Flexslider to Projects Section
+$('.Projects-slider').flexslider({
+    animation: "slide",
+    directionNav: false,
+});
 
 function getImgs (setId) {
 
@@ -66,6 +71,24 @@ $('.events-more').click(function(){
 });
 
 /*-------------------------------------------------------
+-------------------- Primary Stats  ---------------------
+-------------------------------------------------------*/
+function getPrimaryStats(primaryhash){
+  const url = 'http://osmstats.redcross.org/hashtags/' + primaryhash + '/users';
+  $.getJSON(url, function (hashtagData) {
+    var usersCount = (Object.keys(hashtagData).length);
+    var editsCount = 0;
+
+    for (var i = 0; i < usersCount; i++){
+      editsCount = editsCount + hashtagData[i].edits;
+    }
+
+    $('#stats-usersCount').html(usersCount);
+    $('#stats-editsCount').html(editsCount);
+  });
+}
+
+/*-------------------------------------------------------
 -------------------- Activity Graphs --------------------
 -------------------------------------------------------*/
 
@@ -107,7 +130,6 @@ function ingestHashtags (hashtags) {
     initializeBarchart(totalSum, '#Team-Total-Graph');
     initializeBarchart(bldngSum, '#Team-Bldng-Graph');
     initializeBarchart(roadsSum, '#Team-Roads-Graph');
-
   });
 }
 
