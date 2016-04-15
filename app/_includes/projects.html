@@ -1,14 +1,19 @@
+<script>
+  PT.projects = [{% assign comma = false %}{% for p in page.tm-projects %}{% if comma %}, {% endif %}'{{p}}'{% assign comma = true %}{% endfor %}];
+</script>
+
 <div class = "Projects-Container">
   <h1>Current Humanitarian Projects</h1>
   <div class = "flexslider Projects-slider">
     <ul class = "slides project-slide">
+      {% for p in page.tm-projects %}
       <li>
         <div class = "HOT-Container">
           <div class = "HOT-Map"></div>   
           <div class = "HOT-Details">
 
             <div class = "HOT-Title">
-              <p><b>Derre District, Mozambique -- Africa Indoor Residual Spraying Campaign</b></p>
+              <p><b>{{p}} Derre District, Mozambique -- Africa Indoor Residual Spraying Campaign</b></p>
             </div>
             <div class = "HOT-Progress">
               <P>14%</P>
@@ -26,29 +31,7 @@
         </div>
 
       </li>
-      <li>
-        <div class = "HOT-Container">
-          <div class = "HOT-Map"></div>   
-          <div class = "HOT-Details">
-
-            <div class = "HOT-Title">
-              <p><b>Derre District, Mozambique -- Africa Indoor Residual Spraying Campaign</b></p>
-            </div>
-            <div class = "HOT-Progress">
-              <P>14%</P>
-            </div>
-            <div class = "HOT-Description">
-              <p>In order to help all organizations seeking to circumscribe the meningitis outbreak area, OpenStreetMap Togo launches calls for mapping of areas affected by meningitis. This mapping will be mapped roads, residential areas and buildings.
-              </p>
-              <a href="https://www.pinterest.com/MissingMaps/" class="btn btn-blue">CONTRIBUTE</a>
-              <div class = "HOT-Next">
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-          </div>   
-        </div>
-      </li>
+      {% endfor %}
     </ul>
   </div>
   <div class = "GetInvolved">
