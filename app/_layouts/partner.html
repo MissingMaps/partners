@@ -4,6 +4,11 @@ layout: default
 
 {% include header.html %}
 
+<script>
+  // creates PT object for each page. Including lang for future use
+  var PT = { lang: '{{page.lang}}' };
+</script>
+
 <h1>JP Morgan Chase</h1>
 <section id = "Hero">
   {% include hero.html %}
