@@ -4,7 +4,7 @@
 	{% if event_date >= current_date %}
 		{% assign count = count | plus: 1 %}
 
-		<div class="event-sub-container">
+		<div class="event-sub-container {% if count >= 2 %}hidden{% endif %}">
 			<div class="event-top-section clearfix">
 				<div class="sub-head">
 					<img class="event-images" src="{{ site.baseurl }}/assets/graphics/flags/4x3/{{ e.flag }}.svg" width="24px" />
@@ -17,9 +17,9 @@
 			<div class="event-maindetails clearfix">
 				<div class="event-details-left">
 					<span class="emphasizedNumber">
-						{{ e.date | localize: "%d",locale }}
+						{{ e.date | date: "%d" }}
 					</span>
-					<p><b>{{ e.date | localize: "%B",locale }}</b></p>
+					<p><b>{{ e.date | date: "%B" }}</b></p>
 				</div>
 				<div class="event-details-right">
 					<div class="textbox" style="padding-top:8px">
@@ -29,13 +29,13 @@
 							<b>{{ e.place_name }}</b>
 							{% endif %}
 						</p>
-						<p class="event-details">{{ e.date | localize: "%A",locale }}, {{ e.time_string }}</p>
+						<p class="event-details">{{ e.date | date: "%A" }}, {{ e.time_string }}</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		{% if count == 3 %}
+		{% if count == 6 %}
 			{% break %}
 		{% endif %}
 	{% endif %}
