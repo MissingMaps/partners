@@ -72,8 +72,8 @@ $('.events-more').click(function(){
 function ingestHashtags (hashtags) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const url = 'http://osmstats.redcross.org/group-summaries/' + hashtags.join(',');
-  $.getJSON(url, function (hashtagData) {
 
+  $.getJSON(url, function (hashtagData) {
     // For each hashtag, sum the total edits across all categories
     const totalSum = hashtags.map(function (ht) {
       const vals = hashtagData[ht];
@@ -160,7 +160,5 @@ function initializeBarchart (data, targetElement) {
     .attr('text-anchor', 'end');
 }
 
-// The example list of hashtags below should actually be drawn from
-// the Jekyll subhashtag variables found in the _partners directory
-const hashtags = ['peacecorps', 'majorroads', 'mapgive', 'redcross'];
-ingestHashtags(hashtags);
+// Gets hashtag array on each partner page via team.html
+ingestHashtags(PT.hashtags);
