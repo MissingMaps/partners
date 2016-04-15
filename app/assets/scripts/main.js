@@ -88,6 +88,31 @@ function getPrimaryStats(primaryhash){
   });
 }
 
+getProjects(PT.projects);
+
+function getProjects(projects){
+  var projCount = projects.length;
+  $('#stats-projCount').html(projCount);
+
+  for (var i = 0; i < projects.length; i++){
+    const url = 'http://tasks.hotosm.org/project/' + projects[i] + '.json';
+      $.getJSON(url, function(ProjectData){
+        console.log(ProjectData);
+
+        // console.log(ProjectData.properties.name);
+        // console.log(Math.round(ProjectData.properties.done));
+        // console.log(ProjectData.properties.description);
+    });
+  };
+  var thisproj = "";
+
+  makeProjects(thisproj)
+};
+
+function makeProjects(project){
+
+}
+
 /*-------------------------------------------------------
 -------------------- Activity Graphs --------------------
 -------------------------------------------------------*/
