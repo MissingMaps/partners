@@ -1,3 +1,7 @@
+<script>
+    PT.hashtags = [{% assign comma = false %}{% for h in page.subhashtags %}{% if comma %}, {% endif %}'{{h}}'{% assign comma = true %}{% endfor %}];
+</script>
+
 <div class = "Team-Container">
   <h1>Activity</h1>
   <div class = "Team-Nav">

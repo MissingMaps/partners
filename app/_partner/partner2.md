@@ -14,8 +14,10 @@ social:
 
 hashtag: cisco
 subhashtags:
-  - cisco-newyork
-  - cisco-atlanta 
+  - peacecorps
+  - majorroads
+  - mapgive
+  - redcross
 
 tm-projects:
   - 1014
