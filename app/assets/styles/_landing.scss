@@ -385,13 +385,13 @@ h1{
 }
 
 /*----------------------------------------------*/
-/* TEAMS */
+/* TEAMS AND USERS */
 /*----------------------------------------------*/
-.Team-Container{
+.Team-User-Container{
   @include container;
 }
 
-.Team-Nav{
+.Team-User-Nav{
   height: 36px;
   clear: both;
   margin: 0;
@@ -417,7 +417,7 @@ h1{
   cursor: none;
 }
 
-.Team-Stats{
+.Team-User-Stats{
   width: 100%;
   background-color: $debug;
   display:flex;
@@ -432,7 +432,7 @@ h1{
   }
 }
 
-.Team-Graph {
+.Team-User-Graph {
   margin-top: 10px;
   svg {
     rect {
@@ -448,7 +448,7 @@ h1{
   }
 }
 
-.Team-Stat-Item{
+.Team-User-Stat-Item{
   background-color: $debug;
   width: 320px;
   height: 250px;
@@ -457,7 +457,7 @@ h1{
   margin: 1em;
 }
 
-.Team-Nav{
+.Team-User-Nav{
   .Selected{
     border-bottom:3px solid $mmGreen;
   }

@@ -1,32 +1,33 @@
 <script>
     PT.hashtags = [{% assign comma = false %}{% for h in page.subhashtags %}{% if comma %}, {% endif %}'{{h}}'{% assign comma = true %}{% endfor %}];
+    PT.mainHashtag = '{{ page.hashtag }}';
 </script>
 
-<div class = "Team-Container">
+<div class = "Team-User-Container">
   <h1>Activity</h1>
-  <div class = "Team-Nav">
+  <div class = "Team-User-Nav">
     <p class = "null">VIEW BY:</p>
-    <p class = "Selected">TEAMS</p>
-    <p>USERS</p>
+    <p id = "Select-Teams-Graph" class = "Selected">TEAMS</p>
+    <p id = "Select-Users-Graph">USERS</p>
   </div>
-  <div class = "Team-Stats">
-    <div class = "Team-Stat-Item">
+  <div class = "Team-User-Stats">
+    <div class = "Team-User-Stat-Item">
       <div class = "Team-Graph-Title">
         Top Contributors
       </div>
-      <div class = "Team-Graph" id = "Team-Total-Graph"></div>
+      <div class = "Team-User-Graph" id = "Team-User-Total-Graph"></div>
     </div>
-    <div class = "Team-Stat-Item">
-      <div class = "Team-Graph-Title">
+    <div class = "Team-User-Stat-Item">
+      <div class = "Team-User-Graph-Title">
         Most Buildings Added
       </div>
-      <div class = "Team-Graph" id = "Team-Bldng-Graph"></div>
+      <div class = "Team-User-Graph" id = "Team-User-Bldng-Graph"></div>
     </div>
-    <div class = "Team-Stat-Item">
-      <div class = "Team-Graph-Title">
+    <div class = "Team-User-Stat-Item">
+      <div class = "Team-User-Graph-Title">
         Most KM of Roads Added
       </div>
-      <div class = "Team-Graph" id = "Team-Roads-Graph"></div>
+      <div class = "Team-User-Graph" id = "Team-User-Roads-Graph"></div>
     </div>
   </div>
 </div>
