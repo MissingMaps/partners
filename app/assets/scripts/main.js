@@ -117,6 +117,54 @@ function makeProjects(project){
 -------------------- Activity Graphs --------------------
 -------------------------------------------------------*/
 
+// Sets Users button to Selected and loads Users chart
+$('#Select-Users-Graph').click(function () {
+  $('.Team-User-Graph').children().remove();
+  $('#Select-Teams-Graph').removeClass('Selected');
+  $('#Select-Users-Graph').addClass('Selected');
+  // Gets main hashtag on each partner page via team.html
+  ingestUsers(PT.mainHashtag);
+});
+
+// Sets Teams button to Selected and loads Teams chart
+$('#Select-Teams-Graph').click(function () {
+  $('.Team-User-Graph').children().remove();
+  $('#Select-Users-Graph').removeClass('Selected');
+  $('#Select-Teams-Graph').addClass('Selected');
+  ingestHashtags(PT.hashtags);
+});
+
+function ingestUsers (hashtag) {
+  // Connect hashtags to /top-users/ Missing Maps API endpoint
+  const url = 'http://osmstats.redcross.org/top-users/' + hashtag;
+
+  $.getJSON(url, function (userData) {
+    // For each user, collect the total edits across all categories
+    const totalSum = Object.keys(userData).map(function (user) {
+      const totalEdits = Math.round(Number(userData[user].all_edits));
+      return {name: user, value: totalEdits};
+    });
+
+    // For each user, sum the total building edits
+    const bldngSum = Object.keys(userData).map(function (user) {
+      const bldngEdits = Math.round(Number(userData[user].all_edits));
+      return {name: user, value: bldngEdits};
+    });
+
+    // For each user, sum the total road kilometers edited
+    const roadsSum = Object.keys(userData).map(function (user) {
+      const roadsEdits = Math.round(Number(userData[user].all_edits));
+      return {name: user, value: roadsEdits};
+    });
+
+    // Send the total, building, and road metrics to
+    // the barchart builder
+    initializeBarchart(totalSum, '#Team-User-Total-Graph');
+    initializeBarchart(bldngSum, '#Team-User-Bldng-Graph');
+    initializeBarchart(roadsSum, '#Team-User-Roads-Graph');
+  });
+}
+
 function ingestHashtags (hashtags) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const url = 'http://osmstats.redcross.org/group-summaries/' + hashtags.join(',');
@@ -152,9 +200,9 @@ function ingestHashtags (hashtags) {
 
     // Send the total, building, and road metrics to
     // the barchart builder
-    initializeBarchart(totalSum, '#Team-Total-Graph');
-    initializeBarchart(bldngSum, '#Team-Bldng-Graph');
-    initializeBarchart(roadsSum, '#Team-Roads-Graph');
+    initializeBarchart(totalSum, '#Team-User-Total-Graph');
+    initializeBarchart(bldngSum, '#Team-User-Bldng-Graph');
+    initializeBarchart(roadsSum, '#Team-User-Roads-Graph');
   });
 }
 

@@ -12,7 +12,7 @@ social:
   facebook:
   benevity:
 
-hashtag: cisco
+hashtag: missingmaps
 subhashtags:
   - peacecorps
   - majorroads
