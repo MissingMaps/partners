@@ -108,9 +108,10 @@ function getProjects(projects){
 // Update cards with necessary project details
 function makeProjects(project){
   var props = project.properties,
-      order = order + 1,
       projDesc = props.description,
       projDone = Math.round(props.done);
+
+  order = order + 1;
 
   if((props.description).length > 300){
     projDesc = (props.description).substring(0, 300) + " ...<a href = ''>read more</a>";
