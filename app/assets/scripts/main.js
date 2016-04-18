@@ -88,30 +88,46 @@ function getPrimaryStats(primaryhash){
   });
 }
 
+var order = 1;
+
 getProjects(PT.projects);
 
+// Fetch Project data from Tasking Manager API
 function getProjects(projects){
   var projCount = projects.length;
   $('#stats-projCount').html(projCount);
 
   for (var i = 0; i < projects.length; i++){
     const url = 'http://tasks.hotosm.org/project/' + projects[i] + '.json';
-      $.getJSON(url, function(ProjectData){
-        console.log(ProjectData);
-
-        // console.log(ProjectData.properties.name);
-        // console.log(Math.round(ProjectData.properties.done));
-        // console.log(ProjectData.properties.description);
+    $.getJSON(url, function(ProjectData){
+      makeProjects(ProjectData);
     });
   };
-  var thisproj = "";
-
-  makeProjects(thisproj)
 };
 
+// Update cards with necessary project details
 function makeProjects(project){
+  var props = project.properties,
+      projDesc = props.description,
+      projDone = Math.round(props.done);
 
-}
+  order = order + 1;
+
+  if((props.description).length > 300){
+    projDesc = (props.description).substring(0, 300) + " <a href = 'http://tasks.hotosm.org/project/" + project.id + "'>…read more</a>";
+
+    projDesc = marked(projDesc);
+  };
+
+  // Updates Progress Bar
+  $("ul li:nth-child(" + order + ") .HOT-Progress").addClass("projWidth" + order + "");
+  $(".HOT-Progress").append('<style>.projWidth'+order+':before{ width: '+projDone+'%;}</style>');
+
+  // Adds Project variables to the cards
+  $("ul li:nth-child(" + order + ") .HOT-Title ").html("<p><b>" + props.name + "</b></p>");
+  $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "</p>");
+  $("ul li:nth-child(" + order + ") .HOT-Description").html("<p>" + projDesc + "</p><p><a href='https://www.pinterest.com/MissingMaps/' class='btn btn-blue'>CONTRIBUTE</a></p>");
+};
 
 /*-------------------------------------------------------
 -------------------- Activity Graphs --------------------
@@ -190,7 +206,7 @@ function initializeBarchart (data, targetElement) {
   bar.append('rect')
     .attr('height', barHeight)
     .attr('width', (d) => xScale(d.value));
-
+    
   bar.append('text')
     .attr('class', 'Graph-Label-Hashtag')
     .attr('x', 5)
