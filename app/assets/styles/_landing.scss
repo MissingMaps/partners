@@ -417,46 +417,6 @@ h1{
   cursor: none;
 }
 
-.Team-User-Stats{
-  width: 100%;
-  background-color: $debug;
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: stretch;
-  margin: 0;
-  @media screen and (min-width: 1100px){
-    margin: 0 1em;
-  }
-}
-
-.Team-User-Graph {
-  margin-top: 10px;
-  svg {
-    rect {
-      fill: lighten($darkgrey, 20%);
-    }
-    .Graph-Label-Hashtag {
-      font-size: 13px;
-    }
-    .Graph-Label-Value {
-      font-weight: bold;
-      font-size: 13px;
-    }
-  }
-}
-
-.Team-User-Stat-Item{
-  background-color: $debug;
-  width: 320px;
-  height: 250px;
-  flex-grow: 0;
-  flex-shrink: 0;
-  margin: 1em;
-}
-
 .Team-User-Nav{
   .Selected{
     border-bottom:3px solid $mmGreen;

@@ -155,6 +155,7 @@ function ingestUsers (hashtag) {
   const url = 'http://osmstats.redcross.org/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
+    console.log(userData);
     // For each user, collect the total edits across all categories
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
@@ -188,6 +189,9 @@ function ingestHashtags (hashtags) {
   $.getJSON(url, function (hashtagData) {
     // For each hashtag, sum the total edits across all categories
     const totalSum = hashtags.map(function (ht) {
+      const hashtagName = '#' + ht;
+      const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + ht;
+      const name = '<a xlink:href="' + hashtagUrl + '" target="_blank">' + hashtagName + '</a>'
       const vals = hashtagData[ht];
       const sum = Math.round(Number(vals.building_count_add) +
                   Number(vals.building_count_mod) +
@@ -195,23 +199,29 @@ function ingestHashtags (hashtags) {
                   Number(vals.road_count_mod) +
                   Number(vals.waterway_count_add) +
                   Number(vals.poi_count_add));
-      return {name: ht, value: sum};
+      return {name: name, value: sum};
     });
 
     // For each hashtag, sum the total building edits
     const bldngSum = hashtags.map(function (ht) {
+      const hashtagName = '#' + ht;
+      const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + ht;
+      const name = '<a xlink:href="' + hashtagUrl + '" target="_blank">' + hashtagName + '</a>'
       const vals = hashtagData[ht];
       const sum = Math.round(Number(vals.building_count_add) +
                   Number(vals.building_count_mod));
-      return {name: ht, value: sum};
+      return {name: name, value: sum};
     });
 
     // For each hashtag, sum the total road kilometers edited
     const roadsSum = hashtags.map(function (ht) {
+      const hashtagName = '#' + ht;
+      const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + ht;
+      const name = '<a xlink:href="' + hashtagUrl + '" target="_blank">' + hashtagName + '</a>'
       const vals = hashtagData[ht];
       const sum = Math.round(Number(vals.road_km_add) +
                   Number(vals.road_km_mod));
-      return {name: ht, value: sum};
+      return {name: name, value: sum};
     });
 
     // Send the total, building, and road metrics to
@@ -254,13 +264,13 @@ function initializeBarchart (data, targetElement) {
   bar.append('rect')
     .attr('height', barHeight)
     .attr('width', (d) => xScale(d.value));
-    
+
   bar.append('text')
     .attr('class', 'Graph-Label-Hashtag')
     .attr('x', 5)
     .attr('y', barHeight / 2)
     .attr('dy', '.35em')
-    .text((d) => '#' + d.name);
+    .html((d) => d.name);
 
   bar.append('text')
     .attr('class', 'Graph-Label-Value')
