@@ -206,7 +206,7 @@ function initializeBarchart (data, targetElement) {
   bar.append('rect')
     .attr('height', barHeight)
     .attr('width', (d) => xScale(d.value));
-
+    
   bar.append('text')
     .attr('class', 'Graph-Label-Hashtag')
     .attr('x', 5)

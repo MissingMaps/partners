@@ -14,7 +14,7 @@
   font-family: 'Lato';
   text-decoration:none;
   letter-spacing: 0.06em;
-  transition-property: background;
+  transition-property: background color border;
   transition-duration: 0.12s;
   transition-timing-function: linear;
   line-height: 23px;
@@ -118,24 +118,30 @@
 
 .invert-btn-white{
   background-color: rgba(0,0,0,0);
-  border: 1px solid white;
-  color: white;
+  border: $mmTeal 1px solid;
+  color: $mmTeal;
+  padding-top: 15px;
   &:hover{
-    background-color: lighten($mmTeal, 20);
+    background-color: rgba(0,0,0,0);
+    border: 1px solid white;
   }
   &:active{
-    background-color: lighten($mmTeal, 20);
+  background-color: rgba(0,0,0,0);
+  border: 1px solid white;
+  color: white;
   }
   &:focus{
-    background-color: lighten($mmTeal, 20);
+  background-color: rgba(0,0,0,0);
+  border: 1px solid white;
+  color: white;
   }
   a{
-    color: darken($mmTeal, 60);
+    color: white;
     &:hover{
-      color: darken($mmTeal, 60);   
+      color: white;
     }
     &:visited{
-      color: darken($mmTeal, 60);
+      color: white;
     }
   }
 }
