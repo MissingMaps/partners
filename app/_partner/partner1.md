@@ -21,7 +21,7 @@ subhashtags:
   - hotosm-project-1467
 
 tm-projects:
-  - 1014
+  - 1792
   - 1018
   - 1588
   - 1785

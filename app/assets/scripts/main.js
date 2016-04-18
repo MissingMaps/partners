@@ -114,7 +114,9 @@ function makeProjects(project){
   order = order + 1;
 
   if((props.description).length > 300){
-    projDesc = (props.description).substring(0, 300) + " ...<a href = ''>read more</a>";
+    projDesc = (props.description).substring(0, 300) + " <a href = 'http://tasks.hotosm.org/project/" + project.id + "'>…read more</a>";
+
+    projDesc = marked(projDesc);
   };
 
   // Updates Progress Bar

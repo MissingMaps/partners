@@ -412,6 +412,11 @@ h1{
   }
 }
 
+.null{
+  pointer-events: none;
+  cursor: none;
+}
+
 .Team-Stats{
   width: 100%;
   background-color: $debug;
@@ -453,13 +458,13 @@ h1{
 }
 
 .Team-Nav{
-  cursor: pointer;
   .Selected{
     border-bottom:3px solid $mmGreen;
   }
   p{
   &:hover{
     color: black;
+    cursor: pointer;
     }
   }
 }
