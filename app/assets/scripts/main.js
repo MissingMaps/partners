@@ -129,25 +129,36 @@ function makeProjects(project){
   $("ul li:nth-child(" + order + ") .HOT-Description").html("<p>" + projDesc + "</p><p><a href='https://www.pinterest.com/MissingMaps/' class='btn btn-blue'>CONTRIBUTE</a></p>");
 };
 
+
+/*-------------------------------------------------------
+------------------------ HOT Map ------------------------
+-------------------------------------------------------*/
+
+
+
 /*-------------------------------------------------------
 -------------------- Activity Graphs --------------------
 -------------------------------------------------------*/
 
 // Sets Users button to Selected and loads Users chart
 $('#Select-Users-Graph').click(function () {
-  $('.Team-User-Graph').children().remove();
-  $('#Select-Teams-Graph').removeClass('Selected');
-  $('#Select-Users-Graph').addClass('Selected');
-  // Gets main hashtag on each partner page via team.html
-  ingestUsers(PT.mainHashtag);
+  if ($('.Team-User-Graph').children()) {
+    $('.Team-User-Graph').children().remove();
+    $('#Select-Teams-Graph').removeClass('Selected');
+    $('#Select-Users-Graph').addClass('Selected');
+    // Gets main hashtag on each partner page via team.html
+    ingestUsers(PT.mainHashtag);
+  }
 });
 
 // Sets Teams button to Selected and loads Teams chart
 $('#Select-Teams-Graph').click(function () {
-  $('.Team-User-Graph').children().remove();
-  $('#Select-Users-Graph').removeClass('Selected');
-  $('#Select-Teams-Graph').addClass('Selected');
-  ingestHashtags(PT.hashtags);
+  if ($('.Team-User-Graph').children()) {
+    $('.Team-User-Graph').children().remove();
+    $('#Select-Users-Graph').removeClass('Selected');
+    $('#Select-Teams-Graph').addClass('Selected');
+    ingestHashtags(PT.hashtags);
+  }
 });
 
 function ingestUsers (hashtag) {
@@ -254,7 +265,7 @@ function initializeBarchart (data, targetElement) {
   bar.append('rect')
     .attr('height', barHeight)
     .attr('width', (d) => xScale(d.value));
-    
+
   bar.append('text')
     .attr('class', 'Graph-Label-Hashtag')
     .attr('x', 5)
