@@ -7,16 +7,21 @@
 //   console.log('STAGING');
 // }
 
-var apikey = '09023a48037b7882a3683cb1c2043c50', //Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
-		setId = '72157666852477155'; // ID of photo album you're grabbing photos from. Will only display photos that are public.
+ //Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
+var apikey = '09023a48037b7882a3683cb1c2043c50',
+// ID of photo album you're grabbing photos from. Will only display photos that are public.
+  setId = '72157666852477155',
+// Primary Hashtag name.
+  primaryhash = "hotosm-project-1465";
 
+getPrimaryStats(primaryhash);
 getImgs(setId);
 
-  // Add Flexslider to Projects Section
-  $('.Projects-slider').flexslider({
-      animation: "slide",
-      directionNav: false,
-  });
+// Add Flexslider to Projects Section
+$('.Projects-slider').flexslider({
+    animation: "slide",
+    directionNav: false,
+});
 
 function getImgs (setId) {
 
@@ -64,6 +69,49 @@ $('.events-more').click(function(){
     $('.events-more').css('display', 'none');
   }
 });
+
+/*-------------------------------------------------------
+-------------------- Primary Stats  ---------------------
+-------------------------------------------------------*/
+function getPrimaryStats(primaryhash){
+  const url = 'http://osmstats.redcross.org/hashtags/' + primaryhash + '/users';
+  $.getJSON(url, function (hashtagData) {
+    var usersCount = (Object.keys(hashtagData).length);
+    var editsCount = 0;
+
+    for (var i = 0; i < usersCount; i++){
+      editsCount = editsCount + hashtagData[i].edits;
+    }
+
+    $('#stats-usersCount').html(usersCount);
+    $('#stats-editsCount').html(editsCount);
+  });
+}
+
+getProjects(PT.projects);
+
+function getProjects(projects){
+  var projCount = projects.length;
+  $('#stats-projCount').html(projCount);
+
+  for (var i = 0; i < projects.length; i++){
+    const url = 'http://tasks.hotosm.org/project/' + projects[i] + '.json';
+      $.getJSON(url, function(ProjectData){
+        console.log(ProjectData);
+
+        // console.log(ProjectData.properties.name);
+        // console.log(Math.round(ProjectData.properties.done));
+        // console.log(ProjectData.properties.description);
+    });
+  };
+  var thisproj = "";
+
+  makeProjects(thisproj)
+};
+
+function makeProjects(project){
+
+}
 
 /*-------------------------------------------------------
 -------------------- Activity Graphs --------------------
