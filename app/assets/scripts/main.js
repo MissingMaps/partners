@@ -133,43 +133,56 @@ function makeProjects(project){
   addMap(project.id);
 };
 
-
 /*-------------------------------------------------------
 ------------------------ HOT Map ------------------------
 -------------------------------------------------------*/
 
 function onEachFeature (feature, layer) {
-  // console.log("i'm a feature")
+  // Set symbology to match HOTOSM Tasking Manager completion states
+  let symbology = {
+    color: 'black',
+    weight: 1,
+    opacity: 0.7,
+    fillOpacity: 0.4,
+    fillColor: 'black'
+  };
+
+  const state = feature.properties.state;
+  if (state === -1) {
+    symbology.fillColor = '#dfdfdf';
+  } else if (state === 0) {
+    symbology.fillColor = '#dfdfdf';
+  } else if (state === 1) {
+    symbology.fillColor = '#dfdfdf';
+  } else if (state === 2) {
+    symbology.fillColor = '#ffa500';
+  } else if (state === 3) {
+    symbology.fillColor = '#008000';
+  }
+
+  layer.setStyle(symbology);
 };
 
 function addMap (projectId) {
   const accessToken = 'pk.eyJ1IjoiYXN0cm9kaWdpdGFsIiwiYSI6ImNVb1B0ZkEifQ.IrJoULY2VMSBNFqHLrFYew';
-  const basemapUrl = 'http://api.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.png';
-
-  const map = L.map('Map-' + projectId, {zoomControl: false}).setView([38.889931, -77.009003], 13);
-
-  L.tileLayer(basemapUrl + '?access_token=' + accessToken, {
-    attribution: '<a href="http://mapbox.com">Mapbox</a>'
-  })
-  .addTo(map);
+  const basemapUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
   // Connect HOT-OSM endpoint for tasking squares data
-  const url = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
-  console.log(projectId)
-  $.getJSON(url, function (taskData) {
-      const featureLayer = L.geoJson(taskData, {
-      onEachFeature: onEachFeature
+  const endpoint = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
+  $.getJSON(endpoint, function (taskData) {
+    $('#Map-' + projectId).empty();
+    const map = L.map('Map-' + projectId, {zoomControl: false}).setView([38.889931, -77.009003], 13);
+    L.tileLayer(basemapUrl + '?access_token=' + accessToken, {
+      attribution: '<a href="http://mapbox.com">Mapbox</a>'
     })
-
     .addTo(map);
 
-    setTimeout(function () {
-      const bounds = featureLayer.getBounds()
-      // const convexHull = turf.convex(taskData);
-      // const centerPoint = turf.center(taskData);
-      map.fitBounds(bounds);
-    }, 200)
+    const featureLayer = L.geoJson(taskData, {
+      onEachFeature: onEachFeature
+    })
+    .addTo(map);
 
+    map.fitBounds(featureLayer.getBounds());
   });
 }
 
