@@ -215,6 +215,11 @@ $('#Select-Teams-Graph').click(function () {
   ingestHashtags(PT.hashtags);
 });
 
+function generateUserUrl(userName, userId) {
+  const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
+  return '<a xlink:href="' + userUrl + '" target="_blank">' + userName + '</a>'
+}
+
 function ingestUsers (hashtag) {
   // Connect hashtags to /top-users/ Missing Maps API endpoint
   const url = 'http://osmstats.redcross.org/top-users/' + hashtag;
@@ -223,19 +228,19 @@ function ingestUsers (hashtag) {
     // For each user, collect the total edits across all categories
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
-      return {name: user, value: totalEdits};
+      return {name: generateUserUrl(user, userData[user].user_number), value: totalEdits};
     });
 
     // For each user, sum the total building edits
     const bldngSum = Object.keys(userData).map(function (user) {
       const bldngEdits = Math.round(Number(userData[user].all_edits));
-      return {name: user, value: bldngEdits};
+      return {name: generateUserUrl(user, userData[user].user_number), value: bldngEdits};
     });
 
     // For each user, sum the total road kilometers edited
     const roadsSum = Object.keys(userData).map(function (user) {
       const roadsEdits = Math.round(Number(userData[user].all_edits));
-      return {name: user, value: roadsEdits};
+      return {name: generateUserUrl(user, userData[user].user_number), value: roadsEdits};
     });
 
     // Send the total, building, and road metrics to
@@ -246,6 +251,11 @@ function ingestUsers (hashtag) {
   });
 }
 
+function generateHashtagUrl(hashtag) {
+  const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + hashtag;
+  return '<a xlink:href="' + hashtagUrl + '" target="_blank">#' + hashtag + '</a>'
+}
+
 function ingestHashtags (hashtags) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const url = 'http://osmstats.redcross.org/group-summaries/' + hashtags.join(',');
@@ -253,9 +263,6 @@ function ingestHashtags (hashtags) {
   $.getJSON(url, function (hashtagData) {
     // For each hashtag, sum the total edits across all categories
     const totalSum = hashtags.map(function (ht) {
-      const hashtagName = '#' + ht;
-      const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + ht;
-      const name = '<a xlink:href="' + hashtagUrl + '" target="_blank">' + hashtagName + '</a>'
       const vals = hashtagData[ht];
       const sum = Math.round(Number(vals.building_count_add) +
                   Number(vals.building_count_mod) +
@@ -263,29 +270,23 @@ function ingestHashtags (hashtags) {
                   Number(vals.road_count_mod) +
                   Number(vals.waterway_count_add) +
                   Number(vals.poi_count_add));
-      return {name: name, value: sum};
+      return {name: generateHashtagUrl(ht), value: sum};
     });
 
     // For each hashtag, sum the total building edits
     const bldngSum = hashtags.map(function (ht) {
-      const hashtagName = '#' + ht;
-      const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + ht;
-      const name = '<a xlink:href="' + hashtagUrl + '" target="_blank">' + hashtagName + '</a>'
       const vals = hashtagData[ht];
       const sum = Math.round(Number(vals.building_count_add) +
                   Number(vals.building_count_mod));
-      return {name: name, value: sum};
+      return {name: generateHashtagUrl(ht), value: sum};
     });
 
     // For each hashtag, sum the total road kilometers edited
     const roadsSum = hashtags.map(function (ht) {
-      const hashtagName = '#' + ht;
-      const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + ht;
-      const name = '<a xlink:href="' + hashtagUrl + '" target="_blank">' + hashtagName + '</a>'
       const vals = hashtagData[ht];
       const sum = Math.round(Number(vals.road_km_add) +
                   Number(vals.road_km_mod));
-      return {name: name, value: sum};
+      return {name: generateHashtagUrl(ht), value: sum};
     });
 
     // Send the total, building, and road metrics to
