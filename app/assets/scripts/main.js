@@ -108,16 +108,16 @@ function getProjects(projects){
 // Update cards with necessary project details
 function makeProjects(project){
   var props = project.properties,
-      projDesc = props.description,
+      // projDesc = props.description,
       projDone = Math.round(props.done);
 
   order = order + 1;
 
-  if((props.description).length > 300){
-    projDesc = (props.description).substring(0, 300) + " <a href = 'http://tasks.hotosm.org/project/" + project.id + "'>…read more</a>";
+  // if((props.description).length > 300){
+  //   projDesc = (props.description).substring(0, 300) + " <a href = 'http://tasks.hotosm.org/project/" + project.id + "'>…read more</a>";
 
-    projDesc = marked(projDesc);
-  };
+  //   projDesc = marked(projDesc);
+  // };
 
   // Updates Progress Bar
   $("ul li:nth-child(" + order + ") .HOT-Progress").addClass("projWidth" + order + "");
@@ -126,7 +126,7 @@ function makeProjects(project){
   // Adds Project variables to the cards
   $("ul li:nth-child(" + order + ") .HOT-Title ").html("<p><b>" + props.name + "</b></p>");
   $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "</p>");
-  $("ul li:nth-child(" + order + ") .HOT-Description").html("<p>" + projDesc + "</p><p><a href='https://www.pinterest.com/MissingMaps/' class='btn btn-blue'>CONTRIBUTE</a></p>");
+  // $("ul li:nth-child(" + order + ") .HOT-Description").html("<p>" + projDesc + "</p><p><a href='https://www.pinterest.com/MissingMaps/' class='btn btn-blue'>CONTRIBUTE</a></p>");
 };
 
 /*-------------------------------------------------------

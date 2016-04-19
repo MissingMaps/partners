@@ -1,5 +1,5 @@
 <script>
-  PT.projects = [{% assign comma = false %}{% for p in page.tm-projects %}{% if comma %}, {% endif %}'{{p}}'{% assign comma = true %}{% endfor %}];
+  PT.projects = [{% assign comma = false %}{% for p in page.tm-projects %}{% if comma %}, {% endif %}'{{ p.id }}'{% assign comma = true %}{% endfor %}];
 </script>
 
 <div class = "Projects-Container">
@@ -13,18 +13,15 @@
           <div class = "HOT-Details">
 
             <div class = "HOT-Title">
-              <p><b>{{p}} {{ name }}</b></p>
+              <p><b></b></p>
             </div>
             <div class = "HOT-Progress">
               <p>14%</p>
             </div>
             <div class = "HOT-Description">
-              <p>In order to help all organizations seeking to circumscribe the meningitis outbreak area, OpenStreetMap Togo launches calls for mapping of areas affected by meningitis. This mapping will be mapped roads, residential areas and buildings.
+              <p> {{ p.desc }}
               </p>
-              <a href="https://www.pinterest.com/MissingMaps/" class="btn btn-blue">CONTRIBUTE</a>
-              <div class = "HOT-Next">
-                <i class="fa fa-chevron-right"></i>
-              </div>
+              <a href="http://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue">CONTRIBUTE</a>
             </div>
           </div>   
         </div>
