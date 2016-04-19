@@ -127,7 +127,64 @@ function makeProjects(project){
   $("ul li:nth-child(" + order + ") .HOT-Title ").html("<p><b>" + props.name + "</b></p>");
   $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "</p>");
   $("ul li:nth-child(" + order + ") .HOT-Description").html("<p>" + projDesc + "</p><p><a href='https://www.pinterest.com/MissingMaps/' class='btn btn-blue'>CONTRIBUTE</a></p>");
+  $("ul li:nth-child(" + order + ") .HOT-Map ").attr('id', 'Map-' + project.id);
+
+  // Drop a map into the HOT-Map div
+  addMap(project.id);
 };
+
+/*-------------------------------------------------------
+------------------------ HOT Map ------------------------
+-------------------------------------------------------*/
+
+function onEachFeature (feature, layer) {
+  // Set symbology to match HOTOSM Tasking Manager completion states
+  let symbology = {
+    color: 'black',
+    weight: 1,
+    opacity: 0.7,
+    fillOpacity: 0.4,
+    fillColor: 'black'
+  };
+
+  const state = feature.properties.state;
+  if (state === -1) {
+    symbology.fillColor = '#dfdfdf';
+  } else if (state === 0) {
+    symbology.fillColor = '#dfdfdf';
+  } else if (state === 1) {
+    symbology.fillColor = '#dfdfdf';
+  } else if (state === 2) {
+    symbology.fillColor = '#ffa500';
+  } else if (state === 3) {
+    symbology.fillColor = '#008000';
+  }
+
+  layer.setStyle(symbology);
+};
+
+function addMap (projectId) {
+  const accessToken = 'pk.eyJ1IjoiYXN0cm9kaWdpdGFsIiwiYSI6ImNVb1B0ZkEifQ.IrJoULY2VMSBNFqHLrFYew';
+  const basemapUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+  // Connect HOT-OSM endpoint for tasking squares data
+  const endpoint = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
+  $.getJSON(endpoint, function (taskData) {
+    $('#Map-' + projectId).empty();
+    const map = L.map('Map-' + projectId, {zoomControl: false}).setView([38.889931, -77.009003], 13);
+    L.tileLayer(basemapUrl + '?access_token=' + accessToken, {
+      attribution: '<a href="http://mapbox.com">Mapbox</a>'
+    })
+    .addTo(map);
+
+    const featureLayer = L.geoJson(taskData, {
+      onEachFeature: onEachFeature
+    })
+    .addTo(map);
+
+    map.fitBounds(featureLayer.getBounds());
+  });
+}
 
 /*-------------------------------------------------------
 -------------------- Activity Graphs --------------------
@@ -166,6 +223,7 @@ function ingestUsers (hashtag) {
   const url = 'http://osmstats.redcross.org/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
+    console.log(userData);
     // For each user, collect the total edits across all categories
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
@@ -199,6 +257,9 @@ function ingestHashtags (hashtags) {
   $.getJSON(url, function (hashtagData) {
     // For each hashtag, sum the total edits across all categories
     const totalSum = hashtags.map(function (ht) {
+      const hashtagName = '#' + ht;
+      const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + ht;
+      const name = '<a xlink:href="' + hashtagUrl + '" target="_blank">' + hashtagName + '</a>'
       const vals = hashtagData[ht];
       const sum = Math.round(Number(vals.building_count_add) +
                   Number(vals.building_count_mod) +
@@ -206,23 +267,29 @@ function ingestHashtags (hashtags) {
                   Number(vals.road_count_mod) +
                   Number(vals.waterway_count_add) +
                   Number(vals.poi_count_add));
-      return {name: ht, value: sum};
+      return {name: name, value: sum};
     });
 
     // For each hashtag, sum the total building edits
     const bldngSum = hashtags.map(function (ht) {
+      const hashtagName = '#' + ht;
+      const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + ht;
+      const name = '<a xlink:href="' + hashtagUrl + '" target="_blank">' + hashtagName + '</a>'
       const vals = hashtagData[ht];
       const sum = Math.round(Number(vals.building_count_add) +
                   Number(vals.building_count_mod));
-      return {name: ht, value: sum};
+      return {name: name, value: sum};
     });
 
     // For each hashtag, sum the total road kilometers edited
     const roadsSum = hashtags.map(function (ht) {
+      const hashtagName = '#' + ht;
+      const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + ht;
+      const name = '<a xlink:href="' + hashtagUrl + '" target="_blank">' + hashtagName + '</a>'
       const vals = hashtagData[ht];
       const sum = Math.round(Number(vals.road_km_add) +
                   Number(vals.road_km_mod));
-      return {name: ht, value: sum};
+      return {name: name, value: sum};
     });
 
     // Send the total, building, and road metrics to
@@ -271,7 +338,7 @@ function initializeBarchart (data, targetElement) {
     .attr('x', 5)
     .attr('y', barHeight / 2)
     .attr('dy', '.35em')
-    .text((d) => '#' + d.name);
+    .html((d) => d.name);
 
   bar.append('text')
     .attr('class', 'Graph-Label-Value')
