@@ -56,8 +56,14 @@ function getImgs (setId) {
 }
 
 // Adds Event functionality
+
+var eventsnumber = $('.events-event-sub-container').length;
+
+if( eventsnumber < 2){
+  $('.events-more').css('display', 'none');
+};
+
 $('.events-more').click(function(){
-  var eventsnumber = $('.events-event-sub-container').length;
 	$('.hidden').slice(0,2).css('display', 'block');
   if( eventsnumber > 2){
     $('.events-more').html('SEE ALL').attr('class', 'button invert-btn-white events-all');
