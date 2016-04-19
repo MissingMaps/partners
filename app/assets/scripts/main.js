@@ -220,7 +220,6 @@ function ingestUsers (hashtag) {
   const url = 'http://osmstats.redcross.org/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
-    console.log(userData);
     // For each user, collect the total edits across all categories
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
