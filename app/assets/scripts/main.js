@@ -127,6 +127,10 @@ function makeProjects(project){
   $("ul li:nth-child(" + order + ") .HOT-Title ").html("<p><b>" + props.name + "</b></p>");
   $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "</p>");
   $("ul li:nth-child(" + order + ") .HOT-Description").html("<p>" + projDesc + "</p><p><a href='https://www.pinterest.com/MissingMaps/' class='btn btn-blue'>CONTRIBUTE</a></p>");
+  $("ul li:nth-child(" + order + ") .HOT-Map ").attr('id', 'Map-' + project.id);
+
+  // Drop a map into the HOT-Map div
+  addMap(project.id);
 };
 
 
@@ -134,7 +138,40 @@ function makeProjects(project){
 ------------------------ HOT Map ------------------------
 -------------------------------------------------------*/
 
+function onEachFeature (feature, layer) {
+  // console.log("i'm a feature")
+};
 
+function addMap (projectId) {
+  const accessToken = 'pk.eyJ1IjoiYXN0cm9kaWdpdGFsIiwiYSI6ImNVb1B0ZkEifQ.IrJoULY2VMSBNFqHLrFYew';
+  const basemapUrl = 'http://api.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.png';
+
+  const map = L.map('Map-' + projectId, {zoomControl: false}).setView([38.889931, -77.009003], 13);
+
+  L.tileLayer(basemapUrl + '?access_token=' + accessToken, {
+    attribution: '<a href="http://mapbox.com">Mapbox</a>'
+  })
+  .addTo(map);
+
+  // Connect HOT-OSM endpoint for tasking squares data
+  const url = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
+  console.log(projectId)
+  $.getJSON(url, function (taskData) {
+      const featureLayer = L.geoJson(taskData, {
+      onEachFeature: onEachFeature
+    })
+
+    .addTo(map);
+
+    setTimeout(function () {
+      const bounds = featureLayer.getBounds()
+      // const convexHull = turf.convex(taskData);
+      // const centerPoint = turf.center(taskData);
+      map.fitBounds(bounds);
+    }, 200)
+
+  });
+}
 
 /*-------------------------------------------------------
 -------------------- Activity Graphs --------------------
