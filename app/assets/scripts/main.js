@@ -192,23 +192,30 @@ function addMap (projectId) {
 
 // Sets Users button to Selected and loads Users chart
 $('#Select-Users-Graph').click(function () {
-  if ($('.Team-User-Graph').children()) {
-    $('.Team-User-Graph').children().remove();
-    $('#Select-Teams-Graph').removeClass('Selected');
-    $('#Select-Users-Graph').addClass('Selected');
-    // Gets main hashtag on each partner page via team.html
-    ingestUsers(PT.mainHashtag);
-  }
+  $('#Select-Teams-Graph').removeClass('Selected');
+  $('#Select-Users-Graph').addClass('Selected');
+  var totalGraph = document.querySelector("#Team-User-Total-Graph svg");
+  var bldngGraph = document.querySelector("#Team-User-Bldng-Graph svg");
+  var roadsGraph = document.querySelector("#Team-User-Roads-Graph svg");
+  totalGraph.parentNode.removeChild(totalGraph);
+  bldngGraph.parentNode.removeChild(bldngGraph);
+  roadsGraph.parentNode.removeChild(roadsGraph);
+  // Gets main hashtag on each partner page via team.html
+  ingestUsers(PT.mainHashtag);
 });
 
 // Sets Teams button to Selected and loads Teams chart
 $('#Select-Teams-Graph').click(function () {
-  if ($('.Team-User-Graph').children()) {
-    $('.Team-User-Graph').children().remove();
-    $('#Select-Users-Graph').removeClass('Selected');
-    $('#Select-Teams-Graph').addClass('Selected');
-    ingestHashtags(PT.hashtags);
-  }
+  $('#Select-Users-Graph').removeClass('Selected');
+  $('#Select-Teams-Graph').addClass('Selected');
+  var totalGraph = document.querySelector("#Team-User-Total-Graph svg");
+  var bldngGraph = document.querySelector("#Team-User-Bldng-Graph svg");
+  var roadsGraph = document.querySelector("#Team-User-Roads-Graph svg");
+  totalGraph.parentNode.removeChild(totalGraph);
+  bldngGraph.parentNode.removeChild(bldngGraph);
+  roadsGraph.parentNode.removeChild(roadsGraph);
+  // Gets hashtag array on each partner page via team.html
+  ingestHashtags(PT.hashtags);
 });
 
 function ingestUsers (hashtag) {
