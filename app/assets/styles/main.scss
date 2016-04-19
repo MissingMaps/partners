@@ -7,6 +7,9 @@
 @import "./foundation-sites/scss/foundation";
 @include foundation-everything;
 
+//Leaflet
+@import "leaflet";
+
 // Reset and normalize
 @import "normalize";
 @import "reset";

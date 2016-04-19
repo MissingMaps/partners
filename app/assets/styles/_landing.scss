@@ -240,23 +240,6 @@ h1{
   max-width: 100%;
 }
 
-.HOT-Map{
-  height: 200px;
-  width: 80%;
-  border: 1px solid #CCC;
-  margin: 0.5em auto 0.5em auto;
-  float: initial;
-  background-image: url("/assets/graphics/content/dummy-map.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  @media screen and (min-width: 1100px){
-    width: 220px;
-    margin: 0.5em;
-    float: left;
-  }
-}
-
 .HOT-Details{
   float: initial;
   text-align:initial;
@@ -284,10 +267,6 @@ h1{
   border: 1px solid #CCC;
   margin: 0.5em auto 0.5em auto;
   float: initial;
-  background-image: url("/assets/graphics/content/dummy-map.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   @media screen and (min-width: 1100px){
     width: 220px;
     margin: 0.5em;
