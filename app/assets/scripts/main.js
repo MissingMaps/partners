@@ -1,13 +1,4 @@
-// 'use strict';
-
-// var config = require('./config');
-
-// console.log.apply(console, config.consoleMessage);
-// if (config.environment === 'staging') {
-//   console.log('STAGING');
-// }
-
- //Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
+//Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
 var apikey = '09023a48037b7882a3683cb1c2043c50',
 // ID of photo album you're grabbing photos from. Will only display photos that are public.
   setId = '72157666852477155',
@@ -108,16 +99,9 @@ function getProjects(projects){
 // Update cards with necessary project details
 function makeProjects(project){
   var props = project.properties,
-      projDesc = props.description,
       projDone = Math.round(props.done);
 
   order = order + 1;
-
-  if((props.description).length > 300){
-    projDesc = (props.description).substring(0, 300) + " <a href = 'http://tasks.hotosm.org/project/" + project.id + "'>…read more</a>";
-
-    projDesc = marked(projDesc);
-  };
 
   // Updates Progress Bar
   $("ul li:nth-child(" + order + ") .HOT-Progress").addClass("projWidth" + order + "");
@@ -126,7 +110,6 @@ function makeProjects(project){
   // Adds Project variables to the cards
   $("ul li:nth-child(" + order + ") .HOT-Title ").html("<p><b>" + props.name + "</b></p>");
   $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "</p>");
-  $("ul li:nth-child(" + order + ") .HOT-Description").html("<p>" + projDesc + "</p><p><a href='https://www.pinterest.com/MissingMaps/' class='btn btn-blue'>CONTRIBUTE</a></p>");
   $("ul li:nth-child(" + order + ") .HOT-Map ").attr('id', 'Map-' + project.id);
 
   // Drop a map into the HOT-Map div
@@ -172,17 +155,31 @@ function addMap (projectId) {
   $.getJSON(endpoint, function (taskData) {
     $('#Map-' + projectId).empty();
     const map = L.map('Map-' + projectId, {zoomControl: false}).setView([38.889931, -77.009003], 13);
+
+    // Add tile layer
     L.tileLayer(basemapUrl + '?access_token=' + accessToken, {
       attribution: '<a href="http://mapbox.com">Mapbox</a>'
     })
     .addTo(map);
 
+    // Add feature layer
     const featureLayer = L.geoJson(taskData, {
       onEachFeature: onEachFeature
     })
     .addTo(map);
 
+    // Fit to feature layer bounds
     map.fitBounds(featureLayer.getBounds());
+
+    // Disable drag and zoom handlers.
+    map.dragging.disable();
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.keyboard.disable();
+
+    // Disable tap handler, if present.
+    if (map.tap) map.tap.disable();
   });
 }
 
