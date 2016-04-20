@@ -4,15 +4,20 @@ lang: en
 permalink: /partner1/
 
 id: partner1
+name: Devseed
 logo: /assets/logos/partner1.png
 
 social:
-  flickr:
-  twitter:
-  facebook:
-  benevity:
+  flickr: https://www.flickr.com/photos/developmentseed/
+  twitter: https://twitter.com/developmentseed
+  facebook: https://www.facebook.com/pages/Development-Seed/359278120833062
+  benevity: https://devseed.benevity.org/user
 
-hashtag: missingmaps
+community: 
+  apikey: 09023a48037b7882a3683cb1c2043c50
+  setId: 72157666852477155
+
+primary-hashtag: redcross
 subhashtags:
   - peacecorps
   - majorroads

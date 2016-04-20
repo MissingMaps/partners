@@ -1,10 +1,8 @@
 //Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
-var apikey = '09023a48037b7882a3683cb1c2043c50',
+// var apikey = '09023a48037b7882a3683cb1c2043c50',
 // ID of photo album you're grabbing photos from. Will only display photos that are public.
-  setId = '72157666852477155',
+  // setId = '72157666852477155',
 // Primary Hashtag name.
-  primaryhash = "hotosm-project-1465";
-
 getPrimaryStats(primaryhash);
 getImgs(setId);
 
