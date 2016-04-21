@@ -1,6 +1,6 @@
 <script>
     PT.hashtags = [{% assign comma = false %}{% for h in page.subhashtags %}{% if comma %}, {% endif %}'{{h}}'{% assign comma = true %}{% endfor %}];
-    PT.mainHashtag = '{{ page.hashtag }}';
+    PT.mainHashtag = '{{ page.primary-hashtag }}';
 </script>
 
 <div class = "Team-User-Container">

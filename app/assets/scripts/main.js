@@ -1,10 +1,8 @@
 //Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
-var apikey = '09023a48037b7882a3683cb1c2043c50',
+// var apikey = '09023a48037b7882a3683cb1c2043c50',
 // ID of photo album you're grabbing photos from. Will only display photos that are public.
-  setId = '72157666852477155',
+  // setId = '72157666852477155',
 // Primary Hashtag name.
-  primaryhash = "hotosm-project-1465";
-
 getPrimaryStats(primaryhash);
 getImgs(setId);
 
@@ -30,7 +28,7 @@ function getImgs (setId) {
 
     $.each(data.photoset.photo, function (i, item) {
       // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
-      var img_src = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '.jpg';
+      var img_src = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
 
       // Add images in individual <li> elements to HTML
      var img_thumb = $('<li><img src=' + img_src + '></img></li>');
@@ -47,8 +45,14 @@ function getImgs (setId) {
 }
 
 // Adds Event functionality
+
+var eventsnumber = $('.events-event-sub-container').length;
+
+if( eventsnumber < 2){
+  $('.events-more').css('display', 'none');
+};
+
 $('.events-more').click(function(){
-  var eventsnumber = $('.events-event-sub-container').length;
 	$('.hidden').slice(0,2).css('display', 'block');
   if( eventsnumber > 2){
     $('.events-more').html('SEE ALL').attr('class', 'button invert-btn-white events-all');
@@ -238,7 +242,7 @@ function ingestUsers (hashtag) {
 
     // For each user, sum the total building edits
     const bldngSum = Object.keys(userData).map(function (user) {
-      const bldngEdits = Math.round(Number(userData[user].all_edits));
+      const bldngEdits = Math.round(Number(userData[user].buildings));
       return {name: generateUserUrl(user, userData[user].user_number), value: bldngEdits};
     }).sort((a, b) => b.value - a.value);
 
