@@ -7,7 +7,7 @@
 @import "./foundation-sites/scss/foundation";
 @include foundation-everything;
 
-//Leaflet
+// Leaflet
 @import "leaflet";
 
 // Reset and normalize
@@ -17,6 +17,6 @@
 @import "base";
 @import "landing";
 @import "buttons";
-@import "_flexslider";
-@import "_flexslider-overwrite";
-@import "_team-chart";
+@import "flexslider";
+@import "flexslider-overwrite";
+@import "team-chart";
