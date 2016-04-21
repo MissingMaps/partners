@@ -124,7 +124,7 @@ function onEachFeature (feature, layer) {
   // Set symbology to match HOTOSM Tasking Manager completion states
   let symbology = {
     color: 'black',
-    weight: 1,
+    weight: 0.25,
     opacity: 0.7,
     fillOpacity: 0.4,
     fillColor: 'black'
@@ -148,13 +148,18 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   const accessToken = 'pk.eyJ1IjoiYXN0cm9kaWdpdGFsIiwiYSI6ImNVb1B0ZkEifQ.IrJoULY2VMSBNFqHLrFYew';
-  const basemapUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  const basemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
   // Connect HOT-OSM endpoint for tasking squares data
   const endpoint = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
   $.getJSON(endpoint, function (taskData) {
+
+    // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
-    const map = L.map('Map-' + projectId, {zoomControl: false}).setView([38.889931, -77.009003], 13);
+
+    // Initialize map
+    const map = L.map('Map-' + projectId,
+      {zoomControl: false}).setView([38.889931, -77.009003], 13);
 
     // Add tile layer
     L.tileLayer(basemapUrl + '?access_token=' + accessToken, {

@@ -1,4 +1,4 @@
-.Team-User-Stats{
+.Team-User-Stats {
   width: 100%;
   display:flex;
   flex-direction: row;
@@ -20,6 +20,9 @@
     }
     .Graph-Label-Hashtag {
       font-size: 13px;
+      a:hover {
+        text-decoration: underline;
+      }
     }
     .Graph-Label-Value {
       font-weight: bold;
@@ -28,14 +31,14 @@
   }
 }
 
-.Team-User-Graph-Title, .Team-Graph-Title{
+.Team-User-Graph-Title, .Team-Graph-Title {
 	border-bottom: 1px solid #ddd;
 	width: 88%;
 	margin: 0 auto 15px auto;
 	padding-bottom: 6px;
 }
 
-.Team-User-Stat-Item{
+.Team-User-Stat-Item {
   width: 320px;
   height: 250px;
   flex-grow: 0;
