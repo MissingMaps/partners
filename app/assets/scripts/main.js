@@ -28,7 +28,7 @@ function getImgs (setId) {
 
     $.each(data.photoset.photo, function (i, item) {
       // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
-      var img_src = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '.jpg';
+      var img_src = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
 
       // Add images in individual <li> elements to HTML
      var img_thumb = $('<li><img src=' + img_src + '></img></li>');
@@ -237,7 +237,7 @@ function ingestUsers (hashtag) {
 
     // For each user, sum the total building edits
     const bldngSum = Object.keys(userData).map(function (user) {
-      const bldngEdits = Math.round(Number(userData[user].all_edits));
+      const bldngEdits = Math.round(Number(userData[user].buildings));
       return {name: generateUserUrl(user, userData[user].user_number), value: bldngEdits};
     });
 

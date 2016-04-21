@@ -4,14 +4,14 @@ lang: en
 permalink: /partner1/
 
 id: partner1
-name: Devseed
-logo: /assets/logos/partner1.png
+name: MissingMaps Partner
+logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
 
 social:
-  flickr: https://www.flickr.com/photos/developmentseed/
-  twitter: https://twitter.com/developmentseed
-  facebook: https://www.facebook.com/pages/Development-Seed/359278120833062
-  benevity: https://devseed.benevity.org/user
+  flickr: https://www.flickr.com/photos/126636925@N06/
+  twitter: https://twitter.com/TheMissingMaps
+  facebook: https://www.facebook.com/MissingMapsProject
+  benevity: https://missingmaps.benevity.org/user
 
 community: 
   apikey: 09023a48037b7882a3683cb1c2043c50
