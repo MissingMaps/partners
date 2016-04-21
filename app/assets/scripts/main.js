@@ -229,19 +229,19 @@ function ingestUsers (hashtag) {
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
       return {name: generateUserUrl(user, userData[user].user_number), value: totalEdits};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total building edits
     const bldngSum = Object.keys(userData).map(function (user) {
       const bldngEdits = Math.round(Number(userData[user].all_edits));
       return {name: generateUserUrl(user, userData[user].user_number), value: bldngEdits};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total road kilometers edited
     const roadsSum = Object.keys(userData).map(function (user) {
       const roadsEdits = Math.round(Number(userData[user].all_edits));
       return {name: generateUserUrl(user, userData[user].user_number), value: roadsEdits};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // Send the total, building, and road metrics to
     // the barchart builder
@@ -271,7 +271,7 @@ function ingestHashtags (hashtags) {
                   Number(vals.waterway_count_add) +
                   Number(vals.poi_count_add));
       return {name: generateHashtagUrl(ht), value: sum};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // For each hashtag, sum the total building edits
     const bldngSum = hashtags.map(function (ht) {
@@ -279,7 +279,7 @@ function ingestHashtags (hashtags) {
       const sum = Math.round(Number(vals.building_count_add) +
                   Number(vals.building_count_mod));
       return {name: generateHashtagUrl(ht), value: sum};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // For each hashtag, sum the total road kilometers edited
     const roadsSum = hashtags.map(function (ht) {
@@ -287,7 +287,7 @@ function ingestHashtags (hashtags) {
       const sum = Math.round(Number(vals.road_km_add) +
                   Number(vals.road_km_mod));
       return {name: generateHashtagUrl(ht), value: sum};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // Send the total, building, and road metrics to
     // the barchart builder
