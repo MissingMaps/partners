@@ -108,7 +108,6 @@
   a{
     color: darken($mmGreen, 10);
     &:hover{
-      color: white;   
     }
     &:visited{
       color: darken($mmGreen, 10);
@@ -144,4 +143,8 @@
       color: white;
     }
   }
+}
+
+.events-more{
+  border-radius: 0;
 }

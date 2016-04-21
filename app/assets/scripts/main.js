@@ -1,10 +1,8 @@
 //Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
-var apikey = '09023a48037b7882a3683cb1c2043c50',
+// var apikey = '09023a48037b7882a3683cb1c2043c50',
 // ID of photo album you're grabbing photos from. Will only display photos that are public.
-  setId = '72157666852477155',
+  // setId = '72157666852477155',
 // Primary Hashtag name.
-  primaryhash = "hotosm-project-1465";
-
 getPrimaryStats(primaryhash);
 getImgs(setId);
 
@@ -30,7 +28,7 @@ function getImgs (setId) {
 
     $.each(data.photoset.photo, function (i, item) {
       // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
-      var img_src = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '.jpg';
+      var img_src = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
 
       // Add images in individual <li> elements to HTML
      var img_thumb = $('<li><img src=' + img_src + '></img></li>');
@@ -47,8 +45,14 @@ function getImgs (setId) {
 }
 
 // Adds Event functionality
+
+var eventsnumber = $('.events-event-sub-container').length;
+
+if( eventsnumber < 2){
+  $('.events-more').css('display', 'none');
+};
+
 $('.events-more').click(function(){
-  var eventsnumber = $('.events-event-sub-container').length;
 	$('.hidden').slice(0,2).css('display', 'block');
   if( eventsnumber > 2){
     $('.events-more').html('SEE ALL').attr('class', 'button invert-btn-white events-all');
@@ -124,7 +128,7 @@ function onEachFeature (feature, layer) {
   // Set symbology to match HOTOSM Tasking Manager completion states
   let symbology = {
     color: 'black',
-    weight: 1,
+    weight: 0.25,
     opacity: 0.7,
     fillOpacity: 0.4,
     fillColor: 'black'
@@ -148,13 +152,18 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   const accessToken = 'pk.eyJ1IjoiYXN0cm9kaWdpdGFsIiwiYSI6ImNVb1B0ZkEifQ.IrJoULY2VMSBNFqHLrFYew';
-  const basemapUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  const basemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
   // Connect HOT-OSM endpoint for tasking squares data
   const endpoint = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
   $.getJSON(endpoint, function (taskData) {
+
+    // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
-    const map = L.map('Map-' + projectId, {zoomControl: false}).setView([38.889931, -77.009003], 13);
+
+    // Initialize map
+    const map = L.map('Map-' + projectId,
+      {zoomControl: false}).setView([38.889931, -77.009003], 13);
 
     // Add tile layer
     L.tileLayer(basemapUrl + '?access_token=' + accessToken, {
@@ -229,19 +238,19 @@ function ingestUsers (hashtag) {
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
       return {name: generateUserUrl(user, userData[user].user_number), value: totalEdits};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total building edits
     const bldngSum = Object.keys(userData).map(function (user) {
-      const bldngEdits = Math.round(Number(userData[user].all_edits));
+      const bldngEdits = Math.round(Number(userData[user].buildings));
       return {name: generateUserUrl(user, userData[user].user_number), value: bldngEdits};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total road kilometers edited
     const roadsSum = Object.keys(userData).map(function (user) {
       const roadsEdits = Math.round(Number(userData[user].all_edits));
       return {name: generateUserUrl(user, userData[user].user_number), value: roadsEdits};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // Send the total, building, and road metrics to
     // the barchart builder
@@ -271,7 +280,7 @@ function ingestHashtags (hashtags) {
                   Number(vals.waterway_count_add) +
                   Number(vals.poi_count_add));
       return {name: generateHashtagUrl(ht), value: sum};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // For each hashtag, sum the total building edits
     const bldngSum = hashtags.map(function (ht) {
@@ -279,7 +288,7 @@ function ingestHashtags (hashtags) {
       const sum = Math.round(Number(vals.building_count_add) +
                   Number(vals.building_count_mod));
       return {name: generateHashtagUrl(ht), value: sum};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // For each hashtag, sum the total road kilometers edited
     const roadsSum = hashtags.map(function (ht) {
@@ -287,7 +296,7 @@ function ingestHashtags (hashtags) {
       const sum = Math.round(Number(vals.road_km_add) +
                   Number(vals.road_km_mod));
       return {name: generateHashtagUrl(ht), value: sum};
-    });
+    }).sort((a, b) => b.value - a.value);
 
     // Send the total, building, and road metrics to
     // the barchart builder

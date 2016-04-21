@@ -4,15 +4,20 @@ lang: en
 permalink: /partner1/
 
 id: partner1
-logo: /assets/logos/partner1.png
+name: MissingMaps Partner
+logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
 
 social:
-  flickr:
-  twitter:
-  facebook:
-  benevity:
+  flickr: https://www.flickr.com/photos/126636925@N06/
+  twitter: https://twitter.com/TheMissingMaps
+  facebook: https://www.facebook.com/MissingMapsProject
+  benevity: https://missingmaps.benevity.org/user
 
-hashtag: missingmaps
+community: 
+  apikey: 09023a48037b7882a3683cb1c2043c50
+  setId: 72157666852477155
+
+primary-hashtag: redcross
 subhashtags:
   - peacecorps
   - majorroads
