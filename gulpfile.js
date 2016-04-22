@@ -8,6 +8,7 @@ var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
 var cp = require('child_process');
+var babel = require('gulp-babel');
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -48,6 +49,9 @@ gulp.task('compress:main', function() {
   var task = gulp.src([
       'app/assets/scripts/*.js',
     ])
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe(plumber());
 
     if (environment == 'development') {
@@ -62,6 +66,27 @@ gulp.task('compress:main', function() {
 
     return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
+
+gulp.task('compress:vendor', function() {
+  // vendor.min.js
+  var task = gulp.src([
+      'app/assets/scripts/vendor/*.js',
+    ])
+    .pipe(plumber());
+
+    if (environment == 'development') {
+      task = task.pipe(concat('vendor.min.js'));
+    }
+    else {
+      task = task.pipe(uglify('vendor.min.js', {
+        outSourceMap: true,
+        mangle: false
+      }));
+    }
+
+    return task.pipe(gulp.dest('.tmp/assets/scripts'));
+});
+
 
 
 // Build the jekyll website.
@@ -93,7 +118,8 @@ gulp.task('jekyll:rebuild', ['jekyll'], function () {
 // Main build task
 // Builds the site. Destination --> _site
 gulp.task('build', function(done) {
-  runSequence(['jekyll', 'compress:main', 'compass'], ['copy:assets'], done);
+  runSequence(['jekyll', 'compress:main','compress:vendor','compass'],
+    ['copy:assets'], done);
 });
 
 // Default task.
@@ -118,7 +144,7 @@ gulp.task('serve', ['build'], function () {
   });
 
   gulp.watch(['./app/assets/scripts/**/*.js', '!./app/assets/scripts/vendor/**/*'], function() {
-    runSequence('compress:main', browserReload);
+    runSequence('compress:main', 'compress:vendor', browserReload);
   });
 
   gulp.watch(['app/**/*.html', 'app/**/*.md', 'app/**/*.json', 'app/**/*.geojson', '_config*'], function() {

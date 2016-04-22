@@ -1,8 +1,4 @@
-//Recieve API key from: https://www.flickr.com/services/api/misc.api_keys.html
-// var apikey = '09023a48037b7882a3683cb1c2043c50',
-// ID of photo album you're grabbing photos from. Will only display photos that are public.
-  // setId = '72157666852477155',
-// Primary Hashtag name.
+// Populate the Flickr carousel and the primary stats in hero
 getPrimaryStats(primaryhash);
 getImgs(setId);
 
@@ -13,7 +9,6 @@ $('.Projects-slider').flexslider({
 });
 
 function getImgs (setId) {
-
   // Builds API URL to fetch from
   var URL = 'https://api.flickr.com/services/rest/' +  // Wake up the Flickr API gods.
     '?method=flickr.photosets.getPhotos' +  // Get photo from a photoset. http://www.flickr.com/services/api/flickr.photosets.getPhotos.htm
@@ -31,9 +26,8 @@ function getImgs (setId) {
       var img_src = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
 
       // Add images in individual <li> elements to HTML
-     var img_thumb = $('<li><img src=' + img_src + '></img></li>');
-     $(img_thumb).appendTo('.flickr-hit');
-
+      var img_thumb = $('<li><img src=' + img_src + '></img></li>');
+      $(img_thumb).appendTo('.flickr-hit');
     });
 
   // Adds flexslider to Community section
@@ -45,24 +39,23 @@ function getImgs (setId) {
 }
 
 // Adds Event functionality
-
 var eventsnumber = $('.events-event-sub-container').length;
 
-if( eventsnumber < 2){
+if ( eventsnumber < 2) {
   $('.events-more').css('display', 'none');
 };
 
-$('.events-more').click(function(){
-	$('.hidden').slice(0,2).css('display', 'block');
-  if( eventsnumber > 2){
+$('.events-more').click (function () {
+	$('.hidden').slice(0, 2).css('display', 'block');
+  if (eventsnumber > 2) {
     $('.events-more').html('SEE ALL').attr('class', 'button invert-btn-white events-all');
-    $('.events-all').click(function(){
+    $('.events-all').click (function () {
       $('.hidden').css('display', 'block');
-      $('.events-all').css('display', 'none')
+      $('.events-all').css('display', 'none');
     });
-  }else{
+  } else {
     $('.events-more').css('display', 'none');
-  }
+  };
 });
 
 /*-------------------------------------------------------
@@ -76,7 +69,7 @@ function getPrimaryStats(primaryhash){
 
     for (var i = 0; i < usersCount; i++){
       editsCount = editsCount + hashtagData[i].edits;
-    }
+    };
 
     $('#stats-usersCount').html(usersCount);
     $('#stats-editsCount').html(editsCount);
@@ -88,22 +81,22 @@ var order = 1;
 getProjects(PT.projects);
 
 // Fetch Project data from Tasking Manager API
-function getProjects(projects){
+function getProjects (projects) {
   var projCount = projects.length;
   $('#stats-projCount').html(projCount);
 
   for (var i = 0; i < projects.length; i++){
     const url = 'http://tasks.hotosm.org/project/' + projects[i] + '.json';
-    $.getJSON(url, function(ProjectData){
+    $.getJSON(url, function (ProjectData) {
       makeProjects(ProjectData);
     });
   };
 };
 
 // Update cards with necessary project details
-function makeProjects(project){
-  var props = project.properties,
-      projDone = Math.round(props.done);
+function makeProjects (project) {
+  var props = project.properties;
+  var projDone = Math.round(props.done);
 
   order = order + 1;
 
@@ -151,7 +144,8 @@ function onEachFeature (feature, layer) {
 };
 
 function addMap (projectId) {
-  const accessToken = 'pk.eyJ1IjoiYXN0cm9kaWdpdGFsIiwiYSI6ImNVb1B0ZkEifQ.IrJoULY2VMSBNFqHLrFYew';
+  const token = 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYw' +
+                'ZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w.';
   const basemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
   // Connect HOT-OSM endpoint for tasking squares data
@@ -166,16 +160,14 @@ function addMap (projectId) {
       {zoomControl: false}).setView([38.889931, -77.009003], 13);
 
     // Add tile layer
-    L.tileLayer(basemapUrl + '?access_token=' + accessToken, {
+    L.tileLayer(basemapUrl + '?access_token=' + token, {
       attribution: '<a href="http://mapbox.com">Mapbox</a>'
-    })
-    .addTo(map);
+    }).addTo(map);
 
     // Add feature layer
     const featureLayer = L.geoJson(taskData, {
       onEachFeature: onEachFeature
-    })
-    .addTo(map);
+    }).addTo(map);
 
     // Fit to feature layer bounds
     map.fitBounds(featureLayer.getBounds());
@@ -190,7 +182,7 @@ function addMap (projectId) {
     // Disable tap handler, if present.
     if (map.tap) map.tap.disable();
   });
-}
+};
 
 /*-------------------------------------------------------
 -------------------- Activity Graphs --------------------
@@ -224,10 +216,10 @@ $('#Select-Teams-Graph').click(function () {
   ingestHashtags(PT.hashtags);
 });
 
-function generateUserUrl(userName, userId) {
+function generateUserUrl (userName, userId) {
   const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
-  return '<a xlink:href="' + userUrl + '" target="_blank">' + userName + '</a>'
-}
+  return '<a xlink:href="' + userUrl + '" target="_blank">' + userName + '</a>';
+};
 
 function ingestUsers (hashtag) {
   // Connect hashtags to /top-users/ Missing Maps API endpoint
@@ -258,12 +250,12 @@ function ingestUsers (hashtag) {
     initializeBarchart(bldngSum, '#Team-User-Bldng-Graph');
     initializeBarchart(roadsSum, '#Team-User-Roads-Graph');
   });
-}
+};
 
-function generateHashtagUrl(hashtag) {
+function generateHashtagUrl (hashtag) {
   const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + hashtag;
-  return '<a xlink:href="' + hashtagUrl + '" target="_blank">#' + hashtag + '</a>'
-}
+  return '<a xlink:href="' + hashtagUrl + '" target="_blank">#' + hashtag + '</a>';
+};
 
 function ingestHashtags (hashtags) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
@@ -304,7 +296,7 @@ function ingestHashtags (hashtags) {
     initializeBarchart(bldngSum, '#Team-User-Bldng-Graph');
     initializeBarchart(roadsSum, '#Team-User-Roads-Graph');
   });
-}
+};
 
 // Builds a barchart given an array in the form of
 // [{name: *hashtag*, value:*value*}, ..], along with
@@ -353,7 +345,7 @@ function initializeBarchart (data, targetElement) {
     .attr('dy', '.35em')
     .text((d) => d.value.toLocaleString())
     .attr('text-anchor', 'end');
-}
+};
 
 // Gets hashtag array on each partner page via team.html
 ingestHashtags(PT.hashtags);
