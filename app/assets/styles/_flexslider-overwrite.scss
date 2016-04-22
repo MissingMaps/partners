@@ -24,11 +24,6 @@
 	height: 0 !important;
 }
 
-.flex-control-nav{
-	bottom: 10px;
-	z-index: 99;
-}
-
 .flex-control-nav li a{
 	background-color: rgba(0,0,0,0);
 	border: 1px solid $lightgrey;
@@ -39,27 +34,41 @@
 
 .flex-control-paging li a.flex-active{
 	background-color: lighten($mmTeal, 8);
+	-webkit-box-shadow: initial;
+}
+
+.Projects-Container-Leftside{
+	float: left;
+	@media screen and (min-width: 1100px){
+		width: 75%;
+	}
 }
 
 /* Projects Section */
 .Projects-slider{
 	border: 0;
 	background-color: rgba(0,0,0,0);
-	float: left;
 	width: 100%;
 	.flex-control-nav{
-		bottom: 0;
-		right: -66px;
-		top: 0;
 		width: auto;
+		position: relative;
 		li{
-			display: block;
 			margin: 10px;
 		}
 	}
-	@media screen and (min-width: 1100px){
-		width: 70%;
-	}
+}
+
+.spinner > div.big{
+	width: 10px;
+	height: 10px;
+}
+
+.flex-control-nav{
+	width: auto;
+	position: relative;
+	float: left;
+	bottom: 1px;
+	margin-left: 0px;
 }
 
 .Projects-slider .flex-control-nav{
@@ -69,4 +78,25 @@
 	@media screen and (max-width: 600px){
 		right: 2%;
 	}
+}
+
+.flex-prev .flex-next{
+}
+
+.HOT-Nav-Projects{
+	a{
+		float:left;
+	}
+}
+
+.flex-direction-nav a{
+	text-decoration: none;
+	display: initial;
+	width: initial;
+	height: initial;
+	position: inherit;
+	top: 50%;
+	opacity: 1;
+	color: inherit;
+	text-shadow: initial;
 }

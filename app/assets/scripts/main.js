@@ -9,7 +9,10 @@ getImgs(setId);
 // Add Flexslider to Projects Section
 $('.Projects-slider').flexslider({
     animation: "slide",
-    directionNav: false,
+    directionNav: true,
+    slideshowSpeed: 6000000,
+    prevText: '◄',
+    nextText: '▶'
 });
 
 function getImgs (setId) {
@@ -113,12 +116,16 @@ function makeProjects(project){
 
   // Adds Project variables to the cards
   $("ul li:nth-child(" + order + ") .HOT-Title ").html("<p><b>" + props.name + "</b></p>");
-  $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "</p>");
+  $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "%</p>");
   $("ul li:nth-child(" + order + ") .HOT-Map ").attr('id', 'Map-' + project.id);
 
   // Drop a map into the HOT-Map div
   addMap(project.id);
 };
+
+$('.flex-next').prependTo('.HOT-Nav-Projects');
+$('.flex-control-nav').prependTo('.HOT-Nav-Projects');
+$('.flex-prev').prependTo('.HOT-Nav-Projects');
 
 /*-------------------------------------------------------
 ------------------------ HOT Map ------------------------
@@ -234,6 +241,9 @@ function ingestUsers (hashtag) {
   const url = 'http://osmstats.redcross.org/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
+
+    console.log(userData);
+
     // For each user, collect the total edits across all categories
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
@@ -248,7 +258,7 @@ function ingestUsers (hashtag) {
 
     // For each user, sum the total road kilometers edited
     const roadsSum = Object.keys(userData).map(function (user) {
-      const roadsEdits = Math.round(Number(userData[user].all_edits));
+      const roadsEdits = Math.round(Number(userData[user].road_kms));
       return {name: generateUserUrl(user, userData[user].user_number), value: roadsEdits};
     }).sort((a, b) => b.value - a.value);
 
