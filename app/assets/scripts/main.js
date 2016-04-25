@@ -42,24 +42,36 @@ function getImgs (setId) {
 }
 
 // Adds Event functionality
-var eventsnumber = $('.events-event-sub-container').length;
+var eventsnumber = $('.event-sub-container').length;
 
-if ( eventsnumber < 2) {
-  $('.events-more').css('display', 'none');
-};
+console.log(eventsnumber)
 
-$('.events-more').click (function () {
-	$('.hidden').slice(0, 2).css('display', 'block');
-  if (eventsnumber > 2) {
-    $('.events-more').html('SEE ALL').attr('class', 'button invert-btn-white events-all');
-    $('.events-all').click (function () {
-      $('.hidden').css('display', 'block');
-      $('.events-all').css('display', 'none');
-    });
-  } else {
-    $('.events-more').css('display', 'none');
-  };
-});
+// if ( eventsnumber > 2) {
+//   $('.events-more').css('display', 'none');
+// };
+
+events(eventsnumber);
+
+function events(eventsnumber){
+  $('.events-more').bind('click').click (function () {
+  	$('.hidden').slice(0, 2).css('display', 'block');
+    console.log(eventsnumber)
+    if (eventsnumber > 2) {
+      $('.events-more').html('SEE ALL').attr('class', 'btn invert-btn-grn events-more events-all');
+      $('.events-all').click (function () {
+        $('.hidden').css('display', 'block');
+        $('.events-all').html('SEE FEWER').attr('class', 'btn invert-btn-grn events-more events-fewer');
+        $('.events-fewer').click (function (){
+          $('.hidden').css('display', 'none');
+          $('.events-fewer').html('SEE MORE').attr('class', 'btn invert-btn-grn events-more');
+          events(eventsnumber);
+        });
+      });
+    } else {
+      $('.events-more').css('display', 'none');
+    };
+  });
+}
 
 /*-------------------------------------------------------
 -------------------- Primary Stats  ---------------------
