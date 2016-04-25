@@ -35,8 +35,12 @@ function getImgs (setId) {
 
   // Adds flexslider to Community section
   $('.flexslider').flexslider({
+    controlNav: true,
     directionNav: false,
-    slideshowSpeed: 5000,
+    slideshowSpeed: 6000,
+    // pausePlay: true,
+    // prevText: '▶',
+    // nextText: '▶'
     });
   });
 }

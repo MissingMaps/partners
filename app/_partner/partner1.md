@@ -15,7 +15,7 @@ social:
 
 community: 
   apikey: 09023a48037b7882a3683cb1c2043c50
-  setId: 72157666852477155
+  setId: 72157663989195511
 
 primary-hashtag: redcross
 subhashtags:

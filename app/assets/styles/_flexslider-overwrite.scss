@@ -79,6 +79,23 @@
 		margin-left: 0px;
 		display: inline;
 	}
+	.flex-next{
+		display: inline-block;
+		position:absolute;
+		top: -4px;
+		padding-left: 14px;
+	}
+	.flex-direction-nav a{
+		text-decoration: none;
+		display: initial;
+		width: initial;
+		height: initial;
+		position: inherit;
+		top: 50%;
+		opacity: 1;
+		color: inherit;
+		text-shadow: initial;
+	}
 }
 
 .Projects-slider .flex-control-nav{
@@ -90,21 +107,15 @@
 	}
 }
 
-.flex-next{
-	display: inline-block;
-	position:absolute;
-	top: -4px;
-	padding-left: 14px;
-}
-
-.flex-direction-nav a{
-	text-decoration: none;
-	display: initial;
-	width: initial;
-	height: initial;
-	position: inherit;
-	top: 50%;
-	opacity: 1;
-	color: inherit;
-	text-shadow: initial;
+#Commuunity-Flickr{
+	.flex-direction-nav a{
+		text-decoration: none;
+		display: initial;
+		width: initial;
+		height: initial;
+		position: inherit;
+		opacity: 1;
+		color: white;
+		text-shadow: initial;
+	}
 }
