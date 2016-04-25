@@ -13,6 +13,10 @@
 	background-color: $darkestgrey;
 }
 
+.flex-control-nav li{
+	margin: 0px 8px;
+}
+
 .flickr-hit li img{
 	max-height:500px;
 	margin-left: auto;
@@ -25,16 +29,20 @@
 }
 
 .flex-control-nav li a{
-	background-color: rgba(0,0,0,0);
-	border: 1px solid $lightgrey;
+	background-color: $lightgrey;
+/*	border: 1px solid $border-grey;*/
+	border: 0px;
+	-webkit-box-shadow: initial;
+	box-shadow: initial;
 	&:hover{
-		background-color: darken($mmTeal,8);
+		background-color: rgba(196, 226, 159, 0.5);
 	}
 }
 
 .flex-control-paging li a.flex-active{
-	background-color: lighten($mmTeal, 8);
-	-webkit-box-shadow: initial;
+	background-color: lighten($mmGreen, 8);
+	border: 0px;
+/*	border: 1px solid lighten($darkgrey, 10);*/
 }
 
 .Projects-Container-Leftside{

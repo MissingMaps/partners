@@ -271,7 +271,7 @@ h1{
     margin-left: 0;
     @media screen and (min-width: 1100px){
       width: 100%;
-      margin-left: 0.5em;
+      margin-left: 6px;
     }
   }
 }
@@ -318,6 +318,17 @@ h1{
 .HOT-Title{
   text-align: left;
   width: 100%;
+  position: relative;
+  min-height: 36px;
+  p{
+    width: 400px;
+  }
+  .btn{
+    float: right;
+    position: absolute;
+    right: -8px;
+    top: -12px;
+  }
 }
 
 .HOT-Description{
@@ -350,11 +361,13 @@ h1{
     float: right;
     margin: 0;
     position: absolute;
+    right:0px;
+    top:-10px;
   }
 }
 
 .HOT-Progress{
-  height: 24px;
+  height: 20px;
   width: 100%;
   background-color: $debug;
   border-radius: 4px;
@@ -369,7 +382,6 @@ h1{
     font-weight: 800;
     position: absolute;
     right: 10px;
-    top: 3px;
     opacity: 0.5;
   }
   &:before{

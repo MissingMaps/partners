@@ -7,7 +7,7 @@ $('.Projects-slider').flexslider({
     animation: "slide",
     directionNav: true,
     slideshowSpeed: 6000000,
-    prevText: '◄',
+    prevText: '',
     nextText: '▶'
 });
 
@@ -44,18 +44,11 @@ function getImgs (setId) {
 // Adds Event functionality
 var eventsnumber = $('.event-sub-container').length;
 
-console.log(eventsnumber)
+eventsFunctionality(eventsnumber);
 
-// if ( eventsnumber > 2) {
-//   $('.events-more').css('display', 'none');
-// };
-
-events(eventsnumber);
-
-function events(eventsnumber){
+function eventsFunctionality(eventsnumber){
   $('.events-more').bind('click').click (function () {
   	$('.hidden').slice(0, 2).css('display', 'block');
-    console.log(eventsnumber)
     if (eventsnumber > 2) {
       $('.events-more').html('SEE ALL').attr('class', 'btn invert-btn-grn events-more events-all');
       $('.events-all').click (function () {
@@ -120,7 +113,7 @@ function makeProjects (project) {
   $(".HOT-Progress").append('<style>.projWidth'+order+':before{ width: '+projDone+'%;}</style>');
 
   // Adds Project variables to the cards
-  $("ul li:nth-child(" + order + ") .HOT-Title ").html("<p><b>" + props.name + "</b></p>");
+  $("ul li:nth-child(" + order + ") .HOT-Title p").html("<b>" + props.name + "</b>");
   $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "%</p>");
   $("ul li:nth-child(" + order + ") .HOT-Map ").attr('id', 'Map-' + project.id);
 
