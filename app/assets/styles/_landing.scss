@@ -103,6 +103,9 @@ h1{
   float:initial;
   margin: 0;
   position: relative;
+  p{
+    font-weight: 600;
+  }
   @media screen and (min-width: 1100px) {
     margin: 0 auto;
     float: left;
@@ -145,17 +148,16 @@ h1{
 
 .Primary-stats{
   float:right;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     float: initial;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto 0 auto;
   }
 }
 
 .Stat-Item{
   width: 250px;
   display: inline-block;
-  margin: 0 0 1em 0;
+  margin: 16px 0 1em 0;
   .title{
     margin-top: 6px;
     font-size: 1.1em;
@@ -183,15 +185,12 @@ h1{
     width: 50px;
   }
   @media screen and (max-width: 1100px) {
-    margin: 0;
     width: 200px;
   }  
   @media screen and (max-width: 850px) {
-    margin: 0 0.5em;
     width: 150px
   }
   @media screen and (max-width: 700px) {
-    margin: 0 0.5em;
     width: 130px
   }
   @media screen and (max-width: 600px) {
@@ -261,12 +260,7 @@ h1{
     width:80%;
     text-align: left;
     font-style: 'Raleway';
-/*    font-size: 0.85em;
-    color: #939494;
-    text-transform: uppercase;
-    font-family: 'lato';
-    font-weight: 300;
-*/    padding-bottom: 0;
+    padding-bottom: 0;
     margin-left: 0;
     @media screen and (min-width: 1100px){
       width: 100%;
@@ -320,7 +314,16 @@ h1{
   position: relative;
   min-height: 36px;
   p{
-    width: 400px;
+    width: 50%;
+    @media screen and (min-width: 420px){
+      width: 70%;      
+    }
+    @media screen and (min-width: 600px){
+      width: 80%;      
+    }
+    @media screen and (min-width: 1100px){
+      width: 400px;      
+    }
   }
   .btn{
     float: right;
@@ -407,19 +410,24 @@ h1{
 }
 
 .GetInvolved{
-  float: initial;
-  width: 100%;
-  border-left: 0;
+  display: none;
   h3{
     font-size: 1em;
     font-weight: 300;
-    margin-bottom: 1em;
+    margin: 0 auto;
     font-family: 'Hind';
+    padding: 10px 0 8px 0;
+    border-top: 1px solid #dbdbda;
+    width: 60%;
   }
   @media screen and (min-width: 1100px){
     float: right;
     width: 240px;
     border-left: 1px solid #dbdbda;
+    display: block;
+  }
+  .btn{
+    margin-bottom: 16px;
   }
 }
 
@@ -446,15 +454,24 @@ h1{
 .Team-User-Container{
   @include container;
   h1{
-    float: left;
-    margin-left: 5px;
+    text-align: left;
+    width: 80%;
+    @media screen and (min-width: 1100px){
+      float: left;
+      margin-left: 5px;
+      width: 100%;
+      text-align: initial;
+    }
   }
 }
 
 .Team-User-Nav{
   height: 36px;
   clear: both;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width:80%;
+  text-align: left;
   p{
     display: inline-block;
     margin: 0 1.5em 0 0;
@@ -464,11 +481,12 @@ h1{
       margin-right: 3em;
     }
   }
-  @media screen and (min-width: 1100px){
-    margin: 0 1em;
-  }
   @media screen and (min-width: 800px){
-    margin: 0 3.5em;
+    width: 80%
+  }
+  @media screen and (min-width: 1100px){
+    margin: 0 5px;
+    width: 100%
   }
 }
 
