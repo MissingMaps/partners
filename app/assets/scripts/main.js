@@ -1,14 +1,10 @@
-// Populate the Flickr carousel and the primary stats in hero
-getPrimaryStats(primaryhash);
-getImgs(setId);
-
 // Add Flexslider to Projects Section
 $('.Projects-slider').flexslider({
-    animation: "slide",
-    directionNav: true,
-    slideshowSpeed: 6000000,
-    prevText: '',
-    nextText: '▶'
+  animation: 'slide',
+  directionNav: true,
+  slideshowSpeed: 6000000,
+  prevText: '',
+  nextText: '▶'
 });
 
 function getImgs (setId) {
@@ -21,9 +17,6 @@ function getImgs (setId) {
     '&format=json&nojsoncallback=1'; // Bringing it in as a JSON.
 
   $.getJSON(URL, function (data) {
-
-    var photolist = data.photoset.photo;
-
     $.each(data.photoset.photo, function (i, item) {
       // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
       var img_src = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
@@ -33,63 +26,65 @@ function getImgs (setId) {
       $(img_thumb).appendTo('.flickr-hit');
     });
 
-  // Adds flexslider to Community section
-  $('.flexslider').flexslider({
-    controlNav: true,
-    directionNav: false,
-    slideshowSpeed: 6000,
-    // pausePlay: true,
-    // prevText: '▶',
-    // nextText: '▶'
+    // Adds flexslider to Community section
+    $('.flexslider').flexslider({
+      controlNav: true,
+      directionNav: false,
+      slideshowSpeed: 6000
     });
   });
 }
 
-// Adds Event functionality
-var eventsnumber = $('.event-sub-container').length;
+function eventsFunctionality () {
+  var eventsnumber = $('.event-sub-container').length;
+  var firstTwoOpen = false;
+  var allOpen = false;
+  $('.events-btn').bind('click').click(function (event) {
+    if (firstTwoOpen === false && allOpen === false) {
+      firstTwoOpen = true;
+      $('.hidden').slice(0, 2)
+      .css('display', 'block').animate({
+        opacity: 1,
+        height: '180px'
+      }, 500);
 
-eventsFunctionality(eventsnumber);
+      if (eventsnumber > 2) $('.events-btn').html('SEE ALL');
 
-function eventsFunctionality(eventsnumber){
-  $('.events-more').bind('click').click(function () {
-  	$('.hidden').slice(0, 2).css('display', 'block').animate({
-      opacity: 1,
-      height: '180px'
-    }, 500);
-    if (eventsnumber > 2) {
-      $('.events-more').html('SEE ALL').attr('class', 'btn invert-btn-grn events-all');
-      $('.events-all').click (function () {
-        $('.hidden').css('display', 'block').animate({
-          opacity: 1,
-          height: '180px'
-        }, 500);
-        $('.events-all').html('SEE FEWER').attr('class', 'btn invert-btn-grn events-fewer');
-        $('.events-fewer').click (function (){
-          $('.hidden').css('display', 'none').animate({
-            opacity: 0,
-            height: '0px'
-          }, 300);
-          $('.events-fewer').html('SEE MORE').attr('class', 'btn invert-btn-grn events-more');
-          eventsFunctionality(eventsnumber);
-        });
-      });
-    } else {
-          $('.events-fewer').html('SEE MORE').attr('class', 'btn invert-btn-grn events-more');
-          eventsFunctionality(eventsnumber);
-    };
+    } else if (firstTwoOpen === true && allOpen === false && eventsnumber > 2) {
+      firstTwoOpen = false;
+      allOpen = true;
+      $('.events-btn').html('SEE ALL');
+      $('.hidden').css('display', 'block').animate({
+        opacity: 1,
+        height: '180px'
+      }, 500);
+
+      $('.events-btn').html('SEE FEWER');
+
+    } else if (firstTwoOpen === false && allOpen === true) {
+      firstTwoOpen = false;
+      allOpen = false;
+      $('.hidden').css('display', 'none').animate({
+        opacity: 0,
+        height: '0px'
+      }, 300);
+
+      $('.events-btn').html('SEE MORE');
+    }
   });
 }
 
 /*-------------------------------------------------------
 -------------------- Primary Stats  ---------------------
 -------------------------------------------------------*/
-function getPrimaryStats(primaryhash){
+
+function getPrimaryStats (primaryhash) {
   const url = 'http://osmstats.redcross.org/hashtags/' + primaryhash + '/users';
   $.getJSON(url, function (hashtagData) {
     var usersCount = (Object.keys(hashtagData).length);
     var editsCount = 0;
 
-    for (var i = 0; i < usersCount; i++){
+    for (var i = 0; i < usersCount; i++) {
       editsCount = editsCount + hashtagData[i].edits;
     };
 
@@ -98,38 +93,33 @@ function getPrimaryStats(primaryhash){
   });
 }
 
-var order = 1;
-
-getProjects(PT.projects);
-
 // Fetch Project data from Tasking Manager API
 function getProjects (projects) {
   var projCount = projects.length;
   $('#stats-projCount').html(projCount);
-
-  for (var i = 0; i < projects.length; i++){
+  var projectOrder = 1;
+  for (var i = 0; i < projects.length; i++) {
     const url = 'http://tasks.hotosm.org/project/' + projects[i] + '.json';
     $.getJSON(url, function (ProjectData) {
-      makeProjects(ProjectData);
+      projectOrder += 1;
+      makeProjects(ProjectData, projectOrder);
     });
   };
 };
 
 // Update cards with necessary project details
-function makeProjects (project) {
+function makeProjects (project, projectOrder) {
   var props = project.properties;
   var projDone = Math.round(props.done);
 
-  order = order + 1;
-
   // Updates Progress Bar
-  $("ul li:nth-child(" + order + ") .HOT-Progress").addClass("projWidth" + order + "");
-  $(".HOT-Progress").append('<style>.projWidth'+order+':before{ width: '+projDone+'%;}</style>');
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Progress').addClass('projWidth' + projectOrder + '');
+  $('.HOT-Progress').append('<style>.projWidth' + projectOrder + ':before{ width: ' + projDone + '%;}</style>');
 
   // Adds Project variables to the cards
-  $("ul li:nth-child(" + order + ") .HOT-Title p").html("<b>" + props.name + "</b>");
-  $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "%</p>");
-  $("ul li:nth-child(" + order + ") .HOT-Map ").attr('id', 'Map-' + project.id);
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Title p').html('<b>' + props.name + '</b>');
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Progress').html('<p>' + projDone + '%</p>');
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').attr('id', 'Map-' + project.id);
 
   // Drop a map into the HOT-Map div
   addMap(project.id);
@@ -177,7 +167,6 @@ function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
   const endpoint = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
   $.getJSON(endpoint, function (taskData) {
-
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
 
@@ -218,28 +207,28 @@ function addMap (projectId) {
 $('#Select-Users-Graph').click(function () {
   $('#Select-Teams-Graph').removeClass('Selected');
   $('#Select-Users-Graph').addClass('Selected');
-  var totalGraph = document.querySelector("#Team-User-Total-Graph svg");
-  var bldngGraph = document.querySelector("#Team-User-Bldng-Graph svg");
-  var roadsGraph = document.querySelector("#Team-User-Roads-Graph svg");
+  var totalGraph = document.querySelector('#Team-User-Total-Graph svg');
+  var bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
+  var roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
   totalGraph.parentNode.removeChild(totalGraph);
   bldngGraph.parentNode.removeChild(bldngGraph);
   roadsGraph.parentNode.removeChild(roadsGraph);
   // Gets main hashtag on each partner page via team.html
-  ingestUsers(PT.mainHashtag);
+  getUserActivityStats(PT.mainHashtag);
 });
 
 // Sets Teams button to Selected and loads Teams chart
 $('#Select-Teams-Graph').click(function () {
   $('#Select-Users-Graph').removeClass('Selected');
   $('#Select-Teams-Graph').addClass('Selected');
-  var totalGraph = document.querySelector("#Team-User-Total-Graph svg");
-  var bldngGraph = document.querySelector("#Team-User-Bldng-Graph svg");
-  var roadsGraph = document.querySelector("#Team-User-Roads-Graph svg");
+  var totalGraph = document.querySelector('#Team-User-Total-Graph svg');
+  var bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
+  var roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
   totalGraph.parentNode.removeChild(totalGraph);
   bldngGraph.parentNode.removeChild(bldngGraph);
   roadsGraph.parentNode.removeChild(roadsGraph);
   // Gets hashtag array on each partner page via team.html
-  ingestHashtags(PT.hashtags);
+  getGroupActivityStats(PT.hashtags);
 });
 
 function generateUserUrl (userName, userId) {
@@ -247,14 +236,11 @@ function generateUserUrl (userName, userId) {
   return '<a xlink:href="' + userUrl + '" target="_blank" style="text-decoration:none">' + userName + '</a>';
 };
 
-function ingestUsers (hashtag) {
+function getUserActivityStats (hashtag) {
   // Connect hashtags to /top-users/ Missing Maps API endpoint
   const url = 'http://osmstats.redcross.org/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
-
-    console.log(userData);
-
     // For each user, collect the total edits across all categories
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
@@ -286,7 +272,7 @@ function generateHashtagUrl (hashtag) {
   return '<a xlink:href="' + hashtagUrl + '" target="_blank" style="text-decoration: none">#' + hashtag + '</a>';
 };
 
-function ingestHashtags (hashtags) {
+function getGroupActivityStats (hashtags) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const url = 'http://osmstats.redcross.org/group-summaries/' + hashtags.join(',');
 
@@ -376,7 +362,19 @@ function initializeBarchart (data, targetElement) {
     .text((d) => d.value.toLocaleString())
     .attr('text-anchor', 'end')
     .style('fill', '#606161');
-  };
+};
 
-// Gets hashtag array on each partner page via team.html
-ingestHashtags(PT.hashtags);
+/*-------------------------------------------------------
+--------------------- Setup Project ---------------------
+-------------------------------------------------------*/
+
+// Populate the primary stats in hero via Missing Maps API
+getPrimaryStats(primaryhash);
+// Populate project carousel via HOTOSM Tasking Manager API
+getProjects(PT.projects);
+// Populates group (hashtag) graph via Missing Maps API
+getGroupActivityStats(PT.hashtags);
+// Adds Event functionality
+eventsFunctionality();
+// Populate the Flickr carousel
+getImgs(setId);
