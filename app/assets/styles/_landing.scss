@@ -159,8 +159,7 @@ h1{
   .title{
     margin-top: 6px;
     font-size: 1.1em;
-    font-weight: 400;
-    color: rgb(96, 97, 97);
+    color: $border-grey;
     @media screen and (max-width: 700px) {
       padding-top:0px;
       font-size: 0.8em;
@@ -354,8 +353,6 @@ h1{
     position: absolute;
   }
   .HOT-Nav-Projects{
-    position: absolute;
-    left: 128px;
   }
   .btn{
     float: right;
@@ -442,6 +439,10 @@ h1{
 /*----------------------------------------------*/
 .Team-User-Container{
   @include container;
+  h1{
+    float: left;
+    margin-left: 5px;
+  }
 }
 
 .Team-User-Nav{
