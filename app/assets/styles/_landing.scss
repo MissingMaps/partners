@@ -261,6 +261,7 @@ h1{
   h1{
     width:80%;
     text-align: left;
+    font-style: 'Raleway';
 /*    font-size: 0.85em;
     color: #939494;
     text-transform: uppercase;
@@ -334,14 +335,21 @@ h1{
 .HOT-Nav{
   clear:both;
   margin: 1em 2.5em 0 0.4em;
+  position:relative;
   p{
     float:left;
     font-weight: bold;
     margin-right: 0.5em;
+    position: absolute;
+  }
+  .HOT-Nav-Projects{
+    position: absolute;
+    left: 128px;
   }
   .btn{
     float: right;
     margin: 0;
+    position: absolute;
   }
 }
 
@@ -456,7 +464,7 @@ h1{
   }
   p{
   &:hover{
-    color: black;
+    color: darken($mmGreen, 10);
     cursor: pointer;
     }
   }
