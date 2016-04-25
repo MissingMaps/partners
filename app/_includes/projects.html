@@ -3,37 +3,40 @@
 </script>
 
 <div class = "Projects-Container">
-  <h1>Current Humanitarian Projects</h1>
-  <div class = "flexslider Projects-slider">
-    <ul class = "slides project-slide">
-      {% for p in page.tm-projects %}
-      <li>
-        <div class = "HOT-Container">
-          <div class = "HOT-Map">
-            <div class="spinner big">
-              <div class="bounce1 big"></div>
-              <div class="bounce2 big"></div>
-              <div class="bounce3 big"></div>
+  <h1>Current Projects</h1>
+  <div class = "Projects-Container-Leftside">
+    <div class = "flexslider Projects-slider">
+      <ul class = "slides project-slide">
+        {% for p in page.tm-projects %}
+        <li>
+          <div class = "HOT-Container">
+            <div class = "HOT-Map">
+              <div class="spinner big">
+                <div class="bounce1 big"></div>
+                <div class="bounce2 big"></div>
+                <div class="bounce3 big"></div>
+              </div>
+            </div>
+            <div class = "HOT-Details">
+              <div class = "HOT-Title">
+                <p><b></b></p><a href="http://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue">CONTRIBUTE</a>
+              </div>
+              <div class = "HOT-Progress">
+                <p>14%</p>
+              </div>
+              <div class = "HOT-Description">
+                <p> {{ p.desc | truncatewords: 40}} <a href= "http://tasks.hotosm.org/project/{{ p.id }}"> read more.</a>
+                </p>
+              </div>
             </div>
           </div>
-          <div class = "HOT-Details">
-
-            <div class = "HOT-Title">
-              <p><b></b></p>
-            </div>
-            <div class = "HOT-Progress">
-              <p>14%</p>
-            </div>
-            <div class = "HOT-Description">
-              <p> {{ p.desc }}
-              </p>
-              <a href="http://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue">CONTRIBUTE</a>
-            </div>
-          </div>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class = "HOT-Nav">
+      <div class = "HOT-Nav-Projects"></div>
+    </div>
   </div>
   <div class = "GetInvolved">
       <h3>New to Mapping?</h3>

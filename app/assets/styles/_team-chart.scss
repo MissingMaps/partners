@@ -36,7 +36,17 @@
 	width: 88%;
 	margin: 0 auto 15px auto;
 	padding-bottom: 6px;
+  height: 30px;
 }
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
 
 .Team-User-Stat-Item {
   width: 320px;
@@ -46,3 +56,12 @@
   margin: 1em;
 }
 
+.Graph-Label-Hashtag{
+  a{
+  fill: $darkgrey;
+  font-weight: 600;
+  &:hover {
+      fill:darken($mmGreen, 15);
+    }
+  }
+}

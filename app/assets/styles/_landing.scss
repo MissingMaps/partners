@@ -36,7 +36,7 @@ section{
 h1{
   font-family: 'Hind';
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.75em;
   color: $darkgrey;
   display: inline-block;
 }
@@ -87,15 +87,15 @@ h1{
 /*----------------------------------------------*/
 #Primary{
   width: 100%;
-  background-color: $debug;
-  padding: 1em 0 0.5em 0;
+  background-color: $darkestgrey;
+  padding: 3em 0 1em 0;
 }
 
 .Primary_Container{
   @include container;
   overflow: hidden;
   margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .Primary-logo{
@@ -113,8 +113,8 @@ h1{
 }
 
 .Primary-logo-container{
-  height: 120px;
-  width: 180px;
+  height: 100px;
+  width: 200px;
   position: relative;
   font: 0/0 a;
   &:before{
@@ -124,16 +124,23 @@ h1{
     height: 100%;
   };
   @media screen and (max-width: 700px) {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .Primary-logo img{
   display: inline-block;
   vertical-align: middle;
-  max-width: 180px;
-  max-height: 120px;
+  max-width: 200px;
+  max-height: 100px;
+  pointer-events: none;
+}
+
+.Primary-logo p{
+  margin-top:6px;
+  font-size: 18px;
+  color: $lightgrey;
 }
 
 .Primary-stats{
@@ -152,8 +159,7 @@ h1{
   .title{
     margin-top: 6px;
     font-size: 1.1em;
-    font-weight: 400;
-    color: rgb(96, 97, 97);
+    color: $border-grey;
     @media screen and (max-width: 700px) {
       padding-top:0px;
       font-size: 0.8em;
@@ -253,17 +259,18 @@ h1{
   @include container;
   h1{
     width:80%;
-    font-size: 0.85em;
-    color: #939494;
     text-align: left;
-    font-weight: 300;
-    padding-bottom: 0;
-    margin-left: 0;
+    font-style: 'Raleway';
+/*    font-size: 0.85em;
+    color: #939494;
     text-transform: uppercase;
     font-family: 'lato';
+    font-weight: 300;
+*/    padding-bottom: 0;
+    margin-left: 0;
     @media screen and (min-width: 1100px){
       width: 100%;
-      margin-left: 0.5em;
+      margin-left: 6px;
     }
   }
 }
@@ -279,7 +286,7 @@ h1{
   margin: 0.5em auto 0 auto;
   width: 80%;
   @media screen and (min-width: 1100px){
-    width:480px;
+    width:536px;
     float: left;
     text-align: left;
     margin: 0.5em 1em;
@@ -310,22 +317,54 @@ h1{
 .HOT-Title{
   text-align: left;
   width: 100%;
+  position: relative;
+  min-height: 36px;
+  p{
+    width: 400px;
+  }
+  .btn{
+    float: right;
+    position: absolute;
+    right: -8px;
+    top: -12px;
+  }
 }
 
 .HOT-Description{
-  text-align:left;
+  text-align: right;
   width: 100%;
   margin: 0;
   @media screen and (min-width: 1100px){
-    margin-bottom: 3.5em;
   }
   p{
+    text-align:left;
     margin: 1em 0 0.25em 0;
   }
 }
 
+.HOT-Nav{
+  clear:both;
+  margin: 1em 2.5em 0 0.4em;
+  position:relative;
+  p{
+    float:left;
+    font-weight: bold;
+    margin-right: 0.5em;
+    position: absolute;
+  }
+  .HOT-Nav-Projects{
+  }
+  .btn{
+    float: right;
+    margin: 0;
+    position: absolute;
+    right:0px;
+    top:-10px;
+  }
+}
+
 .HOT-Progress{
-  height: 24px;
+  height: 20px;
   width: 100%;
   background-color: $debug;
   border-radius: 4px;
@@ -340,7 +379,6 @@ h1{
     font-weight: 800;
     position: absolute;
     right: 10px;
-    top: 3px;
     opacity: 0.5;
   }
   &:before{
@@ -392,8 +430,14 @@ h1{
   background-color: desaturate(lighten($mmTeal, 40), 30);
 }
 
+/*.hidden{
+  display: none;
+}*/
+
 .hidden{
   display: none;
+  opacity: 0;
+  height: 0;
 }
 
 /*----------------------------------------------*/
@@ -401,6 +445,10 @@ h1{
 /*----------------------------------------------*/
 .Team-User-Container{
   @include container;
+  h1{
+    float: left;
+    margin-left: 5px;
+  }
 }
 
 .Team-User-Nav{
@@ -435,7 +483,7 @@ h1{
   }
   p{
   &:hover{
-    color: black;
+    color: darken($mmGreen, 10);
     cursor: pointer;
     }
   }
@@ -461,7 +509,7 @@ h1{
 }
 
 .Community-Links{
-  margin: 2em 0 0.5em 0;
+  margin: 3.5em 0 0.5em 0;
   margin-left: auto;
   margin-right: auto;
   li{

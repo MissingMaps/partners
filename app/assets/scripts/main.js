@@ -5,7 +5,10 @@ getImgs(setId);
 // Add Flexslider to Projects Section
 $('.Projects-slider').flexslider({
     animation: "slide",
-    directionNav: false,
+    directionNav: true,
+    slideshowSpeed: 6000000,
+    prevText: '',
+    nextText: '▶'
 });
 
 function getImgs (setId) {
@@ -32,31 +35,50 @@ function getImgs (setId) {
 
   // Adds flexslider to Community section
   $('.flexslider').flexslider({
+    controlNav: true,
     directionNav: false,
-    slideshowSpeed: 5000,
+    slideshowSpeed: 6000,
+    // pausePlay: true,
+    // prevText: '▶',
+    // nextText: '▶'
     });
   });
 }
 
 // Adds Event functionality
-var eventsnumber = $('.events-event-sub-container').length;
+var eventsnumber = $('.event-sub-container').length;
 
-if ( eventsnumber < 2) {
-  $('.events-more').css('display', 'none');
-};
+eventsFunctionality(eventsnumber);
 
-$('.events-more').click (function () {
-	$('.hidden').slice(0, 2).css('display', 'block');
-  if (eventsnumber > 2) {
-    $('.events-more').html('SEE ALL').attr('class', 'button invert-btn-white events-all');
-    $('.events-all').click (function () {
-      $('.hidden').css('display', 'block');
-      $('.events-all').css('display', 'none');
-    });
-  } else {
-    $('.events-more').css('display', 'none');
-  };
-});
+function eventsFunctionality(eventsnumber){
+  $('.events-more').bind('click').click(function () {
+  	$('.hidden').slice(0, 2).css('display', 'block').animate({
+      opacity: 1,
+      height: '180px'
+    }, 500);
+    if (eventsnumber > 2) {
+      $('.events-more').html('SEE ALL').attr('class', 'btn invert-btn-grn events-all');
+      $('.events-all').click (function () {
+        $('.hidden').css('display', 'block').animate({
+          opacity: 1,
+          height: '180px'
+        }, 500);
+        $('.events-all').html('SEE FEWER').attr('class', 'btn invert-btn-grn events-fewer');
+        $('.events-fewer').click (function (){
+          $('.hidden').css('display', 'none').animate({
+            opacity: 0,
+            height: '0px'
+          }, 300);
+          $('.events-fewer').html('SEE MORE').attr('class', 'btn invert-btn-grn events-more');
+          eventsFunctionality(eventsnumber);
+        });
+      });
+    } else {
+          $('.events-fewer').html('SEE MORE').attr('class', 'btn invert-btn-grn events-more');
+          eventsFunctionality(eventsnumber);
+    };
+  });
+}
 
 /*-------------------------------------------------------
 -------------------- Primary Stats  ---------------------
@@ -105,13 +127,17 @@ function makeProjects (project) {
   $(".HOT-Progress").append('<style>.projWidth'+order+':before{ width: '+projDone+'%;}</style>');
 
   // Adds Project variables to the cards
-  $("ul li:nth-child(" + order + ") .HOT-Title ").html("<p><b>" + props.name + "</b></p>");
-  $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "</p>");
+  $("ul li:nth-child(" + order + ") .HOT-Title p").html("<b>" + props.name + "</b>");
+  $("ul li:nth-child(" + order + ") .HOT-Progress").html("<p>" + projDone + "%</p>");
   $("ul li:nth-child(" + order + ") .HOT-Map ").attr('id', 'Map-' + project.id);
 
   // Drop a map into the HOT-Map div
   addMap(project.id);
 };
+
+$('.flex-next').prependTo('.HOT-Nav-Projects');
+$('.flex-control-nav').prependTo('.HOT-Nav-Projects');
+$('.flex-prev').prependTo('.HOT-Nav-Projects');
 
 /*-------------------------------------------------------
 ------------------------ HOT Map ------------------------
@@ -218,7 +244,7 @@ $('#Select-Teams-Graph').click(function () {
 
 function generateUserUrl (userName, userId) {
   const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
-  return '<a xlink:href="' + userUrl + '" target="_blank">' + userName + '</a>';
+  return '<a xlink:href="' + userUrl + '" target="_blank" style="text-decoration:none">' + userName + '</a>';
 };
 
 function ingestUsers (hashtag) {
@@ -226,6 +252,9 @@ function ingestUsers (hashtag) {
   const url = 'http://osmstats.redcross.org/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
+
+    console.log(userData);
+
     // For each user, collect the total edits across all categories
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
@@ -240,7 +269,7 @@ function ingestUsers (hashtag) {
 
     // For each user, sum the total road kilometers edited
     const roadsSum = Object.keys(userData).map(function (user) {
-      const roadsEdits = Math.round(Number(userData[user].all_edits));
+      const roadsEdits = Math.round(Number(userData[user].road_kms));
       return {name: generateUserUrl(user, userData[user].user_number), value: roadsEdits};
     }).sort((a, b) => b.value - a.value);
 
@@ -254,7 +283,7 @@ function ingestUsers (hashtag) {
 
 function generateHashtagUrl (hashtag) {
   const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + hashtag;
-  return '<a xlink:href="' + hashtagUrl + '" target="_blank">#' + hashtag + '</a>';
+  return '<a xlink:href="' + hashtagUrl + '" target="_blank" style="text-decoration: none">#' + hashtag + '</a>';
 };
 
 function ingestHashtags (hashtags) {
@@ -336,7 +365,8 @@ function initializeBarchart (data, targetElement) {
     .attr('x', 5)
     .attr('y', barHeight / 2)
     .attr('dy', '.35em')
-    .html((d) => d.name);
+    .html((d) => d.name)
+    .style('fill', '#606161');
 
   bar.append('text')
     .attr('class', 'Graph-Label-Value')
@@ -344,8 +374,9 @@ function initializeBarchart (data, targetElement) {
     .attr('y', barHeight / 2)
     .attr('dy', '.35em')
     .text((d) => d.value.toLocaleString())
-    .attr('text-anchor', 'end');
-};
+    .attr('text-anchor', 'end')
+    .style('fill', '#606161');
+  };
 
 // Gets hashtag array on each partner page via team.html
 ingestHashtags(PT.hashtags);
