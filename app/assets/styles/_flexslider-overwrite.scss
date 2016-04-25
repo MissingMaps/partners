@@ -71,12 +71,14 @@
 	height: 10px;
 }
 
-.flex-control-nav{
-	width: 100%;
-	position: relative;
-	bottom: 1px;
-	margin-left: 0px;
-	display: inline;
+.HOT-Nav-Projects{
+	.flex-control-nav{
+		width: 100%;
+		position: relative;
+		bottom: 1px;
+		margin-left: 0px;
+		display: inline;
+	}
 }
 
 .Projects-slider .flex-control-nav{
@@ -88,16 +90,11 @@
 	}
 }
 
-.flex-prev .flex-next{
+.flex-next{
 	display: inline-block;
 	position:absolute;
 	top: -4px;
 	padding-left: 14px;
-}
-
-.HOT-Nav-Projects{
-	a{
-	}
 }
 
 .flex-direction-nav a{

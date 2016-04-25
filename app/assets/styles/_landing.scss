@@ -430,8 +430,14 @@ h1{
   background-color: desaturate(lighten($mmTeal, 40), 30);
 }
 
+/*.hidden{
+  display: none;
+}*/
+
 .hidden{
   display: none;
+  opacity: 0;
+  height: 0;
 }
 
 /*----------------------------------------------*/
@@ -503,7 +509,7 @@ h1{
 }
 
 .Community-Links{
-  margin: 2em 0 0.5em 0;
+  margin: 3.5em 0 0.5em 0;
   margin-left: auto;
   margin-right: auto;
   li{
