@@ -85,6 +85,15 @@
 		position:absolute;
 		top: -4px;
 		padding-left: 14px;
+		&:hover{
+			color: lighten($mmGreen, 14);
+		}
+		&:active{
+			color: lighten($mmGreen, 14);
+		}
+		&:focus{
+			color:$mmGreen;
+		}
 	}
 	.flex-direction-nav a{
 		text-decoration: none;
