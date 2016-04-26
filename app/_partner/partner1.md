@@ -6,6 +6,7 @@ permalink: /partner1/
 id: partner1
 name: MissingMaps Partner
 logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
+contact: dale.kunce@redcross.org
 
 social:
   flickr: https://www.flickr.com/photos/126636925@N06/
@@ -24,9 +25,6 @@ subhashtags:
   - mapgive
   - redcross
   - hotosm-project-1467
-  - hotosm-project-1467
-  - hotosm-project-1467
-
 
 tm-projects:
   - id: 1805

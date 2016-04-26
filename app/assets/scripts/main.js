@@ -17,8 +17,6 @@ function getImgs (setId) {
     '&format=json&nojsoncallback=1'; // Bringing it in as a JSON.
 
   $.getJSON(URL, function (data) {
-    console.log(data.photoset.photo.length);
-
     $.each(data.photoset.photo, function (i, item) {
       // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
       var img_src = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
@@ -46,6 +44,15 @@ function eventsFunctionality () {
   var eventsnumber = $('.event-sub-container').length;
   var firstTwoOpen = false;
   var allOpen = false;
+
+  if(eventsnumber = 0){
+    $('events-null').css('display', 'block');
+  };
+
+  if(eventsnumber < 3){
+    $('.events-btn').css('display', 'none');
+  };
+
   $('.events-btn').bind('click').click(function (event) {
     if (firstTwoOpen === false && allOpen === false) {
       firstTwoOpen = true;
@@ -55,7 +62,13 @@ function eventsFunctionality () {
         height: '180px'
       }, 500);
 
-      if (eventsnumber > 2) $('.events-btn').html('SEE ALL');
+      if (eventsnumber >= 5){
+        $('.events-btn').html('SEE ALL');
+      }else{
+        firstTwoOpen = false;
+        allOpen = true;
+        $('.events-btn').html('SEE FEWER')
+      }
 
     } else if (firstTwoOpen === true && allOpen === false && eventsnumber > 2) {
       firstTwoOpen = false;
@@ -71,10 +84,12 @@ function eventsFunctionality () {
     } else if (firstTwoOpen === false && allOpen === true) {
       firstTwoOpen = false;
       allOpen = false;
-      $('.hidden').css('display', 'none').animate({
-        opacity: 0,
-        height: '0px'
-      }, 300);
+      $('.hidden')
+        .animate({
+          opacity: 0,
+          height: '0px'
+          }, 300)
+        .css('display', 'none');
 
       $('.events-btn').html('SEE MORE');
     }
@@ -179,7 +194,7 @@ function addMap (projectId) {
 
     // Initialize map
     const map = L.map('Map-' + projectId,
-      {zoomControl: false, attributionControl: false }).setView([38.889931, -77.009003], 13);
+      {zoomControl: false}).setView([38.889931, -77.009003], 13);
 
     // Add tile layer
     L.tileLayer(basemapUrl + '?access_token=' + token, {

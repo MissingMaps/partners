@@ -1,10 +1,17 @@
+<div class = "events-null">
+  <img src = "../assets/graphics/content/process/mapathon.svg" width = "200"></img>
+	<p>There are no upcoming events for {{ page.name }}, but you can still get involved!</p>
+	<p><a href="mailto:{{ page.contact }}">Contact Us</a> if you'd like to host a mapathon, or check out <a href="http://missingmaps.org/events">MissingMaps Events</a> for global mapathons.</p>
+</div>
+
+
 {% assign current_date = site.time | date: '%Y%m%d' %}
 {% assign event = (site.data.[page.id].events | sort: 'date' ) %}
 {% for e in event %} {% assign event_date = e.date | date: '%Y%m%d' %}
 	{% if event_date >= current_date %}
 		{% assign count = count | plus: 1 %}
 
-		<div class="event-sub-container {% if count >= 2 %}hidden{% endif %}">
+		<div class="event-sub-container {% if count >= 3 %}hidden{% endif %}">
 			<div class="event-top-section clearfix">
 				<div class="sub-head">
 					<img class="event-images" src="{{ site.baseurl }}/assets/graphics/flags/4x3/{{ e.flag }}.svg" width="24px" />
@@ -40,3 +47,7 @@
 		{% endif %}
 	{% endif %}
 {% endfor %}
+
+<div class="events-panel">
+  <div class="btn invert-btn-grn events-btn">SEE MORE</div>
+</div>
