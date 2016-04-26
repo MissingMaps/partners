@@ -45,8 +45,8 @@ function eventsFunctionality () {
   var firstTwoOpen = false;
   var allOpen = false;
 
-  if(eventsnumber = 0){
-    $('events-null').css('display', 'block');
+  if(eventsnumber === 0){
+    $('.events-null').css('display', 'block');
   };
 
   if(eventsnumber < 3){

@@ -151,9 +151,10 @@
 }
 
 .flex-direction-nav .flex-prev{
-		left: -40%;	
+	left: 0%;
 }
 
 .flex-direction-nav .flex-next{
-	 	right: -40%;
+	 	right: 0%;
+		overflow: hidden;
 }

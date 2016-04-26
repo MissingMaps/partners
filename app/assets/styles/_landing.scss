@@ -438,9 +438,17 @@ h1{
   background-color: desaturate(lighten($mmTeal, 40), 30);
 }
 
-/*.hidden{
+.events-null{
+  margin-bottom:1.5em;
   display: none;
-}*/
+  p{
+    margin: 1.5em 0 0.5em 0;
+  }
+}
+
+.btn{
+  text-transform: uppercase;
+}
 
 .hidden{
   display: none;
