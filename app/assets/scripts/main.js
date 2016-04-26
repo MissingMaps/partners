@@ -120,6 +120,11 @@ function getProjects (projects) {
   var projCount = projects.length;
   $('#stats-projCount').html(projCount);
   var projectOrder = 1;
+
+  if(projects.length === 1){
+  $('.flex-next').css('display', 'none');
+  }
+
   for (var i = 0; i < projects.length; i++) {
     const url = 'http://tasks.hotosm.org/project/' + projects[i] + '.json';
     $.getJSON(url, function (ProjectData) {
