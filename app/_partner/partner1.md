@@ -15,7 +15,7 @@ social:
 
 community: 
   apikey: 09023a48037b7882a3683cb1c2043c50
-  setId: 72157663989195511
+  setId: 72157655209554272
 
 primary-hashtag: redcross
 subhashtags:
@@ -24,6 +24,9 @@ subhashtags:
   - mapgive
   - redcross
   - hotosm-project-1467
+  - hotosm-project-1467
+  - hotosm-project-1467
+
 
 tm-projects:
   - id: 1805

@@ -4,7 +4,7 @@ $('.Projects-slider').flexslider({
   directionNav: true,
   slideshowSpeed: 6000000,
   prevText: '',
-  nextText: '▶'
+  nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
 });
 
 function getImgs (setId) {
@@ -17,20 +17,27 @@ function getImgs (setId) {
     '&format=json&nojsoncallback=1'; // Bringing it in as a JSON.
 
   $.getJSON(URL, function (data) {
+    console.log(data.photoset.photo.length);
+
     $.each(data.photoset.photo, function (i, item) {
       // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
       var img_src = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
 
       // Add images in individual <li> elements to HTML
       var img_thumb = $('<li><img src=' + img_src + '></img></li>');
-      $(img_thumb).appendTo('.flickr-hit');
+      // Limits to only the most recent 30 photos for simplicity.
+      if ($('.flickr-hit li').length < 30){
+        $(img_thumb).appendTo('.flickr-hit');
+      }
     });
 
     // Adds flexslider to Community section
     $('.flexslider').flexslider({
       controlNav: true,
-      directionNav: false,
-      slideshowSpeed: 6000
+      directionNav: true,
+      slideshowSpeed: 6000,
+      prevText: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+      nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
     });
   });
 }
@@ -229,7 +236,7 @@ $('#Select-Teams-Graph').click(function () {
   roadsGraph.parentNode.removeChild(roadsGraph);
   // Gets hashtag array on each partner page via team.html
   getGroupActivityStats(PT.hashtags);
-});
+})
 
 function generateUserUrl (userName, userId) {
   const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
@@ -318,7 +325,8 @@ function getGroupActivityStats (hashtags) {
 // the name of a DOM target to place the barchart
 function initializeBarchart (data, targetElement) {
   const width = 280;
-  const height = 210;
+  const height = 220;
+
   const barPadding = 17;
 
   const barHeight = height / data.length - barPadding;
