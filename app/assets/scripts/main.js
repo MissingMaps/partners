@@ -179,7 +179,7 @@ function addMap (projectId) {
 
     // Initialize map
     const map = L.map('Map-' + projectId,
-      {zoomControl: false}).setView([38.889931, -77.009003], 13);
+      {zoomControl: false, attributionControl: false }).setView([38.889931, -77.009003], 13);
 
     // Add tile layer
     L.tileLayer(basemapUrl + '?access_token=' + token, {
