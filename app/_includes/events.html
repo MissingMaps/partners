@@ -1,16 +1,27 @@
+<div class = "events-null">
+  <img src = "../assets/graphics/content/process/mapathon.svg" width = "200"></img>
+	<p>There are no upcoming events for {{ page.name }}, but you can still get involved!</p>
+	<p>
+  <a href="http://missingmaps.org/host" class="btn btn-blue">Host A Mapathon</a>
+  <a href="mailto:{{ page.contact }}" class="btn btn-blue">Contact Partner Lead</a>
+  <a href="mailto:{{ page.contact }}" class="btn btn-blue">All MissingMaps Events</a>
+  </p>
+</div>
+
+
 {% assign current_date = site.time | date: '%Y%m%d' %}
 {% assign event = (site.data.[page.id].events | sort: 'date' ) %}
 {% for e in event %} {% assign event_date = e.date | date: '%Y%m%d' %}
 	{% if event_date >= current_date %}
 		{% assign count = count | plus: 1 %}
 
-		<div class="event-sub-container {% if count >= 2 %}hidden{% endif %}">
+		<div class="event-sub-container {% if count >= 3 %}hidden{% endif %}">
 			<div class="event-top-section clearfix">
 				<div class="sub-head">
 					<img class="event-images" src="{{ site.baseurl }}/assets/graphics/flags/4x3/{{ e.flag }}.svg" width="24px" />
 					<h3 class="event-header">{{ e.title }}</h3>
 					{% if e. %}
-					<a class="btn btn-grn" href="{{ event.link }}" target="">SIGN UP</a>
+					<a class="btn btn-grn" href="{{ e.signup_url }}" target="">SIGN UP</a>
 					{% endif %}
 				</div>
 			</div>
@@ -40,3 +51,7 @@
 		{% endif %}
 	{% endif %}
 {% endfor %}
+
+<div class="events-panel">
+  <div class="btn invert-btn-grn events-btn">SEE MORE</div>
+</div>

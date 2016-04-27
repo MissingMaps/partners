@@ -4,7 +4,7 @@ $('.Projects-slider').flexslider({
   directionNav: true,
   slideshowSpeed: 6000000,
   prevText: '',
-  nextText: '▶'
+  nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
 });
 
 function getImgs (setId) {
@@ -23,15 +23,20 @@ function getImgs (setId) {
 
       // Add images in individual <li> elements to HTML
       var img_thumb = $('<li><img src=' + img_src + '></img></li>');
-      $(img_thumb).appendTo('.flickr-hit');
+      // Limits to only the most recent 30 photos for simplicity.
+      if ($('.flickr-hit li').length < 30){
+        $(img_thumb).appendTo('.flickr-hit');
+      }
     });
-
     // Adds flexslider to Community section
     $('.flexslider').flexslider({
       controlNav: true,
-      directionNav: false,
-      slideshowSpeed: 6000
+      directionNav: true,
+      slideshowSpeed: 6000,
+      prevText: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+      nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
     });
+  $('.photo-width-fix ol').prependTo('.Community-Navigation');
   });
 }
 
@@ -39,6 +44,15 @@ function eventsFunctionality () {
   var eventsnumber = $('.event-sub-container').length;
   var firstTwoOpen = false;
   var allOpen = false;
+
+  if(eventsnumber === 0){
+    $('.events-null').css('display', 'block');
+  };
+
+  if(eventsnumber < 3){
+    $('.events-btn').css('display', 'none');
+  };
+
   $('.events-btn').bind('click').click(function (event) {
     if (firstTwoOpen === false && allOpen === false) {
       firstTwoOpen = true;
@@ -48,7 +62,13 @@ function eventsFunctionality () {
         height: '180px'
       }, 500);
 
-      if (eventsnumber > 2) $('.events-btn').html('SEE ALL');
+      if (eventsnumber >= 5){
+        $('.events-btn').html('SEE ALL');
+      }else{
+        firstTwoOpen = false;
+        allOpen = true;
+        $('.events-btn').html('SEE FEWER')
+      }
 
     } else if (firstTwoOpen === true && allOpen === false && eventsnumber > 2) {
       firstTwoOpen = false;
@@ -64,10 +84,12 @@ function eventsFunctionality () {
     } else if (firstTwoOpen === false && allOpen === true) {
       firstTwoOpen = false;
       allOpen = false;
-      $('.hidden').css('display', 'none').animate({
-        opacity: 0,
-        height: '0px'
-      }, 300);
+      $('.hidden')
+        .animate({
+          opacity: 0,
+          height: '0px'
+          }, 300)
+        .css('display', 'none');
 
       $('.events-btn').html('SEE MORE');
     }
@@ -81,15 +103,22 @@ function eventsFunctionality () {
 function getPrimaryStats (primaryhash) {
   const url = 'http://osmstats.redcross.org/hashtags/' + primaryhash + '/users';
   $.getJSON(url, function (hashtagData) {
+
     var usersCount = (Object.keys(hashtagData).length);
     var editsCount = 0;
+    var buildingCount = 0;
+    var roadCount = 0;
 
     for (var i = 0; i < usersCount; i++) {
       editsCount = editsCount + hashtagData[i].edits;
+      buildingCount = buildingCount + hashtagData[i].buildings;
+      roadCount = parseInt(roadCount + hashtagData[i].roads);
     };
 
-    $('#stats-usersCount').html(usersCount);
-    $('#stats-editsCount').html(editsCount);
+    $('#stats-roadCount').html(roadCount.toLocaleString());
+    $('#stats-buildingCount').html(buildingCount.toLocaleString());
+    $('#stats-usersCount').html(usersCount.toLocaleString());
+    $('#stats-editsCount').html(editsCount.toLocaleString());
   });
 }
 
@@ -98,6 +127,11 @@ function getProjects (projects) {
   var projCount = projects.length;
   $('#stats-projCount').html(projCount);
   var projectOrder = 1;
+
+  if(projects.length === 1){
+  $('.flex-next').css('display', 'none');
+  }
+
   for (var i = 0; i < projects.length; i++) {
     const url = 'http://tasks.hotosm.org/project/' + projects[i] + '.json';
     $.getJSON(url, function (ProjectData) {
@@ -229,7 +263,7 @@ $('#Select-Teams-Graph').click(function () {
   roadsGraph.parentNode.removeChild(roadsGraph);
   // Gets hashtag array on each partner page via team.html
   getGroupActivityStats(PT.hashtags);
-});
+})
 
 function generateUserUrl (userName, userId) {
   const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
@@ -318,7 +352,8 @@ function getGroupActivityStats (hashtags) {
 // the name of a DOM target to place the barchart
 function initializeBarchart (data, targetElement) {
   const width = 280;
-  const height = 210;
+  const height = 220;
+
   const barPadding = 17;
 
   const barHeight = height / data.length - barPadding;

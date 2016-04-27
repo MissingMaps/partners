@@ -117,15 +117,49 @@
 	}
 }
 
-#Commuunity-Flickr{
+#Community-Flickr{
 	.flex-direction-nav a{
 		text-decoration: none;
-		display: initial;
+/*		display: initial;
 		width: initial;
 		height: initial;
-		position: inherit;
-		opacity: 1;
+		position: inherit;*/
+		font-size: 2em;		
+		opacity: 0.5;
 		color: white;
 		text-shadow: initial;
+		&:before{
+			content: '';
+		};
 	}
+}
+
+.Community-Navigation ol{
+	position: relative;
+	top: 30px;
+}
+
+#Community-Flickr .flex-direction-nav li a .flex-prev{
+}
+
+.photo-width-fix{
+	background-color: rgba(0,0,0,0);
+	width: 80%;
+	.flex-control-nav{
+		width: 80%;
+		position: relative;
+		margin: 0 auto 1em auto;
+		bottom: -2.5em;
+		background-color: rgba(0,0,0,0);
+		margin-bottom: 2em;
+	}
+}
+
+.flex-direction-nav .flex-prev{
+	left: 0%;
+}
+
+.flex-direction-nav .flex-next{
+	 	right: 0%;
+		overflow: hidden;
 }
