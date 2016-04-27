@@ -28,15 +28,15 @@ function getImgs (setId) {
         $(img_thumb).appendTo('.flickr-hit');
       }
     });
-
     // Adds flexslider to Community section
     $('.flexslider').flexslider({
       controlNav: true,
       directionNav: true,
       slideshowSpeed: 6000,
       prevText: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-      nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+      nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
     });
+  $('.photo-width-fix ol').prependTo('.Community-Navigation');
   });
 }
 
@@ -103,15 +103,22 @@ function eventsFunctionality () {
 function getPrimaryStats (primaryhash) {
   const url = 'http://osmstats.redcross.org/hashtags/' + primaryhash + '/users';
   $.getJSON(url, function (hashtagData) {
+
     var usersCount = (Object.keys(hashtagData).length);
     var editsCount = 0;
+    var buildingCount = 0;
+    var roadCount = 0;
 
     for (var i = 0; i < usersCount; i++) {
       editsCount = editsCount + hashtagData[i].edits;
+      buildingCount = buildingCount + hashtagData[i].buildings;
+      roadCount = parseInt(roadCount + hashtagData[i].roads);
     };
 
-    $('#stats-usersCount').html(usersCount);
-    $('#stats-editsCount').html(editsCount);
+    $('#stats-roadCount').html(roadCount.toLocaleString());
+    $('#stats-buildingCount').html(buildingCount.toLocaleString());
+    $('#stats-usersCount').html(usersCount.toLocaleString());
+    $('#stats-editsCount').html(editsCount.toLocaleString());
   });
 }
 

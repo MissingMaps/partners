@@ -21,10 +21,9 @@ community:
 primary-hashtag: redcross
 subhashtags:
   - peacecorps
-  - majorroads
-  - mapgive
   - redcross
-  - hotosm-project-1467
+  - hotosm-project-1752
+  - hotosm-project-1465
 
 tm-projects:
   - id: 1805
