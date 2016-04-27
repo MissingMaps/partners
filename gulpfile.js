@@ -7,27 +7,25 @@ var clean = require('gulp-clean');
 var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
-var cp = require('child_process');
 var babel = require('gulp-babel');
 
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-//-------------------------- Copy tasks --------------------------------------//
-//----------------------------------------------------------------------------//
+/* ------------------------------------------------------------------------------
+   -------------------------- Copy tasks ----------------------------------------
+   ----------------------------------------------------------------------------*/
 
 // Copy from the .tmp to _site directory.
 // To reduce build times the assets are compiles at the same time as jekyll
 // renders the site. Once the rendering has finished the assets are copied.
-gulp.task('copy:assets', function(done) {
+gulp.task('copy:assets', function (done) {
   return gulp.src('.tmp/assets/**')
     .pipe(gulp.dest('_site/assets'));
 });
 
-////////////////////////////////////////////////////////////////////////////////
-//--------------------------- Assets tasks -----------------------------------//
-//----------------------------------------------------------------------------//
+/* ------------------------------------------------------------------------------
+   --------------------------- Assets tasks -------------------------------------
+   ----------------------------------------------------------------------------*/
 
-gulp.task('compass', function() {
+gulp.task('compass', function () {
   return gulp.src('app/assets/styles/*.scss')
     .pipe(plumber())
     .pipe(compass({
@@ -38,56 +36,53 @@ gulp.task('compass', function() {
       require: ['sass-css-importer'],
       bundle_exec: true
     }))
-    .on('error', function(err) {
+    .on('error', function (err) {
+      if (err) console.log(err);
       this.emit('end');
     })
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('compress:main', function() {
+gulp.task('compress:main', function () {
   // main.min.js
   var task = gulp.src([
-      'app/assets/scripts/*.js',
-    ])
-    .pipe(babel({
-      presets: ['es2015']
-    }))
-    .pipe(plumber());
+    'app/assets/scripts/*.js'
+  ])
+  .pipe(babel({
+    presets: ['es2015']
+  }))
+  .pipe(plumber());
 
-    if (environment == 'development') {
-      task = task.pipe(concat('main.min.js'));
-    }
-    else {
-      task = task.pipe(uglify('main.min.js', {
-        outSourceMap: true,
-        mangle: false
-      }));
-    }
+  if (environment === 'development') {
+    task = task.pipe(concat('main.min.js'));
+  } else {
+    task = task.pipe(uglify('main.min.js', {
+      outSourceMap: true,
+      mangle: false
+    }));
+  }
 
-    return task.pipe(gulp.dest('.tmp/assets/scripts'));
+  return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
 
-gulp.task('compress:vendor', function() {
+gulp.task('compress:vendor', function () {
   // vendor.min.js
   var task = gulp.src([
-      'app/assets/scripts/vendor/*.js',
-    ])
-    .pipe(plumber());
+    'app/assets/scripts/vendor/*.js'
+  ])
+  .pipe(plumber());
 
-    if (environment == 'development') {
-      task = task.pipe(concat('vendor.min.js'));
-    }
-    else {
-      task = task.pipe(uglify('vendor.min.js', {
-        outSourceMap: true,
-        mangle: false
-      }));
-    }
+  if (environment === 'development') {
+    task = task.pipe(concat('vendor.min.js'));
+  } else {
+    task = task.pipe(uglify('vendor.min.js', {
+      outSourceMap: true,
+      mangle: false
+    }));
+  }
 
-    return task.pipe(gulp.dest('.tmp/assets/scripts'));
+  return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
-
-
 
 // Build the jekyll website.
 gulp.task('jekyll', function (done) {
@@ -96,13 +91,13 @@ gulp.task('jekyll', function (done) {
   switch (environment) {
     case 'development':
       args.push('--config=_config.yml,_config-dev.yml');
-    break;
+      break;
     case 'stage':
       args.push('--config=_config.yml,_config-stage.yml');
-    break;
+      break;
     case 'production':
       args.push('--config=_config.yml');
-    break;
+      break;
   }
 
   return cp.spawn('bundle', args, {stdio: 'inherit'})
@@ -117,13 +112,13 @@ gulp.task('jekyll:rebuild', ['jekyll'], function () {
 
 // Main build task
 // Builds the site. Destination --> _site
-gulp.task('build', function(done) {
-  runSequence(['jekyll', 'compress:main','compress:vendor','compass'],
+gulp.task('build', function (done) {
+  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'compass'],
     ['copy:assets'], done);
 });
 
 // Default task.
-gulp.task('default', function(done) {
+gulp.task('default', function (done) {
   runSequence('build', done);
 });
 
@@ -135,51 +130,50 @@ gulp.task('serve', ['build'], function () {
     }
   });
 
-  gulp.watch(['./app/assets/fonts/**/*', './app/assets/images/**/*'], function() {
+  gulp.watch(['./app/assets/fonts/**/*', './app/assets/images/**/*'], function () {
     runSequence('jekyll', browserReload);
   });
 
-  gulp.watch('app/assets/styles/**/*.scss', function() {
+  gulp.watch('app/assets/styles/**/*.scss', function () {
     runSequence('compass');
   });
 
-  gulp.watch(['./app/assets/scripts/**/*.js', '!./app/assets/scripts/vendor/**/*'], function() {
+  gulp.watch(['./app/assets/scripts/**/*.js', '!./app/assets/scripts/vendor/**/*'], function () {
     runSequence('compress:main', 'compress:vendor', browserReload);
   });
 
-  gulp.watch(['app/**/*.html', 'app/**/*.md', 'app/**/*.json', 'app/**/*.geojson', '_config*'], function() {
+  gulp.watch(['app/**/*.html', 'app/**/*.md', 'app/**/*.json', 'app/**/*.geojson', '_config*'], function () {
     runSequence('jekyll', browserReload);
   });
-
 });
 
 var shouldReload = true;
-gulp.task('no-reload', function(done) {
+gulp.task('no-reload', function (done) {
   shouldReload = false;
   runSequence('serve', done);
 });
 
 var environment = 'development';
-gulp.task('prod', function(done) {
+gulp.task('prod', function (done) {
   environment = 'production';
   runSequence('clean', 'build', done);
 });
-gulp.task('stage', function(done) {
+gulp.task('stage', function (done) {
   environment = 'stage';
   runSequence('clean', 'build', done);
 });
 
 // Removes jekyll's _site folder
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   return gulp.src(['_site', '.tmp'], {read: false})
     .pipe(clean());
 });
 
-////////////////////////////////////////////////////////////////////////////////
-//------------------------- Helper functions ---------------------------------//
-//----------------------------------------------------------------------------//
+/* ------------------------------------------------------------------------------
+   --------------------------- Helper functions ---------------------------------
+   ----------------------------------------------------------------------------*/
 
-function browserReload() {
+function browserReload () {
   if (shouldReload) {
     browserSync.reload();
   }

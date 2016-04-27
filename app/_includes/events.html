@@ -8,7 +8,6 @@
   </p>
 </div>
 
-
 {% assign current_date = site.time | date: '%Y%m%d' %}
 {% assign event = (site.data.[page.id].events | sort: 'date' ) %}
 {% for e in event %} {% assign event_date = e.date | date: '%Y%m%d' %}

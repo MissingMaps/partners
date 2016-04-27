@@ -1,109 +1,10 @@
-// Add Flexslider to Projects Section
-$('.Projects-slider').flexslider({
-  animation: 'slide',
-  directionNav: true,
-  slideshowSpeed: 6000000,
-  prevText: '',
-  nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
-});
-
-function getImgs (setId) {
-  // Builds API URL to fetch from
-  var URL = 'https://api.flickr.com/services/rest/' +  // Wake up the Flickr API gods.
-    '?method=flickr.photosets.getPhotos' +  // Get photo from a photoset. http://www.flickr.com/services/api/flickr.photosets.getPhotos.htm
-    '&api_key=' + apikey + // API key. Get one here: http://www.flickr.com/services/apps/create/apply/
-    '&photoset_id=' + setId +  // The set ID.
-    '&privacy_filter=1' +  // 1 signifies all public photos.
-    '&format=json&nojsoncallback=1'; // Bringing it in as a JSON.
-
-  $.getJSON(URL, function (data) {
-    $.each(data.photoset.photo, function (i, item) {
-      // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
-      var img_src = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
-
-      // Add images in individual <li> elements to HTML
-      var img_thumb = $('<li><img src=' + img_src + '></img></li>');
-      // Limits to only the most recent 30 photos for simplicity.
-      if ($('.flickr-hit li').length < 30){
-        $(img_thumb).appendTo('.flickr-hit');
-      }
-    });
-    // Adds flexslider to Community section
-    $('.flexslider').flexslider({
-      controlNav: true,
-      directionNav: true,
-      slideshowSpeed: 6000,
-      prevText: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-      nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
-    });
-  $('.photo-width-fix ol').prependTo('.Community-Navigation');
-  });
-}
-
-function eventsFunctionality () {
-  var eventsnumber = $('.event-sub-container').length;
-  var firstTwoOpen = false;
-  var allOpen = false;
-
-  if(eventsnumber === 0){
-    $('.events-null').css('display', 'block');
-  };
-
-  if(eventsnumber < 3){
-    $('.events-btn').css('display', 'none');
-  };
-
-  $('.events-btn').bind('click').click(function (event) {
-    if (firstTwoOpen === false && allOpen === false) {
-      firstTwoOpen = true;
-      $('.hidden').slice(0, 2)
-      .css('display', 'block').animate({
-        opacity: 1,
-        height: '180px'
-      }, 500);
-
-      if (eventsnumber >= 5){
-        $('.events-btn').html('SEE ALL');
-      }else{
-        firstTwoOpen = false;
-        allOpen = true;
-        $('.events-btn').html('SEE FEWER')
-      }
-
-    } else if (firstTwoOpen === true && allOpen === false && eventsnumber > 2) {
-      firstTwoOpen = false;
-      allOpen = true;
-      $('.events-btn').html('SEE ALL');
-      $('.hidden').css('display', 'block').animate({
-        opacity: 1,
-        height: '180px'
-      }, 500);
-
-      $('.events-btn').html('SEE FEWER');
-
-    } else if (firstTwoOpen === false && allOpen === true) {
-      firstTwoOpen = false;
-      allOpen = false;
-      $('.hidden')
-        .animate({
-          opacity: 0,
-          height: '0px'
-          }, 300)
-        .css('display', 'none');
-
-      $('.events-btn').html('SEE MORE');
-    }
-  });
-}
-
-/*-------------------------------------------------------
--------------------- Primary Stats  ---------------------
--------------------------------------------------------*/
+/* -------------------------------------------------------
+ ------------------- Add Primary Stats -------------------
+ -------------------------------------------------------*/
 
 function getPrimaryStats (primaryhash) {
   const url = 'http://osmstats.redcross.org/hashtags/' + primaryhash + '/users';
   $.getJSON(url, function (hashtagData) {
-
     var usersCount = (Object.keys(hashtagData).length);
     var editsCount = 0;
     var buildingCount = 0;
@@ -113,7 +14,7 @@ function getPrimaryStats (primaryhash) {
       editsCount = editsCount + hashtagData[i].edits;
       buildingCount = buildingCount + hashtagData[i].buildings;
       roadCount = parseInt(roadCount + hashtagData[i].roads);
-    };
+    }
 
     $('#stats-roadCount').html(roadCount.toLocaleString());
     $('#stats-buildingCount').html(buildingCount.toLocaleString());
@@ -122,14 +23,29 @@ function getPrimaryStats (primaryhash) {
   });
 }
 
+/* -------------------------------------------------------
+ --------------- Add HOT Project Carousel ----------------
+ -------------------------------------------------------*/
+
 // Fetch Project data from Tasking Manager API
 function getProjects (projects) {
+  // Add Flexslider to Projects Section
+  $('.Projects-slider').flexslider({
+    animation: 'slide',
+    directionNav: true,
+    slideshowSpeed: 6000000,
+    prevText: '',
+    nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+  });
+  $('.flex-next').prependTo('.HOT-Nav-Projects');
+  $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
+  $('.flex-prev').prependTo('.HOT-Nav-Projects');
   var projCount = projects.length;
   $('#stats-projCount').html(projCount);
   var projectOrder = 1;
 
-  if(projects.length === 1){
-  $('.flex-next').css('display', 'none');
+  if (projects.length === 1) {
+    $('.flex-next').css('display', 'none');
   }
 
   for (var i = 0; i < projects.length; i++) {
@@ -138,8 +54,8 @@ function getProjects (projects) {
       projectOrder += 1;
       makeProjects(ProjectData, projectOrder);
     });
-  };
-};
+  }
+}
 
 // Update cards with necessary project details
 function makeProjects (project, projectOrder) {
@@ -157,15 +73,11 @@ function makeProjects (project, projectOrder) {
 
   // Drop a map into the HOT-Map div
   addMap(project.id);
-};
+}
 
-$('.flex-next').prependTo('.HOT-Nav-Projects');
-$('.flex-control-nav').prependTo('.HOT-Nav-Projects');
-$('.flex-prev').prependTo('.HOT-Nav-Projects');
-
-/*-------------------------------------------------------
------------------------- HOT Map ------------------------
--------------------------------------------------------*/
+/* -------------------------------------------------------
+ ----------- Add Map to HOT Project Carousel -------------
+ -------------------------------------------------------*/
 
 function onEachFeature (feature, layer) {
   // Set symbology to match HOTOSM Tasking Manager completion states
@@ -191,7 +103,7 @@ function onEachFeature (feature, layer) {
   }
 
   layer.setStyle(symbology);
-};
+}
 
 function addMap (projectId) {
   const token = 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYw' +
@@ -231,44 +143,104 @@ function addMap (projectId) {
     // Disable tap handler, if present.
     if (map.tap) map.tap.disable();
   });
-};
+}
 
-/*-------------------------------------------------------
--------------------- Activity Graphs --------------------
--------------------------------------------------------*/
+/* -------------------------------------------------------
+ ----------- Add Functionality to Events List  -----------
+ -------------------------------------------------------*/
 
-// Sets Users button to Selected and loads Users chart
-$('#Select-Users-Graph').click(function () {
-  $('#Select-Teams-Graph').removeClass('Selected');
-  $('#Select-Users-Graph').addClass('Selected');
-  var totalGraph = document.querySelector('#Team-User-Total-Graph svg');
-  var bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
-  var roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
-  totalGraph.parentNode.removeChild(totalGraph);
-  bldngGraph.parentNode.removeChild(bldngGraph);
-  roadsGraph.parentNode.removeChild(roadsGraph);
-  // Gets main hashtag on each partner page via team.html
-  getUserActivityStats(PT.mainHashtag);
-});
+// Adds hide/ show functionality to events list (pre-generated by Jekyll)
+function eventsFunctionality () {
+  var eventsnumber = $('.event-sub-container').length;
+  var firstTwoOpen = false;
+  var allOpen = false;
 
-// Sets Teams button to Selected and loads Teams chart
-$('#Select-Teams-Graph').click(function () {
-  $('#Select-Users-Graph').removeClass('Selected');
-  $('#Select-Teams-Graph').addClass('Selected');
-  var totalGraph = document.querySelector('#Team-User-Total-Graph svg');
-  var bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
-  var roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
-  totalGraph.parentNode.removeChild(totalGraph);
-  bldngGraph.parentNode.removeChild(bldngGraph);
-  roadsGraph.parentNode.removeChild(roadsGraph);
-  // Gets hashtag array on each partner page via team.html
-  getGroupActivityStats(PT.hashtags);
-})
+  if (eventsnumber === 0) {
+    $('.events-null').css('display', 'block');
+  }
+  if (eventsnumber < 3) {
+    $('.events-btn').css('display', 'none');
+  }
 
+  $('.events-btn').bind('click').click(function (event) {
+    if (firstTwoOpen === false && allOpen === false) {
+      firstTwoOpen = true;
+      $('.hidden').slice(0, 2)
+      .css('display', 'block').animate({
+        opacity: 1,
+        height: '180px'
+      }, 500);
+      if (eventsnumber >= 5) {
+        $('.events-btn').html('SEE ALL');
+      } else {
+        firstTwoOpen = false;
+        allOpen = true;
+        $('.events-btn').html('SEE FEWER');
+      }
+    } else if (firstTwoOpen === true && allOpen === false && eventsnumber > 2) {
+      firstTwoOpen = false;
+      allOpen = true;
+      $('.events-btn').html('SEE ALL');
+      $('.hidden').css('display', 'block').animate({
+        opacity: 1,
+        height: '180px'
+      }, 500);
+      $('.events-btn').html('SEE FEWER');
+    } else if (firstTwoOpen === false && allOpen === true) {
+      firstTwoOpen = false;
+      allOpen = false;
+      $('.hidden')
+        .animate({
+          opacity: 0,
+          height: '0px'
+        }, 300, function () {
+          $('.hidden').css('display', 'none');
+        });
+
+      $('.events-btn').html('SEE MORE');
+    }
+  });
+}
+
+/* -------------------------------------------------------
+ ------------------ Add Activity Graphs ------------------
+ -------------------------------------------------------*/
+
+function setupGraphs () {
+  // Sets Users button to Selected and loads Users chart
+  $('#Select-Users-Graph').click(function () {
+    $('#Select-Teams-Graph').removeClass('Selected');
+    $('#Select-Users-Graph').addClass('Selected');
+    var totalGraph = document.querySelector('#Team-User-Total-Graph svg');
+    var bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
+    var roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
+    totalGraph.parentNode.removeChild(totalGraph);
+    bldngGraph.parentNode.removeChild(bldngGraph);
+    roadsGraph.parentNode.removeChild(roadsGraph);
+    // Gets main hashtag on each partner page via team.html
+    getUserActivityStats(PT.mainHashtag);
+  });
+
+  // Sets Teams button to Selected and loads Teams chart
+  $('#Select-Teams-Graph').click(function () {
+    $('#Select-Users-Graph').removeClass('Selected');
+    $('#Select-Teams-Graph').addClass('Selected');
+    var totalGraph = document.querySelector('#Team-User-Total-Graph svg');
+    var bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
+    var roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
+    totalGraph.parentNode.removeChild(totalGraph);
+    bldngGraph.parentNode.removeChild(bldngGraph);
+    roadsGraph.parentNode.removeChild(roadsGraph);
+    // Gets hashtag array on each partner page via team.html
+    getGroupActivityStats(PT.subHashtags);
+  });
+}
+
+// Returns svg link to Missing Maps user endpoint
 function generateUserUrl (userName, userId) {
   const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
   return '<a xlink:href="' + userUrl + '" target="_blank" style="text-decoration:none">' + userName + '</a>';
-};
+}
 
 function getUserActivityStats (hashtag) {
   // Connect hashtags to /top-users/ Missing Maps API endpoint
@@ -299,12 +271,13 @@ function getUserActivityStats (hashtag) {
     initializeBarchart(bldngSum, '#Team-User-Bldng-Graph');
     initializeBarchart(roadsSum, '#Team-User-Roads-Graph');
   });
-};
+}
 
+// Returns svg link to Missing Maps leaderboard endpoint
 function generateHashtagUrl (hashtag) {
   const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + hashtag;
   return '<a xlink:href="' + hashtagUrl + '" target="_blank" style="text-decoration: none">#' + hashtag + '</a>';
-};
+}
 
 function getGroupActivityStats (hashtags) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
@@ -345,7 +318,7 @@ function getGroupActivityStats (hashtags) {
     initializeBarchart(bldngSum, '#Team-User-Bldng-Graph');
     initializeBarchart(roadsSum, '#Team-User-Roads-Graph');
   });
-};
+}
 
 // Builds a barchart given an array in the form of
 // [{name: *hashtag*, value:*value*}, ..], along with
@@ -353,7 +326,6 @@ function getGroupActivityStats (hashtags) {
 function initializeBarchart (data, targetElement) {
   const width = 280;
   const height = 220;
-
   const barPadding = 17;
 
   const barHeight = height / data.length - barPadding;
@@ -397,19 +369,59 @@ function initializeBarchart (data, targetElement) {
     .text((d) => d.value.toLocaleString())
     .attr('text-anchor', 'end')
     .style('fill', '#606161');
-};
+}
 
-/*-------------------------------------------------------
---------------------- Setup Project ---------------------
--------------------------------------------------------*/
+/* -------------------------------------------------------
+ ---------------- Add Flickr Carousel --------------------
+ -------------------------------------------------------*/
+
+function getImgs (flickrApiKey, flickrSetId) {
+  // Builds API URL to fetch from
+  var URL = 'https://api.flickr.com/services/rest/' +  // Wake up the Flickr API gods.
+    '?method=flickr.photosets.getPhotos' +  // Get photo from a photoset. http://www.flickr.com/services/api/flickr.photosets.getPhotos.htm
+    '&api_key=' + flickrApiKey + // API key. Get one here: http://www.flickr.com/services/apps/create/apply/
+    '&photoset_id=' + flickrSetId +  // The set ID.
+    '&privacy_filter=1' +  // 1 signifies all public photos.
+    '&format=json&nojsoncallback=1'; // Bringing it in as a JSON.
+
+  $.getJSON(URL, function (data) {
+    $.each(data.photoset.photo, function (i, item) {
+      // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
+      var imgSrc = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
+
+      // Add images in individual <li> elements to HTML
+      var imgThumb = $('<li><img src=' + imgSrc + '></img></li>');
+      // Limits to only the most recent 30 photos for simplicity.
+      if ($('.flickr-hit li').length < 30) {
+        $(imgThumb).appendTo('.flickr-hit');
+      }
+    });
+    // Adds flexslider to Community section
+    $('.flexslider').flexslider({
+      controlNav: true,
+      directionNav: true,
+      slideshowSpeed: 6000,
+      prevText: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+      nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+    });
+    $('.photo-width-fix ol').prependTo('.Community-Navigation');
+  });
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ ---------------------------------------------------------
+ --------------------- Setup Project ---------------------
+ -------------------------------------------------------*/
 
 // Populate the primary stats in hero via Missing Maps API
-getPrimaryStats(primaryhash);
+getPrimaryStats(PT.mainHashtag);
 // Populate project carousel via HOTOSM Tasking Manager API
-getProjects(PT.projects);
-// Populates group (hashtag) graph via Missing Maps API
-getGroupActivityStats(PT.hashtags);
-// Adds Event functionality
+getProjects(PT.hotProjects);
+// Adds event functionality (hide and show)
 eventsFunctionality();
+// Sets up switcher/ loader for group and user graphs
+setupGraphs();
+// Populates initial groups graph via Missing Maps API
+getGroupActivityStats(PT.subHashtags);
 // Populate the Flickr carousel
-getImgs(setId);
+getImgs(PT.flickrApiKey, PT.flickrSetId);
