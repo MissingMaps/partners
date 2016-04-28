@@ -4,7 +4,7 @@ lang: en
 permalink: /jpmc/
 
 id: jpmc
-name: MissingMaps Partner
+name: JP Morgan Chase
 logo: https://arcmaps.s3.amazonaws.com/share/chase_logo.svg
 contact: dale.kunce@redcross.org
 
