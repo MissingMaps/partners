@@ -6,6 +6,7 @@ permalink: /jpmc/
 id: jpmc
 name: MissingMaps Partner
 logo: https://arcmaps.s3.amazonaws.com/share/chase_logo.svg
+contact: dale.kunce@redcross.org
 
 social:
   flickr: https://www.flickr.com/photos/126636925@N06/
