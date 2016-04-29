@@ -335,12 +335,38 @@ function getGroupActivityStats (hashtags) {
 function Barchart (data, targetElement) {
   // Setting margins and size using Bostock conventions for future
   // ease of use, although currently leaving margins at 0
-  var margin = {top: 0, right: 0, bottom: 0, left: 0};
+  let margin = {top: 0, right: 0, bottom: 0, left: 0};
   var width = parseInt(d3.select(targetElement).style('width'), 10);
   width = width - margin.left - margin.right;
-  const height = 220;
-  const barPadding = 17;
-  const barHeight = (height - margin.top - margin.bottom) / data.length - barPadding;
+  let height = 220;
+  let barPadding = 60 / data.length;
+  let barHeight = (height - margin.top - margin.bottom) / data.length - barPadding;
+
+  // If more than 10 records...
+  if (data.length > 10) {
+    // ...freeze dynamic sizing of bars and begin expanding the svg height instead
+    barPadding = 60 / 10;
+    barHeight = (height - margin.top - margin.bottom) / 10 - barPadding;
+    height = height + ((barPadding + barHeight) * (data.length - 10));
+    // ...enable "Show More" functionality; button appears which allows
+    // for panning up and down the length of svg bar graph
+    const offset = -((data.length - 10) * (barPadding + barHeight)) - 12;
+    let expanded = false;
+    $('.teams-btn')
+      .css('display', 'initial')
+      .click(function () {
+        const graphs = $('.Team-User-Graph > svg');
+        if (expanded === false) {
+          $('.teams-btn').html('SHOW INITIAL TEAMS');
+          graphs.animate({marginTop: offset}, 300);
+          expanded = true;
+        } else if (expanded === true) {
+          $('.teams-btn').html('SHOW MORE TEAMS');
+          graphs.animate({marginTop: 0}, 300);
+          expanded = false;
+        }
+      });
+  }
 
   // Define scales
   const x = d3.scale.linear()
