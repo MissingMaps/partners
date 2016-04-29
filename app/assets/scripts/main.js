@@ -284,6 +284,7 @@ function getGroupActivityStats (hashtags) {
   const url = 'http://osmstats.redcross.org/group-summaries/' + hashtags.join(',');
 
   $.getJSON(url, function (hashtagData) {
+
     // For each hashtag, sum the total edits across all categories
     const totalSum = hashtags.map(function (ht) {
       const vals = hashtagData[ht];
