@@ -459,6 +459,7 @@ h1{
 /* TEAMS AND USERS */
 /*----------------------------------------------*/
 .Team-User-Container{
+  margin-bottom: 2em;
   @include container;
   h1{
     text-align: left;
@@ -515,7 +516,7 @@ h1{
 }
 
 .teams-more{
-  margin: 1.5em 0 1em 0;
+  margin: 2.5em 0 0.5em 0;
 }
 
 /*----------------------------------------------*/

@@ -353,7 +353,7 @@ function Barchart (data, targetElement) {
     const offset = -((data.length - 10) * (barPadding + barHeight)) - 12;
     let expanded = false;
     $('.teams-btn')
-      .removeClass('hidden')
+      .css('display', 'initial')
       .click(function () {
         const graphs = $('.Team-User-Graph > svg');
         if (expanded === false) {
