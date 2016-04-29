@@ -335,12 +335,12 @@ function getGroupActivityStats (hashtags) {
 function Barchart (data, targetElement) {
   // Setting margins and size using Bostock conventions for future
   // ease of use, although currently leaving margins at 0
-  var margin = {top: 0, right: 0, bottom: 0, left: 0};
+  let margin = {top: 0, right: 0, bottom: 0, left: 0};
   var width = parseInt(d3.select(targetElement).style('width'), 10);
   width = width - margin.left - margin.right;
-  var height = 220;
-  var barPadding = 60 / data.length;
-  var barHeight = (height - margin.top - margin.bottom) / data.length - barPadding;
+  let height = 220;
+  let barPadding = 60 / data.length;
+  let barHeight = (height - margin.top - margin.bottom) / data.length - barPadding;
 
   // If more than 10 records...
   if (data.length > 10) {
@@ -349,24 +349,24 @@ function Barchart (data, targetElement) {
     barHeight = (height - margin.top - margin.bottom) / 10 - barPadding;
     height = height + ((barPadding + barHeight) * (data.length - 10));
     // Enable "Show More" functionality
-    const offset = -((data.length - 10) * (barPadding + barHeight));
+    const offset = -((data.length - 10) * (barPadding + barHeight)) - 12;
+    let expanded = false;
     $('.teams-btn')
       .removeClass('hidden')
       .click(function () {
-        const graphs = $('.Team-User-Graph > svg')
-        graphs.animate({marginTop: offset}, 300)
-      })
+        const graphs = $('.Team-User-Graph > svg');
+        if (expanded === false) {
+          $('.teams-btn').html('SHOW PREVIOUS TEAMS');
+          graphs.animate({marginTop: offset}, 300);
+          expanded = true;
+        } else if (expanded === true) {
+          $('.teams-btn').html('SHOW NEXT TEAMS');
+          graphs.animate({marginTop: 0}, 300);
+          expanded = false;
+        }
+      });
   }
 
-
-//   .animate({
-//     opacity: 0,
-//     height: '0px'
-//   }, 300, function () {
-//     $('.hidden').css('display', 'none');
-//   });
-//
-// $('.events-btn').html('SEE MORE');
   // Define scales
   const x = d3.scale.linear()
     .range([0, width])
