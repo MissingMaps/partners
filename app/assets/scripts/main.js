@@ -344,11 +344,12 @@ function Barchart (data, targetElement) {
 
   // If more than 10 records...
   if (data.length > 10) {
-    // freeze dynamic sizing of bars and begin expanding the svg height instead
+    // ...freeze dynamic sizing of bars and begin expanding the svg height instead
     barPadding = 60 / 10;
     barHeight = (height - margin.top - margin.bottom) / 10 - barPadding;
     height = height + ((barPadding + barHeight) * (data.length - 10));
-    // Enable "Show More" functionality
+    // ...enable "Show More" functionality; button appears which allows
+    // for panning up and down the length of svg bar graph
     const offset = -((data.length - 10) * (barPadding + barHeight)) - 12;
     let expanded = false;
     $('.teams-btn')
@@ -356,11 +357,11 @@ function Barchart (data, targetElement) {
       .click(function () {
         const graphs = $('.Team-User-Graph > svg');
         if (expanded === false) {
-          $('.teams-btn').html('SHOW PREVIOUS TEAMS');
+          $('.teams-btn').html('SHOW INITIAL TEAMS');
           graphs.animate({marginTop: offset}, 300);
           expanded = true;
         } else if (expanded === true) {
-          $('.teams-btn').html('SHOW NEXT TEAMS');
+          $('.teams-btn').html('SHOW MORE TEAMS');
           graphs.animate({marginTop: 0}, 300);
           expanded = false;
         }
