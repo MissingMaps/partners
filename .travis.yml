@@ -8,9 +8,8 @@ script:
 
 deploy:
   provider: s3
-  access_key_id: AKIAIEXXJZYGRMAOFKXA
-  secret_access_key:
-    secure: "cOPDtWLPyTiJDaucdjt4G58jbtnbOgw/zRABvVfTzZas49AJADQXXwYpqcmcT3y5dPiLFEV3/5PpFqGJcZIV6Z4bU/aqhQN+gFdZdR4khT3UXnJatHvqeM1TAQlw0W7i1izTPXjism1PhPUKr4bE9GA02/hczIVCll1jh/ioZlAn8TB4BqSdS5xp1SNpWopWiuLze4JxMmCAnZuklmQ7xQ3BZfrGw20cbCrhdoBIKcRjml8YxC3v1PHSKoEo/nEttkjSFl3WysBIfp5p3d0fwBMsO76ln+gMEs5gtWS1lJ7HpVLQ/RuXJMxjtUCCo9pqPsgaU/gRL8B2/yh06W5vQK/pnj8RP0GnF667C09cjeuL2XzjoD1XFPtiW7nl1S3duHGenxSnYDBhMJwwwl/M5aB8kLviW/1DjNig0KfVMap4jFmMrgUkqbX733dp/ovIxG/N4nWNN+P3ZMgaywlUzjdflaWDf9iYJ87sA+ZS+XFc4FX6tpCCZuYpNUmRVLca5V91WAsb5dqIuGCS3QFDtTR1J4B2DLT8/6CDPvpbrZQehCPfFStIHybU5QPHaZakimzxt8mNx1M/FD6pXuGBUo71XuUmLSGbKM0eGxcDUrNLTwYtEFqzuStsjzVmK4w8iqpwTM+fEfS2IEXZoBhzpeQzAiU0riDPdmq2NI3DWlQ="
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
   bucket: ds-mm-partner
   skip_cleanup: true
   region: us-east-1

@@ -265,11 +265,17 @@ function getUserActivityStats (hashtag) {
       return {name: generateUserUrl(user, userData[user].user_number), value: roadsEdits};
     }).sort((a, b) => b.value - a.value);
 
-    // Send the total, building, and road metrics to
-    // the barchart builder
-    initializeBarchart(totalSum, '#Team-User-Total-Graph');
-    initializeBarchart(bldngSum, '#Team-User-Bldng-Graph');
-    initializeBarchart(roadsSum, '#Team-User-Roads-Graph');
+    // Spawn a chart function with listening events for each of the metrics
+    var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
+    var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
+    var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+
+    // On window resize, run window resize function on each chart
+    d3.select(window).on('resize', function () {
+      c1.resize();
+      c2.resize();
+      c3.resize();
+    });
   });
 }
 
@@ -313,63 +319,99 @@ function getGroupActivityStats (hashtags) {
       return {name: generateHashtagUrl(ht), value: sum};
     }).sort((a, b) => b.value - a.value);
 
-    // Send the total, building, and road metrics to
-    // the barchart builder
-    initializeBarchart(totalSum, '#Team-User-Total-Graph');
-    initializeBarchart(bldngSum, '#Team-User-Bldng-Graph');
-    initializeBarchart(roadsSum, '#Team-User-Roads-Graph');
+    // Spawn a chart function with listening events for each of the metrics
+    var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
+    var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
+    var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+
+    // On window resize, run window resize function on each chart
+    d3.select(window).on('resize', function () {
+      c1.resize();
+      c2.resize();
+      c3.resize();
+    });
   });
 }
 
-// Builds a barchart given an array in the form of
-// [{name: *hashtag*, value:*value*}, ..], along with
-// the name of a DOM target to place the barchart
-function initializeBarchart (data, targetElement) {
-  const width = 280;
+function Barchart (data, targetElement) {
+  // Setting margins and size using Bostock conventions for future
+  // ease of use, although currently leaving margins at 0
+  var margin = {top: 0, right: 0, bottom: 0, left: 0};
+  var width = parseInt(d3.select(targetElement).style('width'), 10);
+  width = width - margin.left - margin.right;
   const height = 220;
   const barPadding = 17;
+  const barHeight = (height - margin.top - margin.bottom) / data.length - barPadding;
 
-  const barHeight = height / data.length - barPadding;
-
-  const xScale = d3.scale.linear()
+  // Define scales
+  const x = d3.scale.linear()
     .range([0, width])
     .domain([0, d3.max(data, (d) => d.value)]);
 
-  let svg = d3.select(targetElement)
-    .append('svg')
-    .attr('width', width)
-    .attr('height', height);
+  // Create the chart
+  var chart = d3.select(targetElement).append('svg')
+    .style('width', (width + margin.left + margin.right) + 'px')
+    .style('height', height + 'px')
+  .append('g')
+    .attr('transform', 'translate(' + [margin.left, margin.top] + ')');
 
-  let bar = svg.selectAll('g')
+  d3.select(chart.node().parentNode)
+    .style('height', height + 'px');
+
+  // Render the chart, add the set the bar groups
+  var bars = chart.selectAll('.bar')
     .data(data)
-    .enter()
-    .append('g')
+  .enter().append('g')
     .attr('class', 'bar')
-    .attr('cx', 0)
     .attr('transform', (d, i) => {
       return `translate(0,${i * (barHeight + barPadding)})`;
     });
 
-  bar.append('rect')
+  // Add the bar rectangles
+  bars.append('rect')
+    .attr('class', 'bars')
     .attr('height', barHeight)
-    .attr('width', (d) => xScale(d.value));
+    .attr('width', (d) => x(d.value));
 
-  bar.append('text')
-    .attr('class', 'Graph-Label-Hashtag')
+  // Add the name labels
+  bars.append('text')
+    .attr('class', 'Graph-Label-Name')
     .attr('x', 5)
     .attr('y', barHeight / 2)
     .attr('dy', '.35em')
     .html((d) => d.name)
     .style('fill', '#606161');
 
-  bar.append('text')
+  // Add the value labels
+  bars.append('text')
     .attr('class', 'Graph-Label-Value')
-    .attr('x', 275)
+    .attr('x', width - 20)
     .attr('y', barHeight / 2)
     .attr('dy', '.35em')
     .text((d) => d.value.toLocaleString())
     .attr('text-anchor', 'end')
     .style('fill', '#606161');
+
+  this.resize = function () {
+    // Recalculate width of chart
+    width = parseInt(d3.select(targetElement).style('width'), 10);
+    width = width - margin.left - margin.right;
+
+    // Update svg size
+    d3.select(targetElement).select('svg')
+      .style('width', (width + margin.left + margin.right) + 'px');
+
+    // Update the scale of chart
+    x.range([0, width]);
+
+    // Update the bar width
+    chart.selectAll('rect.bars')
+      .attr('width', (d) => x(d.value));
+
+    // Update the value text position
+    chart.selectAll('text.Graph-Label-Value')
+      .attr('x', width - 20);
+  };
 }
 
 /* -------------------------------------------------------
