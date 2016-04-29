@@ -456,7 +456,7 @@ function getImgs (flickrApiKey, flickrSetId) {
   $.getJSON(URL, function (data) {
     $.each(data.photoset.photo, function (i, item) {
       // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
-      var imgSrc = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_b.jpg';
+      var imgSrc = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '.jpg';
 
       // Add images in individual <li> elements to HTML
       var imgThumb = $('<li><img src=' + imgSrc + '></img></li>');
@@ -477,6 +477,14 @@ function getImgs (flickrApiKey, flickrSetId) {
   });
 }
 
+function checkHashtags(hashtags){
+  console.log(hashtags);
+  if(hashtags.length < 2){
+    console.log('why oh why');
+    $('.Team-User-Container').css('display', 'none');
+  };
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------
@@ -488,6 +496,8 @@ getPrimaryStats(PT.mainHashtag);
 getProjects(PT.hotProjects);
 // Adds event functionality (hide and show)
 eventsFunctionality();
+// Check to see if there are hashtags to view
+checkHashtags(PT.subHashtags);
 // Sets up switcher/ loader for group and user graphs
 setupGraphs();
 // Populates initial groups graph via Missing Maps API

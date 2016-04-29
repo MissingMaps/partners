@@ -565,6 +565,16 @@ h1{
   position: relative;
 }
 
+.Community-Container{
+  .events-null{
+  background-color: $darkestgrey;
+  display: block;
+  margin: 80%;
+  text-align:center;
+  margin: 0 auto;
+  }
+}
+
 /*----------------------------------------------*/
 /* Main Site MissingMaps Bits */
 /*----------------------------------------------*/
