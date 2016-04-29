@@ -14,7 +14,7 @@ social:
   facebook: https://www.facebook.com/MissingMapsProject
   benevity: https://missingmaps.benevity.org/user
 
-community: 
+community:
   apikey: 09023a48037b7882a3683cb1c2043c50
   setId: 72157655209554272
 
@@ -22,6 +22,14 @@ primary-hashtag: redcross
 subhashtags:
   - peacecorps
   - redcross
+  - hotosm-project-1752
+  - hotosm-project-1465
+  - redcross
+  - hotosm-project-1752
+  - hotosm-project-1465
+  - hotosm-project-1752
+  - hotosm-project-1465
+  - hotosm-project-1465
   - hotosm-project-1752
   - hotosm-project-1465
 

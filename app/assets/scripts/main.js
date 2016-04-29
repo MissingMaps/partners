@@ -333,14 +333,25 @@ function getGroupActivityStats (hashtags) {
 }
 
 function Barchart (data, targetElement) {
+  console.log(data);
+  console.log(data.length);
   // Setting margins and size using Bostock conventions for future
   // ease of use, although currently leaving margins at 0
   var margin = {top: 0, right: 0, bottom: 0, left: 0};
   var width = parseInt(d3.select(targetElement).style('width'), 10);
   width = width - margin.left - margin.right;
-  const height = 220;
-  const barPadding = 17;
-  const barHeight = (height - margin.top - margin.bottom) / data.length - barPadding;
+  var height = 220;
+  var barPadding = 60 / data.length;
+  var barHeight = (height - margin.top - margin.bottom) / data.length - barPadding;
+
+  // If more than 10 records, switch bar width and spacing to fixed dimensions,
+  // (locked at the dimensions required for 10), and begin expanding the height
+  // of the svg rather than resizing its contents
+  if (data.length > 10) {
+    barPadding = 60 / 10;
+    barHeight = (height - margin.top - margin.bottom) / 10 - barPadding;
+    height = height + ((barPadding + barHeight) * (data.length - 10));
+  }
 
   // Define scales
   const x = d3.scale.linear()
