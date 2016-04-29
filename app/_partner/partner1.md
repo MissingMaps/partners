@@ -24,6 +24,15 @@ subhashtags:
   - redcross
   - hotosm-project-1752
   - hotosm-project-1465
+  - redcross
+  - hotosm-project-1752
+  - hotosm-project-1465
+  - redcross
+  - hotosm-project-1752
+  - hotosm-project-1465
+  - redcross
+  - hotosm-project-1752
+  - hotosm-project-1465
 
 tm-projects:
   - id: 1805
