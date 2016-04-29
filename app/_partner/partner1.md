@@ -31,7 +31,6 @@ subhashtags:
   - hotosm-project-1465
   - hotosm-project-1465
   - hotosm-project-1752
-  - hotosm-project-1465
 
 tm-projects:
   - id: 1805

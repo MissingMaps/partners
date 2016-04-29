@@ -333,8 +333,6 @@ function getGroupActivityStats (hashtags) {
 }
 
 function Barchart (data, targetElement) {
-  console.log(data);
-  console.log(data.length);
   // Setting margins and size using Bostock conventions for future
   // ease of use, although currently leaving margins at 0
   var margin = {top: 0, right: 0, bottom: 0, left: 0};
@@ -344,15 +342,31 @@ function Barchart (data, targetElement) {
   var barPadding = 60 / data.length;
   var barHeight = (height - margin.top - margin.bottom) / data.length - barPadding;
 
-  // If more than 10 records, switch bar width and spacing to fixed dimensions,
-  // (locked at the dimensions required for 10), and begin expanding the height
-  // of the svg rather than resizing its contents
+  // If more than 10 records...
   if (data.length > 10) {
+    // freeze dynamic sizing of bars and begin expanding the svg height instead
     barPadding = 60 / 10;
     barHeight = (height - margin.top - margin.bottom) / 10 - barPadding;
     height = height + ((barPadding + barHeight) * (data.length - 10));
+    // Enable "Show More" functionality
+    const offset = -((data.length - 10) * (barPadding + barHeight));
+    $('.teams-btn')
+      .removeClass('hidden')
+      .click(function () {
+        const graphs = $('.Team-User-Graph > svg')
+        graphs.animate({marginTop: offset}, 300)
+      })
   }
 
+
+//   .animate({
+//     opacity: 0,
+//     height: '0px'
+//   }, 300, function () {
+//     $('.hidden').css('display', 'none');
+//   });
+//
+// $('.events-btn').html('SEE MORE');
   // Define scales
   const x = d3.scale.linear()
     .range([0, width])
