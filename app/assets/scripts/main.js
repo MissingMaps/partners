@@ -290,7 +290,6 @@ function getGroupActivityStats (hashtags) {
   const url = 'http://osmstats.redcross.org/group-summaries/' + hashtags.join(',');
 
   $.getJSON(url, function (hashtagData) {
-
     // For each hashtag, sum the total edits across all categories
     const totalSum = hashtags.map(function (ht) {
       const vals = hashtagData[ht];
@@ -477,12 +476,10 @@ function getImgs (flickrApiKey, flickrSetId) {
   });
 }
 
-function checkHashtags(hashtags){
-  console.log(hashtags);
-  if(hashtags.length < 2){
-    console.log('why oh why');
+function checkHashtags (hashtags) {
+  if (hashtags.length < 2) {
     $('.Team-User-Container').css('display', 'none');
-  };
+  }
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
