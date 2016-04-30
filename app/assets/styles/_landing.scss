@@ -94,8 +94,8 @@ h1{
 .Primary_Container{
   @include container;
   overflow: hidden;
-  margin-top: 0.5em;
-  padding-bottom: 0.5em;
+  margin-top: 0.75em;
+  padding-bottom: 1em;
 }
 
 .Primary-logo{
@@ -141,7 +141,7 @@ h1{
 }
 
 .Primary-logo p{
-  margin-top:6px;
+  margin-top: 16px;
   font-size: 18px;
   color: $lightgrey;
 }
@@ -156,7 +156,7 @@ h1{
 
 .Stat-Item{
   display: inline-block;
-  margin: 16px 11px 1em 78px;
+  margin: 25px 11px 1em 78px;
   .title{
     margin-top: 6px;
     font-size: 1.1em;
@@ -563,6 +563,16 @@ h1{
   margin: 0 auto;
   height: auto;
   position: relative;
+}
+
+.Community-Container{
+  .events-null{
+  background-color: $darkestgrey;
+  display: block;
+  margin: 80%;
+  text-align:center;
+  margin: 0 auto;
+  }
 }
 
 /*----------------------------------------------*/
