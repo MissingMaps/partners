@@ -81,7 +81,7 @@ function makeProject (project, projectOrder) {
 function makePlaceholderProject (projectId, projectOrder) {
   // Adds error title
   $('ul li:nth-child(' + projectOrder + ') .HOT-Title p')
-    .html(`<b>HOT Project #${projectId} Not Active/ Archived</b>`);
+    .html(`<b>HOT Project #${projectId} Not Active/ Not Found in HOT Tasking Manager</b>`);
 
   // Truncate original description to 25 words, and add explanatory error text
   let projectDescEl = $('ul li:nth-child(' + projectOrder + ') .HOT-Description p');
@@ -108,8 +108,6 @@ function makePlaceholderProject (projectId, projectOrder) {
   L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
     attribution: '<a href="http://mapbox.com">Mapbox</a>'
   }).addTo(map);
-
-  // $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').css({opacity: 0.5})
 
   // Disable drag and zoom handlers
   map.dragging.disable();
