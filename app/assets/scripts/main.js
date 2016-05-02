@@ -83,18 +83,24 @@ function makePlaceholderProject (projectId, projectOrder) {
   $('ul li:nth-child(' + projectOrder + ') .HOT-Title p')
     .html(`<b>HOT Project #${projectId} Not Active/ Not Found in HOT Tasking Manager</b>`);
 
+  // Generate issue information for Github tracker
+  const ghIssueTitle = `HOT Tasking Manager endpoint failure in ${PT.mainHashtag} partner page`;
+  const ghIssueBody = `Project ${projectId} is no longer indexed in the HOT
+ Tasking Manager, so it should be removed from the ${PT.mainHashtag} partner
+ page variable settings.`;
   // Truncate original description to 25 words, and add explanatory error text
-  let projectDescEl = $('ul li:nth-child(' + projectOrder + ') .HOT-Description p');
-  let descString = projectDescEl[0].innerHTML.split(' ').slice(0, 24).join(' ') + '...';
-  descString = `
-    <p>Oops, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
+  let projectDescriptionEl = $('ul li:nth-child(' + projectOrder + ') .HOT-Description p');
+  let errorHtml = projectDescriptionEl[0].innerHTML.split(' ').slice(0, 24).join(' ') + '...';
+  errorHtml = `
+    <p>Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
     target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
-    <a href="https://github.com/MissingMaps/partners/issues" target="_blank">Click here</a>
-    to report an issue or <a href="http://tasks.hotosm.org/" target="_blank">here</a>
-    to search for more projects.</p><p class="strikethrough">${descString}</p>`;
+    <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
+    &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
+    <a href="http://tasks.hotosm.org/" target="_blank">here</a>
+    to search for more projects.</p><p class="strikethrough">${errorHtml}</p>`;
 
   // Add error description
-  projectDescEl.html(descString);
+  projectDescriptionEl.html(errorHtml);
 
   // ----------------------------
   // Add empty placeholder map --
