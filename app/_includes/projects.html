@@ -4,7 +4,7 @@
     <div class = "flexslider Projects-slider">
       <ul class = "slides project-slide">
         {% for p in page.tm-projects %}
-        <li>
+        <li id = Project-{{ p.id }}>
           <div class = "HOT-Container">
             <div class = "HOT-Map">
               <div class="spinner big">
@@ -18,7 +18,7 @@
                 <p><b></b></p><a href="http://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue">CONTRIBUTE</a>
               </div>
               <div class = "HOT-Progress">
-                <p>14%</p>
+                <p></p>
               </div>
               <div class = "HOT-Description">
                 <p> {{ p.desc | truncatewords: 40}} <a href= "http://tasks.hotosm.org/project/{{ p.id }}"> read more.</a>

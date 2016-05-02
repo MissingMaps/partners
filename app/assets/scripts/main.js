@@ -5,7 +5,7 @@
 function getPrimaryStats (primaryhash) {
   const url = 'http://osmstats.redcross.org/hashtags/' + primaryhash + '/users';
   $.getJSON(url, function (hashtagData) {
-    var usersCount = (Object.keys(hashtagData).length);
+    const usersCount = Object.keys(hashtagData).length;
     var editsCount = 0;
     var buildingCount = 0;
     var roadCount = 0;
@@ -40,27 +40,28 @@ function getProjects (projects) {
   $('.flex-next').prependTo('.HOT-Nav-Projects');
   $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
   $('.flex-prev').prependTo('.HOT-Nav-Projects');
-  var projCount = projects.length;
-  $('#stats-projCount').html(projCount);
-  var projectOrder = 1;
 
   if (projects.length === 1) {
     $('.flex-next').css('display', 'none');
   }
 
-  for (var i = 0; i < projects.length; i++) {
-    const url = 'http://tasks.hotosm.org/project/' + projects[i] + '.json';
-    $.getJSON(url, function (ProjectData) {
-      projectOrder += 1;
-      makeProjects(ProjectData, projectOrder);
+  projects.forEach(function (project, i) {
+    const url = `http://tasks.hotosm.org/project/${project}.json`;
+    $.getJSON(url, function (projectData) {
+      makeProject(projectData, i + 2);
+    })
+    .fail(function (err) {
+      console.error(`ERROR >> Project #${project} could not be accessed at ${url}.\n` +
+                    'The server returned the following message object:', err);
+      makePlaceholderProject(project, i + 2);
     });
-  }
+  });
 }
 
 // Update cards with necessary project details
-function makeProjects (project, projectOrder) {
-  var props = project.properties;
-  var projDone = Math.round(props.done);
+function makeProject (project, projectOrder) {
+  const props = project.properties;
+  const projDone = Math.round(props.done);
 
   // Updates Progress Bar
   $('ul li:nth-child(' + projectOrder + ') .HOT-Progress').addClass('projWidth' + projectOrder + '');
@@ -73,6 +74,54 @@ function makeProjects (project, projectOrder) {
 
   // Drop a map into the HOT-Map div
   addMap(project.id);
+}
+
+// Adds placeholder/ warning formatting to project carousel entry in the event
+// that a project cannot be retrieved from the HOT Tasking Manager API
+function makePlaceholderProject (projectId, projectOrder) {
+  // Adds error title
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Title p')
+    .html(`<b>HOT Project #${projectId} Not Active/ Not Found in HOT Tasking Manager</b>`);
+
+  // Generate issue information for Github tracker
+  const ghIssueTitle = `HOT Tasking Manager endpoint failure in ${PT.mainHashtag} partner page`;
+  const ghIssueBody = `Project ${projectId} is no longer indexed in the HOT
+ Tasking Manager, so it should be removed from the ${PT.mainHashtag} partner
+ page variable settings.`;
+  // Truncate original description to 25 words, and add explanatory error text
+  let projectDescriptionEl = $('ul li:nth-child(' + projectOrder + ') .HOT-Description p');
+  let errorHtml = projectDescriptionEl[0].innerHTML.split(' ').slice(0, 24).join(' ') + '...';
+  errorHtml = `
+    <p>Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
+    target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
+    <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
+    &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
+    <a href="http://tasks.hotosm.org/" target="_blank">here</a>
+    to search for more projects.</p><p class="strikethrough">${errorHtml}</p>`;
+
+  // Add error description
+  projectDescriptionEl.html(errorHtml);
+
+  // ----------------------------
+  // Add empty placeholder map --
+  // ----------------------------
+  // Set ul id and remove loading spinners before placing map
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').attr('id', 'Map-' + projectId);
+  $('#Map-' + projectId).empty();
+
+  // Initialize map and add tile layer
+  const map = L.map('Map-' + projectId, {zoomControl: false}).setView([15, 0], 1);
+  L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
+    attribution: '<a href="http://mapbox.com">Mapbox</a>'
+  }).addTo(map);
+
+  // Disable drag and zoom handlers
+  map.dragging.disable();
+  map.touchZoom.disable();
+  map.doubleClickZoom.disable();
+  map.scrollWheelZoom.disable();
+  map.keyboard.disable();
+  if (map.tap) map.tap.disable();
 }
 
 /* -------------------------------------------------------
@@ -106,10 +155,6 @@ function onEachFeature (feature, layer) {
 }
 
 function addMap (projectId) {
-  const token = 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYw' +
-                'ZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w.';
-  const basemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
-
   // Connect HOT-OSM endpoint for tasking squares data
   const endpoint = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
   $.getJSON(endpoint, function (taskData) {
@@ -121,7 +166,7 @@ function addMap (projectId) {
       {zoomControl: false}).setView([38.889931, -77.009003], 13);
 
     // Add tile layer
-    L.tileLayer(basemapUrl + '?access_token=' + token, {
+    L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
       attribution: '<a href="http://mapbox.com">Mapbox</a>'
     }).addTo(map);
 
@@ -133,14 +178,12 @@ function addMap (projectId) {
     // Fit to feature layer bounds
     map.fitBounds(featureLayer.getBounds());
 
-    // Disable drag and zoom handlers.
+    // Disable drag and zoom handlers
     map.dragging.disable();
     map.touchZoom.disable();
     map.doubleClickZoom.disable();
     map.scrollWheelZoom.disable();
     map.keyboard.disable();
-
-    // Disable tap handler, if present.
     if (map.tap) map.tap.disable();
   });
 }
@@ -151,14 +194,14 @@ function addMap (projectId) {
 
 // Adds hide/ show functionality to events list (pre-generated by Jekyll)
 function eventsFunctionality () {
-  var eventsnumber = $('.event-sub-container').length;
+  const eventsCount = $('.event-sub-container').length;
   var firstTwoOpen = false;
   var allOpen = false;
 
-  if (eventsnumber === 0) {
+  if (eventsCount === 0) {
     $('.events-null').css('display', 'block');
   }
-  if (eventsnumber < 3) {
+  if (eventsCount < 3) {
     $('.events-btn').css('display', 'none');
   }
 
@@ -170,14 +213,14 @@ function eventsFunctionality () {
         opacity: 1,
         height: '180px'
       }, 500);
-      if (eventsnumber >= 5) {
+      if (eventsCount >= 5) {
         $('.events-btn').html('SEE ALL');
       } else {
         firstTwoOpen = false;
         allOpen = true;
         $('.events-btn').html('SEE FEWER');
       }
-    } else if (firstTwoOpen === true && allOpen === false && eventsnumber > 2) {
+    } else if (firstTwoOpen === true && allOpen === false && eventsCount > 2) {
       firstTwoOpen = false;
       allOpen = true;
       $('.events-btn').html('SEE ALL');
@@ -486,6 +529,10 @@ function checkHashtags (hashtags) {
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------
  -------------------------------------------------------*/
+// Global Mapbox variables
+const mbToken = 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYw' +
+             'ZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w.';
+const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 // Populate the primary stats in hero via Missing Maps API
 getPrimaryStats(PT.mainHashtag);
