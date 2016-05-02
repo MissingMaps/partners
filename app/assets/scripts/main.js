@@ -53,7 +53,7 @@ function getProjects (projects) {
     .fail(function (err) {
       console.error(`ERROR >> Project #${project} could not be accessed at ${url}.\n` +
                     'The server returned the following message object:', err);
-      placeholderProject();
+      makePlaceholderProject(project, i + 2);
     });
   });
 }
@@ -78,8 +78,46 @@ function makeProject (project, projectOrder) {
 
 // Adds placeholder/ warning formatting to project carousel entry in the event
 // that a project cannot be retrieved from the HOT Tasking Manager API
-function placeholderProject (project, projectOrder) {
+function makePlaceholderProject (projectId, projectOrder) {
+  // Adds error title
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Title p')
+    .html(`<b>HOT Project #${projectId} Not Active/ Archived</b>`);
 
+  // Truncate original description to 25 words, and add explanatory error text
+  let projectDescEl = $('ul li:nth-child(' + projectOrder + ') .HOT-Description p');
+  let descString = projectDescEl[0].innerHTML.split(' ').slice(0, 24).join(' ') + '...';
+  descString = `
+    <p>Oops, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
+    target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
+    <a href="https://github.com/MissingMaps/partners/issues" target="_blank">Click here</a>
+    to report an issue or <a href="http://tasks.hotosm.org/" target="_blank">here</a>
+    to search for more projects.</p><p class="strikethrough">${descString}</p>`;
+
+  // Add error description
+  projectDescEl.html(descString);
+
+  // ----------------------------
+  // Add empty placeholder map --
+  // ----------------------------
+  // Set ul id and remove loading spinners before placing map
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').attr('id', 'Map-' + projectId);
+  $('#Map-' + projectId).empty();
+
+  // Initialize map and add tile layer
+  const map = L.map('Map-' + projectId, {zoomControl: false}).setView([15, 0], 1);
+  L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
+    attribution: '<a href="http://mapbox.com">Mapbox</a>'
+  }).addTo(map);
+
+  // $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').css({opacity: 0.5})
+
+  // Disable drag and zoom handlers
+  map.dragging.disable();
+  map.touchZoom.disable();
+  map.doubleClickZoom.disable();
+  map.scrollWheelZoom.disable();
+  map.keyboard.disable();
+  if (map.tap) map.tap.disable();
 }
 
 /* -------------------------------------------------------
@@ -113,10 +151,6 @@ function onEachFeature (feature, layer) {
 }
 
 function addMap (projectId) {
-  const token = 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYw' +
-                'ZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w.';
-  const basemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
-
   // Connect HOT-OSM endpoint for tasking squares data
   const endpoint = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
   $.getJSON(endpoint, function (taskData) {
@@ -128,7 +162,7 @@ function addMap (projectId) {
       {zoomControl: false}).setView([38.889931, -77.009003], 13);
 
     // Add tile layer
-    L.tileLayer(basemapUrl + '?access_token=' + token, {
+    L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
       attribution: '<a href="http://mapbox.com">Mapbox</a>'
     }).addTo(map);
 
@@ -140,14 +174,12 @@ function addMap (projectId) {
     // Fit to feature layer bounds
     map.fitBounds(featureLayer.getBounds());
 
-    // Disable drag and zoom handlers.
+    // Disable drag and zoom handlers
     map.dragging.disable();
     map.touchZoom.disable();
     map.doubleClickZoom.disable();
     map.scrollWheelZoom.disable();
     map.keyboard.disable();
-
-    // Disable tap handler, if present.
     if (map.tap) map.tap.disable();
   });
 }
@@ -493,6 +525,10 @@ function checkHashtags (hashtags) {
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------
  -------------------------------------------------------*/
+// Global Mapbox variables
+const mbToken = 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYw' +
+             'ZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w.';
+const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 // Populate the primary stats in hero via Missing Maps API
 getPrimaryStats(PT.mainHashtag);
