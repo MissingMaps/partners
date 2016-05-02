@@ -104,6 +104,13 @@ gulp.task('jekyll', function (done) {
     .on('close', done);
 });
 
+// Copies fonts
+gulp.task('fonts', function () {
+  return gulp.src('app/assets/fonts/**/*')
+    .pipe(gulp.dest('.tmp/assets/styles/fonts'))
+    .pipe(gulp.dest('dist/assets/styles/fonts'));
+});
+
 // Build the jekyll website.
 // Reload all the browsers.
 gulp.task('jekyll:rebuild', ['jekyll'], function () {
@@ -113,7 +120,7 @@ gulp.task('jekyll:rebuild', ['jekyll'], function () {
 // Main build task
 // Builds the site. Destination --> _site
 gulp.task('build', function (done) {
-  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'compass'],
+  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'compass', 'fonts'],
     ['copy:assets'], done);
 });
 
