@@ -336,8 +336,8 @@ function getGroupActivityStats (hashtags) {
     // If no hashtags contain data, remove the partner graphs entirely
     if ($.isEmptyObject(hashtagData)) {
       $('.Team-User-Container').css('display', 'none');
-      console.error('ERROR >> None of the secondary hashtags contain any' +
-                    'metrics according to the Missing Maps endpoint at' +
+      console.error('ERROR >> None of the secondary hashtags contain any ' +
+                    'metrics according to the Missing Maps endpoint at ' +
                     'https://osmstats.redcross.org/group-summaries/' +
                     hashtagsString + '. The partner graphs will not be displayed');
     } else {
@@ -546,8 +546,8 @@ function getImgs (flickrApiKey, flickrSetId) {
 
 function checkHashtags (hashtags) {
   if (hashtags.length < 2) {
-    console.error('ERROR >> There are not enough secondary hashtags listed' +
-                  'in order to represent differences in contribution level' +
+    console.error('ERROR >> There are not enough secondary hashtags listed ' +
+                  'in order to represent differences in contribution level ' +
                   'between partners. The partner graphs will not be displayed.');
     $('.Team-User-Container').css('display', 'none');
   }
