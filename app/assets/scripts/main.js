@@ -249,16 +249,20 @@ function eventsFunctionality () {
  -------------------------------------------------------*/
 
 function setupGraphs () {
+  function removeExistingGraphs () {
+    const totalGraph = document.querySelector('#Team-User-Total-Graph svg');
+    const bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
+    const roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
+    totalGraph.parentNode.removeChild(totalGraph);
+    bldngGraph.parentNode.removeChild(bldngGraph);
+    roadsGraph.parentNode.removeChild(roadsGraph);
+  }
   // Sets Users button to Selected and loads Users chart
   $('#Select-Users-Graph').click(function () {
     $('#Select-Teams-Graph').removeClass('Selected');
     $('#Select-Users-Graph').addClass('Selected');
-    var totalGraph = document.querySelector('#Team-User-Total-Graph svg');
-    var bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
-    var roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
-    totalGraph.parentNode.removeChild(totalGraph);
-    bldngGraph.parentNode.removeChild(bldngGraph);
-    roadsGraph.parentNode.removeChild(roadsGraph);
+    // Remove existing graphs
+    removeExistingGraphs();
     // Gets main hashtag on each partner page via team.html
     getUserActivityStats(PT.mainHashtag);
   });
@@ -267,12 +271,8 @@ function setupGraphs () {
   $('#Select-Teams-Graph').click(function () {
     $('#Select-Users-Graph').removeClass('Selected');
     $('#Select-Teams-Graph').addClass('Selected');
-    var totalGraph = document.querySelector('#Team-User-Total-Graph svg');
-    var bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
-    var roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
-    totalGraph.parentNode.removeChild(totalGraph);
-    bldngGraph.parentNode.removeChild(bldngGraph);
-    roadsGraph.parentNode.removeChild(roadsGraph);
+    // Remove existing graphs
+    removeExistingGraphs();
     // Gets hashtag array on each partner page via team.html
     getGroupActivityStats(PT.subHashtags);
   });
