@@ -107,8 +107,7 @@ gulp.task('jekyll', function (done) {
 // Copies fonts
 gulp.task('fonts', function () {
   return gulp.src('app/assets/fonts/**/*')
-    .pipe(gulp.dest('.tmp/assets/styles/fonts'))
-    .pipe(gulp.dest('dist/assets/styles/fonts'));
+    .pipe(gulp.dest('.tmp/assets/styles/fonts'));
 });
 
 // Build the jekyll website.
