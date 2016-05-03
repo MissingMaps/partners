@@ -1,156 +1,155 @@
-.btn{
-  background-color: $ButtonColor;
-  -moz-border-radius:4px;
-  -webkit-border-radius:4px;
-  border-radius:4px;
-  display:inline-block;
-  cursor:pointer;
-  transition: active 0.25s;
-  color: white;
+.btn {
+  display: inline-block;
   padding: 8px 14px 6px 14px;
-  margin: 10px 8px 6px 0px;
-  font-size: 0.8em;
-  font-weight: 400;
+  margin: 10px 8px 6px 0;
   font-family: 'Lato';
-  text-decoration:none;
-  letter-spacing: 0.06em;
-  transition-property: background color border;
-  transition-duration: 0.12s;
-  transition-timing-function: linear;
+  font-size: .8em;
+  font-weight: 400;
   line-height: 23px;
-  a{
-    color: white;
+  color: white;
+  text-decoration: none;
+  letter-spacing: .06em;
+  cursor: pointer;
+  background-color: $ButtonColor;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  transition: active .25s;
+  transition-timing-function: linear;
+  transition-duration: .12s;
+  transition-property: background color border;
+  a {
     font-size: 1em;
-    &:hover{
+    color: white;
+    &:hover {
       color: white;
     }
-    &:active{
-      color:white;
+    &:active {
+      color: white;
     }
-    &:visited{
+    &:visited {
       color: white;
     }
   }
 }
 
-.btn-blue{
+.btn-blue {
+  color: white;
   background-color: $mmTeal;
-  color: white;
 
-  &:hover{
-    background-color: darken($ButtonColor, 12%);
+  &:hover {
     color: white;
+    background-color: darken($ButtonColor, 12%);
   }
-  &:active{
+  &:active {
+    color: white;
     background-color: darken($ButtonColor, 15%);
-    color: white;
   }
-  &:focus{
+  &:focus {
+    color: white;
     background-color: darken($ButtonColor, 12%);
-    color: white;
   }
 }
 
-.btn-grn{
-  background-color: $mmGreen;
+.btn-grn {
   color: white;
-  &:hover{
+  background-color: $mmGreen;
+  &:hover {
+    color: white;
     background-color: darken($mmGreen, 12%);
-    color:white;
   }
-  &:active{
+  &:active {
+    color: white;
     background-color: darken($mmGreen, 15%);
-    color:white;
   }
-  &:focus{
+  &:focus {
+    color: white;
     background-color: darken($mmGreen, 12%);
-    color:white;
   }
 }
 
-.invert-btn-blue{
+.invert-btn-blue {
+  color: $mmTeal;
   background-color: rgba(0,0,0,0);
   border: 1px solid $mmTeal;
-  color: $mmTeal;
-  &:hover{
-    background-color: rgba(35, 188, 193, 0.2);
+  &:hover {
+    background-color: rgba(35, 188, 193, .2);
   }
-  &:active{
-    background-color: rgba(35, 188, 193, 0.2);
+  &:active {
+    background-color: rgba(35, 188, 193, .2);
   }
-  &:focus{
-    background-color: rgba(35, 188, 193, 0.2);
+  &:focus {
+    background-color: rgba(35, 188, 193, .2);
   }
-  a{
+  a {
     color: $mmTeal;
-    &:hover{
-      color: white;   
+    &:hover {
+      color: white;
     }
-    &:visited{
+    &:visited {
       color: $mmTeal;
     }
   }
 }
 
-.invert-btn-grn{
+.invert-btn-grn {
+  color: darken($mmGreen, 10);
   background-color: rgba(0,0,0,0);
   border: 1px solid darken($mmGreen, 10);
-  color: darken($mmGreen, 10);
-  &:hover{
+  &:hover {
     background-color: lighten($mmGreen, 24);
   }
-  &:active{
+  &:active {
     background-color: lighten($mmGreen, 24);
   }
-  &:focus{
+  &:focus {
     background-color: lighten($mmGreen, 24);
   }
-  a{
+  a {
     color: darken($mmGreen, 10);
-    &:hover{
-    }
-    &:visited{
+
+    &:visited {
       color: darken($mmGreen, 10);
     }
   }
 }
 
-.invert-btn-white{
+.invert-btn-white {
+  padding-top: 15px;
+  color: $mmTeal;
   background-color: rgba(0,0,0,0);
   border: $mmTeal 1px solid;
-  color: $mmTeal;
-  padding-top: 15px;
-  &:hover{
+  &:hover {
     background-color: rgba(0,0,0,0);
     border: 1px solid white;
   }
-  &:active{
-  background-color: rgba(0,0,0,0);
-  border: 1px solid white;
-  color: white;
-  }
-  &:focus{
-  background-color: rgba(0,0,0,0);
-  border: 1px solid white;
-  color: white;
-  }
-  a{
+  &:active {
     color: white;
-    &:hover{
+    background-color: rgba(0,0,0,0);
+    border: 1px solid white;
+  }
+  &:focus {
+    color: white;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid white;
+  }
+  a {
+    color: white;
+    &:hover {
       color: white;
     }
-    &:visited{
+    &:visited {
       color: white;
     }
   }
 }
 
-.events-panel{
-  .btn{
+.events-panel {
+  .btn {
     border-radius: 0;
   }
 }
 
-.teams-btn{
+.teams-btn {
   display: none;
 }
