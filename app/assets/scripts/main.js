@@ -339,7 +339,7 @@ function getGroupActivityStats (hashtags) {
       console.error('ERROR >> None of the secondary hashtags contain any ' +
                     'metrics according to the Missing Maps endpoint at ' +
                     'https://osmstats.redcross.org/group-summaries/' +
-                    hashtagsString + '. The partner graphs will not be displayed');
+                    hashtagsString + '. The partner graphs will not be displayed.');
     } else {
       // For each hashtag, sum the total edits across all categories,
       // skipping over hashtags if there are no metrics (this shouldn't
