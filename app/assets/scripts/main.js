@@ -91,13 +91,12 @@ function makePlaceholderProject (projectId, projectOrder) {
   // Truncate original description to 25 words, and add explanatory error text
   let projectDescriptionEl = $('ul li:nth-child(' + projectOrder + ') .HOT-Description p');
   let errorHtml = projectDescriptionEl[0].innerHTML.split(' ').slice(0, 24).join(' ') + '...';
-  errorHtml = `
-    <p>Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
-    target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
-    <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
-    &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
-    <a href="http://tasks.hotosm.org/" target="_blank">here</a>
-    to search for more projects.</p><p class="strikethrough">${errorHtml}</p>`;
+  errorHtml = `<p>Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
+ target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
+ <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
+ &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
+ <a href="http://tasks.hotosm.org/" target="_blank">here</a>
+ to search for more projects.</p><p class="strikethrough">${errorHtml}</p>`;
 
   // Add error description
   projectDescriptionEl.html(errorHtml);
@@ -333,45 +332,66 @@ function getGroupActivityStats (hashtags) {
   const url = 'http://osmstats.redcross.org/group-summaries/' + hashtags.join(',');
 
   $.getJSON(url, function (hashtagData) {
-    // For each hashtag, sum the total edits across all categories
-    const totalSum = hashtags.map(function (ht) {
-      const vals = hashtagData[ht];
-      const sum = Math.round(Number(vals.building_count_add) +
-                  Number(vals.building_count_mod) +
-                  Number(vals.road_count_add) +
-                  Number(vals.road_count_mod) +
-                  Number(vals.waterway_count_add) +
-                  Number(vals.poi_count_add));
-      return {name: generateHashtagUrl(ht), value: sum};
-    }).sort((a, b) => b.value - a.value);
+    // If no hashtags contain data, remove the partner graphs entirely
+    if ($.isEmptyObject(hashtagData)) {
+      $('.Team-User-Container').css('display', 'none');
+    } else {
+      // For each hashtag, sum the total edits across all categories,
+      // skipping over hashtags if there are no metrics (this shouldn't
+      // happen at the API level, but good to use best-practices).
+      // The reduce patterns below are compareable to Object.prototype.map,
+      // with the difference that there does not need to be a 1:1 match
+      // between input and output array length.
+      const totalSum = hashtags.reduce(function (acc, ht) {
+        const vals = hashtagData[ht];
+        if (!$.isEmptyObject(vals)) {
+          const sum = Math.round(Number(vals.building_count_add) +
+                      Number(vals.building_count_mod) +
+                      Number(vals.road_count_add) +
+                      Number(vals.road_count_mod) +
+                      Number(vals.waterway_count_add) +
+                      Number(vals.poi_count_add));
+          acc.push({name: generateHashtagUrl(ht), value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
 
-    // For each hashtag, sum the total building edits
-    const bldngSum = hashtags.map(function (ht) {
-      const vals = hashtagData[ht];
-      const sum = Math.round(Number(vals.building_count_add) +
-                  Number(vals.building_count_mod));
-      return {name: generateHashtagUrl(ht), value: sum};
-    }).sort((a, b) => b.value - a.value);
+      // For each hashtag, sum the total building edits,
+      // skipping over hashtags if there are no metrics
+      const bldngSum = hashtags.reduce(function (acc, ht) {
+        const vals = hashtagData[ht];
+        if (!$.isEmptyObject(vals)) {
+          const sum = Math.round(Number(vals.building_count_add) +
+                      Number(vals.building_count_mod));
+          acc.push({name: generateHashtagUrl(ht), value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
 
-    // For each hashtag, sum the total road kilometers edited
-    const roadsSum = hashtags.map(function (ht) {
-      const vals = hashtagData[ht];
-      const sum = Math.round(Number(vals.road_km_add) +
-                  Number(vals.road_km_mod));
-      return {name: generateHashtagUrl(ht), value: sum};
-    }).sort((a, b) => b.value - a.value);
+      // For each hashtag, sum the total road kilometers edited,
+      // skipping over hashtags if there are no metrics
+      const roadsSum = hashtags.reduce(function (acc, ht) {
+        const vals = hashtagData[ht];
+        if (!$.isEmptyObject(vals)) {
+          const sum = Math.round(Number(vals.road_km_add) +
+                      Number(vals.road_km_mod));
+          acc.push({name: generateHashtagUrl(ht), value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
 
-    // Spawn a chart function with listening events for each of the metrics
-    var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
-    var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
-    var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+      // Spawn a chart function with listening events for each of the metrics
+      var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
+      var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
+      var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
 
-    // On window resize, run window resize function on each chart
-    d3.select(window).on('resize', function () {
-      c1.resize();
-      c2.resize();
-      c3.resize();
-    });
+      // On window resize, run window resize function on each chart
+      d3.select(window).on('resize', function () {
+        c1.resize();
+        c2.resize();
+        c3.resize();
+      });
+    }
   });
 }
 
@@ -531,7 +551,7 @@ function checkHashtags (hashtags) {
  -------------------------------------------------------*/
 // Global Mapbox variables
 const mbToken = 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYw' +
-             'ZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w.';
+                'ZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w.';
 const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 // Populate the primary stats in hero via Missing Maps API
