@@ -210,7 +210,7 @@ function eventsFunctionality () {
       $('.hidden').slice(0, 2)
       .css('display', 'block').animate({
         opacity: 1,
-        height: '180px'
+        height: '190px'
       }, 500);
       if (eventsCount >= 5) {
         $('.events-btn').html('SEE ALL');
@@ -225,7 +225,7 @@ function eventsFunctionality () {
       $('.events-btn').html('SEE ALL');
       $('.hidden').css('display', 'block').animate({
         opacity: 1,
-        height: '180px'
+        height: '190px'
       }, 500);
       $('.events-btn').html('SEE FEWER');
     } else if (firstTwoOpen === false && allOpen === true) {

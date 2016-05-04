@@ -18,8 +18,9 @@ community:
   apikey: 09023a48037b7882a3683cb1c2043c50
   setId: 72157655209554272
 
-primary-hashtag: redpartner1cross
+primary-hashtag: redcross
 subhashtags:
+  - missingmaps
   - peacecorps
   - redcross
 

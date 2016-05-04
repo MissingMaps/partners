@@ -18,11 +18,15 @@ community:
   apikey: 09023a48037b7882a3683cb1c2043c50
   setId: 72157655209554272
 
-primary-hashtag: redpartner1cross
+primary-hashtag: redcross
 subhashtags:
 
 tm-projects:
   - id: 1850
-    desc: "Every Partner page should have at least one project."
+    desc: "Uh oh, it looks like <a href='http://tasks.hotosm.org/project/${projectId}'
+ target='_blank'>Project #${projectId}</a> has been removed from the HOT Tasking Manager.
+ <a href='https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
+ &body=${ghIssueBody}' target='_blank'>Click here</a> to report an issue or
+ <a href='http://tasks.hotosm.org/'"
 
 ---
