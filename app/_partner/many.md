@@ -1,9 +1,9 @@
 ---
 layout: partner
 lang: en
-permalink: /partner1/
+permalink: /many/
 
-id: partner1
+id: many
 name: MissingMaps Partner
 logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
 contact: dale.kunce@redcross.org
@@ -20,13 +20,35 @@ community:
 
 primary-hashtag: redpartner1cross
 subhashtags:
-  - peacecorps
-  - redcross
+  - hotosm-project-1802
+  - congodrc
+  - bing
+  - mapgive
+  - hotosm-project-1504
+  - hotosm-project-1248
+  - hotosm-project-1460
+  - hotosm-project-1537
+  - hotosm-project-1053
+  - southsudan
+  - hotosm-project-1472
+  - hotosm-project-1418
+  - hotosm-project-1400
+  - chai
+  - hotosm-project-1396
+  - majorroads
+  - settlements
+  - nielsen
+  - buildings
+  - houses
 
 tm-projects:
-  - id: 1805
+  - id: 1400
     desc: "An earthquake of magnitude 7.8 hit the coastal region of Ecuador on April, 16th at 23:58 UTC. This major event was followed by several shocks (http://earthquake.usgs.gov/earthquakes/map). The tasks consists on drawing roads, towns, villages, for coordinating help efforts from government institutions and civil society initiatives of rescue. Infrastructure has been damaged and the main access roads are blocked, leaving coastal towns disconnected from rescue efforts."
-  - id: 1796
+  - id: 1396
+    desc: "An earthquake of magnitude 7.8 hit the coastal region of Ecuador on April, 16th at 23:58 UTC. This major event was followed by several shocks (http://earthquake.usgs.gov/earthquakes/map). The tasks consists on drawing roads, towns, villages, for coordinating help efforts from government institutions and civil society initiatives of rescue. Infrastructure has been damaged and the main access roads are blocked, leaving coastal towns disconnected from rescue efforts."
+  - id: 1472
+    desc: "An earthquake of magnitude 7.8 hit the coastal region of Ecuador on April, 16th at 23:58 UTC. This major event was followed by several shocks (http://earthquake.usgs.gov/earthquakes/map). The tasks consists on drawing roads, towns, villages, for coordinating help efforts from government institutions and civil society initiatives of rescue. Infrastructure has been damaged and the main access roads are blocked, leaving coastal towns disconnected from rescue efforts."
+  - id: 1537
     desc: "An earthquake of magnitude 7.8 hit the coastal region of Ecuador on April, 16th at 23:58 UTC. This major event was followed by several shocks (http://earthquake.usgs.gov/earthquakes/map). The tasks consists on drawing roads, towns, villages, for coordinating help efforts from government institutions and civil society initiatives of rescue. Infrastructure has been damaged and the main access roads are blocked, leaving coastal towns disconnected from rescue efforts."
 
 ---
