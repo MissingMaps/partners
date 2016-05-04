@@ -51,7 +51,7 @@ function getProjects (projects) {
       makeProject(projectData, i + 2);
     })
     .fail(function (err) {
-      console.error(`ERROR >> Project #${project} could not be accessed at ${url}.\n` +
+      console.warn(`WARNING >> Project #${project} could not be accessed at ${url}.\n` +
                     'The server returned the following message object:', err);
       makePlaceholderProject(project, i + 2);
     });
@@ -82,6 +82,10 @@ function makePlaceholderProject (projectId, projectOrder) {
   // Adds error title
   $('ul li:nth-child(' + projectOrder + ') .HOT-Title p')
     .html(`<b>HOT Project #${projectId} Not Active/ Not Found in HOT Tasking Manager</b>`);
+
+  // Hides Tasking Manager Contribute button
+  $('#TM-Contribute-Btn-' + projectId).css('display', 'none');
+  $(`#HOT-Title-${projectId} p`).css('width', '100%');
 
   // Generate issue information for Github tracker
   const ghIssueTitle = `HOT Tasking Manager endpoint failure in ${PT.mainHashtag} partner page`;
@@ -210,7 +214,7 @@ function eventsFunctionality () {
       $('.hidden').slice(0, 2)
       .css('display', 'block').animate({
         opacity: 1,
-        height: '180px'
+        height: '190px'
       }, 500);
       if (eventsCount >= 5) {
         $('.events-btn').html('SEE ALL');
@@ -225,7 +229,7 @@ function eventsFunctionality () {
       $('.events-btn').html('SEE ALL');
       $('.hidden').css('display', 'block').animate({
         opacity: 1,
-        height: '180px'
+        height: '190px'
       }, 500);
       $('.events-btn').html('SEE FEWER');
     } else if (firstTwoOpen === false && allOpen === true) {
@@ -336,7 +340,7 @@ function getGroupActivityStats (hashtags) {
     // If no hashtags contain data, remove the partner graphs entirely
     if ($.isEmptyObject(hashtagData)) {
       $('.Team-User-Container').css('display', 'none');
-      console.error('ERROR >> None of the secondary hashtags contain any ' +
+      console.warn('WARNING >> None of the secondary hashtags contain any ' +
                     'metrics according to the Missing Maps endpoint at ' +
                     'https://osmstats.redcross.org/group-summaries/' +
                     hashtagsString + '. The partner graphs will not be displayed.');
@@ -344,9 +348,9 @@ function getGroupActivityStats (hashtags) {
       // For each hashtag, sum the total edits across all categories,
       // skipping over hashtags if there are no metrics (this shouldn't
       // happen at the API level, but good to use best-practices).
-      // The reduce patterns below are compareable to Object.prototype.map,
+      // The reduce patterns below are compareable to Array.prototype.map,
       // with the difference that there does not need to be a 1:1 match
-      // between input and output array length.
+      // between input and output array length
       const totalSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
@@ -546,7 +550,7 @@ function getImgs (flickrApiKey, flickrSetId) {
 
 function checkHashtags (hashtags) {
   if (hashtags.length < 2) {
-    console.error('ERROR >> There are not enough secondary hashtags listed ' +
+    console.warn('WARNING >> There are not enough secondary hashtags listed ' +
                   'in order to represent differences in contribution level ' +
                   'between partners. The partner graphs will not be displayed.');
     $('.Team-User-Container').css('display', 'none');

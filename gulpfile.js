@@ -119,8 +119,7 @@ gulp.task('jekyll:rebuild', ['jekyll'], function () {
 // Main build task
 // Builds the site. Destination --> _site
 gulp.task('build', function (done) {
-  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'compass', 'fonts'],
-    ['copy:assets'], done);
+  runSequence(['copy:assets'], ['jekyll', 'compress:main', 'compress:vendor', 'compass', 'fonts'], done);
 });
 
 // Default task.
