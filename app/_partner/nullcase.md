@@ -22,11 +22,8 @@ primary-hashtag: redcross
 subhashtags:
 
 tm-projects:
-  - id: 1850
-    desc: "Uh oh, it looks like <a href='http://tasks.hotosm.org/project/${projectId}'
- target='_blank'>Project #${projectId}</a> has been removed from the HOT Tasking Manager.
- <a href='https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
- &body=${ghIssueBody}' target='_blank'>Click here</a> to report an issue or
- <a href='http://tasks.hotosm.org/'"
+  - id: 1758
+    desc: "The Netherlands Red Cross is supporting Croix Rouge Benin to decrease the number of children under 5 suffering from waterborne and oro-fecal diseases. Data generated through this task will be used to increase the understanding of where vulnerable communities are.
+    The Netherlands Red Cross will also start investing in a local OSM / HOT community in Benin and is seeking opportunities to provide the necessary training and resources where needed."
 
 ---
