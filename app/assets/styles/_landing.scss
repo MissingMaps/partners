@@ -1,83 +1,83 @@
 /*----------------------------------------------*/
 /* CONTAINERS */
 /*----------------------------------------------*/
-section{
+section {
   width: 100%;
   padding: 2em 0 2em 0;
-  text-align: center;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   clear: both;
-  h1{
+  text-align: center;
+  h1 {
     padding-bottom: 1em;
   }
 }
 
-@mixin container{
+@mixin container {
   max-width: 1100px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   clear: both;
 }
 
-#site-title{
-  span{
-    border: 0 none;
-    clip: rect(0px,0px,0px,0px);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+#site-title {
+  span {
     position: absolute;
     width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0px,0px,0px,0px);
+    border: 0 none;
   }
 }
 
-h1{
-  font-family: 'Hind';
-  font-weight: 700;
-  font-size: 1.75em;
-  color: $darkgrey;
+h1 {
   display: inline-block;
+  font-family: 'Hind';
+  font-size: 1.75em;
+  font-weight: 700;
+  color: $darkgrey;
 }
 
-.site-title{
+.site-title {
   margin: 0;
 }
 
 /*----------------------------------------------*/
 /* HERO  */
 /*----------------------------------------------*/
-#Hero{
+#Hero {
   padding: 1.5em 0 0 0;
 }
 
-.Hero-image{
+.Hero-image {
+  width: 100%;
+  height: 320px;
   background-color: $debug;
-  width:100%;
-  background-image: url("/assets/graphics/content/flickr_img.jpg");
+  background-image: url('/assets/graphics/content/flickr_img.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  height: 320px;
-  .btn{
+  .btn {
     position: absolute;
-    right: 20px;
     top: 60px;
+    right: 20px;
   }
   @media screen and (max-width: 600px) {
     background-position: top;
   }
 }
 
-.Partner-title{
+.Partner-title {
   position: relative;
-  text-align: center;
   top: 150px;
   font-size: 2em;
   font-weight: 700;
-  text-shadow: 1px 1px 2px #8a8a8a;
   color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px #8a8a8a;
   @media screen and (max-width: 600px) {
   }
 }
@@ -85,103 +85,104 @@ h1{
 /*----------------------------------------------*/
 /* INTRO */
 /*----------------------------------------------*/
-#Primary{
+#Primary {
   width: 100%;
-  background-color: $darkestgrey;
   padding: 3em 0 1em 0;
+  background-color: $darkestgrey;
 }
 
-.Primary_Container{
-  @include container;
-  overflow: hidden;
-  margin-top: 0.75em;
+.Primary_Container {
   padding-bottom: 1em;
+  margin-top: .75em;
+  overflow: hidden;
+
+  @include container;
 }
 
-.Primary-logo{
-  display: inline-block;
-  float:initial;
-  margin: 0;
+.Primary-logo {
   position: relative;
-  p{
+  display: inline-block;
+  float: initial;
+  margin: 0;
+  p {
     font-weight: 600;
   }
   @media screen and (min-width: 1100px) {
-    margin: 0 auto;
     float: left;
+    margin: 0 auto;
   }
   @media screen and (max-width: 600px) {
-  width: 100%;
+    width: 100%;
   }
 }
 
-.Primary-logo-container{
-  height: 100px;
-  width: 200px;
+.Primary-logo-container {
   position: relative;
+  width: 200px;
+  height: 100px;
   font: 0/0 a;
-  &:before{
-    content: ' ';
+  &:before {
     display: inline-block;
-    vertical-align: middle;
     height: 100%;
+    vertical-align: middle;
+    content: ' ';
   };
   @media screen and (max-width: 700px) {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 }
 
-.Primary-logo img{
+.Primary-logo img {
   display: inline-block;
-  vertical-align: middle;
   max-width: 200px;
   max-height: 100px;
+  vertical-align: middle;
   pointer-events: none;
 }
 
-.Primary-logo p{
+.Primary-logo p {
   margin-top: 16px;
   font-size: 18px;
   color: $lightgrey;
 }
 
-.Primary-stats{
-  float:right;
+.Primary-stats {
+  float: right;
   @media screen and (max-width: 1020px) {
     float: initial;
     margin: 1em auto 0 auto;
   }
 }
 
-.Stat-Item{
+.Stat-Item {
   display: inline-block;
   margin: 25px 11px 1em 78px;
-  .title{
+  .title {
     margin-top: 6px;
     font-size: 1.1em;
     color: $border-grey;
     @media screen and (max-width: 700px) {
-      padding-top:0px;
-      font-size: 0.8em;
+      padding-top: 0;
+      font-size: .8em;
     }
   }
-  .emphasizedNumber{
-    color: $mmTeal;
+  .emphasizedNumber {
+    padding-top: 6px;
+    padding-bottom: 2px;
     font-size: 2em;
     font-weight: 600;
     line-height: 20px;
-    padding-top: 6px;
-    padding-bottom: 2px;
+    color: $mmTeal;
     @media screen and (max-width: 700px) {
-      padding-top:0px;
+      padding-top: 0;
       font-size: 1.5em;
     }
   }
-  img{
-    margin: 0 auto 10px auto;
+  img {
     display: block;
     width: 50px;
+    margin: 0 auto 10px auto;
   }
   @media screen and (max-width: 1020px) {
     display: inline-block;
@@ -199,8 +200,8 @@ h1{
 }
 
 .spinner {
-  margin: 0 auto;
   width: 70px;
+  margin: 0 auto;
   text-align: center;
   &.big {
     width: 100px;
@@ -208,14 +209,14 @@ h1{
 }
 
 .spinner > div {
+  display: inline-block;
   width: 8px;
   height: 8px;
-  background-color: $mmTeal;
   margin-bottom: 8px;
+  background-color: $mmTeal;
   border-radius: 100%;
-  display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+          animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   &.big {
     width: 25px;
     height: 25px;
@@ -224,27 +225,31 @@ h1{
 }
 
 .spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
+  -webkit-animation-delay: -.32s;
+          animation-delay: -.32s;
 }
 
 .spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+  -webkit-animation-delay: -.16s;
+          animation-delay: -.16s;
 }
 
 @-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1.0);
+  }
 }
 
 @keyframes sk-bouncedelay {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
-    transform: scale(0);
+            transform: scale(0);
   } 40% {
     -webkit-transform: scale(1.0);
-    transform: scale(1.0);
+            transform: scale(1.0);
   }
 }
 
@@ -252,16 +257,17 @@ h1{
 /*----------------------------------------------*/
 /* PROJECTS */
 /*----------------------------------------------*/
-.Projects-Container{
-  margin-top:1em;
+.Projects-Container {
+  margin-top: 1em;
+
   @include container;
-  h1{
-    width:80%;
-    text-align: left;
-    font-style: 'Raleway';
+  h1 {
+    width: 80%;
     padding-bottom: 0;
     margin-left: 0;
-    @media screen and (min-width: 1100px){
+    font-style: 'Raleway';
+    text-align: left;
+    @media screen and (min-width: 1100px) {
       width: 100%;
       margin-left: 6px;
     }
@@ -269,78 +275,78 @@ h1{
 }
 
 
-.HOT-Container{
+.HOT-Container {
   max-width: 100%;
 }
 
-.HOT-Details{
+.HOT-Details {
   float: initial;
-  text-align:initial;
-  margin: 0.5em auto 0 auto;
   width: 80%;
-  @media screen and (min-width: 1100px){
-    width:536px;
+  margin: .5em auto 0 auto;
+  text-align: initial;
+  @media screen and (min-width: 1100px) {
     float: left;
+    width: 536px;
+    margin: .5em 1em;
     text-align: left;
-    margin: 0.5em 1em;
   }
 }
 
-.HOT-Task{
+.HOT-Task {
   float: initial;
   width: 100%;
-  @media screen and (min-width: 1100px){
+  @media screen and (min-width: 1100px) {
     width: 860px;
   }
 }
 
-.HOT-Map{
-  height: 200px;
-  width: 80%;
-  border: 1px solid #CCC;
-  margin: 0.5em auto 0.5em auto;
+.HOT-Map {
   float: initial;
-  @media screen and (min-width: 1100px){
-    width: 220px;
-    margin: 0.5em;
+  width: 80%;
+  height: 200px;
+  margin: .5em auto .5em auto;
+  border: 1px solid #cccccc;
+  @media screen and (min-width: 1100px) {
     float: left;
+    width: 220px;
+    margin: .5em;
   }
 }
 
-.HOT-Title{
-  text-align: left;
-  width: 100%;
+.HOT-Title {
   position: relative;
+  width: 100%;
   min-height: 36px;
-  p{
+  text-align: left;
+  p {
     width: 50%;
-    @media screen and (min-width: 420px){
+    @media screen and (min-width: 420px) {
       width: 70%;
     }
-    @media screen and (min-width: 600px){
+    @media screen and (min-width: 600px) {
       width: 80%;
     }
-    @media screen and (min-width: 1100px){
+    @media screen and (min-width: 1100px) {
       width: 400px;
     }
   }
-  .btn{
-    float: right;
+  .btn {
     position: absolute;
-    right: -8px;
     top: -12px;
+    right: -8px;
+    float: right;
   }
 }
 
-.HOT-Description{
-  text-align: right;
+.HOT-Description {
   width: 100%;
   margin: 0;
-  @media screen and (min-width: 1100px){
+  text-align: right;
+  @media screen and (min-width: 1100px) {
   }
-  p{
-    text-align:left;
-    margin: 1em 0 0.25em 0;
+  p {
+    margin: 1em 0 .25em 0;
+    text-align: left;
     .strikethrough {
       color: lighten($darkgrey, 25%);
       text-decoration: line-through;
@@ -348,88 +354,87 @@ h1{
   }
 }
 
-.HOT-Nav{
-  clear:both;
-  margin: 1em 2.5em 0 0.4em;
-  position:relative;
-  p{
-    float:left;
-    font-weight: bold;
-    margin-right: 0.5em;
+.HOT-Nav {
+  position: relative;
+  margin: 1em 2.5em 0 .4em;
+  clear: both;
+  p {
     position: absolute;
+    float: left;
+    margin-right: .5em;
+    font-weight: bold;
   }
-  .HOT-Nav-Projects{
-  }
-  .btn{
+
+  .btn {
+    position: absolute;
+    top: -10px;
+    right: 0;
     float: right;
     margin: 0;
-    position: absolute;
-    right:0px;
-    top:-10px;
   }
 }
 
-.HOT-Progress{
-  height: 20px;
+.HOT-Progress {
   width: 100%;
+  height: 20px;
+  margin-top: .5em;
   background-color: $debug;
   border-radius: 4px;
-  margin-top: 0.5em;
   transform: translateZ(0);
-  .btn{
+  .btn {
     float: right;
   }
-  P{
-    margin: 0;
-    text-align: right;
-    font-weight: 800;
+  p {
     position: absolute;
     right: 10px;
-    opacity: 0.5;
+    margin: 0;
+    font-weight: 800;
+    text-align: right;
+    opacity: .5;
   }
-  &:before{
-    background-color: $badgeyellow;
+  &:before {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    content: "";
+    content: '';
+    background-color: $badgeyellow;
     border-radius: .25em 0 0 .25em;
   }
 }
 
-.HOT-Next{
-  float: right;
+.HOT-Next {
   position: relative;
-  margin-left: 1.5em;
   top: 15px;
+  float: right;
+  margin-left: 1.5em;
   font-size: 2em;
   cursor: pointer;
-  opacity: 0.25;
-  transition: opacity ease-in 0.2s;
-  &:hover{
-    opacity: 0.5;
+  opacity: .25;
+  transition: opacity ease-in .2s;
+  &:hover {
+    opacity: .5;
   }
 }
 
-.GetInvolved{
+.GetInvolved {
   display: none;
-  h3{
-    font-size: 1em;
-    font-weight: 300;
+  h3 {
+    width: 60%;
+    padding: 10px 0 8px 0;
     margin: 0 auto;
     font-family: 'Hind';
-    padding: 10px 0 8px 0;
+    font-size: 1em;
+    font-weight: 300;
     border-top: 1px solid #dbdbda;
-    width: 60%;
   }
-  @media screen and (min-width: 1100px){
+  @media screen and (min-width: 1100px) {
+    display: block;
     float: right;
     width: 240px;
     border-left: 1px solid #dbdbda;
-    display: block;
   }
-  .btn{
+  .btn {
     margin-bottom: 16px;
   }
 }
@@ -437,145 +442,146 @@ h1{
 /*----------------------------------------------*/
 /* EVENTS */
 /*----------------------------------------------*/
-#Events{
+#Events {
   background-color: desaturate(lighten($mmTeal, 40), 30);
 }
 
-.events-null{
-  margin-bottom:1.5em;
+.events-null {
   display: none;
-  p{
-    margin: 1.5em 0 0.5em 0;
+  margin-bottom: 1.5em;
+  p {
+    margin: 1.5em 0 .5em 0;
   }
 }
 
-.btn{
+.btn {
   text-transform: uppercase;
 }
 
-.hidden{
+.hidden {
   display: none;
-  opacity: 0;
   height: 0;
+  opacity: 0;
 }
 
 /*----------------------------------------------*/
 /* TEAMS AND USERS */
 /*----------------------------------------------*/
-.Team-User-Container{
+.Team-User-Container {
   margin-bottom: 2em;
+
   @include container;
-  h1{
-    text-align: left;
+  h1 {
     width: 80%;
-    @media screen and (min-width: 1100px){
+    text-align: left;
+    @media screen and (min-width: 1100px) {
       float: left;
-      margin-left: 5px;
       width: 100%;
+      margin-left: 5px;
       text-align: initial;
     }
   }
 }
 
-.Team-User-Nav{
+.Team-User-Nav {
+  width: 80%;
   height: 36px;
-  clear: both;
-  margin-left: auto;
   margin-right: auto;
-  width:80%;
+  margin-left: auto;
+  clear: both;
   text-align: left;
-  p{
+  p {
     display: inline-block;
-    margin: 0 1.5em 0 0;
     float: initial;
-    @media screen and (min-width: 800px){
+    margin: 0 1.5em 0 0;
+    @media screen and (min-width: 800px) {
       float: left;
       margin-right: 3em;
     }
   }
-  @media screen and (min-width: 800px){
-    width: 80%
+  @media screen and (min-width: 800px) {
+    width: 80%;
   }
-  @media screen and (min-width: 1100px){
+  @media screen and (min-width: 1100px) {
+    width: 100%;
     margin: 0 5px;
-    width: 100%
   }
 }
 
-.null{
+.null {
   pointer-events: none;
   cursor: none;
 }
 
-.Team-User-Nav{
-  .Selected{
-    border-bottom:3px solid $mmGreen;
+.Team-User-Nav {
+  .Selected {
+    border-bottom: 3px solid $mmGreen;
   }
-  p{
-  &:hover{
-    color: darken($mmGreen, 10);
-    cursor: pointer;
+  p {
+    &:hover {
+      color: darken($mmGreen, 10);
+      cursor: pointer;
     }
   }
 }
 
-.teams-more{
-  margin: 2.5em 0 0.5em 0;
+.teams-more {
+  margin: 2.5em 0 .5em 0;
 }
 
 /*----------------------------------------------*/
 /* COMMUNITY */
 /*----------------------------------------------*/
-.Community{
+.Community {
   background-color: $darkgrey;
 }
 
-.Community-Container{
-  h1{
+.Community-Container {
+  h1 {
     color: $lightgrey;
   }
 }
 
-#Community-Flickr{
-  max-width:100%;
+#Community-Flickr {
+  max-width: 100%;
   max-height: 600px;
   background-color: $darkestgrey;
 }
 
-.Community-Links{
-  margin: 3.5em 0 0.5em 0;
-  margin-left: auto;
+.Community-Links {
+  margin: 3.5em 0 .5em 0;
   margin-right: auto;
-  li{
+  margin-left: auto;
+  li {
+    display: inline-block;
     width: 12px;
     height: 12px;
-    -moz-border-radius: 50px;
+    margin: 0 .25em;
+    border: 1px solid rgba(255,255,255,.5);
     -webkit-border-radius: 50px;
-    border-radius: 50px;
-    border: 1px solid rgba(255,255,255,0.5);
-    margin: 0 0.25em;
-    display: inline-block;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
   }
-  .Community-Links-Emphasis{
+  .Community-Links-Emphasis {
     background-color: $mmTeal;
     border-color: white;
   }
 }
 
-.Community-Navigation{
-  width: 80%;
-  margin: 0 auto;
-  height: auto;
+.Community-Navigation {
   position: relative;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
 }
 
-.Community-Container{
-  .events-null{
-  background-color: $darkestgrey;
-  display: block;
-  margin: 80%;
-  text-align:center;
-  margin: 0 auto;
+.Community-Container {
+  .events-null {
+    display: block;
+    margin: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $darkestgrey;
   }
 }
 
@@ -598,32 +604,32 @@ h1{
 /*----------------------------------------------*/
 /* Explanatory Bits */
 /*----------------------------------------------*/
-.explanatory{
+.explanatory {
   width: 800px;
   max-width: 75%;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 1.4em;
   text-align: center;
 }
 
-.explanatory-bg{
+.explanatory-bg {
   z-index: -1;
-  width:100%;
+  width: 100%;
   height: 240px;
 }
 /*----------------------------------------------*/
 /* Actionable Bits */
 /*----------------------------------------------*/
-.action-container{
-  margin-left: auto;
+.action-container {
+  max-width: 1000px;
+  padding: 10px 0 10px 15px;
   margin-right: auto;
   margin-bottom: 120px;
-  padding: 10px 0px 10px 15px;
-  max-width: 1000px;
+  margin-left: auto;
   border-radius: 20px;
-  .textbox{
+  .textbox {
     padding-top: 10px;
     padding-bottom: 20px;
   }
@@ -638,8 +644,8 @@ h1{
 .contribute-base {
   @media screen and (max-width: 1024px) {
     width: 80%;
-    text-align: center;
     margin: auto;
+    text-align: center;
   }
 }
 
@@ -650,33 +656,33 @@ h1{
 }
 
 .contribute-container {
-  background-color: black;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
+  padding: 30px 0 20px 0;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
-  padding: 30px 0px 20px 0px;
+  background-color: black;
 }
 
-.actions-img{
+.actions-img {
   text-align: center;
 }
 
-.contribute-image{
+.contribute-image {
   p {
-    margin-top:10px;
+    margin-top: 10px;
   }
-@media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     text-align: center;
-}
+  }
 }
 
-.right-box{
+.right-box {
   text-align: right;
 }
 
-@media screen and (min-width: 64em){
+@media screen and (min-width: 64em) {
   .large-push-4 {
     left: -33.333%;
   }
@@ -684,28 +690,28 @@ h1{
 /*----------------------------------------------*/
 /* OSM Analytics */
 /*----------------------------------------------*/
-.osmanalytic-container{
+.osmanalytic-container {
   width: 100%;
-  background-color: $darkestgrey;
-  padding-bottom: 3em;
-  margin-top: 2em;
   padding-top: 1em;
+  padding-bottom: 3em;
   margin: auto;
+  margin-top: 2em;
   text-align: center;
-  .title, .section-header, .textbox{
+  background-color: $darkestgrey;
+  .title, .section-header, .textbox {
     color: $lightgrey;
   }
-  .textbox{
-    p{
-    color: #797b7b;
+  .textbox {
+    p {
+      color: #797b7b;
     }
   }
-  ::selection{
-    background: rgba(247, 224, 127, 0.10);
+  ::selection {
+    background: rgba(247, 224, 127, .10);
   }
 }
 
-.osmanalytic-item-container{
+.osmanalytic-item-container {
   padding: 30px 15px 20px;
   text-align: center;
   border-radius: 20px;
@@ -715,66 +721,66 @@ h1{
   }
 }
 
-.userprof-nav-input{
-    position: relative;
-    padding-top: 20px;
-  input{
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom:60px;
+.userprof-nav-input {
+  position: relative;
+  padding-top: 20px;
+  input {
+    margin-right: auto;
+    margin-bottom: 60px;
+    margin-left: auto;
   }
 }
 
-.alt-svg{
-  bottom: 2px;
+.alt-svg {
   position: absolute;
-  right: 0px;
+  right: 0;
+  bottom: 2px;
   pointer-events: none;
 }
 
-.Discover-Stats{
+.Discover-Stats {
   width: 100%;
 }
 
-.Discover-Split{
+.Discover-Split {
   display: inline-block;
 }
 
-.Discover-Title{
+.Discover-Title {
+  padding-bottom: 1em;
+  font-family: 'Hind';
   font-size: 1.3em;
   color: #797b7b;
-  font-family: "Hind";
-  padding-bottom: 1em;
 }
 
-.Discover-Sub{
+.Discover-Sub {
+  padding-bottom: 1em;
+  font-family: 'Hind';
   font-size: 1.3em;
-  color: #797b7b;
-  font-family: "Hind";
   font-weight: 400;
+  color: #797b7b;
   text-align: center;
-  padding-bottom: 1em;
 }
 
-.Discover-Tools{
+.Discover-Tools {
   padding-bottom: 4em;
-  .title{
-    width:100%;
-    padding-top:0.5em;
+  .title {
+    width: 100%;
+    padding-top: .5em;
   }
 }
 
 /*----------------------------------------------*/
 /* Events Analytics */
 /*----------------------------------------------*/
-.events-container{
+.events-container {
+  width: 100%;
   padding: 30px 10px;
-  background-color: $mmTeal;
-  text-align: center;
-  width:100%;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   clear: both;
+  text-align: center;
+  background-color: $mmTeal;
 }
 
 .clear {
@@ -782,111 +788,111 @@ h1{
 }
 
 .events-panel {
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 
-.event-top-section{
-  background-color: lighten($darkgrey, 48);;
+.event-top-section {
   padding: 5px 10px;
-  border-radius: 2px 2px 0 0;
+  background-color: lighten($darkgrey, 48);
+  border-radius: 2px 2px 0 0;;
 
   @media screen and (max-width: 450px) {
-      padding: 0px 6px 15px 10px;
-    }
+    padding: 0 6px 15px 10px;
+  }
 
-  .sub-head{
+  .sub-head {
     float: left;
-    padding-bottom: 0;
     width: 100%;
+    padding-bottom: 0;
     text-align: left;
     @media screen and (max-width: 580px) {
       font-size: 1.2em;
     }
   }
-  .btn-grn{
+  .btn-grn {
     float: right;
-    line-height: 12px;
-    font-size: .55em;
     margin: 5px 0 5px 0;
+    font-size: .55em;
+    line-height: 12px;
     @media screen and (max-width: 580px) {
-      font-size: 0.7em;
       margin-top: 7px;
+      font-size: .7em;
     }
   }
 }
 
-.event-sub-container{
+.event-sub-container {
   max-width: 600px;
-  background-color: white;
-  border-radius: 2px;
-  margin-bottom: 1.5em;
-  box-shadow: 0px 1px $lightgrey;
-  border: 1px solid $border-grey;
-  margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1.5em;
+  margin-left: auto;
+  background-color: white;
+  border: 1px solid $border-grey;
+  border-radius: 2px;
+  box-shadow: 0 1px $lightgrey;
   @media screen and (max-width: 470px) {
     margin: 0 10px 20px;
   }
 }
 
 .event-images {
-  float: left;
   display: block;
-  margin-right: 10px;
+  float: left;
   padding-top: 9px;
+  margin-right: 10px;
 }
 
 .event-header {
   float: left;
   width: 50%;
   padding-top: 5px;
-  line-height: 26px;
   margin-bottom: 4px;
+  line-height: 26px;
 }
 
-.event-page{
+.event-page {
   width: auto;
-  background-color: lighten($lightgrey,10%);
   padding-bottom: 60px;
+  background-color: lighten($lightgrey,10%);
 }
 
-.event-details-left{
-  padding: 10px 20px;
+.event-details-left {
   float: left;
+  padding: 10px 20px;
   margin-top: 15px;
   border-right: solid 1px $lightgrey;
-  .emphasizedNumber{
-    color: $darkgrey;
+  .emphasizedNumber {
+    padding-top: 15px;
+    margin-top: 2px;
     font-size: 2em;
     font-weight: 800;
     line-height: 20px;
-    margin-top:2px;
-    padding-top:15px;
+    color: $darkgrey;
   }
 }
 
-.event-details-right{
+.event-details-right {
   float: left;
-  padding: 8px 0 14px 20px;
   width: 75%;
+  padding: 8px 0 14px 20px;
   text-align: left;
 
   @media screen and (max-width: 470px) {
     width: 60%;
   }
-  p{
+  p {
     padding: 0;
     line-height: 1.3em;
   }
   .event-details {
-    font-size: .8em;
     margin-top: 5px;
+    font-size: .8em;
   }
-  button{
-    position:absolute;
-    top:0;
-    left:0;
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -894,81 +900,81 @@ h1{
   padding: 10px;
 }
 
-.event-block{
-  height:50px;
+.event-block {
+  height: 50px;
   padding-left: 10px;
   margin-bottom: 20px;
 }
 
-.header-image{
-  .welcome-svg{
+.header-image {
+  .welcome-svg {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
   }
 }
 
 /*----------------------------------------------*/
 /* About Analytics */
 /*----------------------------------------------*/
-.about-container{
+.about-container {
   width: 70%;
-  text-align: center;
+  padding: 0 0 2em 0;
   margin: auto;
-  padding: 0px 0px 2em 0px;
+  text-align: center;
   @media screen and (max-width: 710px) {
     width: 100%;
   }
-  p{
+  p {
     margin-bottom: 8px;
   };
-  img{
-    margin: 0px 16px 0px 16px;
+  img {
+    margin: 0 16px 0 16px;
     margin-bottom: 10px;
   };
-  &.top{
-    margin-bottom:0px;
+  &.top {
+    margin-bottom: 0;
   }
-  .sub-head{
+  .sub-head {
     margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: .5em;
   }
 }
 
 
-.about-textbox{
+.about-textbox {
   padding-left: 14px;
-  text-align: left;
-  font-weight: 300;
   font-size: 1.1em;
+  font-weight: 300;
   line-height: 1.4em;
-  span{
+  text-align: left;
+  span {
     display: inline-block;
-    vertical-align: middle;
     line-height: normal;
+    vertical-align: middle;
   }
-  h1{
+  h1 {
     display: inline;
   }
-  li{
-    padding-bottom:10px;
+  li {
+    padding-bottom: 10px;
     list-style-position: inside;
   }
 }
 
-.about-textboxfirst{
-  width:70%;
-  padding-left: 14px;
+.about-textboxfirst {
+  width: 70%;
   padding-bottom: 20px;
-  text-align: left;
-  font-weight: 300;
+  padding-left: 14px;
   font-size: 1.1em;
+  font-weight: 300;
   line-height: 1.4em;
-  span{
+  text-align: left;
+  span {
     display: inline-block;
-    vertical-align: middle;
     line-height: normal;
+    vertical-align: middle;
   }
-  h1{
+  h1 {
     display: inline;
   }
 }
@@ -976,19 +982,19 @@ h1{
 /*----------------------------------------------*/
 /* Footer Analytics */
 /*----------------------------------------------*/
-.footer-container{
-  padding: 30px 0px 0px 0px;
-  background-color: $lightgrey;
+.footer-container {
   width: 100%;
-  .sectionheader{
-    padding-bottom: 36px;
+  padding: 30px 0 0 0;
+  background-color: $lightgrey;
+  .sectionheader {
     padding-top: 20px;
+    padding-bottom: 36px;
   }
 }
 
-.footer-mm{
-  height: 50px;
+.footer-mm {
   width: 100%;
+  height: 50px;
   line-height: 50px;
   color: $lightgrey;
   background-color: $darkestgrey;
@@ -997,148 +1003,147 @@ h1{
 /*----------------------------------------------*/
 /* Map Guides */
 /*----------------------------------------------*/
-.pageheader{
-  margin-top: 50px;
+.pageheader {
   padding-top: 10px;
+  margin-top: 50px;
   margin-bottom: 28px;
   font-size: 35px;
 }
 
-.linebreak{
+.linebreak {
   max-width: 500px;
-  margin: 2px auto 0px auto;
   padding-bottom: 20px;
+  margin: 2px auto 0 auto;
 }
 
-.contribute-options{
+.contribute-options {
   max-width: 500px;
   margin-top: 40px;
   margin-bottom: 60px;
-  a{
+  a {
     margin: 0;
   }
-  img{
+  img {
     width: 150px;
   }
-  .contribute-button{
+  .contribute-button {
     margin-top: 16px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 }
 
-.videobox{
+.videobox {
   padding: 10px 30px 60px 30px;
-  .sub-head{
+  .sub-head {
     padding-top: 10px;
     font-size: 1.2em;
   }
-  .textbox{
-    p{
+  .textbox {
+    p {
       color: #797b7b;
     }
   }
-  hr{
-    margin: 2px 0px 10px 0px;
+  hr {
+    margin: 2px 0 10px 0;
   }
 }
 
-ol{
+ol {
   padding-left: 20px;
 }
 
-hr{
-  margin: 40px 0px 0px 0px;
+hr {
+  margin: 40px 0 0 0;
 }
 
-.mmvideo{
-  text-align: center;
+.mmvideo {
   margin-top: 20px;
   margin-bottom: 10px;
-
-}
-
-.host-button-box{
   text-align: center;
+}
+
+.host-button-box {
   margin-top: 20px;
+  text-align: center;
 }
 
-.host-container{
-  background-color: lighten($lightgrey, 10%);
-  margin-left: auto;
-  margin-right: auto;
+.host-container {
   width: 70%;
-  font-weight: 300;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 1.1em;
+  font-weight: 300;
   line-height: 1.6em;
+  background-color: lighten($lightgrey, 10%);
 }
 
-.host-textbox{
-  text-align:left;
-  font-weight: 300;
-  font-size: 1.1em;
-  line-height: 1.6em;
-  padding-left: 20px;
-  padding-right: 20px;
+.host-textbox {
   max-width: 600px;
-  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: auto;
   margin-bottom: 20px;
-  input{
-      width: 13px;
-      height: 13px;
-      padding:0;
-      margin: 0;
-      margin-right: 4px;
-      display: inline-block;
-      vertical-align: middle;
-      position: relative;
-      top: -1px;
-      overflow: hidden;
-      background-color: lighten($lightgrey, 10%);
+  margin-left: auto;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.6em;
+  text-align: left;
+  input {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    margin-right: 4px;
+    overflow: hidden;
+    vertical-align: middle;
+    background-color: lighten($lightgrey, 10%);
   }
 }
 
-.host-image{
-  text-align: center;
+.host-image {
   margin-top: 40px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.host-materials{
-  font-weight: 300;
-  font-size: 1.1em;
-  line-height: 1.6em;
+.host-materials {
   padding-top: 10px;
   padding-bottom: 40px;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.6em;
   text-align: center;
   li {
     background-color: lighten($lightgrey, 10%);
   }
 }
 
-.OSM-logo{
-  img{
+.OSM-logo {
+  img {
     width: 100px;
     height: 100px;
   }
 }
 
-.about-button{
-  margin-top:40px;
-}
-
-.padding-extra{
+.about-button {
   margin-top: 40px;
 }
 
-.arw{
+.padding-extra {
+  margin-top: 40px;
+}
+
+.arw {
   position: relative;
   padding-right: 30px;
-  img{
-  width: 15px;
-  position: absolute;
-  right: 8px;
-  top: 10px;
+  img {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    width: 15px;
   }
 }
