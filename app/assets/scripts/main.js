@@ -83,6 +83,10 @@ function makePlaceholderProject (projectId, projectOrder) {
   $('ul li:nth-child(' + projectOrder + ') .HOT-Title p')
     .html(`<b>HOT Project #${projectId} Not Active/ Not Found in HOT Tasking Manager</b>`);
 
+  // Hides Tasking Manager Contribute button
+  $('#TM-Contribute-Btn-' + projectId).css('display', 'none');
+  $(`#HOT-Title-${projectId} p`).css('width', '100%');
+
   // Generate issue information for Github tracker
   const ghIssueTitle = `HOT Tasking Manager endpoint failure in ${PT.mainHashtag} partner page`;
   const ghIssueBody = `Project ${projectId} is no longer indexed in the HOT
