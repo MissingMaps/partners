@@ -612,7 +612,7 @@ input[type='text'] {
 }
 
 /*----------------------------------------------*/
-/*Collecticons Danger Sign Symbol*/
+/*Collecticons Chevrons and Danger Sign Symbol*/
 /*----------------------------------------------*/
 
 @font-face {
@@ -647,13 +647,31 @@ input[type='text'] {
   -moz-osx-font-smoothing: grayscale;
 }
 
-%collecticon-sign-danger {
+%collecticon-chevron-left {
   @extend %collecticon;
   content: "\EA01";
 }
-.collecticon-sign-danger:before {
-  color: $mmred;
+.collecticon-chevron-left:before {
   content: "\EA01";
+  font-weight: 900;
+}
+
+%collecticon-chevron-right {
+  @extend %collecticon;
+  content: "\EA02";
+}
+.collecticon-chevron-right:before {
+  content: "\EA02";
+  font-weight: 900;
+}
+
+%collecticon-sign-danger {
+  @extend %collecticon;
+  content: "\EA03";
+}
+.collecticon-sign-danger:before {
+  content: "\EA03";
+  color: $mmred;
   font-size: 30px;
   vertical-align: -25%;
   padding-right: 2px;
