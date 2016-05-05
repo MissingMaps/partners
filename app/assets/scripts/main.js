@@ -3,7 +3,7 @@
  -------------------------------------------------------*/
 
 function getPrimaryStats (primaryhash) {
-  const url = 'http://osmstats.redcross.org/hashtags/' + primaryhash + '/users';
+  const url = `http://osmstats.redcross.org/hashtags/${primaryhash}/users`;
   $.getJSON(url, function (hashtagData) {
     const usersCount = Object.keys(hashtagData).length;
     var editsCount = 0;
@@ -64,13 +64,13 @@ function makeProject (project, projectOrder) {
   const projDone = Math.round(props.done);
 
   // Updates Progress Bar
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Progress').addClass('projWidth' + projectOrder + '');
-  $('.HOT-Progress').append('<style>.projWidth' + projectOrder + ':before{ width: ' + projDone + '%;}</style>');
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
+  $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
   // Adds Project variables to the cards
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Title p').html('<b>' + props.name + '</b>');
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Progress').html('<p>' + projDone + '%</p>');
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').attr('id', 'Map-' + project.id);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${props.name}</b>`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).attr('id', 'Map-' + project.id);
 
   // Drop a map into the HOT-Map div
   addMap(project.id);
@@ -80,7 +80,7 @@ function makeProject (project, projectOrder) {
 // that a project cannot be retrieved from the HOT Tasking Manager API
 function makePlaceholderProject (projectId, projectOrder) {
   // Adds error title
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Title p')
+  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`)
     .html(`<span class="ico icon collecticon-sign-danger"></span>
 <b>HOT Project #${projectId} Not Active/Not Found in HOT Tasking Manager</b>`);
 
@@ -94,8 +94,8 @@ function makePlaceholderProject (projectId, projectOrder) {
  Tasking Manager, so it should be removed from the ${PT.mainHashtag} partner
  page variable settings.`;
   // Truncate original description to 25 words, and add explanatory error text
-  let projectDescriptionEl = $('ul li:nth-child(' + projectOrder + ') .HOT-Description p');
-  let errorHtml = projectDescriptionEl[0].innerHTML.split(' ').slice(0, 34).join(' ') + '...';
+  let projectDescriptionEl = $(`ul li:nth-child(${projectOrder}) .HOT-Description p`);
+  let errorHtml = projectDescriptionEl[0].innerHTML.split(' ').slice(0, 24).join(' ') + '...';
   errorHtml = `<p>Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
  <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
@@ -107,11 +107,8 @@ function makePlaceholderProject (projectId, projectOrder) {
   projectDescriptionEl.html(errorHtml);
 
   // Remove loading spinners and add placeholder background
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Map ')
-    .empty()
-    .addClass('placeholder');
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Progress ').css('display', 'none');
-
+  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).empty().addClass('placeholder');
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress `).css('display', 'none');
 }
 
 /* -------------------------------------------------------
@@ -146,7 +143,7 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
+  const endpoint = `http://tasks.hotosm.org/project/${projectId}/tasks.json`;
   $.getJSON(endpoint, function (taskData) {
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
@@ -272,7 +269,7 @@ function setupGraphs () {
 // Returns svg link to Missing Maps user endpoint
 function generateUserUrl (userName, userId) {
   const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
-  return '<a xlink:href="' + userUrl + '" target="_blank" style="text-decoration:none">' + userName + '</a>';
+  return `<a xlink:href="${userUrl}" target="_blank" style="text-decoration:none">${userName}</a>`;
 }
 
 function getUserActivityStats (hashtag) {
@@ -315,7 +312,7 @@ function getUserActivityStats (hashtag) {
 // Returns svg link to Missing Maps leaderboard endpoint
 function generateHashtagUrl (hashtag) {
   const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + hashtag;
-  return '<a xlink:href="' + hashtagUrl + '" target="_blank" style="text-decoration: none">#' + hashtag + '</a>';
+  return `<a xlink:href="${hashtagUrl}" target="_blank" style="text-decoration: none">#${hashtag}</a>`;
 }
 
 function getGroupActivityStats (hashtags) {
@@ -514,10 +511,10 @@ function getImgs (flickrApiKey, flickrSetId) {
   $.getJSON(URL, function (data) {
     $.each(data.photoset.photo, function (i, item) {
       // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
-      var imgSrc = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '.jpg';
+      var imgSrc = `https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg`;
 
       // Add images in individual <li> elements to HTML
-      var imgThumb = $('<li><img src=' + imgSrc + '></img></li>');
+      var imgThumb = $(`<li><img src=${imgSrc}></img></li>`);
       // Limits to only the most recent 30 photos for simplicity.
       if ($('.flickr-hit li').length < 30) {
         $(imgThumb).appendTo('.flickr-hit');
