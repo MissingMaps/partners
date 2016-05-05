@@ -93,18 +93,16 @@ function makePlaceholderProject (projectId, projectOrder) {
   const ghIssueBody = `Project ${projectId} is no longer indexed in the HOT
  Tasking Manager, so it should be removed from the ${PT.mainHashtag} partner
  page variable settings.`;
-  // Truncate original description to 25 words, and add explanatory error text
-  let projectDescriptionEl = $(`ul li:nth-child(${projectOrder}) .HOT-Description p`);
-  let errorHtml = projectDescriptionEl[0].innerHTML.split(' ').slice(0, 24).join(' ') + '...';
-  errorHtml = `<p>Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
+
+  // Add explanatory error text
+  const errorHtml = `Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
  <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
  &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
  <a href="http://tasks.hotosm.org/" target="_blank">here</a>
- to search for more projects.</p><p class="strikethrough">${errorHtml}</p>`;
+ to search for more projects.`;
 
-  // Add error description
-  projectDescriptionEl.html(errorHtml);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Description p`).html(errorHtml);
 
   // Remove loading spinners and add placeholder background
   $(`ul li:nth-child(${projectOrder}) .HOT-Map`).empty().addClass('placeholder');

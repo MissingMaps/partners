@@ -671,7 +671,7 @@ input[type='text'] {
 }
 .collecticon-sign-danger:before {
   content: "\EA03";
-  color: $mmred;
+  color: darken($mmYello, 20%);
   font-size: 30px;
   vertical-align: -25%;
   padding-right: 2px;
