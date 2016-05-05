@@ -136,7 +136,7 @@ gulp.task('serve', ['build'], function () {
   });
 
   gulp.watch(['./app/assets/fonts/**/*', './app/assets/images/**/*'], function () {
-    runSequence('jekyll', browserReload);
+    runSequence('jekyll', 'build', browserReload);
   });
 
   gulp.watch('app/assets/styles/**/*.scss', function () {

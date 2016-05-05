@@ -3,7 +3,7 @@
  -------------------------------------------------------*/
 
 function getPrimaryStats (primaryhash) {
-  const url = 'http://osmstats.redcross.org/hashtags/' + primaryhash + '/users';
+  const url = `http://osmstats.redcross.org/hashtags/${primaryhash}/users`;
   $.getJSON(url, function (hashtagData) {
     const usersCount = Object.keys(hashtagData).length;
     var editsCount = 0;
@@ -35,7 +35,7 @@ function getProjects (projects) {
     directionNav: true,
     slideshowSpeed: 6000000,
     prevText: '',
-    nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+    nextText: '<i class="ico icon collecticon-chevron-right"></i>'
   });
   $('.flex-next').prependTo('.HOT-Nav-Projects');
   $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
@@ -52,7 +52,7 @@ function getProjects (projects) {
     })
     .fail(function (err) {
       console.warn(`WARNING >> Project #${project} could not be accessed at ${url}.\n` +
-                    'The server returned the following message object:', err);
+                   'The server returned the following message object:', err);
       makePlaceholderProject(project, i + 2);
     });
   });
@@ -64,13 +64,13 @@ function makeProject (project, projectOrder) {
   const projDone = Math.round(props.done);
 
   // Updates Progress Bar
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Progress').addClass('projWidth' + projectOrder + '');
-  $('.HOT-Progress').append('<style>.projWidth' + projectOrder + ':before{ width: ' + projDone + '%;}</style>');
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
+  $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
   // Adds Project variables to the cards
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Title p').html('<b>' + props.name + '</b>');
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Progress').html('<p>' + projDone + '%</p>');
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').attr('id', 'Map-' + project.id);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${props.name}</b>`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).attr('id', 'Map-' + project.id);
 
   // Drop a map into the HOT-Map div
   addMap(project.id);
@@ -80,8 +80,9 @@ function makeProject (project, projectOrder) {
 // that a project cannot be retrieved from the HOT Tasking Manager API
 function makePlaceholderProject (projectId, projectOrder) {
   // Adds error title
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Title p')
-    .html(`<b>HOT Project #${projectId} Not Active/ Not Found in HOT Tasking Manager</b>`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`)
+    .html(`<i class="ico icon collecticon-sign-danger"></i>
+<b>HOT Project #${projectId} Not Active/Not Found in HOT Tasking Manager</b>`);
 
   // Hides Tasking Manager Contribute button
   $('#TM-Contribute-Btn-' + projectId).css('display', 'none');
@@ -92,39 +93,20 @@ function makePlaceholderProject (projectId, projectOrder) {
   const ghIssueBody = `Project ${projectId} is no longer indexed in the HOT
  Tasking Manager, so it should be removed from the ${PT.mainHashtag} partner
  page variable settings.`;
-  // Truncate original description to 25 words, and add explanatory error text
-  let projectDescriptionEl = $('ul li:nth-child(' + projectOrder + ') .HOT-Description p');
-  let errorHtml = projectDescriptionEl[0].innerHTML.split(' ').slice(0, 24).join(' ') + '...';
-  errorHtml = `<p>Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
+
+  // Add explanatory error text
+  const errorHtml = `Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
  <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
  &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
  <a href="http://tasks.hotosm.org/" target="_blank">here</a>
- to search for more projects.</p><p class="strikethrough">${errorHtml}</p>`;
+ to search for more projects.`;
 
-  // Add error description
-  projectDescriptionEl.html(errorHtml);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Description p`).html(errorHtml);
 
-  // ----------------------------
-  // Add empty placeholder map --
-  // ----------------------------
-  // Set ul id and remove loading spinners before placing map
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').attr('id', 'Map-' + projectId);
-  $('#Map-' + projectId).empty();
-
-  // Initialize map and add tile layer
-  const map = L.map('Map-' + projectId, {zoomControl: false}).setView([15, 0], 1);
-  L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
-    attribution: '<a href="http://mapbox.com">Mapbox</a>'
-  }).addTo(map);
-
-  // Disable drag and zoom handlers
-  map.dragging.disable();
-  map.touchZoom.disable();
-  map.doubleClickZoom.disable();
-  map.scrollWheelZoom.disable();
-  map.keyboard.disable();
-  if (map.tap) map.tap.disable();
+  // Remove loading spinners and add placeholder background
+  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).empty().addClass('placeholder');
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress `).css('display', 'none');
 }
 
 /* -------------------------------------------------------
@@ -159,7 +141,7 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = 'http://tasks.hotosm.org/project/' + projectId + '/tasks.json';
+  const endpoint = `http://tasks.hotosm.org/project/${projectId}/tasks.json`;
   $.getJSON(endpoint, function (taskData) {
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
@@ -172,6 +154,9 @@ function addMap (projectId) {
     L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
       attribution: '<a href="http://mapbox.com">Mapbox</a>'
     }).addTo(map);
+
+    // Remove 'Leaflet' attribution
+    map.attributionControl.setPrefix('');
 
     // Add feature layer
     const featureLayer = L.geoJson(taskData, {
@@ -285,7 +270,7 @@ function setupGraphs () {
 // Returns svg link to Missing Maps user endpoint
 function generateUserUrl (userName, userId) {
   const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
-  return '<a xlink:href="' + userUrl + '" target="_blank" style="text-decoration:none">' + userName + '</a>';
+  return `<a xlink:href="${userUrl}" target="_blank" style="text-decoration:none">${userName}</a>`;
 }
 
 function getUserActivityStats (hashtag) {
@@ -328,7 +313,7 @@ function getUserActivityStats (hashtag) {
 // Returns svg link to Missing Maps leaderboard endpoint
 function generateHashtagUrl (hashtag) {
   const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + hashtag;
-  return '<a xlink:href="' + hashtagUrl + '" target="_blank" style="text-decoration: none">#' + hashtag + '</a>';
+  return `<a xlink:href="${hashtagUrl}" target="_blank" style="text-decoration: none">#${hashtag}</a>`;
 }
 
 function getGroupActivityStats (hashtags) {
@@ -341,9 +326,9 @@ function getGroupActivityStats (hashtags) {
     if ($.isEmptyObject(hashtagData)) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
-                    'metrics according to the Missing Maps endpoint at ' +
-                    'https://osmstats.redcross.org/group-summaries/' +
-                    hashtagsString + '. The partner graphs will not be displayed.');
+                   'metrics according to the Missing Maps endpoint at ' +
+                   'https://osmstats.redcross.org/group-summaries/' +
+                   hashtagsString + '. The partner graphs will not be displayed.');
     } else {
       // For each hashtag, sum the total edits across all categories,
       // skipping over hashtags if there are no metrics (this shouldn't
@@ -527,10 +512,10 @@ function getImgs (flickrApiKey, flickrSetId) {
   $.getJSON(URL, function (data) {
     $.each(data.photoset.photo, function (i, item) {
       // Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
-      var imgSrc = 'https://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '.jpg';
+      var imgSrc = `https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg`;
 
       // Add images in individual <li> elements to HTML
-      var imgThumb = $('<li><img src=' + imgSrc + '></img></li>');
+      var imgThumb = $(`<li><img src=${imgSrc}></img></li>`);
       // Limits to only the most recent 30 photos for simplicity.
       if ($('.flickr-hit li').length < 30) {
         $(imgThumb).appendTo('.flickr-hit');
@@ -541,8 +526,8 @@ function getImgs (flickrApiKey, flickrSetId) {
       controlNav: true,
       directionNav: true,
       slideshowSpeed: 6000,
-      prevText: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-      nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+      prevText: '<i class="ico icon collecticon-chevron-left"></i>',
+      nextText: '<i class="ico icon collecticon-chevron-right"></i>'
     });
     $('.photo-width-fix ol').prependTo('.Community-Navigation');
   });
@@ -551,8 +536,8 @@ function getImgs (flickrApiKey, flickrSetId) {
 function checkHashtags (hashtags) {
   if (hashtags.length < 2) {
     console.warn('WARNING >> There are not enough secondary hashtags listed ' +
-                  'in order to represent differences in contribution level ' +
-                  'between partners. The partner graphs will not be displayed.');
+                 'in order to represent differences in contribution level ' +
+                 'between partners. The partner graphs will not be displayed.');
     $('.Team-User-Container').css('display', 'none');
   }
 }

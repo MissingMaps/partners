@@ -311,6 +311,13 @@ h1 {
     width: 220px;
     margin: .5em;
   }
+  &.placeholder {
+    background-image: url('/assets/graphics/content/logos/MMlogo-Outlined.svg');
+    background-color: $lightgrey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% 80%;
+  }
 }
 
 .HOT-Title {
