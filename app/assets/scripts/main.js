@@ -155,6 +155,9 @@ function addMap (projectId) {
       attribution: '<a href="http://mapbox.com">Mapbox</a>'
     }).addTo(map);
 
+    // Remove 'Leaflet' attribution
+    map.attributionControl.setPrefix('');
+
     // Add feature layer
     const featureLayer = L.geoJson(taskData, {
       onEachFeature: onEachFeature
