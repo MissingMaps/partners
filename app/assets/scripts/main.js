@@ -105,26 +105,10 @@ function makePlaceholderProject (projectId, projectOrder) {
   // Add error description
   projectDescriptionEl.html(errorHtml);
 
-  // ----------------------------
-  // Add empty placeholder map --
-  // ----------------------------
-  // Set ul id and remove loading spinners before placing map
+  // Set ul id
   $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').attr('id', 'Map-' + projectId);
-  $('#Map-' + projectId).empty();
-
-  // Initialize map and add tile layer
-  const map = L.map('Map-' + projectId, {zoomControl: false}).setView([15, 0], 1);
-  L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
-    attribution: '<a href="http://mapbox.com">Mapbox</a>'
-  }).addTo(map);
-
-  // Disable drag and zoom handlers
-  map.dragging.disable();
-  map.touchZoom.disable();
-  map.doubleClickZoom.disable();
-  map.scrollWheelZoom.disable();
-  map.keyboard.disable();
-  if (map.tap) map.tap.disable();
+  // Remove loading spinners and add placeholder background
+  $('#Map-' + projectId).empty().addClass('placeholder');
 }
 
 /* -------------------------------------------------------
