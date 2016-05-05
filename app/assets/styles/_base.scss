@@ -610,3 +610,51 @@ input[type='text'] {
 .center-text {
   text-align: center;
 }
+
+/*----------------------------------------------*/
+/*Collecticons Danger Sign Symbol*/
+/*----------------------------------------------*/
+
+@font-face {
+  font-family: "collecticons";
+  src: url('fonts/collecticons.eot');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "collecticons";
+  src: url('fonts/collecticons.ttf');
+  src: url('fonts/collecticons.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%collecticon,
+[class^="collecticon-"],
+[class*=" collecticon-"] {
+  speak: none;
+  font-family: "collecticons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better font rendering */
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+%collecticon-sign-danger {
+  @extend %collecticon;
+  content: "\EA01";
+}
+.collecticon-sign-danger:before {
+  color: $mmred;
+  content: "\EA01";
+  font-size: 30px;
+  vertical-align: -25%;
+  padding-right: 2px;
+}

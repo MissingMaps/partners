@@ -52,7 +52,7 @@ function getProjects (projects) {
     })
     .fail(function (err) {
       console.warn(`WARNING >> Project #${project} could not be accessed at ${url}.\n` +
-                    'The server returned the following message object:', err);
+                   'The server returned the following message object:', err);
       makePlaceholderProject(project, i + 2);
     });
   });
@@ -81,7 +81,8 @@ function makeProject (project, projectOrder) {
 function makePlaceholderProject (projectId, projectOrder) {
   // Adds error title
   $('ul li:nth-child(' + projectOrder + ') .HOT-Title p')
-    .html(`<b>HOT Project #${projectId} Not Active/ Not Found in HOT Tasking Manager</b>`);
+    .html(`<span class="ico icon collecticon-sign-danger"></span>
+<b>HOT Project #${projectId} Not Active/Not Found in HOT Tasking Manager</b>`);
 
   // Hides Tasking Manager Contribute button
   $('#TM-Contribute-Btn-' + projectId).css('display', 'none');
@@ -94,7 +95,7 @@ function makePlaceholderProject (projectId, projectOrder) {
  page variable settings.`;
   // Truncate original description to 25 words, and add explanatory error text
   let projectDescriptionEl = $('ul li:nth-child(' + projectOrder + ') .HOT-Description p');
-  let errorHtml = projectDescriptionEl[0].innerHTML.split(' ').slice(0, 24).join(' ') + '...';
+  let errorHtml = projectDescriptionEl[0].innerHTML.split(' ').slice(0, 34).join(' ') + '...';
   errorHtml = `<p>Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
  <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
@@ -105,10 +106,12 @@ function makePlaceholderProject (projectId, projectOrder) {
   // Add error description
   projectDescriptionEl.html(errorHtml);
 
-  // Set ul id
-  $('ul li:nth-child(' + projectOrder + ') .HOT-Map ').attr('id', 'Map-' + projectId);
   // Remove loading spinners and add placeholder background
-  $('#Map-' + projectId).empty().addClass('placeholder');
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Map ')
+    .empty()
+    .addClass('placeholder');
+  $('ul li:nth-child(' + projectOrder + ') .HOT-Progress ').css('display', 'none');
+
 }
 
 /* -------------------------------------------------------
@@ -325,9 +328,9 @@ function getGroupActivityStats (hashtags) {
     if ($.isEmptyObject(hashtagData)) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
-                    'metrics according to the Missing Maps endpoint at ' +
-                    'https://osmstats.redcross.org/group-summaries/' +
-                    hashtagsString + '. The partner graphs will not be displayed.');
+                   'metrics according to the Missing Maps endpoint at ' +
+                   'https://osmstats.redcross.org/group-summaries/' +
+                   hashtagsString + '. The partner graphs will not be displayed.');
     } else {
       // For each hashtag, sum the total edits across all categories,
       // skipping over hashtags if there are no metrics (this shouldn't
@@ -535,8 +538,8 @@ function getImgs (flickrApiKey, flickrSetId) {
 function checkHashtags (hashtags) {
   if (hashtags.length < 2) {
     console.warn('WARNING >> There are not enough secondary hashtags listed ' +
-                  'in order to represent differences in contribution level ' +
-                  'between partners. The partner graphs will not be displayed.');
+                 'in order to represent differences in contribution level ' +
+                 'between partners. The partner graphs will not be displayed.');
     $('.Team-User-Container').css('display', 'none');
   }
 }
