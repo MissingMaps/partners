@@ -8,9 +8,11 @@
  
 2. Rename the new repo mm-partner-[_partner name_] and push it to MissingMaps.
 
-3. Update Partner Information
+3. Add Partner Logo (SVG format) to to the ```content > logos``` folder.
 
-4. Add Partner Events
+4. Update Partner Information
+
+5. Add Partner Events
  
 #### Updating Partner Information
  
