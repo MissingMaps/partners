@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "collecticons";
-  src: url('{{ site.baseurl }}/assets/fonts/collecticons.eot');
+  src: url('../fonts/collecticons.eot');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,10 +20,10 @@
 @font-face {
   font-family: "collecticons";
   
-  src: url('{{ site.baseurl }}/assets/fonts/collecticons.ttf');
+  src: url('../fonts/collecticons.ttf');
   
   
-  src: url('{{ site.baseurl }}/assets/fonts/collecticons.woff');
+  src: url('../fonts/collecticons.woff');
   
   font-weight: normal;
   font-style: normal;
