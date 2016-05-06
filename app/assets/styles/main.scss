@@ -3,9 +3,6 @@
 @import "compass";
 
 //Foundation
-@import "./lib/settings";
-@import "./foundation-sites/scss/foundation";
-@include foundation-everything;
 
 // Leaflet
 @import "./lib/leaflet";
