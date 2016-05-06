@@ -1,10 +1,10 @@
 ---
 layout: partner
 lang: en
-permalink: /partner1/
+permalink: /partner_example/
 
-id: partner1
-name: MissingMaps Partner
+id: partner_example
+name: Example Partner
 logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
 contact: dale.kunce@redcross.org
 
@@ -23,6 +23,8 @@ subhashtags:
   - missingmaps
   - peacecorps
   - redcross
+  - hotosm-project-1504
+  - hotosm-project-1248
 
 tm-projects:
   - id: 1805
