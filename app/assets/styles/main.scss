@@ -3,23 +3,25 @@
 @import "compass";
 
 //Foundation
-@import "settings";
+@import "./lib/settings";
 @import "./foundation-sites/scss/foundation";
 @include foundation-everything;
 
 // Leaflet
-@import "leaflet";
+@import "./lib/leaflet";
 
 // Reset and normalize
-@import "normalize";
-@import "reset";
-@import "normalize-opentype";
+@import "./lib/normalize";
+@import "./lib/reset";
+@import "./lib/normalize-opentype";
 
 // Site specific styles
+@import "variables";
 @import "base";
+@import "navbar";
 @import "icons";
-@import "landing";
+@import "partnerpage";
 @import "buttons";
-@import "flexslider";
+@import "./lib/flexslider";
 @import "flexslider-overwrite";
 @import "team-chart";
