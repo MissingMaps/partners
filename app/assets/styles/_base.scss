@@ -27,6 +27,10 @@ body, ul, li, ol, p {
   color: $darkgrey;
 }
 
+html, body{
+  font-size: 100%;
+}
+
 ul {
   margin-bottom: .5em;
   list-style: none;
@@ -34,6 +38,8 @@ ul {
 
 body {
   background-color: #f2f2f2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ::-moz-selection {

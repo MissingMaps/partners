@@ -670,6 +670,7 @@ h1 {
   padding-top: 5px;
   margin-bottom: 4px;
   line-height: 26px;
+  font-weight: 400;
 }
 
 .event-page {
@@ -732,6 +733,31 @@ h1 {
     position: absolute;
     bottom: 0;
   }
+}
+/*----------------------------------------------*/
+/* Foundation fixes */
+/*----------------------------------------------*/
+.clearfix::before, .clearfix::after{
+  content: ' ';
+  display: table;
+}
+
+.clearfix::after{
+  clear: both;
+}
+
+*:before, *:after{
+  box-sizing: inherit;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+
 }
 
 /*----------------------------------------------*/
