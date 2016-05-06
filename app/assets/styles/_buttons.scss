@@ -1,3 +1,7 @@
+/*----------------------------------------------*/
+/* Button Styling */ 
+/*----------------------------------------------*/
+
 .btn {
   display: inline-block;
   padding: 8px 14px 6px 14px;
@@ -68,47 +72,24 @@
   }
 }
 
-.invert-btn-blue {
-  color: $mmTeal;
-  background-color: rgba(0,0,0,0);
-  border: 1px solid $mmTeal;
-  &:hover {
-    background-color: rgba(35, 188, 193, .2);
-  }
-  &:active {
-    background-color: rgba(35, 188, 193, .2);
-  }
-  &:focus {
-    background-color: rgba(35, 188, 193, .2);
-  }
-  a {
-    color: $mmTeal;
-    &:hover {
-      color: white;
-    }
-    &:visited {
-      color: $mmTeal;
-    }
-  }
-}
-
-.invert-btn-grn {
-  color: darken($mmGreen, 10);
+.invert-btn-grn{
   background-color: rgba(0,0,0,0);
   border: 1px solid darken($mmGreen, 10);
-  &:hover {
+  color: darken($mmGreen, 10);
+  &:hover{
     background-color: lighten($mmGreen, 24);
   }
-  &:active {
+  &:active{
     background-color: lighten($mmGreen, 24);
   }
-  &:focus {
+  &:focus{
     background-color: lighten($mmGreen, 24);
   }
-  a {
+  a{
     color: darken($mmGreen, 10);
-
-    &:visited {
+    &:hover{
+    }
+    &:visited{
       color: darken($mmGreen, 10);
     }
   }
