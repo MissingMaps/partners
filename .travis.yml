@@ -3,6 +3,23 @@ language: node_js
 node_js:
   - '4'
 
+env:
+  global:
+  - CXX=g++-4.8
+  - DEPLOY_BRANCH=master
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+
+cache:
+  apt: true
+  directories:
+  - node_modules
+
 script:
   - gulp prod
 
@@ -17,4 +34,4 @@ deploy:
   acl: public_read
   on:
     repo: MissingMaps/partners
-    branch: develop
+    branch: "${DEPLOY_BRANCH}"
