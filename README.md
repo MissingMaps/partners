@@ -1,18 +1,18 @@
+# MissingMaps Partner Pages
 
-# missingmaps partner pages
- 
+This repo contains the code for MissingMaps partner pages. Each page is a unique view of a MissingMaps partner and their contributions to MissingMaps projects. 
  
 ### Creating a new Partner Page
  
-1. Clone this repo.
- 
-2. Rename the new repo mm-partner-[_partner name_] and push it to MissingMaps.
+1. Create new `partner.md` file in the `_partner` folder. Rename according to the partner and how you want the URL to look. For example, `my-new-partner.md` will have the url `missingmaps.org/partners/my-new-partner`. Use dashes `-` instead of underscores. 
 
-3. Add Partner Logo (SVG format) to to the ```content > logos``` folder.
+2. All partner page data is contained within the yml frontmatter. Copy and paste the `partner-example.md` file. Edit all variables with new partner information. See Updating Partner Information below for details on each variable. 
 
-4. Update Partner Information
+3. Add Partner Logo (SVG format) to to the `assets/graphics/content/logos` folder.
 
-5. Add Partner Events
+4. Create a new partner folder in the `_data` folder. Each folder name must match the name of the file within the `_partner` folder.
+
+5. Create a `events.csv` file within each new `_data` folder. See Adding Events below for more details on the `events.csv` file.
  
 #### Updating Partner Information
  
