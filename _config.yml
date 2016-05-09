@@ -12,7 +12,7 @@ highlighter: false
 
 baseurl: ""
 
-default_partner: partner_example
+default_partner: partner-example
 
 collections:
   partner:

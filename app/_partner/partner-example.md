@@ -1,9 +1,9 @@
 ---
 layout: partner
 lang: en
-permalink: /partner_example/
+permalink: /partner-example/
 
-id: partner_example
+id: partner-example
 name: Example Partner
 logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
 contact: dale.kunce@redcross.org
