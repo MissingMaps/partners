@@ -25,7 +25,7 @@ before_install:
 - chmod +x ./.build_scripts/deploy.sh
 
 script:
-- npm run build
+- gulp
 
 deploy:
   provider: script
