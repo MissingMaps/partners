@@ -1,0 +1,37 @@
+language: node_js
+
+node_js:
+  - '4'
+
+env:
+  global:
+  - CXX=g++-4.8
+  - DEPLOY_BRANCH=master
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+
+cache:
+  apt: true
+  directories:
+  - node_modules
+
+script:
+  - gulp prod
+
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY      # set AWS_ACCESS_KEY as environment variables in Settings tab on travis-ci.org
+  secret_access_key: $AWS_SECRET_KEY  # set AWS_SECRET_KEY as environment variables in Settings tab on travis-ci.org
+  bucket: ds-mm-partner               # S3 bucket to deploy to
+  skip_cleanup: true
+  region: us-east-1
+  local_dir: _site                    # jekyll directory
+  acl: public_read
+  on:
+    repo: MissingMaps/partners
+    branch: "${DEPLOY_BRANCH}"
