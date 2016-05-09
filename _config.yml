@@ -12,6 +12,8 @@ highlighter: false
 
 baseurl: ""
 
+default_partner: partner_example
+
 collections:
   partner:
     output: true
