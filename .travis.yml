@@ -1,12 +1,13 @@
 language: node_js
 
 node_js:
-  - '4'
+- '4'
 
 env:
   global:
   - CXX=g++-4.8
-  - DEPLOY_BRANCH=develop
+  - DEPLOY_BRANCH=master
+  - secure: "JAE59oZX9t5NSo5P3EwEJ6kxh/1gAYouozZ2vOU8CB4AWWum2UU53jniB3P+cos8uvui9MxeY80D+UP7mhlUtz0JrxHfRiQXbqNnFJxBg929KFfMhhH5fiNypC7fyc0Wwj5Arw+C+D6nqjQtEgdJnTh3YwxACn9fPhIibV6mYUWGyrUvageLG2LIQxNnkz05YlRnJx32Oq8ft3H5AQ4ZN81R3lWSQ3zI8zFyMfmm63fTN3r6tOSVpYsZRgVvb5MEpp4C+pYT2VA5vdLhAXwRNhDZkPSxRo3SIax4q+38qpz6A919kgfW9mcDsz81s850vfRrENv7EepN2ZgpEZtkVliyidxt5ACc41+0YN3HZQyp1fYUeRotmN3eS1Y2wzfYOVZgB4pdfZtTIG1Zb8qW5GmiLQKIpG5LBB7dWgs0C6DtN3mu/+qFAfdiUjr2I9tuCSHPVE/xW0tdP6Vr1lzD/hYEDhit/HnlO4d2y3Dh8Pplm/z0MFt6H8GFph5/rqr/+X/dDHbS0js2vzq+AX+6FqM/XTD9HVl+/8wliBPoXHWRy3FXF1vOT80XxTO/ho0iz2yl21yAU3MuumsEhUcwiWFwpVxTtkzDxXMXrMJzHGK1VDbNe7oxWtmk+2BTSOnw/Ps6kiygPTLEtHEjQL/4iZdlIEt0NrjstUCm4ifrWog="
 
 addons:
   apt:
@@ -20,18 +21,15 @@ cache:
   directories:
   - node_modules
 
+before_install:
+- chmod +x ./.build_scripts/deploy.sh
+
 script:
-  - gulp prod
+- gulp
 
 deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  bucket: ds-mm-partner
+  provider: script
   skip_cleanup: true
-  region: us-east-1
-  local_dir: _site
-  acl: public_read
+  script: ".build_scripts/deploy.sh"
   on:
-    repo: MissingMaps/partners
     branch: "${DEPLOY_BRANCH}"
