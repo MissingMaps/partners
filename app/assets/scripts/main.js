@@ -246,20 +246,35 @@ function setupGraphs () {
     bldngGraph.parentNode.removeChild(bldngGraph);
     roadsGraph.parentNode.removeChild(roadsGraph);
   }
-  // Sets Users button to Selected and loads Users chart
+  const moreBtn = $('.btn.invert-btn-grn.teams-btn');
+  const teamLabel = $('.Team-Graph-Title .left');
+  const teamUserLabel = $('.Team-User-Graph-Title .left');
+  // Sets Users button to Selected, loads Users graphs, hides
+  // "Show More Teams" button
   $('#Select-Users-Graph').click(function () {
     $('#Select-Teams-Graph').removeClass('Selected');
     $('#Select-Users-Graph').addClass('Selected');
+    teamLabel.text('Users');
+    teamUserLabel.text('Users');
+    moreBtn.animate({opacity: 0}, 500, function () {
+      moreBtn.css('display', 'none');
+    });
     // Remove existing graphs
     removeExistingGraphs();
     // Gets main hashtag on each partner page via team.html
     getUserActivityStats(PT.mainHashtag);
   });
 
-  // Sets Teams button to Selected and loads Teams chart
+  // Sets Teams button to Selected, loads Teams graphs, reveals
+  // "Show More Teams" button if applicable
   $('#Select-Teams-Graph').click(function () {
     $('#Select-Users-Graph').removeClass('Selected');
     $('#Select-Teams-Graph').addClass('Selected');
+    teamLabel.text('Teams');
+    teamUserLabel.text('Teams');
+    if (PT.subHashtags.length > 10) {
+      moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+    }
     // Remove existing graphs
     removeExistingGraphs();
     // Gets hashtag array on each partner page via team.html
