@@ -39,7 +39,7 @@ header {
   position: relative;
   display: inline-block;
   float: right;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 560px) {
     display: none;
   }
 }
@@ -92,6 +92,7 @@ header {
   height: 0;
   overflow: hidden;
   opacity: 0;
+  text-align: right;
   transition: opacity .3s;
   :hover {
     a {
@@ -103,6 +104,10 @@ header {
     background-color: $darkestgrey;
     border-bottom: 1px solid lighten($darkestgrey, 15);
   }
+}
+
+.nav-events{
+  width: 180px;
 }
 
 .nav-dropdown:hover .dropdown-content {
@@ -135,7 +140,7 @@ header {
     }
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 560px) {
     display: block;
   }
 }
@@ -167,7 +172,7 @@ header {
 .resp-nav-dropdown {
   display: inline-block;
   text-align: center;
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 560px) {
     display: none;
   }
 }
