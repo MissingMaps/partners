@@ -14,7 +14,6 @@ prose:
     - /_prose.yml
     - /_config.yml
     - /_config-dev.yml
-    - /_config-stage.yml
     
     # Development stuff
     - /.csscomb.json
@@ -22,6 +21,7 @@ prose:
     - /.gitattributes
     - /.gitignore
     - /.travis-s3sample.yml
+    - /.build-scripts
     - /Gemfile
     - /Gemfile.lock
     - /gulpfile.js
@@ -37,64 +37,34 @@ prose:
         field: 
           element: "hidden"
           value: "partner"
-
       - name: "lang"
         field: 
           element: "hidden"
           value: "en"
-
       - name: "permalink"
         field:
           element: "text"
           value: "/partner-example/"
-
       - name: "id"
         field: 
           element: "text"
           value: "partner-example"
-
       - name: "name"
         field: 
           element: "text"
           value: "Example Partner"
-
       - name: "logo"
         field: 
           element: "text"
           value: "/assets/graphics/content/logos/MMlogo-Outlined.svg"
-
       - name: "contact"
         field: 
           element: "text"
           value: "dale.kunce@redcross.org"
-
-      - name: "social"
-        field: "flickr"
-          element: "text"
-          value: "https://www.flickr.com/photos/126636925@N06/"
-        field: "twitter"
-          element: "text"
-          value: "https://twitter.com/TheMissingMaps"
-        field: "facebook"
-          element: "text"
-          value: "https://www.facebook.com/MissingMapsProject"
-        field: "benevity"
-          element: "text"
-          value: "https://missingmaps.benevity.org/user"
-
-      - name: "community"
-        field: "apikey"
-          element: "text"
-          value: "09023a48037b7882a3683cb1c2043c50"
-        field: "setId"
-          element: "text"
-          value: "72157655209554272"
-
       - name: "primary-hashtag"
         field: 
           element: "text"
           value: "redcross"
-
       - name: "subhashtags"
         field: 
           element: "text"
