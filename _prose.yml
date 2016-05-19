@@ -9,6 +9,7 @@ prose:
     - /app/humans.txt
     - /app/index.html
     - /app/robots.txt
+    - /404.html
 
     # Block _prose and _config.
     - /_prose.yml
@@ -45,26 +46,32 @@ prose:
         field:
           element: "text"
           value: "/partner-example/"
+          label: "This will be the end of the URL the partner page can be located at. Using /[partner.name]/ will make the link missingmaps.com/partner/partner.name/."
       - name: "id"
         field: 
           element: "text"
           value: "partner-example"
+          label: "What will be used to match the partner page to the events.csv. Needs to be the same as the folder containing this partner's events."
       - name: "name"
         field: 
           element: "text"
           value: "Example Partner"
+          label: "Partner name. Displayed on the main page under logo."
       - name: "logo"
         field: 
           element: "text"
           value: "/assets/graphics/content/logos/MMlogo-Outlined.svg"
+          label: "Link to partner logo."
       - name: "contact"
         field: 
           element: "text"
           value: "dale.kunce@redcross.org"
+
       - name: "primary-hashtag"
         field: 
           element: "text"
           value: "redcross"
+
       - name: "subhashtags"
         field: 
           element: "text"
