@@ -67,14 +67,6 @@ prose:
           element: "text"
           value: "dale.kunce@redcross.org"
           label: "contact"
-      - name: "social"
-        field: 
-          element: "Textarea"
-          label: "social links"
-      - name: "community"
-        field: 
-          element: "textarea"
-          label: flickr links
       - name: "primary-hashtag"
         field: 
           element: "text"
@@ -84,7 +76,3 @@ prose:
           element: "multiselect"
           placeholder: ""
           alterable: true
-      - name: "tm-projects"
-        field:
-          element: "textarea" 
-  
