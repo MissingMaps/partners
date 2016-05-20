@@ -56,8 +56,8 @@ prose:
         field: 
           element: "text"
           placeholder: "name"
-          label: "Partner name. Displayed on the main page under logo."
-      - name: "logo"
+          label: "partner name"
+      - name: "logo filename"
         field: 
           element: "text"
           value: "MMlogo-Outlined.svg"
