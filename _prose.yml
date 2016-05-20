@@ -37,43 +37,60 @@ prose:
       - name: "layout"
         field: 
           element: "hidden"
-          value: "partner"
+          placeholder: "partner"
       - name: "lang"
         field: 
           element: "hidden"
-          value: "en"
+          placeholder: "en"
       - name: "permalink"
         field:
           element: "text"
-          value: "/partner-example/"
-          label: "This will be the end of the URL the partner page can be located at. Using /[partner.name]/ will make the link missingmaps.com/partner/partner.name/."
+          placeholder: "/partner-example/"
+          label: "permalink"
       - name: "id"
         field: 
           element: "text"
-          value: "partner-example"
-          label: "What will be used to match the partner page to the events.csv. Needs to be the same as the folder containing this partner's events."
+          placeholder: "partner-example"
+          label: "id"
       - name: "name"
         field: 
           element: "text"
-          value: "Example Partner"
+          placeholder: "name"
           label: "Partner name. Displayed on the main page under logo."
       - name: "logo"
         field: 
           element: "text"
-          value: "/assets/graphics/content/logos/MMlogo-Outlined.svg"
-          label: "Link to partner logo."
+          value: "MMlogo-Outlined.svg"
+          label: "logo"
       - name: "contact"
         field: 
           element: "text"
           value: "dale.kunce@redcross.org"
-
+          label: "contact"
+      - name: "social"
+        field: 
+          element: "Textarea"
+          placeholder: "https://www.flickr.com/photos/126636925@N06/"
+          label: "social links"
+      - name: "community"
+        field: "apikey"
+          element: "text"
+          placeholder: "09023a48037b7882a3683cb1c2043c50"
+          label: "apikey"
+        field: "setId"
+          element: "text"
+          placeholder: "72157655209554272"
+          label: "setId"
       - name: "primary-hashtag"
         field: 
           element: "text"
-          value: "redcross"
-
+          placeholder: "redcross"
       - name: "subhashtags"
         field: 
-          element: "text"
-          value: ""
+          element: "multiselect"
+          placeholder: ""
           alterable: true
+      - name: "tm-projects"
+        field:
+          element: "textarea" 
+  
