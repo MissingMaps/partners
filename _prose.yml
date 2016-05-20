@@ -77,7 +77,7 @@ prose:
           element: "text"
           placeholder: "https://twitter.com/TheMissingMaps"
           label: "twitter account"
-      - name: "twitter"
+      - name: "facebook"
         field:
           element: "text"
           placeholder: "https://www.facebook.com/MissingMapsProject"
