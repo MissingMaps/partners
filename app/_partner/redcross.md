@@ -1,17 +1,17 @@
 ---
 layout: partner
 lang: en
-permalink: /nullcase/
+permalink: /redcross/
 
-id: nullcase
-name: MissingMaps Partner
+id: redcross
+name: RedCross
 logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
 contact: dale.kunce@redcross.org
 
 social:
   flickr: https://www.flickr.com/photos/126636925@N06/
-  twitter: https://twitter.com/TheMissingMaps
-  facebook: https://www.facebook.com/MissingMapsProject
+  twitter: https://twitter.com/redcross
+  facebook: https://www.facebook.com/redcross
   benevity: https://missingmaps.benevity.org/user
 
 community:

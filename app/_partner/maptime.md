@@ -1,27 +1,27 @@
 ---
 layout: partner
 lang: en
-permalink: /jpmc/
+permalink: /maptime/
 
-id: jpmc
-name: JP Morgan Chase
-logo: https://arcmaps.s3.amazonaws.com/share/chase_logo.svg
+id: maptime
+name: MapTime
+logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
 contact: dale.kunce@redcross.org
 
 social:
-  flickr: https://www.flickr.com/photos/126636925@N06/
-  twitter: https://twitter.com/jpmorgan
-  facebook: https://www.facebook.com/jpmc
+  flickr:
+  twitter: https://twitter.com/maptimeHQ
+  facebook: https://www.facebook.com/maptimeHQ
   benevity: https://missingmaps.benevity.org/user
 
 community:
   apikey: 09023a48037b7882a3683cb1c2043c50
   setId: 72157655209554272
 
-primary-hashtag: jpmc
+primary-hashtag: maptime
 subhashtags:
-  - TYK2WD
-  - jpmc_midtown
+  - maptimeDC
+
 
 tm-projects:
   - id: 1848
