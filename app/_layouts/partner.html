@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<script>
+  // creates PT object for each page. Including lang for future use
+  var PT = { lang: '{{page.lang}}' };
+</script>
+
+<h1>{{ page.name }}</h1>
+
+ <section id = "Primary">
+  {% include intro.html %}
+</section>
+
+<section class = "Current-Projects">
+  {% include projects.html %}
+</section>
+
+<section class = "Teams">
+  {% include teams.html %}
+</section>
+
+<section id = "Events">
+  <h1>Upcoming Events</h1>
+  {% include events.html %}
+</section>
+
+<section class = "Community">
+  {% include community.html %}
+</section>
+
+{% include footer.html %}

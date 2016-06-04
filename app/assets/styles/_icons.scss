@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Icon font: collecticons
+   ========================================================================== */
+
+/**
+ * Generated with collecticons-processor on May 5, 2016
+ * http://collecticons.io/
+ */
+
+
+@font-face {
+  font-family: "collecticons";
+  src: url('../fonts/collecticons.eot');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: "collecticons";
+  
+  src: url('../fonts/collecticons.ttf');
+  
+  
+  src: url('../fonts/collecticons.woff');
+  
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+%collecticon,
+[class^="collecticon-"],
+[class*=" collecticon-"] {
+  speak: none;
+  font-family: "collecticons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better font rendering */
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+%collecticon-chevron-left {
+  @extend %collecticon;
+  content: "\EA01"
+}
+.collecticon-chevron-left:before {
+  content: "\EA01"
+}
+
+%collecticon-chevron-right {
+  @extend %collecticon;
+  content: "\EA02"
+}
+.collecticon-chevron-right:before {
+  content: "\EA02"
+}
+
+%collecticon-facebook {
+  @extend %collecticon;
+  content: "\EA03"
+}
+.collecticon-facebook:before {
+  content: "\EA03"
+}
+
+%collecticon-flickr {
+  @extend %collecticon;
+  content: "\EA04"
+}
+.collecticon-flickr:before {
+  content: "\EA04";
+  margin-right: 0.4em;
+  vertical-align: -1px;
+}
+
+%collecticon-sign-danger {
+  @extend %collecticon;
+  content: "\EA05"
+}
+.collecticon-sign-danger:before {
+  content: "\EA05";
+  color: darken($mmYello, 14%);
+  font-size: 30px;
+  vertical-align: -25%;
+  padding-right: 2px
+}
+
+%collecticon-twitter {
+  @extend %collecticon;
+  content: "\EA06"
+}
+.collecticon-twitter:before {
+  content: "\EA06";
+  vertical-align: -1px;
+}
+
+.social-icon{
+}

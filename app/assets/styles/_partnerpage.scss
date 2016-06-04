@@ -1,0 +1,782 @@
+/*----------------------------------------------*/
+/* CONTAINERS */
+/*----------------------------------------------*/
+section {
+  width: 100%;
+  padding: 2em 0 2em 0;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  text-align: center;
+  h1 {
+    padding-bottom: 1em;
+  }
+}
+
+@mixin container {
+  max-width: $MaxWidth;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+}
+
+#site-title {
+  span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0px,0px,0px,0px);
+    border: 0 none;
+  }
+}
+
+h1 {
+  display: inline-block;
+  font-family: 'Hind';
+  font-size: 1.75em;
+  font-weight: 700;
+  color: $darkgrey;
+}
+
+.site-title {
+  margin: 0;
+}
+
+/*----------------------------------------------*/
+/* HERO  */
+/*----------------------------------------------*/
+#Hero {
+  padding: 1.5em 0 0 0;
+}
+
+.Hero-image {
+  width: 100%;
+  height: 320px;
+  background-image: url('/assets/graphics/content/flickr_img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  .btn {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    background-position: top;
+  }
+}
+
+.Partner-title {
+  position: relative;
+  top: 150px;
+  font-size: 2em;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px #8a8a8a;
+  @media screen and (max-width: 600px) {
+  }
+}
+
+/*----------------------------------------------*/
+/* INTRO */
+/*----------------------------------------------*/
+#Primary {
+  width: 100%;
+  padding: 3em 0 1em 0;
+  background-color: $darkestgrey;
+}
+
+.Primary_Container {
+  padding-bottom: 1em;
+  margin-top: .75em;
+  overflow: hidden;
+
+  @include container;
+}
+
+.Primary-logo {
+  position: relative;
+  display: inline-block;
+  float: initial;
+  margin: 0;
+  p {
+    font-weight: 600;
+  }
+  @media screen and (min-width: $MaxWidth) {
+    float: left;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.Primary-logo-container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  font: 0/0 a;
+  &:before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: ' ';
+  };
+  @media screen and (max-width: 700px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.Primary-logo img {
+  display: inline-block;
+  max-width: 200px;
+  max-height: 100px;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.Primary-logo p {
+  margin-top: 16px;
+  font-size: 18px;
+  color: $lightgrey;
+}
+
+.Primary-stats {
+  float: right;
+  @media screen and (max-width: 1020px) {
+    float: initial;
+    margin: 1em auto 0 auto;
+  }
+}
+
+.Stat-Item {
+  display: inline-block;
+  margin: 25px 11px 1em 78px;
+  .title {
+    margin-top: 6px;
+    font-size: 1.1em;
+    color: $lightgrey;
+    @media screen and (max-width: 700px) {
+      padding-top: 0;
+      font-size: .8em;
+    }
+  }
+  .emphasizedNumber {
+    padding-top: 6px;
+    padding-bottom: 2px;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 20px;
+    color: $mmTeal;
+    @media screen and (max-width: 700px) {
+      padding-top: 0;
+      font-size: 1.5em;
+    }
+  }
+  img {
+    display: block;
+    width: 50px;
+    margin: 0 auto 10px auto;
+  }
+  @media screen and (max-width: 1020px) {
+    display: inline-block;
+    margin: 1em 3em;
+  }
+  @media screen and (max-width: 810px) {
+    margin: 1em 2em;
+  }
+  @media screen and (max-width: 600px) {
+    margin: 1em 4em;
+  }
+  @media screen and (max-width: 430px) {
+    margin: 1em 2em;
+  }
+}
+
+.spinner {
+  width: 70px;
+  margin: 0 auto;
+  text-align: center;
+  &.big {
+    width: 100px;
+  }
+}
+
+.spinner > div {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-bottom: 8px;
+  background-color: $mmTeal;
+  border-radius: 100%;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+          animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  &.big {
+    width: 25px;
+    height: 25px;
+    margin-top: 85px;
+  }
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -.32s;
+          animation-delay: -.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -.16s;
+          animation-delay: -.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1.0);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+            transform: scale(1.0);
+  }
+}
+
+
+/*----------------------------------------------*/
+/* PROJECTS */
+/*----------------------------------------------*/
+.Projects-Container {
+  margin-top: 1em;
+
+  @include container;
+  h1 {
+    width: 80%;
+    padding-bottom: 0;
+    margin-left: 0;
+    font-style: 'Raleway';
+    text-align: left;
+    @media screen and (min-width: $MaxWidth) {
+      width: 100%;
+      margin-left: 6px;
+    }
+  }
+}
+
+
+.HOT-Container {
+  max-width: 100%;
+}
+
+.HOT-Details {
+  float: initial;
+  width: 80%;
+  margin: .5em auto 0 auto;
+  text-align: initial;
+  @media screen and (min-width: $MaxWidth) {
+    float: left;
+    width: 536px;
+    margin: .5em 1em;
+    text-align: left;
+  }
+}
+
+.HOT-Task {
+  float: initial;
+  width: 100%;
+  @media screen and (min-width: $MaxWidth) {
+    width: 860px;
+  }
+}
+
+.HOT-Map {
+  float: initial;
+  width: 80%;
+  height: 200px;
+  margin: .5em auto .5em auto;
+  border: 1px solid #cccccc;
+  @media screen and (min-width: $MaxWidth) {
+    float: left;
+    width: 220px;
+    margin: .5em;
+  }
+  &.placeholder {
+    background-image: url('/assets/graphics/content/logos/MMlogo-Outlined.svg');
+    background-color: $lightgrey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% 80%;
+  }
+}
+
+.HOT-Title {
+  position: relative;
+  width: 100%;
+  min-height: 36px;
+  text-align: left;
+  p {
+    width: 50%;
+    @media screen and (min-width: 420px) {
+      width: 70%;
+    }
+    @media screen and (min-width: 600px) {
+      width: 80%;
+    }
+    @media screen and (min-width: $MaxWidth) {
+      width: 400px;
+    }
+  }
+  .btn {
+    position: absolute;
+    top: -12px;
+    right: -8px;
+    float: right;
+  }
+}
+
+.HOT-Description {
+  width: 100%;
+  margin: 0;
+  text-align: right;
+  @media screen and (min-width: $MaxWidth) {
+  }
+  p {
+    margin: 1em 0 .25em 0;
+    text-align: left;
+    .strikethrough {
+      color: lighten($darkgrey, 25%);
+      text-decoration: line-through;
+    }
+  }
+}
+
+.HOT-Nav {
+  position: relative;
+  margin: 1em 2.5em 0 .4em;
+  clear: both;
+  p {
+    position: absolute;
+    float: left;
+    margin-right: .5em;
+    font-weight: bold;
+  }
+
+  .btn {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    float: right;
+    margin: 0;
+  }
+}
+
+.HOT-Progress {
+  width: 100%;
+  height: 20px;
+  margin-top: .5em;
+  background-color: $lightestgrey;
+  border-radius: 4px;
+  transform: translateZ(0);
+  .btn {
+    float: right;
+  }
+  p {
+    position: absolute;
+    right: 10px;
+    margin: 0;
+    font-weight: 800;
+    text-align: right;
+    opacity: .5;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    content: '';
+    background-color: $mmYello;
+    border-radius: .25em 0 0 .25em;
+  }
+}
+
+.HOT-Next {
+  position: relative;
+  top: 15px;
+  float: right;
+  margin-left: 1.5em;
+  font-size: 2em;
+  cursor: pointer;
+  opacity: .25;
+  transition: opacity ease-in .2s;
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.GetInvolved {
+  display: none;
+  h3 {
+    width: 60%;
+    padding: 10px 0 8px 0;
+    margin: 0 auto;
+    font-family: 'Hind';
+    font-size: 1em;
+    font-weight: 300;
+    border-top: 1px solid #dbdbda;
+  }
+  @media screen and (min-width: $MaxWidth) {
+    display: block;
+    float: right;
+    width: 240px;
+    border-left: 1px solid #dbdbda;
+  }
+  .btn {
+    margin-bottom: 16px;
+  }
+}
+
+/*----------------------------------------------*/
+/* EVENTS */
+/*----------------------------------------------*/
+#Events {
+  background-color: desaturate(lighten($mmTeal, 40), 30);
+}
+
+.events-null {
+  display: none;
+  margin-bottom: 1.5em;
+  p {
+    margin: 1.5em 0 .5em 0;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+  height: 0;
+  opacity: 0;
+}
+
+/*----------------------------------------------*/
+/* TEAMS AND USERS */
+/*----------------------------------------------*/
+.Team-User-Container {
+  margin-bottom: 2em;
+
+  @include container;
+  h1 {
+    width: 80%;
+    text-align: left;
+    @media screen and (min-width: $MaxWidth) {
+      float: left;
+      width: 100%;
+      margin-left: 5px;
+      text-align: initial;
+    }
+  }
+}
+
+.Team-User-Nav {
+  width: 80%;
+  height: 36px;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  text-align: left;
+  p {
+    display: inline-block;
+    float: initial;
+    margin: 0 1.5em 0 0;
+    @media screen and (min-width: 800px) {
+      float: left;
+      margin-right: 3em;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    width: 80%;
+  }
+  @media screen and (min-width: $MaxWidth) {
+    width: 100%;
+    margin: 0 5px;
+  }
+}
+
+.null {
+  pointer-events: none;
+  cursor: none;
+}
+
+.Team-User-Nav {
+  .Selected {
+    border-bottom: 3px solid $mmGreen;
+  }
+  p {
+    &:hover {
+      color: darken($mmGreen, 10);
+      cursor: pointer;
+    }
+  }
+}
+
+.teams-more {
+  margin: 2.5em 0 .5em 0;
+}
+
+/*----------------------------------------------*/
+/* COMMUNITY */
+/*----------------------------------------------*/
+.Community {
+  background-color: $darkgrey;
+}
+
+.Community-Container {
+  h1 {
+    color: $lightgrey;
+  }
+}
+
+#Community-Flickr {
+  max-width: 100%;
+  max-height: 600px;
+  background-color: $darkestgrey;
+}
+
+.Community-Links {
+  margin: 3.5em 0 .5em 0;
+  margin-right: auto;
+  margin-left: auto;
+  li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 .25em;
+    border: 1px solid rgba(255,255,255,.5);
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
+  }
+  .Community-Links-Emphasis {
+    background-color: $mmTeal;
+    border-color: white;
+  }
+}
+
+.Community-Navigation {
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.Community-Container {
+  .events-null {
+    display: block;
+    margin: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $darkestgrey;
+  }
+}
+
+/*----------------------------------------------*/
+/* Events Analytics */
+/*----------------------------------------------*/
+.events-container {
+  width: 100%;
+  padding: 30px 10px;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  text-align: center;
+  background-color: $mmTeal;
+}
+
+.clear {
+  clear: both;
+}
+
+.events-panel {
+  width: 100%;
+  text-align: center;
+}
+
+.event-top-section {
+  padding: 5px 10px;
+  background-color: lighten($darkgrey, 48);
+  border-radius: 2px 2px 0 0;;
+
+  @media screen and (max-width: 450px) {
+    padding: 0 6px 15px 10px;
+  }
+
+  .sub-head {
+    float: left;
+    width: 100%;
+    padding-bottom: 0;
+    text-align: left;
+    @media screen and (max-width: 580px) {
+      font-size: 1.2em;
+    }
+  }
+  .btn-grn {
+    float: right;
+    margin: 5px 0 5px 0;
+    font-size: .55em;
+    line-height: 12px;
+    @media screen and (max-width: 580px) {
+      margin-top: 7px;
+      font-size: .7em;
+    }
+  }
+}
+
+.event-sub-container {
+  max-width: 600px;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  margin-left: auto;
+  background-color: white;
+  border: 1px solid darken($lightgrey, 8);
+  border-radius: 2px;
+  box-shadow: 0 1px $lightgrey;
+  @media screen and (max-width: 470px) {
+    margin: 0 10px 20px;
+  }
+}
+
+.event-images {
+  display: block;
+  float: left;
+  padding-top: 9px;
+  margin-right: 10px;
+}
+
+.event-header {
+  float: left;
+  width: 50%;
+  padding-top: 5px;
+  margin-bottom: 4px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.event-page {
+  width: auto;
+  padding-bottom: 60px;
+  background-color: lighten($lightgrey,10%);
+}
+
+.event-details-left {
+  float: left;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-right: solid 1px $lightgrey;
+  .emphasizedNumber {
+    padding-top: 15px;
+    margin-top: 2px;
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 20px;
+    color: $darkgrey;
+  }
+}
+
+.event-details-right {
+  float: left;
+  width: 75%;
+  padding: 8px 0 14px 20px;
+  text-align: left;
+
+  @media screen and (max-width: 470px) {
+    width: 60%;
+  }
+  p {
+    padding: 0;
+    line-height: 1.3em;
+  }
+  .event-details {
+    margin-top: 5px;
+    font-size: .8em;
+  }
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.event-maindetails {
+  padding: 10px;
+}
+
+.event-block {
+  height: 50px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.header-image {
+  .welcome-svg {
+    position: absolute;
+    bottom: 0;
+  }
+}
+/*----------------------------------------------*/
+/* Foundation fixes */
+/*----------------------------------------------*/
+.clearfix::before, .clearfix::after{
+  content: ' ';
+  display: table;
+}
+
+.clearfix::after{
+  clear: both;
+}
+
+*:before, *:after{
+  box-sizing: inherit;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+
+}
+
+/*----------------------------------------------*/
+/* Footer Analytics */
+/*----------------------------------------------*/
+.footer-container {
+  width: 100%;
+  padding: 30px 0 0 0;
+  background-color: $lightgrey;
+  .sectionheader {
+    padding-top: 20px;
+    padding-bottom: 36px;
+  }
+}
+
+.footer-mm {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: $lightgrey;
+  background-color: $darkestgrey;
+}

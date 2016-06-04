@@ -1,0 +1,204 @@
+/*----------------------------------------------*/
+/*Nav Bar Style*/
+/*----------------------------------------------*/
+
+header {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  height: 52px;
+  color: $lightgrey;
+  background-color: $darkestgrey;
+  ul {
+    display: inline-block;
+  }
+  li {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.navbar-background {
+  max-width: $MaxWidth;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-icon {
+  float: left;
+  padding-top: 6px;
+  padding-left: 2em;
+  @media screen and (min-width: $MaxWidth) {
+    padding-left: 0;
+  }
+}
+
+.nav-list {
+  position: relative;
+  display: inline-block;
+  float: right;
+  @media screen and (max-width: 560px) {
+    display: none;
+  }
+}
+
+.nav-input {
+  position: relative;
+  bottom: 3px;
+  display: inline-block;
+  float: right;
+  padding: 0 16px 0 40px;
+}
+
+.nav-item {
+  height: 52px;
+  padding: 0 10px 0 7.2px;
+  font-family: 'Lato';
+  font-size: .9em;
+  line-height: 52px;
+  color: white;
+  color: $lightgrey;
+  letter-spacing: .06em;
+  cursor: pointer;
+  transition: color .2s;
+  &:hover {
+    color: darken($lightgrey, 45);
+  }
+}
+
+.nav-links {
+  float: center;
+}
+
+.inner {
+  max-width: $MaxWidth;
+  padding-right: 2em;
+  padding-left: 2em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  text-align: right;
+  transition: opacity .3s;
+  :hover {
+    a {
+      color: darken($lightgrey, 45);
+    }
+  }
+  .nav-item {
+    padding-left: 12px;
+    background-color: $darkestgrey;
+    border-bottom: 1px solid lighten($darkestgrey, 15);
+  }
+}
+
+.nav-events{
+  width: 180px;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  height: auto;
+  opacity: 1;
+}
+
+.resp-navbar {
+  display: none;
+  float: right;
+  width: 100px;
+  height: 52px;
+  padding-left: 1em;
+  line-height: 52px;
+  cursor: pointer;
+  p {
+    margin-top: 15px;
+    font-family: 'Lato';
+    font-size: 1em;
+    color: $lightgrey;
+    letter-spacing: .06em;
+    &:before {
+      display: block;
+      float: left;
+      width: 16px;
+      height: 16px;
+      margin: 3px 0 0 0;
+      content: '';
+      background: url('/assets/graphics/meta/menubox.svg');
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    display: block;
+  }
+}
+
+.resp-dropdown-content {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background-color: lighten($darkestgrey, 10);
+  opacity: 0;
+  transition: opacity .1s;
+  a {
+    display: block;
+  }
+  :hover {
+    background-color: lighten($darkestgrey, 3);
+  }
+  .nav-item {
+    width: 100%;
+    border-top: 1px solid lighten($darkestgrey, 15);
+  }
+}
+
+
+.resp-nav-dropdown {
+  display: inline-block;
+  text-align: center;
+  @media screen and (min-width: 560px) {
+    display: none;
+  }
+}
+
+.resp-nav-dropdown:hover .resp-dropdown-content {
+  height: auto;
+  opacity: 1;
+}
+
+.header-image {
+  position: relative;
+  height: 25rem;
+  margin-bottom: 4rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.header-contribute {
+  background-image: url('/assets/graphics/old/mapathon.jpg');
+}
+
+.header-events {
+  background-image: url('/assets/graphics/old/mapathon2.jpg');
+}
+
+.header-about, .header-hosting {
+  background-image: url('/assets/graphics/old/mapathon3.jpg');
+}

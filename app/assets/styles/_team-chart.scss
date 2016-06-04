@@ -1,0 +1,78 @@
+/*----------------------------------------------*/
+/* Team Chart Styling */ 
+/*----------------------------------------------*/
+.Team-User-Stats {
+  display: flex;
+  margin: 0 0 0 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width: 1100px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.Team-User-Graph {
+  width: 320px;
+  height: 235px;
+  padding-top: 15px;
+  margin: 0 30px 0 0;
+  overflow: hidden;
+  text-align: left;
+  border-top: 1px solid #dddddd;
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    margin-right: 0;
+  }
+  svg {
+    rect {
+      fill: lighten($mmGreen, 24);
+    }
+    .Graph-Label-Name {
+      font-size: 13px;
+      a {
+        font-weight: 600;
+        transition: .3s fill;
+
+        fill: $darkgrey;
+        &:hover {
+          text-decoration: underline;
+
+          fill: darken($mmGreen, 8);
+        }
+      }
+    }
+    .Graph-Label-Value {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+}
+
+.Team-User-Graph-Title, .Team-Graph-Title {
+  width: 100%;
+  height: 30px;
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+  margin-right: 30px;
+  @media screen and (max-width: 1100px) {
+    margin-right: 0;
+  }
+}
+
+.Team-User-Stat-Item {
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
+}

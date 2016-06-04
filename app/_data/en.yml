@@ -1,0 +1,22 @@
+####################
+## HEADER CONTENT ##
+####################
+
+nav:
+  - text:         "CONTRIBUTE"
+    url:          "/contribute/"
+  - text:         "EVENTS"
+    links:
+      - text:     "CURRENT EVENTS"
+        url:      "/events/"
+      - text:     "ORGANIZE AN EVENT"
+        url:      "/host/"
+  - text:         "ABOUT"
+    url:          "/about/"
+  - text:         "DISCOVER"
+    links:
+      - text:     "USER PROFILES"
+        url:      "http://www.missingmaps.org/users/"
+      - text:     "LEADERBOARDS"
+        url:      "http://www.missingmaps.org/leaderboards/"
+

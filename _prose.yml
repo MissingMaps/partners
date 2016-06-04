@@ -1,0 +1,110 @@
+# Prose settings
+
+prose:
+  ignore:
+    - /app/_data
+    - /app/_includes
+    - /app/_layouts
+    - /app/assets
+    - /app/humans.txt
+    - /app/index.html
+    - /app/robots.txt
+    - /404.html
+
+    # Block _prose and _config.
+    - /_prose.yml
+    - /_config.yml
+    - /_config-dev.yml
+    
+    # Development stuff
+    - /.csscomb.json
+    - /.eslintrc
+    - /.gitattributes
+    - /.gitignore
+    - /.travis-s3sample.yml
+    - /.build-scripts
+    - /Gemfile
+    - /Gemfile.lock
+    - /gulpfile.js
+    - /LISCENSE
+    - /package.json
+    - /README.md
+
+  rooturl: app
+
+  metadata:
+    "app/_partner":
+      - name: "layout"
+        field: 
+          element: "hidden"
+          placeholder: "partner"
+      - name: "lang"
+        field: 
+          element: "hidden"
+          placeholder: "en"
+      - name: "permalink"
+        field:
+          element: "text"
+          placeholder: "/partner-example/"
+          label: "permalink"
+      - name: "id"
+        field: 
+          element: "text"
+          placeholder: "partner-example"
+          label: "id"
+      - name: "name"
+        field: 
+          element: "text"
+          placeholder: "name"
+          label: "partner name"
+      - name: "logo filename"
+        field: 
+          element: "text"
+          value: "MMlogo-Outlined.svg"
+          label: "logo"
+      - name: "contact"
+        field: 
+          element: "text"
+          value: "dale.kunce@redcross.org"
+          label: "contact"
+      - name: "flickr"
+        field:
+          element: "text"
+          placeholder: "https://www.flickr.com/photos/126636925@N06/"
+          label: "flickr account"
+      - name: "twitter"
+        field:
+          element: "text"
+          placeholder: "https://twitter.com/TheMissingMaps"
+          label: "twitter account"
+      - name: "facebook"
+        field:
+          element: "text"
+          placeholder: "https://www.facebook.com/MissingMapsProject"
+          label: "facebook page"
+      - name: "benevity"
+        field:
+          element: "text"
+          placeholder: "https://missingmaps.benevity.org/user"
+          label: "benevity link"
+      - name: "apikey"
+        field: 
+          element: "text"
+          placeholder: "09023a48037b7882a3683cb1c2043c50"
+          label: "flickr api key"
+      - name: "setId"
+        field: 
+          element: "text"
+          placeholder: "72157655209554272"
+          label: "flickr set Id"
+      - name: "primary-hashtag"
+        field: 
+          element: "text"
+          placeholder: "redcross"
+          label: primary hashtag
+      - name: "subhashtags"
+        field: 
+          element: "multiselect"
+          placeholder: ""
+          label: sub-hashtags
+          alterable: true

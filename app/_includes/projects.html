@@ -1,0 +1,44 @@
+<div class = "Projects-Container">
+  <h1>Current Projects</h1>
+  <div class = "Projects-Container-Leftside">
+    <div class = "flexslider Projects-slider">
+      <ul class = "slides project-slide">
+        {% for p in page.tm-projects limit:10 %}
+        <li id = Project-{{ p.id }}>
+          <div class = "HOT-Container">
+            <div class = "HOT-Map">
+              <div class="spinner big">
+                <div class="bounce1 big"></div>
+                <div class="bounce2 big"></div>
+                <div class="bounce3 big"></div>
+              </div>
+            </div>
+            <div class = "HOT-Details">
+              <div class = "HOT-Title" id = "HOT-Title-{{ p.id }}">
+                <p><b></b></p><a href="http://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">CONTRIBUTE</a>
+              </div>
+              <div class = "HOT-Progress">
+                <p></p>
+              </div>
+              <div class = "HOT-Description">
+                <p> {{ p.desc | truncatewords: 40}} <a href= "http://tasks.hotosm.org/project/{{ p.id }}"> read more.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class = "HOT-Nav">
+      <div class = "HOT-Nav-Projects"></div>
+    </div>
+  </div>
+  <div class = "GetInvolved">
+      <p>Log your hours at</p>
+      <p><a href="{{ page.benevity }}" class="btn btn-blue">BENEVITY </a></p>
+      <h3>New to Mapping?</h3>
+      <img src = "{{ site.baseurl }}/assets/graphics/content/process/Learn-MapNow.svg" width = "120"></img>
+      <p><a href="http://www.missingmaps.org/contribute/" class="btn btn-blue">LEARN TO MAP </a></p>
+  </div>
+</div>

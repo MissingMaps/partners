@@ -1,0 +1,27 @@
+/*----------------------------------------------*/
+/*Variables*/
+/*----------------------------------------------*/
+
+$mmgreen: #8bbf3f;
+$mmblue: #1e9fcc;
+$mmTeal: #23bcc1;
+$mmYello: #fef387;
+$selectYello: desaturate(lighten($mmYello, 7), 30);
+$mmGreen: #8bc544;
+$darkgrey: #606161;
+$lightgrey: #dbdbda;
+$lightestgrey: #E7E7E7;
+$darkestgrey: #303030;
+
+$MaxWidth: 1100px;
+$TextColor: $darkgrey;
+
+$DataColor: $mmTeal;
+
+$ButtonColor: $mmTeal;
+
+/*----------------------------------------------*/
+/* In Context */ 
+/*----------------------------------------------*/
+$text-color: $darkgrey;
+$border-color: $darkgrey;
