@@ -5,23 +5,22 @@ permalink: /maptime/
 
 id: maptime
 name: MapTime
-logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
-contact: dale.kunce@redcross.org
+logo: https://arcmaps.s3.amazonaws.com/share/blog-pictures/maptime.png
+contact: hello@maptime.io
 
 social:
-  flickr:
+  flickr: https://www.flickr.com/groups/maptime/
   twitter: https://twitter.com/maptimeHQ
   facebook: https://www.facebook.com/maptimeHQ
-  benevity: https://missingmaps.benevity.org/user
+  benevity:
 
 community:
-  apikey: 09023a48037b7882a3683cb1c2043c50
-  setId: 72157655209554272
+  apikey:
+  setId:
 
 primary-hashtag: maptime
 subhashtags:
   - maptimeDC
-
 
 tm-projects:
   - id: 1848
