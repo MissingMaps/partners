@@ -6,7 +6,7 @@ This repo contains the code for MissingMaps partner pages. Each page is a unique
  
 1. Create new `partner.md` file in the `_partner` folder. Rename according to the partner and how you want the URL to look. For example, `my-new-partner.md` will have the url `missingmaps.org/partners/my-new-partner`. Use dashes `-` instead of underscores. 
 
-2. All partner page data is contained within the yml frontmatter. Copy and paste the `partner-example.md` file. Edit all variables with new partner information. See Updating Partner Information below for details on each variable. 
+2. All partner page data is contained within the yml frontmatter. Copy and paste the `partner-example.md` file. Edit all variables with new partner information. This repo has been set up with Prose.io to make this easier. [You can edit the yml frontmatter there as well](http://prose.io/#MissingMaps/partners/). See Updating Partner Information below for details on each variable.
 
 3. Add Partner Logo (SVG format) to to the `assets/graphics/content/logos` folder.
 
