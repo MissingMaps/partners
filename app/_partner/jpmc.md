@@ -5,8 +5,8 @@ permalink: /jpmc/
 
 id: jpmc
 name: JP Morgan Chase
-logo: MMlogo-Outlined.svg
-contact: dale.kunce@redcross.org
+logo: https://arcmaps.s3.amazonaws.com/share/chase_logo.svg
+contact: lauren.e.sills@jpmchase.com
 
 social:
   flickr: https://www.flickr.com/photos/126636925@N06/
@@ -14,8 +14,9 @@ social:
   facebook: https://www.facebook.com/jpmc
   benevity: https://missingmaps.benevity.org/user
 
-apikey: 09023a48037b7882a3683cb1c2043c50
-setId: 72157655209554272
+community:
+  apikey: 09023a48037b7882a3683cb1c2043c50
+  setId: 72157655209554272
 
 primary-hashtag: jpmc
 subhashtags:
