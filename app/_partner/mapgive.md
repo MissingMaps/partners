@@ -5,7 +5,7 @@ permalink: /mapgive/
 
 id: mapgive
 name: Mapgive
-logo: http://mapgive.state.gov/events/connect-camp-maps/img/mapgive.png
+logo: mapgive.png
 contact:
 
 social:

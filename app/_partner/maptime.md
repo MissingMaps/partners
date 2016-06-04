@@ -5,7 +5,7 @@ permalink: /maptime/
 
 id: maptime
 name: MapTime
-logo: https://arcmaps.s3.amazonaws.com/share/blog-pictures/maptime.png
+logo: maptime.png
 contact: hello@maptime.io
 
 social:

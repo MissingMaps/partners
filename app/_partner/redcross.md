@@ -5,7 +5,7 @@ permalink: /redcross/
 
 id: redcross
 name: RedCross
-logo: https://raw.githubusercontent.com/MissingMaps/missingmaps.github.io/publish/app/assets/graphics/content/logos/arc_logo.png
+logo: arc_logo.png
 contact: dale.kunce@redcross.org
 
 social:

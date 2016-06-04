@@ -5,7 +5,7 @@ permalink: /jpmc/
 
 id: jpmc
 name: JP Morgan Chase
-logo: https://arcmaps.s3.amazonaws.com/share/chase_logo.svg
+logo: jpmc.png
 contact: lauren.e.sills@jpmchase.com
 
 social:

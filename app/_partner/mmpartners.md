@@ -5,7 +5,7 @@ permalink: /mmpartners/
 
 id: mmpartners
 name: MissingMaps Partner
-logo: /assets/graphics/content/logos/MMlogo-Outlined.svg
+logo: MMlogo-Outlined.svg
 contact: dale.kunce@redcross.org
 
 social:
