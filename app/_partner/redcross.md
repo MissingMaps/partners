@@ -19,6 +19,9 @@ setId: 72157655209554272
 
 primary-hashtag: redcross
 subhashtags:
+  - mapgive
+  - rita
+  - jpmc
 
 tm-projects:
   - id: 1848
