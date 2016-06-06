@@ -8,14 +8,13 @@ name: RedCross
 logo: arc_logo.png
 contact: dale.kunce@redcross.org
 
-social:
-  flickr: https://www.flickr.com/photos/126636925@N06/
-  twitter: https://twitter.com/redcross
-  facebook: https://www.facebook.com/redcross
-  benevity: https://missingmaps.benevity.org/user
+flickr: https://www.flickr.com/photos/126636925@N06/
+twitter: https://twitter.com/redcross
+facebook: https://www.facebook.com/redcross
+benevity: https://missingmaps.benevity.org/user
 
-apikey: 09023a48037b7882a3683cb1c2043c50
-setId: 72157655209554272
+flickr-apikey: 09023a48037b7882a3683cb1c2043c50
+flickr-setId: 72157655209554272
 
 primary-hashtag: redcross
 subhashtags:

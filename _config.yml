@@ -10,9 +10,10 @@ exclude:
 timezone: America/New_York
 highlighter: false 
 
-baseurl: ""
+domain:         http://www.missingmaps.org
+path_prefix:    /partners
 
-default_partner:
+default_partner: mmpartners
 
 collections:
   partner:
