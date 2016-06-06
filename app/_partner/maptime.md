@@ -8,15 +8,13 @@ name: MapTime
 logo: maptime.png
 contact: hello@maptime.io
 
-social:
-  flickr: https://www.flickr.com/groups/maptime/
-  twitter: https://twitter.com/maptimeHQ
-  facebook: https://www.facebook.com/maptimeHQ
-  benevity:
+flickr: https://www.flickr.com/groups/maptime/
+twitter: https://twitter.com/maptimeHQ
+facebook: https://www.facebook.com/maptimeHQ
+benevity:
 
-community:
-  apikey:
-  setId:
+flickr-apikey:
+flickr-setId:
 
 primary-hashtag: maptime
 subhashtags:

@@ -8,15 +8,13 @@ name: Mapgive
 logo: mapgive.png
 contact:
 
-social:
-  flickr: https://www.flickr.com/photos/mapgive/albums/72157662676286584
-  twitter: https://twitter.com/mapgive
-  facebook:
-  benevity:
+flickr: https://www.flickr.com/photos/mapgive/albums/72157662676286584
+twitter: https://twitter.com/mapgive
+facebook:
+benevity:
 
-community:
-  apikey: 09023a48037b7882a3683cb1c2043c50
-  setId: 72157662676286584
+flickr-apikey: 09023a48037b7882a3683cb1c2043c50
+flickr-setId: 72157662676286584
 
 primary-hashtag: mapgive
 subhashtags:
