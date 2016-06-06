@@ -13,7 +13,7 @@ highlighter: false
 domain:         http://www.missingmaps.org
 path_prefix:    /partners
 
-default_partner: mmpartners
+default_partner: all
 
 collections:
   partner:
