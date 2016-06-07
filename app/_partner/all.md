@@ -1,10 +1,10 @@
 ---
 layout: partner
 lang: en
-permalink: /mmpartners/
+permalink: /all/
 
-id: mmpartners
-name: MissingMaps Partner
+id: all
+name: MissingMaps Partners
 logo: MMlogo-Outlined.svg
 contact: dale.kunce@redcross.org
 
