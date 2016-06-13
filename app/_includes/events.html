@@ -1,5 +1,5 @@
 <div class = "events-null">
-  <img src = "../assets/graphics/content/process/mapathon.svg" width = "200"></img>
+  <img src = "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/process/Mapathon.svg" width = "200"></img>
 	<p>There are no upcoming events for {{ page.name }}, but you can still get involved!</p>
 	<p>
   <a href="http://missingmaps.org/host" class="btn btn-blue">Host A Mapathon</a>
@@ -17,7 +17,7 @@
 		<div class="event-sub-container {% if count >= 3 %}hidden{% endif %}">
 			<div class="event-top-section clearfix">
 				<div class="sub-head">
-					<img class="event-images" src="{{ site.baseurl }}/assets/graphics/flags/4x3/{{ e.flag }}.svg" width="24px" />
+					<img class="event-images" src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/flags/4x3/{{ e.flag }}.svg" width="24px" />
 					<h3 class="event-header">{{ e.title }}</h3>
 					{% if e. %}
 					<a class="btn btn-grn" href="{{ e.signup_url }}" target="">SIGN UP</a>

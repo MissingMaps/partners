@@ -1,7 +1,9 @@
 latitude,longitude,date,flag,title,place_name,place_url,time_string,signup_url
 38.89911,-77.02211,2015-04-29,us,MapTimeDC + HOT ,WeWork Chinatown,http://osm.org/go/ZZcbjMXnf?m=,6:30pm-8pm,http://www.meetup.com/Maptime-DC/events/220505118/
 45.19128,5.7331,2015-10-28,fr,Maptime-Alpes,Cowork in Grenoble,http://www.openstreetmap.org/node/3806387790,17:00-22:00,http://www.meetup.com/MaptimeAlpes/events/225840761/
-54.7764152,-1.5758539,2015-11-09,gb,Maptime Durham Mapathon,Maptime Durham,,TBD,
+54.7764152,-1.5758539,2015-11-09,gb,Maptime Durham Mapathon,Maptime Durham,http://osm.org/go/ZS_tK56U-,17:00-22:00,http://www.eventbrite.co.uk/e/maptime-november-gis-tickets-19421575455
 45.18353,5.70354,2016-05-18,fr,Mapathon Missing Maps Grenoble #3 - MissingMaps May by MapTime,"La Coop, Grenoble, France",http://www.openstreetmap.org/way/322443010,18:30-22:30,http://www.eventbrite.fr/e/billets-mapathon-missing-maps-grenoble-3-missingmaps-may-by-maptime-25212551420
-47.5988193,-122.3331263,2016-05-04,us,MaptimeSEA,King County GIS Center,http://www.openstreetmap.org/?mlat=47.59909&mlon=-122.33136#map=19/47.59909/-122.33136,18:00-20:00,http://www.meetup.com/MaptimeSEA/events/230573877/
-44.5636821,-123.2639384,2016-05-26,us,Maptime Corvallis,Foundry Annex,http://www.openstreetmap.org/?mlat=44.56380&mlon=-123.26371#map=19/44.56380/-123.26371,18:30-20:00,http://www.meetup.com/Maptime-Corvallis/events/230718202/
+47.5988193,-122.3331263,2016-05-04,us,MaptimeSEA,King County GIS Center,http://osm.org/go/WIdFDBpS8,18:00-20:00,http://www.meetup.com/MaptimeSEA/events/230573877/
+44.5636821,-123.2639384,2016-05-26,us,Maptime Corvallis,Foundry Annex,\http://osm.org/go/TdU2gS5~G,18:30-20:00,http://www.meetup.com/Maptime-Corvallis/events/230718202/
+40.74445,-73.98721,2016-05-25,us,MaptimeNYC,"Enigma.io Offices, New York City, United States",https://www.openstreetmap.org/node/4202401314,7:00-10:00,http://www.meetup.com/Maptime-NYC/events/231277088/
+37.78687,-122.39956,2016-05-24,us,Missing Maps Meetup!,Wikimedia Foundation,http://www.openstreetmap.org/#map=19/37.78687/-122.39990,18:30-20:30,http://www.meetup.com/Maptime-SF/events/231194323/
