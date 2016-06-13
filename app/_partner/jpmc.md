@@ -22,6 +22,8 @@ primary-hashtag: jpmc
 subhashtags:
   - TYK2WD
   - jpmc_midtown
+  - jpmcdel
+  - jpmcdc
 
 tm-projects:
   - id: 1848
