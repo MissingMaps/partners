@@ -3,7 +3,7 @@
  -------------------------------------------------------*/
 
 function getPrimaryStats (primaryhash) {
-  const url = `http://osmstats.redcross.org/hashtags/${primaryhash}/users`;
+  const url = `http://localhost:3000/hashtags/${primaryhash}/users`;
   $.getJSON(url, function (hashtagData) {
     const usersCount = Object.keys(hashtagData).length;
     var editsCount = 0;
@@ -11,7 +11,7 @@ function getPrimaryStats (primaryhash) {
     var roadCount = 0;
 
     for (var i = 0; i < usersCount; i++) {
-      editsCount = editsCount + hashtagData[i].total_edits;
+      editsCount = editsCount + hashtagData[i].edits;
       buildingCount = buildingCount + hashtagData[i].buildings;
       roadCount = roadCount + hashtagData[i].roads;
     }
