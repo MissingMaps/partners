@@ -11,10 +11,11 @@ function getPrimaryStats (primaryhash) {
     var roadCount = 0;
 
     for (var i = 0; i < usersCount; i++) {
-      editsCount = editsCount + hashtagData[i].edits;
+      editsCount = editsCount + hashtagData[i].total_edits;
       buildingCount = buildingCount + hashtagData[i].buildings;
-      roadCount = parseInt(roadCount + hashtagData[i].roads);
+      roadCount = roadCount + hashtagData[i].roads;
     }
+    roadCount = Math.round(roadCount);
 
     $('#stats-roadCount').html(roadCount.toLocaleString());
     $('#stats-buildingCount').html(buildingCount.toLocaleString());
