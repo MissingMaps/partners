@@ -3,7 +3,7 @@
  -------------------------------------------------------*/
 
 function getPrimaryStats (primaryhash) {
-  const url = `http://localhost:3000/hashtags/${primaryhash}/users`;
+  const url = `http://osmstats.redcross.org/hashtags/${primaryhash}/users`;
   $.getJSON(url, function (hashtagData) {
     const usersCount = Object.keys(hashtagData).length;
     var editsCount = 0;
