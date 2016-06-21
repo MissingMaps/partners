@@ -87,12 +87,12 @@ prose:
           element: "text"
           placeholder: "https://missingmaps.benevity.org/user"
           label: "benevity link"
-      - name: "apikey"
+      - name: "flickr-apikey"
         field: 
           element: "text"
           placeholder: "09023a48037b7882a3683cb1c2043c50"
           label: "flickr api key"
-      - name: "setId"
+      - name: "flickr-setId"
         field: 
           element: "text"
           placeholder: "72157655209554272"
