@@ -18,10 +18,10 @@ flickr-setId: 72157655209554272
 
 primary-hashtag: google
 subhashtags:
-  - googleLDNSW
-  - googleLDNWC
-  - googleTYO
-  - googleZCH
+  - googleldmsw
+  - googleldnwc
+  - googletyo
+  - googlezch
 
 tm-projects:
   - id: 1933
