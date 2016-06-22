@@ -5,7 +5,7 @@ permalink: /google/
 
 id: google
 name: Google
-logo: google.svg.png
+logo: google.png
 contact: rachaelb@google.com
 
 flickr: https://www.flickr.com/photos/126636925@N06/
