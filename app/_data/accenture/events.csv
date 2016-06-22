@@ -1,1 +1,3 @@
-
+latitude,longitude,date,flag,title,place_name,place_url,time_string,signup_url
+51.51120,-0.08199,2016-06-22,uk,London Mapathon,Headquarters London,http://www.openstreetmap.org/node/3358734427#map=19/51.51120/-0.08199,18:00-21:00,
+-33.86630,151.19474,2016-06-24,au,Missing Maps Accenture ANZ,"Accenture, Pyrmont, Australia",http://www.openstreetmap.org/way/173164608,11:30-14:00,
