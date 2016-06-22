@@ -22,6 +22,7 @@ subhashtags:
   - googleldnwc
   - googletyo
   - googlezch
+  - googlenyc
 
 tm-projects:
   - id: 1933
