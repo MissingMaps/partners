@@ -1,10 +1,10 @@
 ---
 layout: partner
 lang: en
-permalink: /accenture/
+permalink: /google/
 
 id: google
-name: google
+name: Google
 logo: google.svg
 contact: rachaelb@google.com
 
