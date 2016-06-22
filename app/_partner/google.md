@@ -3,8 +3,8 @@ layout: partner
 lang: en
 permalink: /accenture/
 
-id: accenture
-name: Google
+id: google
+name: google
 logo: google.svg
 contact: rachaelb@google.com
 
