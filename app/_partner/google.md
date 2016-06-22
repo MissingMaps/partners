@@ -18,7 +18,7 @@ flickr-setId: 72157655209554272
 
 primary-hashtag: google
 subhashtags:
-  - googleldmsw
+  - googleldnsw
   - googleldnwc
   - googletyo
   - googlezch
