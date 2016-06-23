@@ -13,8 +13,9 @@ function getPrimaryStats (primaryhash) {
     for (var i = 0; i < usersCount; i++) {
       editsCount = editsCount + hashtagData[i].edits;
       buildingCount = buildingCount + hashtagData[i].buildings;
-      roadCount = parseInt(roadCount + hashtagData[i].roads);
+      roadCount = roadCount + hashtagData[i].roads;
     }
+    roadCount = Math.round(roadCount);
 
     $('#stats-roadCount').html(roadCount.toLocaleString());
     $('#stats-buildingCount').html(buildingCount.toLocaleString());
