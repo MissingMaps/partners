@@ -1,0 +1,6 @@
+latitude,longitude,date,flag,title,place_name,place_url,time_string,signup_url
+51.51603,-0.12724,2016-06-23,uk,Google London mapathon 1,1-13 St Giles High St,http://www.openstreetmap.org/way/93217408#map=19/51.51603/-0.12724,19:00-12:00,
+51.49493,-0.14664,2016-06-24,uk,Google London mapathon 2,Belgrave House,http://www.openstreetmap.org/way/98530992#map=19/51.49493/-0.14664,13:30-16:30,
+35.66045,139.72924,2016-06-23,jp,Google Tokyo mapathon,Roppongi Hills Mori Tower,http://www.openstreetmap.org/way/153924771#map=19/35.66045/139.72924,18:00-21:00,
+40.74746,-73.99290,2016-06-24,us,Google New York mapathon,Doctors Without Borders,http://www.openstreetmap.org/node/4021259442#map=19/40.74746/-73.99290,18:00-21:00,
+47.36559,8.52486,2016-06-24,ch,Google Zürich mapathon,Brandschenkestrasse,http://www.openstreetmap.org/way/34572240#map=19/47.36559/8.52486,13:00-16:00,
