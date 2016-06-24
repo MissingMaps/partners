@@ -19,6 +19,12 @@ flickr-setId: 72157655209554272
 primary-hashtag: accenture
 subhashtags:
   - accldn
+  - accvie
+  - accenturedc
+  - accdc
+  - accindia
+  - accjpn
+  - accenturemexico
 
 tm-projects:
   - id: 1316
