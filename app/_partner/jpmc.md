@@ -23,6 +23,14 @@ subhashtags:
   - jpmcdel
   - jpmcdc
   - jpmcsummerhire
+  - jpmc-sh-1
+  - jpmc-sh-2
+  - jpmc-sh-3
+  - jpmc-sh-4
+  - jpmc-sh-5
+  - jpmc-sh-6
+  - jpmc-sh-7
+  - jpmc-sh-8
 
 tm-projects:
   - id: 1536
