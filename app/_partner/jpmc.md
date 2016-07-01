@@ -22,6 +22,7 @@ subhashtags:
   - jpmc_midtown
   - jpmcdel
   - jpmcdc
+  - jpmcsummerhire
 
 tm-projects:
   - id: 1536
