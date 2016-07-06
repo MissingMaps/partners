@@ -35,8 +35,14 @@
     </div>
   </div>
   <div class = "GetInvolved">
-      <p>Log your hours at</p>
-      <p><a href="{{ page.benevity }}" class="btn btn-blue">BENEVITY </a></p>
+      {% if page.benevity == null %}
+        <!-- <p>Log your hours at</p>
+        <p class='benevity-link'><a href="{{ page.benevity }}" class="btn btn-blue">BENEVITY </a></p> -->
+      {% else %}
+        <p>Log your hours at</p>
+        <p class='benevity-link'><a href="{{ page.benevity }}" class="btn btn-blue">BENEVITY </a></p>
+      {% endif %}
+
       <h3>New to Mapping?</h3>
       <img src = "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/process/Learn-MapNow.svg" width = "120"></img>
       <p><a href="http://www.missingmaps.org/contribute/" class="btn btn-blue">LEARN TO MAP </a></p>
