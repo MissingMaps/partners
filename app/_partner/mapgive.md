@@ -4,7 +4,7 @@ lang: en
 permalink: /mapgive/
 
 id: mapgive
-name: Mapgive
+name: mapgive
 logo: mapgive.png
 contact:
 

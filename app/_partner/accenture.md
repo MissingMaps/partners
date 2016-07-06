@@ -4,17 +4,17 @@ lang: en
 permalink: /accenture/
 
 id: accenture
-name: Accenture
+name: accenture
 logo: accenture.svg.png
 contact: rebecca.firth@accenture.com
 
 flickr: https://www.flickr.com/
 twitter: https://twitter.com/accenture
 facebook: https://www.facebook.com/accenture
-benevity: https://missingmaps.benevity.org/user
+benevity:
 
-flickr-apikey: 09023a48037b7882a3683cb1c2043c50
-flickr-setId: 72157655209554272
+flickr-apikey:
+flickr-setId:
 
 primary-hashtag: accenture
 subhashtags:

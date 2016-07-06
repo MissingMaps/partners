@@ -432,7 +432,7 @@ h1 {
     font-family: 'Hind';
     font-size: 1em;
     font-weight: 300;
-    border-top: 1px solid #dbdbda;
+    // border-top: 1px solid #dbdbda;
   }
   @media screen and (min-width: $MaxWidth) {
     display: block;
@@ -443,6 +443,13 @@ h1 {
   .btn {
     margin-bottom: 16px;
   }
+}
+
+.benevity-link{
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dbdbda;
 }
 
 /*----------------------------------------------*/
