@@ -18,9 +18,7 @@ flickr-setId:
 
 primary-hashtag: whmapathon
 subhashtags:
-  - peacecorps
-  - missingmaps
-  - youthmappers
+  - hotosm-project-1988
   - missingamerica
 
 tm-projects:
