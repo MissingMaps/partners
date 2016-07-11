@@ -4,14 +4,14 @@ lang: en
 permalink: /jpmc/
 
 id: jpmc
-name: JP Morgan Chase
+name: jpmc
 logo: jpmc.png
 contact: lauren.e.sills@jpmchase.com
 
 flickr: https://www.flickr.com/photos/126636925@N06/
 twitter: https://twitter.com/jpmorgan
 facebook: https://www.facebook.com/jpmc
-benevity: https://missingmaps.benevity.org/user
+benevity:
 
 flickr-apikey: 09023a48037b7882a3683cb1c2043c50
 flickr-setId: 72157655209554272
@@ -22,6 +22,15 @@ subhashtags:
   - jpmc_midtown
   - jpmcdel
   - jpmcdc
+  - jpmcsummerhire
+  - jpmc-sh-1
+  - jpmc-sh-2
+  - jpmc-sh-3
+  - jpmc-sh-4
+  - jpmc-sh-5
+  - jpmc-sh-6
+  - jpmc-sh-7
+  - jpmc-sh-8
 
 tm-projects:
   - id: 1536

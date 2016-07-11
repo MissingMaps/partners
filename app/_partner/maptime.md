@@ -4,7 +4,7 @@ lang: en
 permalink: /maptime/
 
 id: maptime
-name: MapTime
+name: maptime
 logo: maptime.png
 contact: hello@maptime.io
 

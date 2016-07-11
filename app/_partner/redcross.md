@@ -4,14 +4,14 @@ lang: en
 permalink: /redcross/
 
 id: redcross
-name: RedCross
+name: redcross
 logo: arc_logo.png
 contact: dale.kunce@redcross.org
 
 flickr: https://www.flickr.com/photos/126636925@N06/
 twitter: https://twitter.com/redcross
 facebook: https://www.facebook.com/redcross
-benevity: https://missingmaps.benevity.org/user
+benevity:
 
 flickr-apikey: 09023a48037b7882a3683cb1c2043c50
 flickr-setId: 72157655209554272
