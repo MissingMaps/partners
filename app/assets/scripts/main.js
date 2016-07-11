@@ -62,12 +62,9 @@ function getProjects (projects) {
 // Update cards with necessary project details
 function makeProject (project, projectOrder) {
   const props = project.properties;
-
   const projDone = Math.round(props.done + props.validated);
 
   // Updates Progress Bar
-  console.log(props);
-
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
   $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
