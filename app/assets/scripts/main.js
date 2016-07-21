@@ -563,8 +563,7 @@ function checkHashtags (hashtags) {
  --------------------- Setup Project ---------------------
  -------------------------------------------------------*/
 // Global Mapbox variables
-const mbToken = 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYw' +
-                'ZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w.';
+const mbToken = 'pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q';
 const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 // Populate the primary stats in hero via Missing Maps API
