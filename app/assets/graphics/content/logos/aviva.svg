@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 13.0.2, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="177px" height="123px" viewBox="-0.504 -0.098 177 123" enable-background="new -0.504 -0.098 177 123"
+	 xml:space="preserve">
+<defs>
+</defs>
+<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#0071BC" points="164.482,81.597 164.482,77.8 163.131,77.8 163.131,77.211 
+	166.72,77.211 166.72,77.8 165.367,77.8 165.367,81.597 164.482,81.597 "/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#0071BC" d="M172.57,81.597h-0.882v-3.421h-0.014
+	c-0.481,1.221-0.983,2.323-1.478,3.421h-0.477c-0.47-1.098-0.945-2.2-1.401-3.421h-0.014v3.421h-0.707v-4.386h1.089
+	c0.45,1.077,1.179,2.793,1.347,3.357h0.012c0.208-0.589,0.996-2.28,1.498-3.357h1.026V81.597L172.57,81.597z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#0071BC" d="M81.047,89.747c0.735,0.133,3.375,0.902,3.375,2.776v30.037h8.928
+	V88.677H81.047V89.747L81.047,89.747z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#0071BC" d="M10.839,88.677v1.07c1.082,0.225,3.426,0.88,2.476,2.995L0,122.561
+	h7.035l4.169-9.295h14.75l3.646,9.295h9.25L25.636,88.677H10.839L10.839,88.677z M13.093,109.056l5.982-13.33l5.226,13.33H13.093
+	L13.093,109.056z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#0071BC" d="M147.732,88.677v1.07c1.079,0.225,3.427,0.88,2.474,2.995
+	l-13.312,29.818h7.036l4.163-9.295h14.749l3.648,9.295h9.257l-13.221-33.884H147.732L147.732,88.677z M149.987,109.056l5.98-13.33
+	l5.228,13.33H149.987L149.987,109.056z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#0071BC" d="M123.98,122.561L138.1,88.677h-6.677l-10.355,24.847l-9.852-24.847
+	H98.668v1.07c1.449,0.278,3.076,0.902,3.818,2.776l11.91,30.037H123.98L123.98,122.561z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#0071BC" d="M62.09,122.561l14.123-33.884h-6.681l-10.353,24.847l-9.855-24.847
+	H36.779v1.07c1.452,0.278,3.074,0.902,3.82,2.776l11.904,30.037H62.09L62.09,122.561z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFD400" d="M111.35,61.084l-5.931-61.077h-0.002l-6.02,62.093
+	C103.294,61.672,107.283,61.332,111.35,61.084L111.35,61.084z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#5FBC56" d="M125.854,60.641l0.02-60.633L105.419,0v0.008l5.931,61.077
+	C116.085,60.806,120.922,60.65,125.854,60.641L125.854,60.641z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#0071BC" d="M99.397,62.101l6.02-62.093V0L51.939,0.008l0.027,73.729
+	C64.531,68.243,80.887,64.151,99.397,62.101L99.397,62.101z"/>
+</svg>
