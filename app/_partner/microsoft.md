@@ -5,13 +5,13 @@ permalink: /microsoft/
 
 id: microsoft
 name: microsoft
-logo: microsoft_logo.svg
-contact:
+logo:
+contact: jubalh@Microsoft.com
 
 flickr:
 twitter: https://twitter.com/microsoft
 facebook: https://www.facebook.com/microsoft
-benevity:
+benevity: https://microsoft.benevity.org/
 
 flickr-apikey:
 flickr-setId:
@@ -25,12 +25,8 @@ subhashtags:
   - msftmaps
 
 tm-projects:
-  - id: 1933
-    desc: "MSF teams, in collaboration with the Congolese Ministry of Health, provide care for thousands of people in Masisi General Hospital and other health centres in the area, including the provision of HIV care. MSF also organises mobile clinics, which respond to the needs of people affected by violence, insecurity and poor access to healthcare, some of whom have have been forced to flee their homes. Mapping this area will help MSF to identify vulnerable populations, plan and manage medical interventions and provide better care for those displaced by violence."
-  - id: 1978
-    desc: "MSF teams, in collaboration with the Congolese Ministry of Health, provide care for thousands of people in Masisi General Hospital and other health centres in the area, including the provision of HIV care. MSF also organises mobile clinics, which respond to the needs of people affected by violence, insecurity and poor access to healthcare, some of whom have have been forced to flee their homes. Mapping this area will help MSF to identify vulnerable populations, plan and manage medical interventions and provide better care for those displaced by violence."
-  - id: 1982
-    desc: "MSF teams, in collaboration with the Congolese Ministry of Health, provide care for thousands of people in Masisi General Hospital and other health centres in the area, including the provision of HIV care. MSF also organises mobile clinics, which respond to the needs of people affected by violence, insecurity and poor access to healthcare, some of whom have have been forced to flee their homes. Mapping this area will help MSF to identify vulnerable populations, plan and manage medical interventions and provide better care for those displaced by violence."
-
-
+  - id: 2158
+    desc: "The American Red Cross is a member of the Measles & Rubella Initiative, which seeks to eliminate these diseases. We will be conducting a measles campaign in Malawi in spring 2017. This task will create a basemap of the area in order to help Red Cross teams to plan logistics and prepare for mobile data collection and field mapping in the areas. We will initially focus on these areas of Lilongwe."
+  - id: 2150
+    desc: "The American Red Cross is supporting the Haitian Red Cross to extend health services delivery and improve health outcomes by providing the population with equitable access to primary health services. One key element of this strategy is to increase the availability of professional health resources by training and deploying 10,000 ASCP. The Haitian Red Cross seeks to improve the effectiveness and efficiency of the services expected of this initiative and to build health resilience capacity at the community levels by leveraging its country-wide network of volunteers."
 ---
