@@ -22,7 +22,8 @@ subhashtags:
   - msoffice
   - msftrisk
   - msftsecurity
-  - msftmaps
+  - msftgive
+  - microsoft
 
 tm-projects:
   - id: 2158
