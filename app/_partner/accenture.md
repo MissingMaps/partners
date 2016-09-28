@@ -11,7 +11,9 @@ contact: rebecca.firth@accenture.com
 flickr: https://www.flickr.com/
 twitter: https://twitter.com/accenture
 facebook: https://www.facebook.com/accenture
-benevity:
+hoursname:
+hourslink:
+
 
 flickr-apikey:
 flickr-setId:

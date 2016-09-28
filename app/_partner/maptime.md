@@ -11,7 +11,8 @@ contact: hello@maptime.io
 flickr: https://www.flickr.com/groups/maptime/
 twitter: https://twitter.com/maptimeHQ
 facebook: https://www.facebook.com/maptimeHQ
-benevity:
+hoursname:
+hourslink:
 
 flickr-apikey:
 flickr-setId:

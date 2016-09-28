@@ -11,7 +11,8 @@ contact: rachaelb@google.com
 flickr: https://www.flickr.com/photos/126636925@N06/
 twitter: https://twitter.com/google
 facebook: https://www.facebook.com/google
-benevity:
+hoursname:
+hourslink:
 
 flickr-apikey: 09023a48037b7882a3683cb1c2043c50
 flickr-setId: 72157655209554272

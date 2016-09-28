@@ -11,7 +11,8 @@ contact:
 flickr: https://www.flickr.com/photos/126636925@N06/
 twitter: https://twitter.com/jpmorgan
 facebook: https://www.facebook.com/jpmc
-benevity: https://communityconnection.cloudapps.cisco.com/cc/volunteer/0013400001P680aAAB/info/
+hoursname: Community Connection
+hourslink: https://communityconnection.cloudapps.cisco.com/cc/volunteer/0013400001P680aAAB/info/
 
 flickr-apikey: 09023a48037b7882a3683cb1c2043c50
 flickr-setId: 72157655209554272

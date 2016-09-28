@@ -11,7 +11,8 @@ contact:
 flickr:
 twitter: https://twitter.com/whitehouse
 facebook: https://www.facebook.com/WhiteHouse/
-benevity:
+hoursname:
+hourslink:
 
 flickr-apikey:
 flickr-setId:

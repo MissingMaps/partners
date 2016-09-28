@@ -11,7 +11,8 @@ contact: jubalh@Microsoft.com
 flickr:
 twitter: https://twitter.com/microsoft
 facebook: https://www.facebook.com/microsoft
-benevity: https://microsoft.benevity.org/
+hoursname: Benevity
+hourslink: https://microsoft.benevity.org/
 
 flickr-apikey:
 flickr-setId:
