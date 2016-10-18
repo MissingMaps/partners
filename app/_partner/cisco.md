@@ -23,9 +23,9 @@ subhashtags:
   - ciscosv
 
 tm-projects:
-- id: 2158
-  desc: "The American Red Cross is a member of the Measles & Rubella Initiative, which seeks to eliminate these diseases. We will be conducting a measles campaign in Malawi in spring 2017. This task will create a basemap of the area in order to help Red Cross teams to plan logistics and prepare for mobile data collection and field mapping in the areas. We will initially focus on these areas of Lilongwe."
-- id: 2150
-  desc: "The American Red Cross is supporting the Haitian Red Cross to extend health services delivery and improve health outcomes by providing the population with equitable access to primary health services. One key element of this strategy is to increase the availability of professional health resources by training and deploying 10,000 ASCP. The Haitian Red Cross seeks to improve the effectiveness and efficiency of the services expected of this initiative and to build health resilience capacity at the community levels by leveraging its country-wide network of volunteers."
+- id: 1618
+  desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities."
+- id: 1596
+  desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities."
 
 ---
