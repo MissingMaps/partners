@@ -19,8 +19,19 @@ flickr-setId: 72157655209554272
 
 primary-hashtag: aviva
 subhashtags:
-  - avivauk
-  - avivapredictiveanalytics
+  - avivaca
+  - avivaes
+  - avivafr
+  - avivahk
+  - avivain
+  - avivainvestors
+  - avivair
+  - avivait
+  - avivalt
+  - avivapl
+  - avivasg
+  - fpidubai
+  - fpiiom
 
 
 tm-projects:
