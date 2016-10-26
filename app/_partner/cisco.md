@@ -23,13 +23,9 @@ subhashtags:
   - ciscosv
 
 tm-projects:
-- id: 1618
-  desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities."
-- id: 1596
-  desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities."
-- id: 1598
-  desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities."
-- id: 2251
-  desc: "Hurricane Matthew a category 4 hurricane caused catastrophic damage to western Haiti. Over 2 feet of rain fell, causing flooding, damaging homes and washing away infrastructure. According to reports over 15,000 people have been displaced including destroying almost 4,000 homes. Bridges and roads have been affected including critical links for relief efforts. The government has estimated at least 350,000 people need some kind of assistance after the disaster."
+- id: 2260
+  desc: "The American Red Cross is a member of the Measles & Rubella Initiative, which seeks to eliminate these diseases. We will be conducting a measles campaign in Malawi in spring 2017. This task will create a basemap of the area in order to help Red Cross teams to plan logistics and prepare for mobile data collection and field mapping in the areas."
+- id: 1788
+  desc: "Mugumu is the capital of Serengeti district in eastern Tanzania and the surrounding villages have a very high incidence of Female Genital Mutilation, early marriage and Gender Based Violence. NGOs on the ground need better road and residential area data to facilitate their outreach work. We need to complete this map by mid November so we can print out paper maps ready for the next FGM cutting season in December."
 
 ---
