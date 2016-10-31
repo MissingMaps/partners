@@ -25,6 +25,7 @@ subhashtags:
   - msftsecurity
   - msftgive
   - microsoft
+  - msftbayarea
 
 tm-projects:
 - id: 1788
