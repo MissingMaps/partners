@@ -26,6 +26,7 @@ subhashtags:
   - msftgive
   - microsoft
   - msftbayarea
+  - msftbing
 
 tm-projects:
 - id: 1788
