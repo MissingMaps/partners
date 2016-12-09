@@ -28,6 +28,6 @@ tm-projects:
 - id: 2376
   desc: "The National Malaria Programme in Botswana and the Clinton Health Access Initiative are working with the Missing Maps team to comprehensively build a footprint map to aid upcoming malaria control and elimination field work in 2016, as part of a final push at the total elimination of malaria. Botswana is well-positioned to be one of the first countries in southern Africa to eliminate malaria in the next few years. In 2015, Botswana reported 276 cases of malaria countrywide, a number that reduced from a staggering 8,056 in 2000 thanks to the scale-up of effective interventions and surveillance in the communities."
 - id: 2261
-  desc: "Mugumu is the capital of Serengeti district in eastern Tanzania and the surrounding villages have a very high incidence of Female Genital Mutilation, early marriage and Gender Based Violence. NGOs on the ground need better road and residential area data to facilitate their outreach work. We need to complete this map so we can print out paper maps ready for the next "FGM cutting season" in December."
+  desc: "Mugumu is the capital of Serengeti district in eastern Tanzania and the surrounding villages have a very high incidence of Female Genital Mutilation, early marriage and Gender Based Violence. NGOs on the ground need better road and residential area data to facilitate their outreach work. We need to complete this map so we can print out paper maps ready for the next FGM cutting season in December."
 
 ---
