@@ -6,7 +6,7 @@ permalink: /microsoft/
 id: microsoft
 name: microsoft
 logo:
-contact: jubalh@Microsoft.com
+contact: jubalh@microsoft.com
 
 flickr:
 twitter: https://twitter.com/microsoft
@@ -27,13 +27,12 @@ subhashtags:
   - microsoft
   - msftbayarea
   - msftbing
+  - msftues2017
 
 tm-projects:
-- id: 1788
-  desc: "Mugumu is the capital of Serengeti district in eastern Tanzania and the surrounding villages have a very high incidence of Female Genital Mutilation, early marriage and Gender Based Violence. NGOs on the ground need better road and residential area data to facilitate their outreach work. We need to complete this map by mid November so we can print out paper maps ready for the next FGM cutting season in December."
-- id: 1990
-  desc: "The National Malaria Programme in Botswana and the Clinton Health Access Initiative are working with the Missing Maps team to comprehensively build a footprint map to aid upcoming malaria control and elimination field work in 2016, as part of a final push at the total elimination of malaria. Botswana is well-positioned to be one of the first countries in southern Africa to eliminate malaria in the next few years. In 2015, Botswana reported 276 cases of malaria countrywide, a number that reduced from a staggering 8,056 in 2000 thanks to the scale-up of effective interventions and surveillance in the communities."
-- id: 2260
-  desc: "The American Red Cross is a member of the Measles & Rubella Initiative, which seeks to eliminate these diseases. We will be conducting a measles campaign in Malawi in spring 2017. This task will create a basemap of the area in order to help Red Cross teams to plan logistics and prepare for mobile data collection and field mapping in the areas."
+- id: 2468
+  desc: "The Red Cross is mapping the Ayeyarwady Delta area in Myanmar as part of a multi-year mapping and data readiness activity to better understand where critical infrastructure and roads are to inform decision making during potential disasters. As recently as 2008 a cyclone killed at least 77,000 people with over 55,900 missing, and left about 2.5 million homeless. The map data will help the Red Cross to better understand where people live in relation to potential hazards so that we can help them be prepared for the disaster and so national decision makers can make better decisions in the immediate aftermath of a disaster."
+- id: 2469
+  desc: "The Red Cross is mapping the Ayeyarwady Delta area in Myanmar as part of a multi-year mapping and data readiness activity to better understand where critical infrastructure and roads are to inform decision making during potential disasters. As recently as 2008 a cyclone killed at least 77,000 people with over 55,900 missing, and left about 2.5 million homeless. The map data will help the Red Cross to better understand where people live in relation to potential hazards so that we can help them be prepared for the disaster and so national decision makers can make better decisions in the immediate aftermath of a disaster."
 
 ---
