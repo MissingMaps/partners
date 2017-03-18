@@ -32,12 +32,12 @@ subhashtags:
   - jpmc-sh-6
   - jpmc-sh-7
   - jpmc-sh-8
-  - Bourn-1
-  - Bourn-2
-  - Bourn-3
-  - Glas-1
-  - Glas-2
-  - Glas-3
+  - bourn-1
+  - bourn-2
+  - bourn-3
+  - glas-1
+  - glas-2
+  - glas-3
 
 tm-projects:
   - id: 1536
