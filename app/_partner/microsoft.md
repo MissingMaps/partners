@@ -28,6 +28,7 @@ subhashtags:
   - msftbayarea
   - msftbing
   - msftues2017
+  - msftwdgeic
 
 tm-projects:
 - id: 2468
