@@ -11,8 +11,8 @@ contact:
 flickr:
 twitter:
 facebook:
-hoursname:
-hourslink:
+hoursname: "Your Cause"
+hourslink: https://involved.yourcause.com/
 
 
 flickr-apikey:
