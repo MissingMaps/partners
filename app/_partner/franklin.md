@@ -5,7 +5,7 @@ permalink: /franklin/
 
 id: ftinvest
 name: ftinvest
-logo:
+logo: ftinvest.png
 contact:
 
 flickr:
