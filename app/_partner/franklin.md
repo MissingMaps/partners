@@ -3,8 +3,8 @@ layout: partner
 lang: en
 permalink: /franklin/
 
-id: franklin
-name: franklin
+id: ftinvest
+name: ftinvest
 logo:
 contact:
 
