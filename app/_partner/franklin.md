@@ -3,15 +3,15 @@ layout: partner
 lang: en
 permalink: /franklin/
 
-id: ftinvest
-name: ftinvest
+id: FTMaps
+name: FTMaps
 logo: ftinvest.png
 contact:
 
 flickr:
 twitter:
 facebook:
-hoursname: "Your Cause"
+hoursname: "Involved Portal"
 hourslink: https://involved.yourcause.com/
 
 
