@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-- '4'
+- '6'
 
 env:
   global:
@@ -22,8 +22,11 @@ cache:
   - node_modules
 
 before_install:
-- chmod +x ./.build_scripts/deploy.sh
-
+  - chmod +x ./.build_scripts/deploy.sh
+  - rvm install 2.3.1
+before_script:
+  - npm install
+  
 script:
 - gulp prod
 
