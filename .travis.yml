@@ -6,7 +6,9 @@ node_js:
 env:
   global:
   - CXX=g++-4.8
+  - GH_REF=github.com/IFRCGo/ifrcgo.github.io
   - DEPLOY_BRANCH=master
+  - TARGET_BRANCH=gh-pages
   - secure: "NI46J9DTOlqfRi9Vv/QNGI5USNGx29Antnyi2KJbskczPvwQatcsFKovsqmWGfBgNS3PmUUSgstta1JHzkkeTXGIAEaDz8rXnqdVoUGsQP9GXzl8R4cMaEF3S3JB7DVoq+Hdpm8aNLuBuaVj9P1aGPlXBM3lpe65izuPYp2L6dcnSPfxxrJiiU+2i5tGRIqr5M3/wFzgSH4D43sVbcyw8yp5tpRTvnZDmy+UCTQM/uPIKn5SscZ0ZMtKh1w8MJvm8UqdqWinsJLEU8zp4Dyw/twSDYDhOhPQAJ7t7ca1RJb061SSF4kltQhH/26OEHwEW1KgPwX/Tdo5e4CyhPtAlCXrDthDDl1PyLvPGoYtNwglCnB9m9sAmMcn3giTOK+fjX0HXV0qbJ3IbXh2eUMTP2/ACxfnvPDAHO40HKvqDsJ5fvzWKx6o/s/9diRfVNEiPH2pwMjJ6CrxApW4vDUwYic2B8lZUUYQ0ZDJ/qbca7Oku/hNt9L7nCaLJ/nB4npJdWbRDXxWzQy/rCIR/nB2pPzJn4JzttbS1xJIQLbX75lXaQnDUoRRgLiv4lUlCJ0/ZS9uSDbqF05wQoqmfdkYHKEq9IwKOIBHcYAUjKcGoEAvJ9ggB9FgtZ5Fn86GjcEKUR62XhyPATOvZk3qFRzCCNmOdKB9sZBLau1LbCPYwLk="
 
 addons:
@@ -26,7 +28,6 @@ before_install:
   - rvm install 2.3.1
 before_script:
   - npm install
-  
 script:
 - gulp prod
 
