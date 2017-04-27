@@ -25,10 +25,8 @@ before_install:
   - chmod +x ./.build_scripts/deploy.sh
   - rvm install 2.3.1
 before_script:
-  - npm install -g bower
   - npm install
-  - bower install
-
+  
 script:
 - gulp prod
 
