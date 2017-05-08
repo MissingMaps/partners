@@ -3,7 +3,7 @@ layout: partner
 lang: en
 permalink: /franklin/
 
-id: FTMaps
+id: ftinvest
 name: FTMaps
 logo: ftinvest.png
 contact:
