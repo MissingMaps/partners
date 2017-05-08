@@ -6,10 +6,8 @@ node_js:
 env:
   global:
   - CXX=g++-4.8
-  - GH_REF=github.com/MissingMaps/partners
   - DEPLOY_BRANCH=master
-  - TARGET_BRANCH=gh-pages
-  - secure: gn7Uli3Q1DSzL5Qx6Vroo6RjHmHIYD89hH8qmDYX1nPOStW2YYpWfIeYkyY9rj2EkErSvVk0pV6atxJos2Qw4vglXNOaHkFYpy+b+CHCtI5GsDbKtsgbZWd0F8Z5aqfbB33G/AfzCAfiY8yTYKHzcOpZ0QNb6/LjTflecp7pJ2AyGv5aBIHS5nU3m3I52fuSRaVxAYJ/ksakVdHS/GfTTuU+OTYsij5Sal9vnazks/kLm5sF62B+hGNGBgcyPKnHKcYr8xytA4sfHL5vKFmSsesyn8Wgk3VzazRPcG+r46sUWovO+47yfN225oXkVlcwMJQ2aGeynm5lAv26lYC1B5yKut1N2Q9TeNLlGkBs1/h6yzdBHljj61Cmuy9pjzNOWKU3de9S7rNvq/c2r5NkjPAE2OZM3LvOxiQ/xKrZVUvO4u9+oRDf0yKutG/8Kq6eDQPXn1w3KeHNoEsd/maugUpaZMM8KVL1jBLUI9M9CXJqJUIQI9rWyvgswZkBvy+hJ2VSj89mO5UfPv+wUu2YAslcbaV92grvMP8E9JZGP0cDvbQVrxkjkYxRmJz24eqtPwiF2rzlAwxB2VjzbiOxClFdPxCXc49SOCKFdc852+XIP+AYxQ9N0Rori8xYWquv6LZMjDLgpciEqd/e21dH0IJSF5VVzysQkW+N7/ZzSAk=
+  - secure: "NI46J9DTOlqfRi9Vv/QNGI5USNGx29Antnyi2KJbskczPvwQatcsFKovsqmWGfBgNS3PmUUSgstta1JHzkkeTXGIAEaDz8rXnqdVoUGsQP9GXzl8R4cMaEF3S3JB7DVoq+Hdpm8aNLuBuaVj9P1aGPlXBM3lpe65izuPYp2L6dcnSPfxxrJiiU+2i5tGRIqr5M3/wFzgSH4D43sVbcyw8yp5tpRTvnZDmy+UCTQM/uPIKn5SscZ0ZMtKh1w8MJvm8UqdqWinsJLEU8zp4Dyw/twSDYDhOhPQAJ7t7ca1RJb061SSF4kltQhH/26OEHwEW1KgPwX/Tdo5e4CyhPtAlCXrDthDDl1PyLvPGoYtNwglCnB9m9sAmMcn3giTOK+fjX0HXV0qbJ3IbXh2eUMTP2/ACxfnvPDAHO40HKvqDsJ5fvzWKx6o/s/9diRfVNEiPH2pwMjJ6CrxApW4vDUwYic2B8lZUUYQ0ZDJ/qbca7Oku/hNt9L7nCaLJ/nB4npJdWbRDXxWzQy/rCIR/nB2pPzJn4JzttbS1xJIQLbX75lXaQnDUoRRgLiv4lUlCJ0/ZS9uSDbqF05wQoqmfdkYHKEq9IwKOIBHcYAUjKcGoEAvJ9ggB9FgtZ5Fn86GjcEKUR62XhyPATOvZk3qFRzCCNmOdKB9sZBLau1LbCPYwLk="
 
 addons:
   apt:
@@ -24,14 +22,14 @@ cache:
   - node_modules
 
 before_install:
-  - chmod +x ./.build_scripts/deploy.sh
-  - rvm install 2.3.1
-
-before_script:
-  - npm install
+- chmod +x ./.build_scripts/deploy.sh
 
 script:
-  - gulp prod
+- gulp prod
 
-after_success:
-  - "./.build_scripts/deploy.sh"
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: ".build_scripts/deploy.sh"
+  on:
+    branch: "${DEPLOY_BRANCH}"
