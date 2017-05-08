@@ -32,13 +32,6 @@ before_script:
 
 script:
   - gulp prod
-  
+
 after_success:
   - "./.build_scripts/deploy.sh"
-
-# deploy:
-#   provider: script
-#   skip_cleanup: true
-#   script: ".build_scripts/deploy.sh"
-#   on:
-#     branch: "${DEPLOY_BRANCH}"
