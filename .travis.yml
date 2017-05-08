@@ -22,7 +22,11 @@ cache:
   - node_modules
 
 before_install:
-- chmod +x ./.build_scripts/deploy.sh
+  - chmod +x ./.build_scripts/deploy.sh
+  - rvm install 2.3.1
+
+before_script:
+  - npm install
 
 script:
 - gulp prod
