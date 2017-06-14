@@ -1,26 +1,23 @@
 language: ruby
 rvm:
   - 2.3.1
-
 env:
   global:
   - TRAVIS_NODE_VERSION="v7.1.0"
   - CXX=g++-4.8
   - DEPLOY_BRANCH=master
-  - secure: "qjlxS9IjMLTb/ab/R8H8b64xZWwhKjKV94O2IN0Bna7fYzenB06aD3BmIgQIVSoo38+XzgfOs9lT8jqMLYHuLtTdHIbe/BFLQDzRAT4w2FsyAzym8oPbE7IPZ5TgRH2/Qz0OPbKn+T9MTcpJtQJfSEGwt+3FH5Wo3cwXpZbHkwJBnq9VokH1+W0N5jDRHn/tIQgjP5coOee68cpX6rytAw8nhJ9eEYmSL/HsK7BLqh4c1cCjNhgNpGU4CUh9/jgGaLMgLMgi7wte6sVkSeEGubERhdFf6cGu1GgKmtLeLc0UvQxhKDCSaxYnVL5SafWy2PE6CH4YHSijahVo+lH0eluCXFK6lea6Z7UQI1RfWLUIIAuJMaN2zMttBfiOFHcEyhaHJAXMEseD0veniDxjHiXw219eRixs2XDT1EVJPjx/P7sDdPS/c0VZaZrJo9KD3p0W3m8iVzMgnbUj0uLcZZLtOwB1ec0FiEv08K1oKIb+5+mhgnKr9q1zBbJgMrECuedS0I0hsWX8Pou6SYjR/XFD6ZS04F28YjT8rsHse/2Po5edoStHnWFx6dcLfg5VjQ39+9VCIle7XLA2WdTx3xgv1ZWey7ve49J61af9Jy1iTEXUWjh4epYyMaWh54uE9A+N2vMLmO3kWEEb48rzBqpvaKuHr1kGc/Jgzo8O3Bc="
-
+  - GH_REF=github.com/MissingMaps/partners
+  - secure: MMMUrCBQ3LxQ2uybgS4jkmow/pX/X+5MhaXEQvUrFvVDJHatyqq6JBM9KJfP7jcgblK0uPEEn5dYrxvrwUgob12tUGogy2WbzF9xtYlMmkLOjNLwpBEjkRCXiV0+FIXbyPaumNBCwMwLnfQ91nH9/er48EmlFxtJqtkf7eYU2VRb0Os1zsuiBOA++MyuWFGrdMimMd4u6Zu49VSZxT4VMQXO54rwlROjar1QSTxtX1qRrPrX+lT54U4peADlDuqgMkAJyiWrGbKjIeGB1BTsRo3OGWj7MCTuq3vnTv+lacKcuKZ+raaxjhqiEp9yPNHpNgjjHIEheVZxnxpqD7jGH5weRyKuI0HjY0u1v0FKLeCYeZ1EAAkkLNcJ6Y/j2+FeExposUSNpyBgnCx4lQ3yWuqg2axznrF01BfBMLdgyQ0apgiPXm9HI4xQF+TOxWPWm6dCLXc8nMeOazWv4L1YFeg51BiwKorDUFLs9pjKxkbpjvTp7O9d4aJt5ASNSg+i0KirN2inulcnIfHRWHHlcjfdZWxvUr3aRZ0ZXNvJ1PlKubcL4a6aW61niLKepBKrqu+jYqQxRFu8NYWelzgBFyXw44hkUrfy5XSz4WK8NfKq7e1POIXNHAa7EbonfObInjwrV2M9RFP2BNnCboIZiZeDZ3OnzfxJC+RhPkj1vDw=
 addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
     packages:
     - g++-4.8
-
 cache:
   apt: true
   directories:
   - node_modules
-
 before_install:
 - chmod +x ./.build_scripts/deploy.sh
 before_script:
@@ -30,7 +27,6 @@ before_script:
   - npm install
 script:
 - gulp prod
-
 deploy:
   provider: script
   skip_cleanup: true
