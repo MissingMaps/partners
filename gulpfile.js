@@ -56,16 +56,16 @@ gulp.task('compress:main', function () {
   .pipe(babel({
     presets: ['es2015']
   }))
-  .pipe(plumber());
+  .pipe(concat('main.min.js')); //hotfix
 
-  if (environment === 'development') {
-    task = task.pipe(concat('main.min.js'));
-  } else {
-    task = task.pipe(uglify('main.min.js', {
-      outSourceMap: true,
-      mangle: false
-    }));
-  }
+  // if (environment === 'development') {
+  //   task = task.pipe(concat('main.min.js'));
+  // } else {
+  //   task = task.pipe(uglify('main.min.js', {
+  //     outSourceMap: true,
+  //     mangle: false
+  //   }));
+  // }
 
   return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
@@ -75,16 +75,16 @@ gulp.task('compress:vendor', function () {
   var task = gulp.src([
     'app/assets/scripts/vendor/*.js'
   ])
-  .pipe(plumber());
+  .pipe(concat('vendor.min.js')); //hotfix
 
-  if (environment === 'development') {
-    task = task.pipe(concat('vendor.min.js'));
-  } else {
-    task = task.pipe(uglify('vendor.min.js', {
-      outSourceMap: true,
-      mangle: false
-    }));
-  }
+  // if (environment === 'development') {
+  //   task = task.pipe(concat('vendor.min.js'));
+  // } else {
+  //   task = task.pipe(uglify('vendor.min.js', {
+  //     outSourceMap: true,
+  //     mangle: false
+  //   }));
+  // }
 
   return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
