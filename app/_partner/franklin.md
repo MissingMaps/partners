@@ -3,8 +3,8 @@ layout: partner
 lang: en
 permalink: /franklin/
 
-id: ftinvest
-name: FTMaps
+id: ftmaps
+name: ftmaps
 logo: ftinvest.png
 contact:
 
@@ -18,7 +18,7 @@ hourslink: https://involved.yourcause.com/
 flickr-apikey:
 flickr-setId:
 
-primary-hashtag: ftinvest
+primary-hashtag: ftmaps
 subhashtags:
 
 tm-projects:
