@@ -1,6 +1,7 @@
 language: ruby
 rvm:
-- 2.3.1
+  - 2.3.1
+
 env:
   global:
   - TRAVIS_NODE_VERSION="v7.1.0"
@@ -21,10 +22,17 @@ cache:
 before_install:
 - chmod +x ./.build_scripts/deploy.sh
 before_script:
+<<<<<<< HEAD
 - ". $HOME/.nvm/nvm.sh"
 - nvm install $TRAVIS_NODE_VERSION
 - nvm use $TRAVIS_NODE_VERSION
 - npm install
+=======
+  - . $HOME/.nvm/nvm.sh
+  - nvm install $TRAVIS_NODE_VERSION
+  - nvm use $TRAVIS_NODE_VERSION
+  - npm install
+>>>>>>> 90c944493fb0272e8290b357ba1d11c2d7d19729
 script:
 - gulp prod
 deploy:
