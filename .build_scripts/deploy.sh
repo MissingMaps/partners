@@ -11,7 +11,7 @@ if [ $TRAVIS_PULL_REQUEST = "false" ] && [ $TRAVIS_BRANCH = ${DEPLOY_BRANCH} ]; 
   git add .
   git commit -m "CI deploy to gh-pages"
   # git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master > /dev/null 2>&1
-  git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+  git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages
 else
   echo "Not a publishable branch so we're all done here"
 fi
