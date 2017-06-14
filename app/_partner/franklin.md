@@ -3,36 +3,22 @@ layout: partner
 lang: en
 permalink: /franklin/
 
-<<<<<<< HEAD
 id: ftmaps
 name: ftmaps
-=======
-id: ftinvest
-name: FTMaps
->>>>>>> 93b20d405c5c68798dd67c653cc49f2e62852d1b
 logo: ftinvest.png
 contact:
 
 flickr:
 twitter:
 facebook:
-<<<<<<< HEAD
-hoursname:
-hourslink:
-=======
 hoursname: "Involved Portal"
 hourslink: https://involved.yourcause.com/
->>>>>>> 93b20d405c5c68798dd67c653cc49f2e62852d1b
 
 
 flickr-apikey:
 flickr-setId:
 
-<<<<<<< HEAD
 primary-hashtag: ftmaps
-=======
-primary-hashtag: ftinvest
->>>>>>> 93b20d405c5c68798dd67c653cc49f2e62852d1b
 subhashtags:
 
 tm-projects:
