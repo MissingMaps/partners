@@ -15,7 +15,7 @@ prose:
     - /_prose.yml
     - /_config.yml
     - /_config-dev.yml
-    
+
     # Development stuff
     - /.csscomb.json
     - /.eslintrc
@@ -35,11 +35,11 @@ prose:
   metadata:
     "app/_partner":
       - name: "layout"
-        field: 
+        field:
           element: "hidden"
           placeholder: "partner"
       - name: "lang"
-        field: 
+        field:
           element: "hidden"
           placeholder: "en"
       - name: "permalink"
@@ -48,24 +48,24 @@ prose:
           placeholder: "/partner-example/"
           label: "permalink"
       - name: "id"
-        field: 
+        field:
           element: "text"
           placeholder: "partner-example"
           label: "id"
       - name: "name"
-        field: 
+        field:
           element: "text"
           placeholder: "name"
           label: "partner name"
       - name: "logo filename"
-        field: 
+        field:
           element: "text"
           value: "MMlogo-Outlined.svg"
           label: "logo"
       - name: "contact"
-        field: 
+        field:
           element: "text"
-          value: "dale.kunce@redcross.org"
+          value: "rachel.levine@redcross.org"
           label: "contact"
       - name: "flickr"
         field:
@@ -88,22 +88,22 @@ prose:
           placeholder: "https://missingmaps.benevity.org/user"
           label: "benevity link"
       - name: "flickr-apikey"
-        field: 
+        field:
           element: "text"
           placeholder: "09023a48037b7882a3683cb1c2043c50"
           label: "flickr api key"
       - name: "flickr-setId"
-        field: 
+        field:
           element: "text"
           placeholder: "72157655209554272"
           label: "flickr set Id"
       - name: "primary-hashtag"
-        field: 
+        field:
           element: "text"
           placeholder: "redcross"
           label: primary hashtag
       - name: "subhashtags"
-        field: 
+        field:
           element: "multiselect"
           placeholder: ""
           label: sub-hashtags

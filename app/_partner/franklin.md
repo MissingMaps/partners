@@ -14,7 +14,6 @@ facebook:
 hoursname: "Involved Portal"
 hourslink: https://involved.yourcause.com/
 
-
 flickr-apikey:
 flickr-setId:
 

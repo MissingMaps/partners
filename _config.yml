@@ -8,10 +8,10 @@ exclude:
   - assets/styles
   - README.md
 timezone: America/New_York
-highlighter: false 
+highlighter: false
 
 domain:         http://www.missingmaps.org
-path_prefix:    /partners
+# path_prefix:    /partners
 
 default_partner: all
 
