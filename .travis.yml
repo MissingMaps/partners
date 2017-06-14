@@ -1,10 +1,10 @@
-language: node_js
-
-node_js:
-- '4'
+language: ruby
+rvm:
+  - 2.3.1
 
 env:
   global:
+  - TRAVIS_NODE_VERSION="v7.1.0"
   - CXX=g++-4.8
   - DEPLOY_BRANCH=master
   - secure: "qjlxS9IjMLTb/ab/R8H8b64xZWwhKjKV94O2IN0Bna7fYzenB06aD3BmIgQIVSoo38+XzgfOs9lT8jqMLYHuLtTdHIbe/BFLQDzRAT4w2FsyAzym8oPbE7IPZ5TgRH2/Qz0OPbKn+T9MTcpJtQJfSEGwt+3FH5Wo3cwXpZbHkwJBnq9VokH1+W0N5jDRHn/tIQgjP5coOee68cpX6rytAw8nhJ9eEYmSL/HsK7BLqh4c1cCjNhgNpGU4CUh9/jgGaLMgLMgi7wte6sVkSeEGubERhdFf6cGu1GgKmtLeLc0UvQxhKDCSaxYnVL5SafWy2PE6CH4YHSijahVo+lH0eluCXFK6lea6Z7UQI1RfWLUIIAuJMaN2zMttBfiOFHcEyhaHJAXMEseD0veniDxjHiXw219eRixs2XDT1EVJPjx/P7sDdPS/c0VZaZrJo9KD3p0W3m8iVzMgnbUj0uLcZZLtOwB1ec0FiEv08K1oKIb+5+mhgnKr9q1zBbJgMrECuedS0I0hsWX8Pou6SYjR/XFD6ZS04F28YjT8rsHse/2Po5edoStHnWFx6dcLfg5VjQ39+9VCIle7XLA2WdTx3xgv1ZWey7ve49J61af9Jy1iTEXUWjh4epYyMaWh54uE9A+N2vMLmO3kWEEb48rzBqpvaKuHr1kGc/Jgzo8O3Bc="
@@ -23,7 +23,11 @@ cache:
 
 before_install:
 - chmod +x ./.build_scripts/deploy.sh
-
+before_script:
+  - . $HOME/.nvm/nvm.sh
+  - nvm install $TRAVIS_NODE_VERSION
+  - nvm use $TRAVIS_NODE_VERSION
+  - npm install
 script:
 - gulp prod
 

@@ -1,8 +1,10 @@
 var gulp = require('gulp');
 var cp = require('child_process');
-var runSequence = require('run-sequence');
-var compass = require('gulp-compass');
-var uglify = require('gulp-uglifyjs');
+var runSequence = require('run-sequence').use(gulp);
+var autoprefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
@@ -25,23 +27,26 @@ gulp.task('copy:assets', function (done) {
    --------------------------- Assets tasks -------------------------------------
    ----------------------------------------------------------------------------*/
 
-gulp.task('compass', function () {
-  return gulp.src('app/assets/styles/*.scss')
-    .pipe(plumber())
-    .pipe(compass({
-      css: '.tmp/assets/styles',
-      sass: 'app/assets/styles',
-      style: 'expanded',
-      sourcemap: true,
-      require: ['sass-css-importer'],
-      bundle_exec: true
-    }))
-    .on('error', function (err) {
-      if (err) console.log(err);
-      this.emit('end');
-    })
-    .pipe(browserSync.reload({stream: true}));
-});
+   var sassInput = 'app/assets/styles/*.scss';
+   var sassOptions = {
+     includePaths: ['node_modules/foundation-sites/scss','node_modules/font-awesome/scss','.tmp/assets/styles' ],
+     errLogToConsole: true,
+     outputStyle: 'expanded'
+   };
+   var autoprefixerOptions = {
+     browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
+   };
+
+   gulp.task('sass', function() {
+     return gulp.src(sassInput)
+       .pipe(plumber())
+       .pipe(sourcemaps.init())
+       .pipe(sass(sassOptions).on('error', sass.logError))
+       .pipe(autoprefixer(autoprefixerOptions))
+       .pipe(sourcemaps.write('.'))
+       .pipe(browserSync.reload({stream:true}))
+       .pipe(gulp.dest('.tmp/assets/styles'));
+   });
 
 gulp.task('compress:main', function () {
   // main.min.js
@@ -119,7 +124,7 @@ gulp.task('jekyll:rebuild', ['jekyll'], function () {
 // Main build task
 // Builds the site. Destination --> _site
 gulp.task('build', function (done) {
-  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'compass', 'fonts'], ['copy:assets'], done);
+  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'fonts'], ['copy:assets'], done);
 });
 
 // Default task.
@@ -140,7 +145,7 @@ gulp.task('serve', ['build'], function () {
   });
 
   gulp.watch('app/assets/styles/**/*.scss', function () {
-    runSequence('compass');
+    runSequence('sass');
   });
 
   gulp.watch(['./app/assets/scripts/**/*.js', '!./app/assets/scripts/vendor/**/*'], function () {
