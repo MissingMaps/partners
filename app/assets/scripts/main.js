@@ -284,8 +284,8 @@ function setupGraphs () {
 }
 
 // Returns svg link to Missing Maps user endpoint
-function generateUserUrl (userName, userId) {
-  const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
+function generateUserUrl (userName) {
+  const userUrl = 'http://www.missingmaps.org/users/#/' + userName.replace(/\s+/g, '-').toLowerCase();
   return `<a xlink:href="${userUrl}" target="_blank" style="text-decoration:none">${userName}</a>`;
 }
 
@@ -297,19 +297,19 @@ function getUserActivityStats (hashtag) {
     // For each user, collect the total edits across all categories
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
-      return {name: generateUserUrl(user, userData[user].user_number), value: totalEdits};
+      return {name: generateUserUrl(user), value: totalEdits};
     }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total building edits
     const bldngSum = Object.keys(userData).map(function (user) {
       const bldngEdits = Math.round(Number(userData[user].buildings));
-      return {name: generateUserUrl(user, userData[user].user_number), value: bldngEdits};
+      return {name: generateUserUrl(user), value: bldngEdits};
     }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total road kilometers edited
     const roadsSum = Object.keys(userData).map(function (user) {
       const roadsEdits = Math.round(Number(userData[user].road_kms));
-      return {name: generateUserUrl(user, userData[user].user_number), value: roadsEdits};
+      return {name: generateUserUrl(user), value: roadsEdits};
     }).sort((a, b) => b.value - a.value);
 
     // Spawn a chart function with listening events for each of the metrics
