@@ -3,7 +3,7 @@
  -------------------------------------------------------*/
 
 function getPrimaryStats (primaryhash) {
-  const url = `http://osmstats.redcross.org/hashtags/${primaryhash}/users`;
+  const url = `https://osmstats.redcross.org/hashtags/${primaryhash}/users`;
   $.getJSON(url, function (hashtagData) {
     const usersCount = Object.keys(hashtagData).length;
     var editsCount = 0;
@@ -285,13 +285,13 @@ function setupGraphs () {
 
 // Returns svg link to Missing Maps user endpoint
 function generateUserUrl (userName) {
-  const userUrl = 'http://www.missingmaps.org/users/#/' + userName.replace(/\s+/g, '-').toLowerCase();
+  const userUrl = 'https://www.missingmaps.org/users/#/' + userName.replace(/\s+/g, '-').toLowerCase();
   return `<a xlink:href="${userUrl}" target="_blank" style="text-decoration:none">${userName}</a>`;
 }
 
 function getUserActivityStats (hashtag) {
   // Connect hashtags to /top-users/ Missing Maps API endpoint
-  const url = 'http://osmstats.redcross.org/top-users/' + hashtag;
+  const url = 'https://osmstats.redcross.org/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
     // For each user, collect the total edits across all categories
