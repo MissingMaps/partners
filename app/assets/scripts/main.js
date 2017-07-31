@@ -335,7 +335,7 @@ function generateHashtagUrl (hashtag) {
 function getGroupActivityStats (hashtags) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = hashtags.join(',');
-  const url = 'http://osmstats.redcross.org/group-summaries/' + hashtagsString;
+  const url = 'https://osmstats.redcross.org/group-summaries/' + hashtagsString;
 
   $.getJSON(url, function (hashtagData) {
     // If no hashtags contain data, remove the partner graphs entirely
