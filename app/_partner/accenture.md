@@ -5,7 +5,7 @@ permalink: /accenture/
 
 id: accenture
 name: accenture
-logo: accenture.svg.png
+logo: accenture.png
 contact: rebecca.firth@accenture.com
 
 flickr: https://www.flickr.com/
