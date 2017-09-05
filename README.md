@@ -1,3 +1,6 @@
+[![Build
+Status](https://travis-ci.org/MissingMaps/partners.svg?branch=master)](https://travis-ci.org/MissingMaps/partners)
+
 # MissingMaps Partner Pages
 
 This repo contains the code for MissingMaps partner pages. Each page is a unique view of a MissingMaps partner and their contributions to MissingMaps projects. 
