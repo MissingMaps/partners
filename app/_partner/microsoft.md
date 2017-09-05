@@ -12,7 +12,7 @@ flickr:
 twitter: https://twitter.com/microsoft
 facebook: https://www.facebook.com/microsoft
 hoursname: Benevity
-hourslink: https://microsoft.benevity.org/
+hourslink: https://microsoft.benevity.org/cause/840-530196605
 
 flickr-apikey:
 flickr-setId:
