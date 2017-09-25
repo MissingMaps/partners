@@ -20,6 +20,8 @@
     "serve": "gulp serve",
     "clean": "gulp clean",
     "build": "gulp",
+    "build-stage": "gulp stage",
+    "build-prod": "gulp prod",
     "lint": "semistandard app/assets/scripts/**/*.js",
     "test": "echo NO TESTS YET",
     "install": "bundle install --path bundle/cache"

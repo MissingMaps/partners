@@ -131,10 +131,10 @@ $ npm run build
 
 Compiles the site loading the `_config-stage.yml` alongside `_config.yml`. The javascript files will be minified.
 ```
-$ gulp stage
+$ npm run build-stage
 ```
 
 Compiles the site loading the `_config-prod.yml` alongside `_config.yml`. The javascript files will be minified.
 ```
-$ gulp prod
+$ npm run build-prod
 ```
