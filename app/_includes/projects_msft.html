@@ -1,0 +1,50 @@
+<div class = "Projects-Container">
+  <h1>Current Projects</h1>
+  <div class = "Projects-Container-Leftside">
+    <div class = "flexslider Projects-slider">
+      <ul class = "slides project-slide">
+        {% for p in page.tm-projects limit:10 %}
+        <li id = Project-{{ p.id }}>
+          <div class = "HOT-Container">
+            <div class = "HOT-Map">
+              <div class="spinner big">
+                <div class="bounce1 big"></div>
+                <div class="bounce2 big"></div>
+                <div class="bounce3 big"></div>
+              </div>
+            </div>
+            <div class = "HOT-Details">
+              <div class = "HOT-Title" id = "HOT-Title-{{ p.id }}">
+                <p><b></b></p><a href="http://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">START MAPPING</a>
+              </div>
+              <div class = "HOT-Progress">
+                <p></p>
+              </div>
+              <div class = "HOT-Description">
+                <p> {{ p.desc | truncatewords: 40}} <a href= "http://tasks.hotosm.org/project/{{ p.id }}"> read more.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class = "HOT-Nav">
+      <div class = "HOT-Nav-Projects"></div>
+    </div>
+  </div>
+  <div class = "GetInvolved">
+      {% if page.hourslink == null %}
+        <p>Support Missing Maps</p>
+        <p class='benevity-link'><a href="http://donate.hotosm.org/" class="btn btn-blue">DONATE </a></p>
+      {% else %}
+        <p>Log your hours</p>
+        <p class='benevity-link'><a href="{{ page.hourslink }}" class="btn btn-blue">{{ page.hoursname }} </a></p>
+      {% endif %}
+
+      <h3>New to Mapping?</h3>
+      <img src = "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/process/Learn-MapNow.svg" width = "120"></img>
+      <p><a href="http://www.missingmaps.org/learn/" class="btn btn-blue">LEARN TO MAP </a></p>
+  </div>
+</div>

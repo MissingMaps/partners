@@ -21,15 +21,8 @@ primary-hashtag: msft
 subhashtags:
   - xbox
   - msoffice
-  - msftrisk
-  - msftsecurity
-  - msftgive
   - microsoft
-  - msftbayarea
-  - msftbing
-  - msftues2017
-  - msftwdgeic
-  - msftnvw17
+  - msft*
 
 tm-projects:
 - id: 3211

@@ -1,0 +1,25 @@
+<div class = "Community-Container">
+	<h1>Community</h1>
+	<div id = "Community-Flickr">
+		<div class="flexslider photo-width-fix">
+		  <ul class="flickr-hit slides">
+		  </ul>
+		</div>
+	</div>
+  <div class="Community-Navigation">
+    <p></p>
+  </div>
+  <div class="Community-Links">
+		{% if page.flickr != null %}
+    <a href="{{ page.flickr }}" class="btn btn-blue"><i class="ico icon collecticon-flickr social-icon"></i>FLICKR </a>
+		{% endif %}
+		{% if page.twitter != null %}
+    <a href="{{ page.twitter }}" class="btn btn-blue"><i class="ico icon collecticon-twitter social-icon"></i> TWITTER </a>
+		{% endif %}
+		{% if page.facebook != null %}
+    <a href="{{ page.facebook }}" class="btn btn-blue"><i class="ico icon collecticon-facebook social-icon"></i> FACEBOOK </a>
+		{% endif %}
+  </div>
+  <div class="Contact">
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <div class="wrapper">
+      <div class="footer-mm center-text">
+        CC-BY <a href="http://www.missingmaps.org/">Missing Maps</a> 2016
+      </div>
+    </div>
+</footer>
+<script>
+    PT.mainHashtag = '{{ page.primary-hashtag }}';
+    PT.subHashtags = [{% assign comma = false %}{% for h in page.subhashtags %}{% if comma %}, {% endif %}'{{h}}'{% assign comma = true %}{% endfor %}];
+    PT.hotProjects = [{% assign comma = false %}{% for p in page.tm-projects %}{% if comma %}, {% endif %}'{{ p.id }}'{% assign comma = true %}{% endfor %}];
+    PT.flickrApiKey = '{{ page.flickr-apikey }}';
+    PT.flickrSetId = '{{ page.flickr-setId }}';
+</script>
+<script src="{{ site.domain }}{{ site.path_prefix }}/assets/scripts/vendor.min.js"></script>
+<script src="{{ site.domain }}{{ site.path_prefix }}/assets/scripts/main.min.js"></script>

@@ -2,6 +2,34 @@
 layout: default
 ---
 
+{% if page.name == "microsoft" %}
+{% include header_msft.html %}
+
+<script>
+  // creates PT object for each page. Including lang for future use
+  var PT = { lang: '{{page.lang}}' };
+</script>
+
+<h1>{{ page.name }}</h1>
+
+<section id = "Primary">
+  {% include intro_msft.html %}
+</section>
+
+<section class = "Current-Projects">
+  {% include projects_msft.html %}
+</section>
+
+<section class = "Teams">
+  {% include teams_msft.html %}
+</section>
+
+<section class = "Community">
+  {% include community_msft.html %}
+</section>
+
+{% include footer_msft.html %}
+{% else %}
 {% include header.html %}
 
 <script>
@@ -28,3 +56,4 @@ layout: default
 </section>
 
 {% include footer.html %}
+{% endif %}
