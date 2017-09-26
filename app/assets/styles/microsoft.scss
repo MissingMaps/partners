@@ -1,0 +1,160 @@
+body.microsoft {
+  font-family: 'SegoeUI', 'Open Sans', sans-serif;
+  ul,
+  li,
+  ol,
+  p,
+  h1,
+  h1,
+  .titlewhite,
+  .titlewhite p,
+  .GetInvolved h3 {
+    font-family: 'SegoeUI', 'Open Sans', sans-serif;
+  }
+
+  header, #Primary, .footer-mm {
+    background-color: black;
+  }
+
+  #Primary .Primary_Container {
+    h1, p {
+      color: white;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 32px;
+      margin-top: 5px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  section#Stats {
+    background-color: white;
+
+    .Primary-stats {
+      float: none;
+    }
+
+    .Stat-Item {
+      margin: 3em;
+
+      .emphasizedNumber {
+        color: black;
+        font-size: 1.6em;
+      }
+
+      .title {
+        color: black;
+        font-size: 1em;
+      }
+    }
+  }
+
+  section.Current-Projects {
+    background-color: black;
+    text-align: center;
+
+    h1 {
+      color: white;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      font-weight: 700;
+
+      b {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      color: white;
+      font-size: .8em;
+    }
+
+    .HOT-Map, .HOT-Details {
+      float: none;
+    }
+  }
+
+  section.Get-Started {
+    background-color: white;
+
+    h1 {
+      color: black;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+
+  section.Log-Time {
+    background-color: blue;
+
+    h1 {
+      color: white;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+  section.Teams {
+    background-color: white;
+
+    h3 {
+      color: black;
+      float: left;
+      font-size: 1.2em;
+      font-weight: 300;
+      margin-left: 5px;
+    }
+
+    p {
+      color: black;
+      font-size: 0.9em;
+    }
+  }
+
+  section.Community {
+    background-color: black;
+
+    h1 {
+      color: white;
+    }
+  }
+
+  .nav-item {
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .btn {
+    border-radius: 0;
+    border: 1px solid white;
+    color: white;
+    text-transform: none;
+    background: transparent;
+  }
+
+  .btn-blue {
+    background-color: #0078d7;
+  }
+
+  .flex-control-nav li {
+    margin: 4px;
+  }
+
+  .flex-control-paging li a {
+    height: 4px;
+    width: 4px;
+  }
+}
