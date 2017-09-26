@@ -24,7 +24,8 @@
     "build-prod": "gulp prod",
     "lint": "semistandard app/assets/scripts/**/*.js",
     "test": "echo NO TESTS YET",
-    "install": "bundle install --path bundle/cache"
+    "install": "bundle install --path bundle/cache",
+    "publish": "gh-pages -d _site -b gh-pages"
   },
   "browserify": {
     "transform": [
@@ -46,6 +47,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "font-awesome": "^4.7.0",
     "foundation-sites": "^6.3.1",
+    "gh-pages": "^1.0.0",
     "glob": "^7.1.2",
     "glob-all": "^3.1.0",
     "gulp": "^3.9.1",
