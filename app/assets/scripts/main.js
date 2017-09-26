@@ -352,6 +352,8 @@ function getGroupActivityStats (hashtags) {
       // The reduce patterns below are compareable to Array.prototype.map,
       // with the difference that there does not need to be a 1:1 match
       // between input and output array length
+      const hashtags = Object.keys(hashtagData);
+
       const totalSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
