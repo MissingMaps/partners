@@ -560,6 +560,29 @@ function checkHashtags (hashtags) {
   }
 }
 
+function showAlternatePoster () {
+  // get all custom videos
+  const videos = $('.video');
+
+  videos.on('click', function () {
+    const el = $(this);
+    let comment;
+
+    // el.contents() is an Object, not an array, so we can't use find()
+    for (var i = 0; i < el.contents().length; i++) {
+      if (el.contents()[i].nodeType === 8 && el.contents()[i].textContent.match(/<iframe/)) {
+        comment = el.contents()[i].textContent;
+        break;
+      }
+    }
+
+    if (comment != null) {
+      el.addClass('player').html(comment);
+      el.off('click');
+    }
+  });
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------
@@ -585,3 +608,5 @@ getGroupActivityStats(PT.subHashtags);
 if (PT.flickrApiKey && PT.flickrSetId) {
   getImgs(PT.flickrApiKey, PT.flickrSetId);
 }
+
+showAlternatePoster();

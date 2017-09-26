@@ -1,4 +1,6 @@
 body.microsoft {
+  background-color: white;
+
   font-family: 'SegoeUI', 'Open Sans', sans-serif;
   ul,
   li,
@@ -12,12 +14,27 @@ body.microsoft {
     font-family: 'SegoeUI', 'Open Sans', sans-serif;
   }
 
-  header, #Primary, .footer-mm {
+  header,
+  #Primary,
+  .footer-mm {
     background-color: black;
   }
 
-  #Primary .Primary_Container {
-    h1, p {
+  section#Primary {
+    background: linear-gradient(
+      to bottom,
+      black 0%,
+      black 75%,
+      white 75%,
+      white 100%
+    );
+
+    .Primary_Container {
+      width: 50%;
+    }
+
+    h1,
+    p {
       color: white;
     }
 
@@ -28,12 +45,23 @@ body.microsoft {
     }
 
     p {
-      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .video {
+      border: 5px solid white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 315px;
+      width: 560px;
     }
   }
 
   section#Stats {
     background-color: white;
+    padding-top: 0;
 
     .Primary-stats {
       float: none;
@@ -75,10 +103,11 @@ body.microsoft {
 
     p {
       color: white;
-      font-size: .8em;
+      font-size: 0.8em;
     }
 
-    .HOT-Map, .HOT-Details {
+    .HOT-Map,
+    .HOT-Details {
       float: none;
     }
   }
@@ -86,15 +115,49 @@ body.microsoft {
   section.Get-Started {
     background-color: white;
 
+    .Primary_Container {
+      width: 40%;
+    }
+
     h1 {
       color: black;
       font-weight: 300;
-      text-align: center;
+    }
+
+    h4 {
+      color: black;
+      font-weight: 300;
+    }
+
+    .left,
+    .right {
+      margin: 0;
+      width: 50%;
+
+      div {
+        padding-top: 30px;
+      }
+    }
+
+    .left div {
+      border-right: 1px solid #979797;
     }
   }
 
+  section.Event {
+    background-image: url('/assets/graphics/msft/event.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 500px;
+  }
+
   section.Log-Time {
-    background-color: blue;
+    background: linear-gradient(to left, #0078d7, #92cbca);
+
+    .Primary_Container {
+      width: 50%;
+    }
 
     h1 {
       color: white;
@@ -104,6 +167,7 @@ body.microsoft {
 
     p {
       color: white;
+      margin-bottom: 20px;
     }
   }
 
@@ -116,6 +180,7 @@ body.microsoft {
       font-size: 1.2em;
       font-weight: 300;
       margin-left: 5px;
+      margin-bottom: 20px;
     }
 
     p {
@@ -127,8 +192,21 @@ body.microsoft {
   section.Community {
     background-color: black;
 
+    .Primary_Container {
+      width: 50%;
+    }
+
     h1 {
       color: white;
+      font-weight: 300;
+    }
+
+    p {
+      color: white;
+    }
+
+    .Community-Links {
+      margin: 1.5em 0;
     }
   }
 
@@ -138,15 +216,17 @@ body.microsoft {
   }
 
   .btn {
-    border-radius: 0;
-    border: 1px solid white;
-    color: white;
-    text-transform: none;
     background: transparent;
+    border: 1px solid white;
+    border-radius: 0;
+    color: white;
+    padding: 4px 30px;
+    text-transform: none;
   }
 
   .btn-blue {
     background-color: #0078d7;
+    border: 0;
   }
 
   .flex-control-nav li {
