@@ -113,7 +113,7 @@ body.microsoft {
   }
 
   section.Get-Started {
-    background-color: white;
+    background-color: #f7f7f7;
 
     .Primary_Container {
       width: 40%;
@@ -207,6 +207,97 @@ body.microsoft {
 
     .Community-Links {
       margin: 1.5em 0;
+    }
+  }
+
+  section#Title {
+    background-color: black;
+
+    .Primary_Container {
+      height: 200px;
+      width: 50%;
+    }
+
+    h1 {
+      color: white;
+      font-weight: 300;
+      margin-top: 90px;
+    }
+  }
+
+  section#About {
+    .Primary_Container {
+      width: 50%;
+    }
+  }
+
+  section#GetStarted {
+    .Primary_Container {
+      width: 50%;
+    }
+
+    h1 {
+      color: black;
+      font-weight: 300;
+    }
+
+    p {
+      color: black;
+    }
+  }
+
+  .checklist {
+    h2 {
+      color: black;
+      font-weight: 300;
+    }
+
+    .left, .right {
+      margin: 0;
+      text-align: left;
+    }
+
+    .shim {
+      float: left;
+      width: 15%;
+    }
+
+    .left {
+      width: 25%;
+    }
+
+    .right {
+      width: 60%;
+    }
+
+    ul {
+      list-style-image: url('/assets/graphics/msft/check.svg');
+      text-align: left;
+    }
+  }
+
+  section#MapathonSupport {
+    background-color: #2b2d3e;
+
+    .Primary_Container {
+      width: 50%;
+    }
+
+    h1 {
+      color: white;
+      font-weight: 300;
+    }
+
+    p {
+      color: white;
+    }
+
+    ul {
+      margin: 20px;
+
+      li {
+        font-weight: bold;
+      }
     }
   }
 
