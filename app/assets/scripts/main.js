@@ -578,5 +578,8 @@ checkHashtags(PT.subHashtags);
 setupGraphs();
 // Populates initial groups graph via Missing Maps API
 getGroupActivityStats(PT.subHashtags);
+
 // Populate the Flickr carousel
-getImgs(PT.flickrApiKey, PT.flickrSetId);
+if (PT.flickrApiKey && PT.flickrSetId) {
+  getImgs(PT.flickrApiKey, PT.flickrSetId);
+}
