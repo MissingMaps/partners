@@ -56,6 +56,15 @@ body.microsoft {
       margin-right: auto;
       height: 315px;
       width: 560px;
+      position: relative;
+
+      .play {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        height: 36px;
+        width: 36px;
+      }
     }
   }
 
