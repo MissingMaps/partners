@@ -432,12 +432,12 @@ function Barchart (data, targetElement) {
       .css('display', 'initial')
       .click(function () {
         const graphs = $('.Team-User-Graph > svg');
-        if (expanded === false) {
-          $('.teams-btn').html('SHOW INITIAL TEAMS');
+        if (!expanded) {
+          $('.teams-btn').html('Show initial teams');
           graphs.animate({marginTop: offset}, 300);
           expanded = true;
-        } else if (expanded === true) {
-          $('.teams-btn').html('SHOW MORE TEAMS');
+        } else if (expanded) {
+          $('.teams-btn').html('Show more teams');
           graphs.animate({marginTop: 0}, 300);
           expanded = false;
         }
