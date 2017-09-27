@@ -14,16 +14,11 @@
               </div>
             </div>
             <div class="HOT-Details">
-              <div class="HOT-Progress">
+              <div class="xHOT-Progress">
                 <p><!-- placeholder --></p>
               </div>
-              <h3 class="HOT-Title" id="HOT-Title-{{ p.id }}">
-                <p><!-- placeholder --></p>
-              </h3>
-              <div class="HOT-Description">
-                <p> {{ p.desc | truncatewords: 40}} <a href= "http://tasks.hotosm.org/project/{{ p.id }}"> read more.</a>
-                </p>
-              </div>
+              <h3 class="title" id="HOT-Title-{{ p.id }}"></h3>
+              <p class="description">{{ p.desc | truncatewords: 40}} <a href= "http://tasks.hotosm.org/project/{{ p.id }}"> read more.</a></p>
             </div>
             <div>
               <a href="http://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue">Start Mapping</a>
