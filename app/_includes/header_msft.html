@@ -2,51 +2,49 @@
 	<div class="navbar-background">
 		<div class="nav-icon">
 			<h1 id="site-title">
-				<a href="{{ site.domain }}/" title="MissingMaps">
+				<a href="{{ site.domain }}/" title="Missing Maps">
 					<img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/meta/MM-White.svg" width="94px" alt="Missing Maps Logo">
 					<span>Missing Maps</span>
 				</a>
 			</h1>
 		</div>
-		<div class="nav-list">
-			<ul>
-				<a href="http://www.missingmaps.org/learn/"><li class="nav-item">CONTRIBUTE</li></a>
-				<!-- <li class="nav-item nav-dropdown">CONTRIBUTE
-					<div class="dropdown-content">
-						<a href="http://mapswipe.org/learn/"><div class="nav-item">LEARN TO MAP</div></a>
-						<a href="http://mapswipe.org/validate/"><div class="nav-item">LEARN TO VALIDATE</div></a>
-						<a href="http://mapswipe.org/"><div class="nav-item">MAPSWIPE</div></a>
-					</div>
-				</li> -->
-				<li class="nav-item nav-dropdown">EVENTS
-					<div class="dropdown-content nav-events">
-						<a href="http://www.missingmaps.org/events/"><div class="nav-item">CURRENT EVENTS</div></a>
-						<a href="http://www.missingmaps.org/host/"><div class="nav-item">ORGANIZE AN EVENT</div></a>
-					</div>
-				</li>
-				<a href="http://www.missingmaps.org/about/"><li class="nav-item">ABOUT</li></a>
-				<a href="http://www.missingmaps.org/blog/"><li class="nav-item">BLOG</li></a>
-				<li class="nav-item nav-dropdown">DISCOVER
-					<div class="dropdown-content">
-						<a href="http://www.missingmaps.org/users/#/"><div class="nav-item">USER PROFILES</div></a>
-						<a href="http://www.missingmaps.org/leaderboards/#/"><div class="nav-item">LEADERBOARDS</div></a>
-						<a href="http://www.missingmaps.org/osmstats/"><div class="nav-item">OSM STATS</div></a>
-					</div>
-				</li>
-			</ul>
-		</div>
+		<menu class="nav-list" role="menu">
+			<menuitem class="nav-item"><a href="http://www.missingmaps.org/learn/">CONTRIBUTE</a></menuitem>
+			<!-- <li class="nav-item nav-dropdown">CONTRIBUTE
+				<nav class="dropdown-content">
+					<a href="http://mapswipe.org/learn/" class="nav-item">LEARN TO MAP</a>
+					<a href="http://mapswipe.org/validate/" class="nav-item">LEARN TO VALIDATE</a>
+					<a href="http://mapswipe.org/" class="nav-item">MAPSWIPE</a>
+				</nav>
+			</li> -->
+			<div class="nav-item nav-dropdown" role="menuitem" tabindex="0">EVENTS
+				<nav class="dropdown-content nav-events" role="group">
+					<a href="http://www.missingmaps.org/events/" role="menuitem" tabindex="0" class="nav-item">CURRENT EVENTS</a>
+					<a href="http://www.missingmaps.org/host/" role="menuitem" tabindex="0" class="nav-item">ORGANIZE AN EVENT</a>
+				</nav>
+			</div>
+			<menuitem class="nav-item"><a href="http://www.missingmaps.org/about/">ABOUT</a></menuitem>
+			<menuitem class="nav-item"><a href="http://www.missingmaps.org/blog/">BLOG</a></menuitem>
+			<div class="nav-item nav-dropdown" role="menuitem" tabindex="0">DISCOVER
+				<nav class="dropdown-content" role="group">
+					<a href="http://www.missingmaps.org/users/#/" role="menuitem" tabindex="0" class="nav-item">USER PROFILES</a>
+					<a href="http://www.missingmaps.org/leaderboards/#/" role="menuitem" tabindex="0" class="nav-item">LEADERBOARDS</a>
+					<a href="http://www.missingmaps.org/osmstats/" role="menuitem" tabindex="0" class="nav-item">OSM STATS</a>
+				</nav>
+			</div>
+		</menu>
 	</div>
 	<div class="resp-navbar navbar-background resp-nav-dropdown">
 			<p>MENU</p>
-			<div class="resp-dropdown-content">
-				<a href="http://mapswipe.org/learn/"><div class="nav-item">LEARN TO MAP</div></a>
-				<a href="http://mapswipe.org/validate/"><div class="nav-item">LEARN TO VALIDATE</div></a>
-				<a href="http://www.missingmaps.org/events/"><li class="nav-item">CURRENT EVENTS</li></a>
-				<a href="http://www.missingmaps.org/host/"><li class="nav-item">ORGANIZE AN EVENT</li></a>
-				<a href="http://www.missingmaps.org/about/"><li class="nav-item">ABOUT</li></a>
-				<a href="http://www.missingmaps.org/blog/"><li class="nav-item">BLOG</li></a>
-				<a href="http://www.missingmaps.org/users/#/"><li class="nav-item">USER PROFILES</li></a>
-				<a href="http://www.missingmaps.org/leaderboards/#/"><li class="nav-item">LEADERBOARDS</li></a>
-			</div>
+			<nav class="resp-dropdown-content">
+				<a href="http://mapswipe.org/learn/" class="nav-item">LEARN TO MAP</a>
+				<a href="http://mapswipe.org/validate/" class="nav-item">LEARN TO VALIDATE</a>
+				<a href="http://www.missingmaps.org/events/" class="nav-item">CURRENT EVENTS</a>
+				<a href="http://www.missingmaps.org/host/" class="nav-item">ORGANIZE AN EVENT</a>
+				<a href="http://www.missingmaps.org/about/" class="nav-item">ABOUT</a>
+				<a href="http://www.missingmaps.org/blog/" class="nav-item">BLOG</a>
+				<a href="http://www.missingmaps.org/users/#/" class="nav-item">USER PROFILES</a>
+				<a href="http://www.missingmaps.org/leaderboards/#/" class="nav-item">LEADERBOARDS</a>
+			</nav>
 	</div>
 </header>

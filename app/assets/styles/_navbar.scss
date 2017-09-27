@@ -58,12 +58,15 @@ header {
   font-family: 'Lato';
   font-size: .9em;
   line-height: 52px;
-  color: white;
   color: $lightgrey;
   letter-spacing: .06em;
   cursor: pointer;
   transition: color .2s;
-  &:hover {
+  a {
+    color: $lightgrey;
+  }
+  &:hover, &:focus,
+  a:hover, a:focus {
     color: darken($lightgrey, 45);
   }
 }
@@ -92,6 +95,7 @@ header {
   height: 0;
   overflow: hidden;
   opacity: 0;
+  display: none;
   text-align: right;
   transition: opacity .3s;
   :hover {
@@ -103,6 +107,11 @@ header {
     padding-left: 12px;
     background-color: $darkestgrey;
     border-bottom: 1px solid lighten($darkestgrey, 15);
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;;
   }
 }
 
@@ -110,9 +119,13 @@ header {
   width: 180px;
 }
 
-.nav-dropdown:hover .dropdown-content {
-  height: auto;
-  opacity: 1;
+.nav-dropdown:hover,
+.nav-dropdown:focus {
+  .dropdown-content{
+    height: auto;
+    display: block;
+    opacity: 1;
+  }
 }
 
 .resp-navbar {

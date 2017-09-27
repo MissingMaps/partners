@@ -57,6 +57,15 @@ body.microsoft {
       height: 315px;
       width: 560px;
       position: relative;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      .videoPlaceholder {
+        height: 100%;
+        min-width: 100%;
+        max-width: none;
+      }
 
       .play {
         position: absolute;
@@ -120,6 +129,7 @@ body.microsoft {
       margin-left: auto;
       margin-right: auto;
       width: 50%;
+      overflow: hidden;
 
       h3 {
         color: white;
@@ -135,15 +145,18 @@ body.microsoft {
     }
 
     .HOT-Map {
-      height: 200px;
+      height: 250px;
       margin-left: auto;
       margin-right: auto;
-      width: 400px;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #EEEEEE;
     }
 
     .HOT-Progress {
       background-color: #333;
       height: 5px;
+      margin: 10px 0;
 
       &:before {
         background-color: #0078d7;
@@ -428,6 +441,83 @@ body.microsoft {
 
     &.flex-active {
       background-color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body.microsoft {
+    section#Primary {
+      .Primary_Container {
+          width: 80%;
+        }
+    }
+    section.Get-Started {
+      .Primary_Container {
+        width: 80%;
+      }
+    }
+    section.Current-Projects {
+      .HOT-Container {
+        width: 60%;
+      }
+      .flexslider .flex-direction-nav .flex-prev,
+      .flexslider:hover .flex-direction-nav .flex-prev {
+        left: 10%;
+      }
+      .flexslider .flex-direction-nav .flex-next,
+      .flexslider:hover .flex-direction-nav .flex-next {
+        right: 10%;
+      }
+    } 
+    section.Log-Time {
+      .Primary_Container {
+        width: 80%;
+      }
+    }
+    section.Community {
+      .Community-Container {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  body.microsoft {
+    section#Primary {
+      .Primary_Container {
+          width: calc(100% - 40px);
+        }
+    }
+    section.Get-Started {
+      .Primary_Container {
+        width: calc(100% - 40px);
+      }
+    }
+    section.Current-Projects {
+      .HOT-Container {
+        width: calc(100% - 80px);
+      }
+      .flexslider .flex-direction-nav .flex-prev,
+      .flexslider:hover .flex-direction-nav .flex-prev {
+        left: 0;
+      }
+      .flexslider .flex-direction-nav .flex-next,
+      .flexslider:hover .flex-direction-nav .flex-next {
+        right: 13px;
+      }
+    } 
+    section.Log-Time {
+      .Primary_Container {
+        width: calc(100% - 40px);
+      }
+    }
+    section.Community {
+      .Community-Container {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+      }
     }
   }
 }
