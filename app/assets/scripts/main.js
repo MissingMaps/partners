@@ -72,6 +72,7 @@ function makeProject (project, projectOrder) {
   $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
   $(`ul li:nth-child(${projectOrder}) .title`).html(props.name);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Map`).attr('id', 'Map-' + project.id);
 
   // Drop a map into the HOT-Map div

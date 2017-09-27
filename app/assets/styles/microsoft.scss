@@ -141,6 +141,19 @@ body.microsoft {
       width: 400px;
     }
 
+    .HOT-Progress {
+      background-color: #333;
+      height: 5px;
+
+      &:before {
+        background-color: #0078d7;
+      }
+
+      p {
+        display: none;
+      }
+    }
+
     .HOT-Map,
     .HOT-Details {
       float: none;
