@@ -256,8 +256,8 @@ function setupGraphs () {
   $('#Select-Users-Graph').click(function () {
     $('#Select-Teams-Graph').removeClass('Selected');
     $('#Select-Users-Graph').addClass('Selected');
-    teamLabel.text('Users');
-    teamUserLabel.text('Users');
+    teamLabel.text('User');
+    teamUserLabel.text('User');
     moreBtn.animate({opacity: 0}, 500, function () {
       moreBtn.css('display', 'none');
     });
@@ -272,8 +272,8 @@ function setupGraphs () {
   $('#Select-Teams-Graph').click(function () {
     $('#Select-Users-Graph').removeClass('Selected');
     $('#Select-Teams-Graph').addClass('Selected');
-    teamLabel.text('Teams');
-    teamUserLabel.text('Teams');
+    teamLabel.text('Team');
+    teamUserLabel.text('Team');
     if (PT.subHashtags.length > 10) {
       moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
     }
