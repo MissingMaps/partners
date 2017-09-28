@@ -31,6 +31,7 @@ subhashtags:
   - cisco_gps
   - cisco_osp
   - cisco_uk
+  - ciscosoe
 
 tm-projects:
 - id: 3643
