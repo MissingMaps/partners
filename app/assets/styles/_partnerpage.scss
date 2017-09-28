@@ -499,10 +499,13 @@ h1 {
 .Team-User-Nav {
   width: 80%;
   height: 36px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   clear: both;
   text-align: left;
+  menuitem {
+    cursor: pointer;
+  }
+  
   p {
     display: inline-block;
     float: initial;

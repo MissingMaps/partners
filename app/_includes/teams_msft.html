@@ -1,31 +1,31 @@
-<div class = "Team-User-Container">
-  <h3>Microsoft Mapping Leaderboard</h3>
-  <div class = "Team-User-Nav">
-    <p class = "null">View by:</p>
-    <p id = "Select-Teams-Graph" class = "Selected">Teams</p>
-    <p id = "Select-Users-Graph">Users</p>
-  </div>
-  <div class = "Team-User-Stats">
-    <div class = "Team-User-Stat-Item">
-      <div class = "Team-Graph-Title">
-        <div class = "left">Team</div>
-        <div class = "right">Total Edits</div>
+<div class="Team-User-Container">
+  <h3 id="grid2Label">Microsoft Mapping Leaderboard</h3>
+  <menu class="Team-User-Nav">
+    <p class="null">View by:</p>
+    <menuitem id="Select-Teams-Graph" class="Selected">Teams</menuitem>
+    <menuitem id="Select-Users-Graph">Users</menuitem>
+  </menu>
+  <div class="Team-User-Stats" role="grid" aria-labelledby="grid2Label">
+    <div class="Team-User-Stat-Item">
+      <div class="Team-Graph-Title">
+        <div class="left" aria-colindex="1">Team</div>
+        <div class="right" aria-colindex="2">Total Edits</div>
       </div>
-      <div class = "Team-User-Graph" id = "Team-User-Total-Graph"></div>
+      <div class="Team-User-Graph" id="Team-User-Total-Graph"></div>
     </div>
-    <div class = "Team-User-Stat-Item">
-      <div class = "Team-User-Graph-Title">
-        <div class = "left">Team</div>
-        <div class = "right">Buildings Added</div>
+    <div class="Team-User-Stat-Item">
+      <div class="Team-User-Graph-Title">
+        <div class="left" aria-colindex="1">Team</div>
+        <div class="right" aria-colindex="2">Buildings Added</div>
       </div>
-      <div class = "Team-User-Graph" id = "Team-User-Bldng-Graph"></div>
+      <div class="Team-User-Graph" id="Team-User-Bldng-Graph"></div>
     </div>
-    <div class = "Team-User-Stat-Item">
-      <div class = "Team-User-Graph-Title">
-        <div class = "left">Team</div>
-        <div class = "right">km of Roads Added</div>
+    <div class="Team-User-Stat-Item">
+      <div class="Team-User-Graph-Title">
+        <div class="left" aria-colindex="1">Team</div>
+        <div class="right" aria-colindex="2">km of Roads Added</div>
       </div>
-      <div class = "Team-User-Graph" id = "Team-User-Roads-Graph"></div>
+      <div class="Team-User-Graph" id="Team-User-Roads-Graph"></div>
     </div>
   </div>
   <div class="teams-more">
