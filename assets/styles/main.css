@@ -3484,7 +3484,8 @@ body.microsoft .GetInvolved h3 {
   font-family: 'SegoeUI', 'Open Sans', sans-serif;
 }
 
-body.microsoft a {
+body.microsoft a,
+body.microsoft .nav-dropdown {
   color: #0078d7;
 }
 
