@@ -1,0 +1,34 @@
+<div class="Projects-Container">
+  <h1>Start Mapping</h1>
+  <div>
+    <div class="flexslider Projects-slider">
+      <ul class="slides project-slide">
+        {% for p in page.tm-projects limit:10 %}
+        <li id="Project-{{ p.id }}">
+          <div class="HOT-Container">
+            <div class="HOT-Map">
+              <div class="spinner big">
+                <div class="bounce1 big"></div>
+                <div class="bounce2 big"></div>
+                <div class="bounce3 big"></div>
+              </div>
+            </div>
+            <div class="HOT-Progress">
+              <p><!-- placeholder --></p>
+            </div>
+            <div class="HOT-Details">
+              <h3 class="title" id="HOT-Title-{{ p.id }}"></h3>
+              <p class="description">{{ p.desc | truncatewords: 40}} <a href= "http://tasks.hotosm.org/project/{{ p.id }}"> read more.</a></p>
+              <p class="completeness"></p>
+            </div>
+            <div>
+              <a href="http://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue">Start Mapping</a>
+              <a href="http://www.missingmaps.org/users/" class="btn">Check your progress</a>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

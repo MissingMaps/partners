@@ -36,7 +36,7 @@ function getProjects (projects) {
     directionNav: true,
     slideshowSpeed: 6000000,
     prevText: '',
-    nextText: '<i class="ico icon collecticon-chevron-right"></i>'
+    nextText: ''
   });
   $('.flex-next').prependTo('.HOT-Nav-Projects');
   $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
@@ -70,7 +70,10 @@ function makeProject (project, projectOrder) {
 
   // Adds Project variables to the cards
   $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
+  $(`ul li:nth-child(${projectOrder}) .title`).html(props.name);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Details .completeness`).html(`<strong>${projDone}%</strong> complete`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Map`).attr('id', 'Map-' + project.id);
 
   // Drop a map into the HOT-Map div
@@ -255,8 +258,8 @@ function setupGraphs () {
   $('#Select-Users-Graph').click(function () {
     $('#Select-Teams-Graph').removeClass('Selected');
     $('#Select-Users-Graph').addClass('Selected');
-    teamLabel.text('Users');
-    teamUserLabel.text('Users');
+    teamLabel.text('User');
+    teamUserLabel.text('User');
     moreBtn.animate({opacity: 0}, 500, function () {
       moreBtn.css('display', 'none');
     });
@@ -271,8 +274,8 @@ function setupGraphs () {
   $('#Select-Teams-Graph').click(function () {
     $('#Select-Users-Graph').removeClass('Selected');
     $('#Select-Teams-Graph').addClass('Selected');
-    teamLabel.text('Teams');
-    teamUserLabel.text('Teams');
+    teamLabel.text('Team');
+    teamUserLabel.text('Team');
     if (PT.subHashtags.length > 10) {
       moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
     }
@@ -352,6 +355,8 @@ function getGroupActivityStats (hashtags) {
       // The reduce patterns below are compareable to Array.prototype.map,
       // with the difference that there does not need to be a 1:1 match
       // between input and output array length
+      const hashtags = Object.keys(hashtagData);
+
       const totalSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
@@ -429,12 +434,12 @@ function Barchart (data, targetElement) {
       .css('display', 'initial')
       .click(function () {
         const graphs = $('.Team-User-Graph > svg');
-        if (expanded === false) {
-          $('.teams-btn').html('SHOW INITIAL TEAMS');
+        if (!expanded) {
+          $('.teams-btn').html('Show initial teams');
           graphs.animate({marginTop: offset}, 300);
           expanded = true;
-        } else if (expanded === true) {
-          $('.teams-btn').html('SHOW MORE TEAMS');
+        } else if (expanded) {
+          $('.teams-btn').html('Show more teams');
           graphs.animate({marginTop: 0}, 300);
           expanded = false;
         }
@@ -558,6 +563,29 @@ function checkHashtags (hashtags) {
   }
 }
 
+function showAlternatePoster () {
+  // get all custom videos
+  const videos = $('.video');
+
+  videos.on('click', function () {
+    const el = $(this);
+    let comment;
+
+    // el.contents() is an Object, not an array, so we can't use find()
+    for (var i = 0; i < el.contents().length; i++) {
+      if (el.contents()[i].nodeType === 8 && el.contents()[i].textContent.match(/<iframe/)) {
+        comment = el.contents()[i].textContent;
+        break;
+      }
+    }
+
+    if (comment != null) {
+      el.addClass('player').html(comment);
+      el.off('click');
+    }
+  });
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------
@@ -583,3 +611,5 @@ getGroupActivityStats(PT.subHashtags);
 if (PT.flickrApiKey && PT.flickrSetId) {
   getImgs(PT.flickrApiKey, PT.flickrSetId);
 }
+
+showAlternatePoster();
