@@ -18,7 +18,7 @@
     <link rel="author" type="text/plain" href="humans.txt" />
 
     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400|Hind:700,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400|Hind:700,300,600|Open+Sans:700,300,600' rel='stylesheet' type='text/css'>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
@@ -52,9 +52,10 @@
 
   </head>
 
-  <body>
+  <body class="redcross">
 
-    <header>
+    
+<header>
 	<div class="navbar-background">
 		<div class="nav-icon">
 			<h1 id="site-title">
@@ -235,34 +236,34 @@
 </section>
 
 <section class = "Teams">
-  <div class = "Team-User-Container">
-  <h1>Activity</h1>
-  <div class = "Team-User-Nav">
-    <p class = "null">VIEW BY:</p>
-    <p id = "Select-Teams-Graph" class = "Selected">TEAMS</p>
-    <p id = "Select-Users-Graph">USERS</p>
-  </div>
-  <div class = "Team-User-Stats">
-    <div class = "Team-User-Stat-Item">
-      <div class = "Team-Graph-Title">
-        <div class = "left">Teams</div>
-        <div class = "right">Total Edits</div>
+  <div class="Team-User-Container">
+  <h1 id="grid1Label">Activity</h1>
+  <menu class="Team-User-Nav">
+    <p class="null">VIEW BY:</p>
+    <menuitem id="Select-Teams-Graph" class="Selected">TEAMS</menuitem>
+    <menuitem id="Select-Users-Graph">USERS</menuitem>
+  </menu>
+  <div class="Team-User-Stats" role="grid" aria-labelledby="grid1Label">
+    <div class="Team-User-Stat-Item">
+      <div class="Team-Graph-Title">
+        <div class="left" aria-colindex="1">Team</div>
+        <div class="right" aria-colindex="2">Total Edits</div>
       </div>
-      <div class = "Team-User-Graph" id = "Team-User-Total-Graph"></div>
+      <div class="Team-User-Graph" id="Team-User-Total-Graph"></div>
     </div>
-    <div class = "Team-User-Stat-Item">
-      <div class = "Team-User-Graph-Title">
-        <div class = "left">Teams</div>
-        <div class = "right">Buildings Added</div>
+    <div class="Team-User-Stat-Item">
+      <div class="Team-User-Graph-Title">
+        <div class="left" aria-colindex="1">Team</div>
+        <div class="right" aria-colindex="2">Buildings Added</div>
       </div>
-      <div class = "Team-User-Graph" id = "Team-User-Bldng-Graph"></div>
+      <div class="Team-User-Graph" id="Team-User-Bldng-Graph"></div>
     </div>
-    <div class = "Team-User-Stat-Item">
-      <div class = "Team-User-Graph-Title">
-        <div class = "left">Teams</div>
-        <div class = "right">km of Roads Added</div>
+    <div class="Team-User-Stat-Item">
+      <div class="Team-User-Graph-Title">
+        <div class="left" aria-colindex="1">Team</div>
+        <div class="right" aria-colindex="2">km of Roads Added</div>
       </div>
-      <div class = "Team-User-Graph" id = "Team-User-Roads-Graph"></div>
+      <div class="Team-User-Graph" id="Team-User-Roads-Graph"></div>
     </div>
   </div>
   <div class="teams-more">
@@ -304,7 +305,7 @@
 <footer class="site-footer">
   <div class="wrapper">
       <div class="footer-mm center-text">
-        CC-BY <a href="http://www.missingmaps.org/">Missing Maps</a> 2016
+        CC-BY <a href="http://www.missingmaps.org/">Missing Maps</a> 2016-2017
       </div>
     </div>
 </footer>
@@ -317,6 +318,7 @@
 </script>
 <script src="http://www.missingmaps.org/partners/assets/scripts/vendor.min.js"></script>
 <script src="http://www.missingmaps.org/partners/assets/scripts/main.min.js"></script>
+
 
 
 
