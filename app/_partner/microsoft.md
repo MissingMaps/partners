@@ -25,6 +25,8 @@ subhashtags:
   - msft*
 
 tm-projects:
+- id: 3665
+  desc: "Puerto Rico was hit by Hurricane Maria (Category 5) on 20 September after hitting Dominica severely. The American Red Cross has requested building data generation for planning and conducting relief operations on the island. We are mapping from pre-event imagery to give them an operating picture of the island before the hurricane made impact."
 - id: 3211
   desc: "The American Red Cross is a member of the Measles & Rubella Initiative, which seeks to eliminate these diseases. We will be conducting a measles campaign in Malawi in 2017. This task will create a basemap of the area in order to help Red Cross teams to plan logistics and prepare for mobile data collection and field mapping in the areas."
 - id: 3385
