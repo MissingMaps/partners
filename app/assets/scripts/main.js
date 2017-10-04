@@ -300,19 +300,19 @@ function getUserActivityStats (hashtag) {
     // For each user, collect the total edits across all categories
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
-      return {name: generateUserUrl(user), value: totalEdits};
+      return {name: user, decorate: generateUserUrl, value: totalEdits};
     }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total building edits
     const bldngSum = Object.keys(userData).map(function (user) {
       const bldngEdits = Math.round(Number(userData[user].buildings));
-      return {name: generateUserUrl(user), value: bldngEdits};
+      return {name: user, decorate: generateUserUrl, value: bldngEdits};
     }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total road kilometers edited
     const roadsSum = Object.keys(userData).map(function (user) {
       const roadsEdits = Math.round(Number(userData[user].road_kms));
-      return {name: generateUserUrl(user), value: roadsEdits};
+      return {name: user, decorate: generateUserUrl, value: roadsEdits};
     }).sort((a, b) => b.value - a.value);
 
     // Spawn a chart function with listening events for each of the metrics
@@ -366,7 +366,7 @@ function getGroupActivityStats (hashtags) {
                       Number(vals.road_count_mod) +
                       Number(vals.waterway_count_add) +
                       Number(vals.poi_count_add));
-          acc.push({name: generateHashtagUrl(ht), value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -378,7 +378,7 @@ function getGroupActivityStats (hashtags) {
         if (!$.isEmptyObject(vals)) {
           const sum = Math.round(Number(vals.building_count_add) +
                       Number(vals.building_count_mod));
-          acc.push({name: generateHashtagUrl(ht), value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -390,7 +390,7 @@ function getGroupActivityStats (hashtags) {
         if (!$.isEmptyObject(vals)) {
           const sum = Math.round(Number(vals.road_km_add) +
                       Number(vals.road_km_mod));
-          acc.push({name: generateHashtagUrl(ht), value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -482,7 +482,8 @@ function Barchart (data, targetElement) {
     .attr('x', 5)
     .attr('y', barHeight / 2)
     .attr('dy', '.35em')
-    .html((d) => d.name)
+    .text(d => d.name)
+    .html(d => d.decorate(d.name))
     .style('fill', '#606161');
 
   // Add the value labels
