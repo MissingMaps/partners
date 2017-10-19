@@ -47,7 +47,7 @@ function getProjects (projects) {
   }
 
   projects.forEach(function (project, i) {
-    const url = `http://tasks.hotosm.org/project/${project}.json`;
+    const url = `http://tasks.hotosm.org/api/v1/project/${project}`;
     $.getJSON(url, function (projectData) {
       makeProject(projectData, i + 2);
     })
@@ -61,23 +61,23 @@ function getProjects (projects) {
 
 // Update cards with necessary project details
 function makeProject (project, projectOrder) {
-  const props = project.properties;
-  const projDone = Math.round(props.done + props.validated);
+  // const props = project.properties;
+  // const projDone = Math.round(props.done + props.validated);
 
   // Updates Progress Bar
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
-  $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
+  // $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
   // Adds Project variables to the cards
-  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
-  $(`ul li:nth-child(${projectOrder}) .title`).html(props.name);
-  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
-  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
-  $(`ul li:nth-child(${projectOrder}) .HOT-Details .completeness`).html(`<strong>${projDone}%</strong> complete`);
-  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).attr('id', 'Map-' + project.id);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.projectInfo.name}</b>`);
+  $(`ul li:nth-child(${projectOrder}) .title`).html(project.projectInfo.name);
+  // $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
+  // $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
+  // $(`ul li:nth-child(${projectOrder}) .HOT-Details .completeness`).html(`<strong>${projDone}%</strong> complete`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).attr('id', 'Map-' + project.projectId);
 
   // Drop a map into the HOT-Map div
-  addMap(project.id);
+  addMap(project.projectId);
 }
 
 // Adds placeholder/ warning formatting to project carousel entry in the event
@@ -145,7 +145,7 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = `http://tasks.hotosm.org/project/${projectId}/tasks.json`;
+  const endpoint = `http://tasks.hotosm.org/project/${projectId}.tasks`;
   $.getJSON(endpoint, function (taskData) {
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
