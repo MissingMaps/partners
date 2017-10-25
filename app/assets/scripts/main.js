@@ -61,7 +61,7 @@ function getProjects (projects) {
 
 // Update cards with necessary project details
 function makeProject (project, projectOrder) {
-  const projDone = Math.round(project.percentMapped + project.percentValidated);
+  const projDone = Math.round(project.percentMapped);
 
   // Updates Progress Bar
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
