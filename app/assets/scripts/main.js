@@ -69,7 +69,7 @@ function makeProject (project, projectOrder) {
 
   // Adds Project variables to the cards
   $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.name}</b>`);
-  $(`ul li:nth-child(${projectOrder}) .title`).html(project.name);
+  $(`ul li:nth-child(${projectOrder}) .title`).html(`${project.name} (#${project.projectId})`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Details .completeness`).html(`<strong>${projDone}%</strong> complete`);
