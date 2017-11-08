@@ -61,7 +61,7 @@ function getProjects (projects) {
 
 // Update cards with necessary project details
 function makeProject (project, projectOrder) {
-  const projDone = Math.round(project.percentMapped + project.percentValidated);
+  const projDone = Math.round(project.percentMapped);
 
   // Updates Progress Bar
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
@@ -69,7 +69,7 @@ function makeProject (project, projectOrder) {
 
   // Adds Project variables to the cards
   $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.name}</b>`);
-  $(`ul li:nth-child(${projectOrder}) .title`).html(project.name);
+  $(`ul li:nth-child(${projectOrder}) .title`).html(`${project.name} (#${project.projectId})`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Details .completeness`).html(`<strong>${projDone}%</strong> complete`);
@@ -126,17 +126,18 @@ function onEachFeature (feature, layer) {
     fillColor: 'black'
   };
 
-  const state = feature.properties.state;
-  if (state === -1) {
-    symbology.fillColor = '#dfdfdf';
-  } else if (state === 0) {
-    symbology.fillColor = '#dfdfdf';
-  } else if (state === 1) {
-    symbology.fillColor = '#dfdfdf';
-  } else if (state === 2) {
-    symbology.fillColor = '#ffa500';
-  } else if (state === 3) {
-    symbology.fillColor = '#008000';
+  const taskStatus = feature.properties.taskStatus;
+  if (taskStatus === "READY") {
+    symbology.fillColor = '#ffffff'; //white
+    symbology.fillOpacity = 0.0;  //transparent
+  } else if (taskStatus === "INVALIDATED") {
+    symbology.fillColor = '#e90b43'; //red
+  } else if (taskStatus === "VALIDATED") {
+    symbology.fillColor = '#008000'; //green
+  } else if (taskStatus === "LOCKED_FOR_MAPPING") {
+    symbology.fillColor = '#1259F0'; //blue
+  } else if (taskStatus === "MAPPED") {
+    symbology.fillColor = '#ffcc00'; //yellow
   }
 
   layer.setStyle(symbology);
