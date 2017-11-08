@@ -47,7 +47,7 @@ function getProjects (projects) {
   }
 
   projects.forEach(function (project, i) {
-    const url = `http://tasks.hotosm.org/api/v1/project/${project}/summary`;
+    const url = `https://tasks.hotosm.org/api/v1/project/${project}/summary`;
     $.getJSON(url, function (projectData) {
       makeProject(projectData, i + 2);
     })
@@ -98,11 +98,11 @@ function makePlaceholderProject (projectId, projectOrder) {
  page variable settings.`;
 
   // Add explanatory error text
-  const errorHtml = `Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
+  const errorHtml = `Uh oh, it looks like <a href="https://tasks.hotosm.org/api/v1/project/${project};${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
  <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
  &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
- <a href="http://tasks.hotosm.org/" target="_blank">here</a>
+ <a href="https://tasks.hotosm.org/" target="_blank">here</a>
  to search for more projects.`;
 
   $(`ul li:nth-child(${projectOrder}) .HOT-Description p`).html(errorHtml);
