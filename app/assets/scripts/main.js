@@ -145,7 +145,7 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = `http://tasks.hotosm.org/api/v1/project/${projectId}`;
+  const endpoint = `https://tasks.hotosm.org/api/v1/project/${projectId}`;
   $.getJSON(endpoint, function (taskData) {
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
