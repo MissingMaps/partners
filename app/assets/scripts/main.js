@@ -3,7 +3,7 @@
  -------------------------------------------------------*/
 
 function getPrimaryStats (primaryhash) {
-  const url = `https://osmstats.redcross.org/hashtags/${primaryhash}/users`;
+  const url = `https://osm-stats-api.azurewebsites.net/hashtags/${primaryhash}/users`;
   $.getJSON(url, function (hashtagData) {
     const usersCount = Object.keys(hashtagData).length;
     var editsCount = 0;
@@ -294,7 +294,7 @@ function generateUserUrl (userName) {
 
 function getUserActivityStats (hashtag) {
   // Connect hashtags to /top-users/ Missing Maps API endpoint
-  const url = 'https://osmstats.redcross.org/top-users/' + hashtag;
+  const url = 'http://osm-stats-api.azurewebsites.net/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
     // For each user, collect the total edits across all categories
@@ -338,7 +338,7 @@ function generateHashtagUrl (hashtag) {
 function getGroupActivityStats (hashtags) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = hashtags.join(',');
-  const url = 'https://osmstats.redcross.org/group-summaries/' + hashtagsString;
+  const url = 'https://osm-stats-api.azurewebsites.net/group-summaries/' + hashtagsString;
 
   $.getJSON(url, function (hashtagData) {
     // If no hashtags contain data, remove the partner graphs entirely
@@ -346,7 +346,7 @@ function getGroupActivityStats (hashtags) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
                    'metrics according to the Missing Maps endpoint at ' +
-                   'https://osmstats.redcross.org/group-summaries/' +
+                   'https://osm-stats-api.azurewebsites.net/group-summaries/' +
                    hashtagsString + '. The partner graphs will not be displayed.');
     } else {
       // For each hashtag, sum the total edits across all categories,
