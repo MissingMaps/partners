@@ -19,7 +19,7 @@ flickr-setId: 72157655209554272
 
 primary-hashtag: jlr
 subhashtags:
-  - avivaca
+  - jlr1
 
 
 tm-projects:
