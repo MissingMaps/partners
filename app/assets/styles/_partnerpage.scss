@@ -311,7 +311,7 @@ h1 {
     margin: .5em;
   }
   &.placeholder {
-    background-image: url('/assets/graphics/content/logos/MMlogo-Outlined.svg');
+    background-image: url('/partners/assets/graphics/content/logos/MMlogo-Outlined.svg');
     background-color: $lightgrey;
     background-repeat: no-repeat;
     background-position: center;
@@ -499,10 +499,13 @@ h1 {
 .Team-User-Nav {
   width: 80%;
   height: 36px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   clear: both;
   text-align: left;
+  menuitem {
+    cursor: pointer;
+  }
+  
   p {
     display: inline-block;
     float: initial;

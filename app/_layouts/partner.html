@@ -2,6 +2,50 @@
 layout: default
 ---
 
+{% if page.name == "microsoft" %}
+{% include header_msft.html %}
+
+<script>
+  // creates PT object for each page. Including lang for future use
+  var PT = { lang: '{{page.lang}}' };
+</script>
+
+<h1>{{ page.name }}</h1>
+
+<section id = "Primary">
+  {% include intro_msft.html %}
+</section>
+
+<section id = "Stats">
+  {% include stats_msft.html %}
+</section>
+
+<section class="Get-Started">
+  {% include get_started_msft.html %}
+</section>
+
+<section class = "Current-Projects">
+  {% include projects_msft.html %}
+</section>
+
+<section class="Event">
+  {% include event_msft.html %}
+</section>
+
+<section class="Log-Time">
+  {% include log_time_msft.html %}
+</section>
+
+<section class = "Teams">
+  {% include teams_msft.html %}
+</section>
+
+<section class = "Community">
+  {% include community_msft.html %}
+</section>
+
+{% include footer_msft.html %}
+{% else %}
 {% include header.html %}
 
 <script>
@@ -11,7 +55,7 @@ layout: default
 
 <h1>{{ page.name }}</h1>
 
- <section id = "Primary">
+<section id = "Primary">
   {% include intro.html %}
 </section>
 
@@ -23,13 +67,9 @@ layout: default
   {% include teams.html %}
 </section>
 
-<section id = "Events">
-  <h1>Upcoming Events</h1>
-  {% include events.html %}
-</section>
-
 <section class = "Community">
   {% include community.html %}
 </section>
 
 {% include footer.html %}
+{% endif %}
