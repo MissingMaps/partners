@@ -138,5 +138,3 @@ Compiles the site loading the `_config-prod.yml` alongside `_config.yml`. The ja
 ```
 $ npm run build-prod
 ```
-
-test build
