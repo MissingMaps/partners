@@ -19,7 +19,29 @@ flickr-setId: 72157655209554272
 
 primary-hashtag: jlr
 subhashtags:
-  - jlr1
+  - bmm1
+  - bmm2
+  - bmm3
+  - bmm4
+  - bmm5
+  - bmm6
+  - bmm7
+  - bmm8
+  - bmm9
+  - bmm10
+  - bmm11
+  - bmm12
+  - bmm13
+  - bmm14
+  - bmm15
+  - bmm16
+  - vic1
+  - vic2
+  - vic3
+  - vic4
+  - vic5
+  - vic6
+  
 
 
 tm-projects:
