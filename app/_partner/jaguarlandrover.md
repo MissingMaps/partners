@@ -4,7 +4,7 @@ lang: en
 permalink: /jaguarlandrover/
 
 id: jaguarlandrover
-name: Jaguar Land Rover
+name: JLR
 logo: jlr.png
 contact:
 
