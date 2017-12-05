@@ -35,6 +35,8 @@ subhashtags:
   - bmm14
   - bmm15
   - bmm16
+  - bmm17
+  - bmm18
   - vic1
   - vic2
   - vic3
