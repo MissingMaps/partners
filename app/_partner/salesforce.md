@@ -5,8 +5,8 @@ permalink: /salesforce/
 
 id: salesforce
 name: salesforce
-logo: 
-contact:
+logo: Salesforce.svg
+contact: ahigginbottom@salesforce.com
 
 flickr: 
 twitter: https://www.twitter.com/SalesforceOrg
