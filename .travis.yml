@@ -3,7 +3,7 @@ rvm:
   - 2.3.1
 env:
   global:
-  - TRAVIS_NODE_VERSION="v8"
+  - TRAVIS_NODE_VERSION="v7.1.0"
   - CXX=g++-4.8
   - DEPLOY_BRANCH=master
   - GH_REF=github.com/MissingMaps/partners
