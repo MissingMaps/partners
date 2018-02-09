@@ -34,12 +34,12 @@ subhashtags:
   - ciscosoe
 
 tm-projects:
-- id: 1603
-  desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities."
 - id: 1848
   desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities."
 - id: 2011
   desc: "The American Red Cross is partnering with the Vietnam Red Cross to increase the resilience and capacities of 24 disaster prone communes in Quang Nam and Quang Ngai provinces. The project will see to address the particular needs and capacities of vulnerable groups, including women, children, disabled people, the elderly, and those who reside in the most disaster-prone areas."
+- id: 2194
+  desc: "The American Red Cross is a member of the Measles & Rubella Initiative, which seeks to eliminate these diseases. We will be conducting a measles campaign in Malawi with follow up in the community by the Red Cross network. This task will create a basemap of the area in order to help Red Cross teams to plan logistics and prepare for mobile data collection and field mapping in the areas. We will initially focus on these areas of Lilongwe."
 - id: 2668
   desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities."
 ---
