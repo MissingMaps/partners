@@ -66,6 +66,13 @@ function makeProject (project, projectOrder) {
   // Updates Progress Bar
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
   $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
+  
+  // modifies start mapping button if project is not published
+  if (project.status !== "PUBLISHED") {
+    $(`ul li:nth-child(${projectOrder}) .HOT-Title a`).html(`${project.status}`);
+    $(`ul li:nth-child(${projectOrder}) .HOT-Title a`).attr('href',`#`);
+    $(`ul li:nth-child(${projectOrder}) .HOT-Title a`).addClass(`disabled`);
+  }
 
   // Adds Project variables to the cards
   $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.name}</b>`);
