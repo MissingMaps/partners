@@ -2908,6 +2908,13 @@ img {
   display: none;
 }
 
+.btn.disabled {
+  cursor: not-allowed;
+  border: 1px solid #dbdbda;
+  background-color: #E7E7E7;
+  color: #606161;
+}
+
 /*
  * jQuery FlexSlider v2.3.0
  * http://www.woothemes.com/flexslider/
