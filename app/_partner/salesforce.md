@@ -19,7 +19,6 @@ flickr-setId:
 
 primary-hashtag: salesforce
 subhashtags:
-  - salesforcelondon
   - SalesforceCA
   - SalesforceBR
   - SalesforceMX
