@@ -302,7 +302,7 @@ function generateUserUrl (userName) {
 
 function getUserActivityStats (hashtag) {
   // Connect hashtags to /top-users/ Missing Maps API endpoint
-  const url = 'http://osm-stats-api.azurewebsites.net/top-users/' + hashtag;
+  const url = 'https://osm-stats-api.azurewebsites.net/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
     // For each user, collect the total edits across all categories
