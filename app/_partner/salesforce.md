@@ -19,34 +19,33 @@ flickr-setId:
 
 primary-hashtag: salesforce
 subhashtags:
-  - salesforcelondon
-  - SalesforceCA
-  - SalesforceBR
-  - SalesforceMX
-  - SalesforceWest
-  - SalesforceCentral
-  - SalesforceEast
-  - SalesforceAU
-  - SalesforceHK
-  - SalesforceIN
-  - SalesforceKR
-  - SalesforceNZ
-  - SalesforceSG
-  - SalesforceBE
-  - SalesforceDK
-  - SalesforceFI
-  - SalesforceFR
-  - SalesforceDE
-  - SalesforceIE
-  - SalesforceIL
-  - SalesforceIT
-  - SalesforceMA
-  - SalesforceNL
-  - SalesforceES
-  - SalesforceSE
-  - SalesforceCH
-  - SalesforceGB
-  - SalesforceJP
+  - salesforceca
+  - salesforcebr
+  - salesforcemx
+  - salesforcewest
+  - salesforcecentral
+  - salesforceeast
+  - salesforceau
+  - salesforcehk
+  - salesforcein
+  - salesforcekr
+  - salesforcenz
+  - salesforcesg
+  - salesforcebe
+  - salesforcedk
+  - salesforcefi
+  - salesforcefr
+  - salesforcede
+  - salesforceie
+  - salesforceil
+  - salesforceit
+  - salesforcema
+  - salesforcenl
+  - salesforcees
+  - salesforcese
+  - salesforcech
+  - salesforcegh
+  - salesforcejp
 
 tm-projects:
   - id: 4135
