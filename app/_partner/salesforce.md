@@ -46,7 +46,7 @@ subhashtags:
   - salesforcech
   - salesforcegh
   - salesforcejp
-  - salesforcegb
+  - salesforceuk
 
 tm-projects:
   - id: 4135
