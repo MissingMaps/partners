@@ -8,14 +8,14 @@ name: salesforce
 logo: Salesforce.svg
 contact: ahigginbottom@salesforce.com
 
-flickr: 
+flickr: https://www.flickr.com/photos/140736557@N04/sets/72157666872027428
 twitter: https://www.twitter.com/SalesforceOrg
 facebook:
 hoursname:
 hourslink:
 
-flickr-apikey: 
-flickr-setId: 
+flickr-apikey: b4f0178b524610373b2b65bda51979ba
+flickr-setId: 72157666872027428
 
 primary-hashtag: salesforce
 subhashtags:
