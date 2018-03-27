@@ -270,7 +270,7 @@ function setupGraphs () {
 
 // Returns svg link to Missing Maps user endpoint
 function generateUserUrl (userName) {
-  const userUrl = 'http://www.missingmaps.org/users/#/' + userName.replace(/\s+/g, '-').toLowerCase();
+  const userUrl = 'http://www.missingmaps.org/users/#/' + userName;
   return `<a xlink:href="${userUrl}" target="_blank" style="text-decoration:none">${userName}</a>`;
 }
 
