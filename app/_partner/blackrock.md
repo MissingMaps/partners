@@ -8,7 +8,7 @@ name: BlackRock
 logo: blackrock.png
 contact: rebecca@hotosm.org
 
-flickr:
+flickr: https://www.flickr.com/photos/140736557@N04/albums/72157667905063518
 twitter: https://www.twitter.com/blackrock
 facebook:
 hoursname:
