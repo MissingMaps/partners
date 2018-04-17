@@ -14,8 +14,8 @@ facebook:
 hoursname:
 hourslink:
 
-flickr-apikey:
-flickr-setId:
+flickr-apikey: b4f0178b524610373b2b65bda51979ba
+flickr-setId: 72157667905063518
 
 primary-hashtag: blackrock
 subhashtags:
