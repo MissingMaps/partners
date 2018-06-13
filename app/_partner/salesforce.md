@@ -53,6 +53,7 @@ subhashtags:
   - CSGEMESouth
   - CSGEMEAUKI
   - CSGEMEADelivery
+  - SalesforceCBU
 
 
 tm-projects:
