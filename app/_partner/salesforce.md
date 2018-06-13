@@ -51,15 +51,15 @@ subhashtags:
   - CSGEMEANorth
   - CSGEMEACentral
   - CSGEMESouth
-  - CSGEMEAUK
+  - CSGEMEAUKI
   - CSGEMEADelivery
 
 
 tm-projects:
-  - id: 3784
-    desc: "We believe in the need to be prepared for the recovery and response of any natural disasters and unpredictable socio-structural changes that may have negative consequences. Earthquakes and then floods are the main disasters that take place in Turkey. We believe it is important to start working from now on mapping and updating the maps continuously. As of 2016, Küçükçekmece has a population of 766.609, inhabiting 21 Mahalles (neighbourhoods), and the population density is 19,952 per km2. the area of Küçükçekmece district is 37,52 KM2. It is estimated that there were around 27,419 registered Syrian refugees in the district, according to the DGMM report of Turkish Ministry of Interior."
   - id: 4439
     desc: "Since the second half of 2015, the Mopti region and the Douentza area have begun to experience a fairly significant disruption of security by armed groups. The situation and conflict dynamics in the area have already seriously affected the health and humanitarian situation in and around Douentza. The conflict is expected to continue and strengthen, the health system continues to deteriorate and access for aid workers becomes more complicated. The malaria season and annual hunger gap (a period when there is little or no fresh produce available) begins in June. All these coupled factors make the population situation very precarious. Up-to-date maps are essential to know where the population is living, to better plan our resources to reach populations in danger more quickly and to manage the safety of our teams working in the Douentza area in Mali."
+  - id: 4492
+    desc: "MSF teams working in Niger state, northern Nigeria, respond to a variety of different health needs. These include emergency response to disease outbreaks across the area. Accurate maps of the area will assist emergency teams with epidemiological analysis, disease surveillance and logistical planning. The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises: disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur. This task was generated through Mapswipe. All satellite imagery has been reviewed for containing buildings."
   - id: 4277
     desc: "BUILDINGS ONLY mapping, no need to map the roads. An escalation of in security in DRC has led to over 2043 new refugee have entered Uganda between the dates of 3rd and 5th March. This has brought the total number of new arrivals to since 1st January 2018 to 48,105 In a rapidly developing situation such as this, it is vital that accurate and up-to-date mapping information is available to allow UNHCR and partners to respond to needs more effectively and efficiently. The maps that you create in this task will enable sanitation facilities - including latrines, hand washing points and hygiene promotion activities - to be effectively provisioned for the people living there."
   - id: 4135
