@@ -19,22 +19,21 @@ flickr-setId: 72157666872027428
 
 primary-hashtag: salesforceleads
 subhashtags:
-  - salesforceLSbe
-  - salesforceLSdk
-  - salesforceLSfi
-  - salesforceLSfr
-  - salesforceLSde
-  - salesforceLSie
-  - salesforceLSil
-  - salesforceLSit
-  - salesforceLSma
-  - salesforceLSnl
-  - salesforceLSes
-  - salesforceLSse
-  - salesforceLSch
-  - salesforceLSuk
-  - salesforceremoteLS
-
+  - salesforcelsbe
+  - salesforcelsdk
+  - salesforcelsfi
+  - salesforcelsfr
+  - salesforcelsde
+  - salesforcelsie
+  - salesforcelsil
+  - salesforcelsit
+  - salesforcelsma
+  - salesforcelsnl
+  - salesforcelses
+  - salesforcelsse
+  - salesforcelsch
+  - salesforcelsuk
+  - salesforceremotels
 
 tm-projects:
   - id: 4358
