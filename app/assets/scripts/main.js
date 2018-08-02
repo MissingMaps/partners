@@ -317,6 +317,13 @@ function generateHashtagUrl (hashtag) {
   return `<a xlink:href="${hashtagUrl}" target="_blank" style="text-decoration: none">#${hashtag}</a>`;
 }
 
+// returns the total sum of the hashtg sum counts for buildings and roads in getGroupActivityStats
+function statsSum ( obj ) {
+  return Object.keys( obj ).reduce(function (sum, key) {
+    return sum + obj[key].value;
+  }, 0);
+}
+
 function getGroupActivityStats (hashtags, primaryHashtag) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
@@ -332,14 +339,7 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
                    hashtagsString + '. The partner graphs will not be displayed.');
     } else {
       const primaryData = hashtagData[primaryHashtag];
-      const primaryBuildingCount = primaryData.building_count_add + primaryData.building_count_mod;
-      const primaryRoadCount = primaryData.road_count_add + primaryData.road_count_mod;
 
-      // update the top-level stats in the hero
-      $('#stats-roadCount').html(primaryRoadCount.toLocaleString());
-      $('#stats-buildingCount').html(primaryBuildingCount.toLocaleString());
-      $('#stats-usersCount').html(primaryData.users.toLocaleString());
-      $('#stats-editsCount').html(primaryData.edits.toLocaleString());
 
       // For each hashtag, sum the total edits across all categories,
       // skipping over hashtags if there are no metrics (this shouldn't
@@ -375,6 +375,9 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
         return acc;
       }, []).sort((a, b) => b.value - a.value);
 
+      // Sum all the building edits for all the subhashtags combined
+      const subhashtagsBldngCount = statsSum(bldngSum);
+
       // For each hashtag, sum the total road kilometers edited,
       // skipping over hashtags if there are no metrics
       const roadsSum = hashtags.reduce(function (acc, ht) {
@@ -386,6 +389,15 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
+
+      // Sum all the building edits for all the subhashtags combined
+      const subhashtagsRoadsCount = statsSum(roadsSum);
+
+            // update the top-level stats in the hero
+      $('#stats-roadCount').html(subhashtagsRoadsCount.toLocaleString());
+      $('#stats-buildingCount').html(subhashtagsBldngCount.toLocaleString());
+      $('#stats-usersCount').html(primaryData.users.toLocaleString());
+      $('#stats-editsCount').html(primaryData.edits.toLocaleString());
 
       // Spawn a chart function with listening events for each of the metrics
       var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
