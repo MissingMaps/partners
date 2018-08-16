@@ -36,6 +36,9 @@ subhashtags:
   - salesforceremotels
   - salesforceslde
   - salesforceslch
+  - salesforcesldk
+  - salesforceslfi
+  - salesforceslse
 
 tm-projects:
   - id: 4892
