@@ -34,6 +34,8 @@ subhashtags:
   - salesforcelsch
   - salesforcelsuk
   - salesforceremotels
+  - salesforceslde
+  - salesforceslch
 
 tm-projects:
   - id: 4892
