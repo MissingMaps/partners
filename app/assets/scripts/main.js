@@ -586,7 +586,7 @@ function statsSum ( obj ) {
   }, 0);
 }
 
-function getGroupActivityStatsSalesforce (hashtags, primaryHashtag) {
+function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
   const url = 'https://osm-stats-production-api.azurewebsites.net/group-summaries/' + hashtagsString;
@@ -716,7 +716,7 @@ checkHashtags(PT.subHashtags);
 setupGraphs();
 // Populates hero + initial groups graph via Missing Maps API
 if (PT.mainHashtag == 'salesforcels') {
-  getGroupActivityStatsSalesforce(PT.subHashtags, PT.mainHashtag);
+  getGroupActivityStatsSubHashtag(PT.subHashtags, PT.mainHashtag);
 } else {
   getGroupActivityStats(PT.subHashtags, PT.mainHashtag);
 }
