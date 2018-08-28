@@ -579,6 +579,125 @@ function showAlternatePoster () {
   });
 }
 
+// returns the total sum of the hashtg sum counts for buildings and roads in getGroupActivityStats
+function statsSum ( obj ) {
+  return Object.keys( obj ).reduce(function (sum, key) {
+    return sum + obj[key].value;
+  }, 0);
+}
+
+function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
+  // Connect hashtags to /group-summaries/ Missing Maps API endpoint
+  const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
+  const url = 'https://osm-stats-production-api.azurewebsites.net/group-summaries/' + hashtagsString;
+
+  $.getJSON(url, function (hashtagData) {
+    // If no hashtags contain data, remove the partner graphs entirely
+    if ($.isEmptyObject(hashtagData)) {
+      $('.Team-User-Container').css('display', 'none');
+      console.warn('WARNING >> None of the secondary hashtags contain any ' +
+                   'metrics according to the Missing Maps endpoint at ' +
+                   'https://osm-stats-production-api.azurewebsites.net/group-summaries/' +
+                   hashtagsString + '. The partner graphs will not be displayed.');
+    } else {
+      const primaryData = hashtagData[primaryHashtag];
+
+
+      // For each hashtag, sum the total edits across all categories,
+      // skipping over hashtags if there are no metrics (this shouldn't
+      // happen at the API level, but good to use best-practices).
+      // The reduce patterns below are compareable to Array.prototype.map,
+      // with the difference that there does not need to be a 1:1 match
+      // between input and output array length
+      const hashtags = Object.keys(hashtagData).filter(x => x !== primaryHashtag);
+
+      const totalSum = hashtags.reduce(function (acc, ht) {
+        const vals = hashtagData[ht];
+        if (!$.isEmptyObject(vals)) {
+          const sum = vals.building_count_add +
+                      vals.building_count_mod +
+                      vals.road_count_add +
+                      vals.road_count_mod +
+                      vals.waterway_count_add +
+                      vals.poi_count_add;
+          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
+
+      // For each hashtag, sum the total building edits,
+      // skipping over hashtags if there are no metrics
+      const bldngSum = hashtags.reduce(function (acc, ht) {
+        const vals = hashtagData[ht];
+        if (!$.isEmptyObject(vals)) {
+          const sum = vals.building_count_add +
+                      vals.building_count_mod;
+          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
+
+      // Sum all the building edits for all the subhashtags combined
+      const subhashtagsBldngCount = statsSum(bldngSum);
+
+      // For each hashtag, sum the total road kilometers edited,
+      // skipping over hashtags if there are no metrics
+      const roadsSum = hashtags.reduce(function (acc, ht) {
+        const vals = hashtagData[ht];
+        if (!$.isEmptyObject(vals)) {
+          const sum = Math.round(vals.road_km_add +
+                      vals.road_km_mod);
+          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
+
+      // Sum all the building edits for all the subhashtags combined
+      const subhashtagsRoadsCount = statsSum(roadsSum);
+
+      const usersSum = hashtags.reduce(function (acc, ht) {
+        const vals = hashtagData[ht];
+        if (!$.isEmptyObject(vals)) {
+          const sum = vals.users;
+          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
+
+      const usersTotal = statsSum(usersSum);
+
+      const contributionsSum = hashtags.reduce(function (acc, ht) {
+        const vals = hashtagData[ht];
+        if (!$.isEmptyObject(vals)) {
+          const sum = vals.edits;
+          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
+
+      const editsTotal = statsSum(contributionsSum);
+
+            // update the top-level stats in the hero
+      $('#stats-roadCount').html(subhashtagsRoadsCount.toLocaleString());
+      $('#stats-buildingCount').html(subhashtagsBldngCount.toLocaleString());
+      $('#stats-usersCount').html(usersTotal.toLocaleString());
+      $('#stats-editsCount').html(editsTotal.toLocaleString());
+
+      // Spawn a chart function with listening events for each of the metrics
+      var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
+      var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
+      var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+
+      // On window resize, run window resize function on each chart
+      d3.select(window).on('resize', function () {
+        c1.resize();
+        c2.resize();
+        c3.resize();
+      });
+    }
+  });
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------
@@ -596,7 +715,11 @@ checkHashtags(PT.subHashtags);
 // Sets up switcher/ loader for group and user graphs
 setupGraphs();
 // Populates hero + initial groups graph via Missing Maps API
-getGroupActivityStats(PT.subHashtags, PT.mainHashtag);
+if (PT.mainHashtag == 'salesforcels') {
+  getGroupActivityStatsSubHashtag(PT.subHashtags, PT.mainHashtag);
+} else {
+  getGroupActivityStats(PT.subHashtags, PT.mainHashtag);
+}
 
 // Populate the Flickr carousel
 if (PT.flickrApiKey && PT.flickrSetId) {
