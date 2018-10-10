@@ -333,7 +333,7 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
     } else {
       const primaryData = hashtagData[primaryHashtag];
       const primaryBuildingCount = primaryData.building_count_add + primaryData.building_count_mod;
-      const primaryRoadCount = primaryData.road_count_add + primaryData.road_count_mod;
+      const primaryRoadCount = primaryData.road_km_add + primaryData.road_km_mod;
 
       // update the top-level stats in the hero
       $('#stats-roadCount').html(primaryRoadCount.toLocaleString());
@@ -354,8 +354,8 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
         if (!$.isEmptyObject(vals)) {
           const sum = vals.building_count_add +
                       vals.building_count_mod +
-                      vals.road_count_add +
-                      vals.road_count_mod +
+                      vals.road_km_add +
+                      vals.road_km_mod +
                       vals.waterway_count_add +
                       vals.poi_count_add;
           acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
@@ -616,8 +616,8 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
         if (!$.isEmptyObject(vals)) {
           const sum = vals.building_count_add +
                       vals.building_count_mod +
-                      vals.road_count_add +
-                      vals.road_count_mod +
+                      vals.road_km_add +
+                      vals.road_km_mod +
                       vals.waterway_count_add +
                       vals.poi_count_add;
           acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
