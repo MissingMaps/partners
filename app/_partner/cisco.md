@@ -36,8 +36,6 @@ subhashtags:
 tm-projects:
   - id: 2011
     desc: "The American Red Cross is partnering with the Vietnam Red Cross to increase the resilience and capacities of 24 disaster prone communes in Quang Nam and Quang Ngai provinces. The project will see to address the particular needs and capacities of vulnerable groups, including women, children, disabled people, the elderly, and those who reside in the most disaster-prone areas."
-  - id: 2668
-    desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities."
   - id: 3965
     desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, we'll be mapping communities across the region."
   - id: 3996
