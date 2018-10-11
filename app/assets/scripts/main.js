@@ -333,7 +333,7 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
     } else {
       const primaryData = hashtagData[primaryHashtag];
       const primaryBuildingCount = primaryData.building_count_add + primaryData.building_count_mod;
-      const primaryRoadCount = primaryData.road_km_add + primaryData.road_km_mod;
+      const primaryRoadCount = Math.round(primaryData.road_km_add + primaryData.road_km_mod);
 
       // update the top-level stats in the hero
       $('#stats-roadCount').html(primaryRoadCount.toLocaleString());
