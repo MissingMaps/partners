@@ -13,9 +13,6 @@ facebook: https://www.facebook.com/americangeo
 
 primary-hashtag: americangeo
 subhashtags:
-  - teachosm
-  - geography2050
-  - agsgeographyteacherfellows
   - HVJAPHUG
   - OneGainesville
   - fremd
@@ -28,4 +25,5 @@ subhashtags:
   - aastmyrtlebeach
   - DragonsMap
   - PGPCS
+
 ---
