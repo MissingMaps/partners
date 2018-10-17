@@ -16,5 +16,16 @@ subhashtags:
   - teachosm
   - geography2050
   - agsgeographyteacherfellows
-
+  - HVJAPHUG
+  - OneGainesville
+  - fremd
+  - cincoranch
+  - HCHS
+  - mappingredhawks
+  - Mashpee
+  - ATMourningHS
+  - WeAreCosby
+  - aastmyrtlebeach
+  - DragonsMap
+  - PGPCS
 ---
