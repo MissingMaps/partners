@@ -32,6 +32,7 @@ subhashtags:
   - cisco_osp
   - cisco_uk
   - ciscosoe
+  - ciscooneops
 
 tm-projects:
   - id: 2011
