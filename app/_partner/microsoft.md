@@ -27,8 +27,6 @@ subhashtags:
   - msft*
 
 tm-projects:
-- id: 1594
-  desc: "Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in Central America, South America, and the Caribbean to address local hazards and vulnerabilities in dozens of disaster-prone communities."
 - id: 4756 
   desc: "In the lake basin region of Chad, the influx of the displaced population is exerting pressure over scarce essential resources. This has resulted in a sharp increase of humanitarian needs in food, healthcare and water, hygiene and sanitation for both IDPs and host communities."
 - id: 4757
