@@ -28,11 +28,11 @@ subhashtags:
 
 tm-projects:
 - id: 5406
-  desc: "Better mapping of Saipan is needed for the American Red Cross to plan and coordinate the emergency response”
+  desc: "Better mapping of Saipan is needed for the American Red Cross to plan and coordinate the emergency response."
 - id: 4756
   desc: "In the lake basin region of Chad, the influx of the displaced population is exerting pressure over scarce essential resources. This has resulted in a sharp increase of humanitarian needs in food, healthcare and water, hygiene and sanitation for both IDPs and host communities."
 - id: 4757
-  desc: "In the lake basin region of Chad, the influx of the displaced population is exerting pressure over scarce essential resources. This has resulted in a sharp increase of humanitarian needs in food, healthcare and water, hygiene and sanitation for both IDPs and host communities." 
+  desc: "In the lake basin region of Chad, the influx of the displaced population is exerting pressure over scarce essential resources. This has resulted in a sharp increase of humanitarian needs in food, healthcare and water, hygiene and sanitation for both IDPs and host communities."
 - id: 4765
   desc: "In the lake basin region of Chad, the influx of the displaced population is exerting pressure over scarce essential resources. This has resulted in a sharp increase of humanitarian needs in food, healthcare and water, hygiene and sanitation for both IDPs and host communities."
 - id: 4832
