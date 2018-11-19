@@ -352,12 +352,12 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
       const totalSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
-          const sum = vals.building_count_add +
+          const sum = Math.round(vals.building_count_add +
                       vals.building_count_mod +
                       vals.road_km_add +
                       vals.road_km_mod +
                       vals.waterway_count_add +
-                      vals.poi_count_add;
+                      vals.poi_count_add);
           acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
         }
         return acc;
@@ -614,12 +614,12 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
       const totalSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
-          const sum = vals.building_count_add +
+          const sum = Math.round(vals.building_count_add +
                       vals.building_count_mod +
                       vals.road_km_add +
                       vals.road_km_mod +
                       vals.waterway_count_add +
-                      vals.poi_count_add;
+                      vals.poi_count_add);
           acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
         }
         return acc;
