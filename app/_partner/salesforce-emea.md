@@ -57,7 +57,7 @@ subhashtags:
   - sfcpcbarcelohotels
   - sfcpcbiomerieux
   - sfcpcbnpparibas
-  -sfcpcbouyguestelecom
+  - sfcpcbouyguestelecom
   - sfcpcbudgetboc
   - sfcpcbulgari
   - sfcpcbureauveritas
