@@ -21,10 +21,10 @@ primary-hashtag: salesforceemea
 subhashtags:
   - salesforcefrance
   - sfcpc
-  - sfcpcparis
-  - sfcpcnantes
-  - sfcpclyon
-  - sfcpcgrenoble
+  - sfcpc*
+
+
+
 
 tm-projects:
   - id: 5170
