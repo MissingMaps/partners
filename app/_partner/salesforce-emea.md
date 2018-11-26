@@ -27,6 +27,8 @@ subhashtags:
 
 
 tm-projects:
+  - id: 5522
+    desc: "Monsoon rains have caused severe flooding in the Kerala Region of India. Your help is needed to map affect areas so aid agencies and local responders can better assist in the recovery. HOT has received request of local expert mappers and people doing online coordinated mapping, as well as many people who want to contribute map data asking how to improve and add to OSM data."
   - id: 5170
     desc: "Monsoon rains have caused severe flooding in the Kerala Region of India. Your help is needed to map affect areas so aid agencies and local responders can better assist in the recovery. HOT has received request of local expert mappers and people doing online coordinated mapping, as well as many people who want to contribute map data asking how to improve and add to OSM data."
 ---
