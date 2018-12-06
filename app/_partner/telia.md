@@ -8,14 +8,14 @@ name: telia
 logo: telia.png
 contact: rebecca.firth@hotosm.org
 
-flickr: https://www.flickr.com/photos/140719078@N05/albums/72157704039364914
+flickr: https://www.flickr.com/photos/162530214@N08/albums/72157702897347191
 twitter: https://www.twitter.com/TeliaCompany
 facebook:
 hoursname:
 hourslink:
 
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
-flickr-setId: 72157704039364914
+flickr-setId: 72157702897347191
 
 primary-hashtag: telia
 subhashtags:
