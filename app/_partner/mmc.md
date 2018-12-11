@@ -4,7 +4,7 @@ lang: en
 permalink: /mmc/
 
 id: mmc
-name: mmc
+name: mmcimpact
 logo: mmc.jpg
 contact: rebecca.firth@hotosm.org
 
@@ -22,7 +22,7 @@ subhashtags:
   - marshcares
   - mercercares
   - guycarpentercares
-  - OW4S
+  - ow4s
 
 tm-projects:
   - id: 5410
