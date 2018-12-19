@@ -5,7 +5,7 @@ permalink: /mmc/
 
 id: mmc
 name: mmc
-logo: mmc.jpg
+logo: mmc.png
 contact: rebecca.firth@hotosm.org
 
 flickr: https://www.flickr.com/photos/140719078@N05/albums/72157704039364914
