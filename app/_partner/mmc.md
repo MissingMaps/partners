@@ -8,21 +8,21 @@ name: mmc
 logo: mmc.png
 contact: rebecca.firth@hotosm.org
 
-flickr: https://www.flickr.com/photos/140719078@N05/albums/72157704039364914
+flickr: https://www.flickr.com/photos/162530214@N08/sets/72157676557584408
 twitter: https://www.twitter.com/
 facebook:
 hoursname:
 hourslink:
 
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
-flickr-setId: 72157704039364914
+flickr-setId: 72157676557584408
 
 primary-hashtag: mmcimpact
 subhashtags:
   - marshcares
   - mercercares
   - guycarpentercares
-  - OW4S
+  - ow4s
 
 tm-projects:
   - id: 5410
