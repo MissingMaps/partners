@@ -790,3 +790,16 @@ img{
   color: $lightgrey;
   background-color: $darkestgrey;
 }
+
+/*----------------------------------------------*/
+/* Custom Partners */
+/*----------------------------------------------*/
+
+body.mmc {
+  .Primary-logo-container{
+    width: 350px;
+  }
+  .Primary-logo img {
+    max-width: 350px;
+  }
+}

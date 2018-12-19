@@ -4,8 +4,8 @@ lang: en
 permalink: /mmc/
 
 id: mmc
-name: mmcimpact
-logo: mmc.jpg
+name: mmc
+logo: mmc.png
 contact: rebecca.firth@hotosm.org
 
 flickr: https://www.flickr.com/photos/162530214@N08/sets/72157676557584408
