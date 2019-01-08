@@ -3,8 +3,8 @@ layout: partner
 lang: en
 permalink: /mmc/
 
-id: mmc
-name: mmc
+id: mmcimpact
+name: mmcimpact
 logo: mmc.png
 contact: rebecca.firth@hotosm.org
 
