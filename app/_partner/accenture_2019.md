@@ -8,15 +8,14 @@ name: accenture
 logo: accenture.png
 contact: sabrina.bals@accenture.com
 
-flickr: https://flic.kr/s/aHsmyYqYUX
-twitter: https://twitter.com/AccentureCmty
-facebook: 
+flickr: https://www.flickr.com/photos/162530214@N08/sets/72157705611464735/
+twitter: https://twitter.com/accenture
+facebook: https://www.facebook.com/accenture
 hoursname:
 hourslink:
 
-
-flickr-apikey:
-flickr-setId:
+flickr-apikey: b4f0178b524610373b2b65bda51979ba
+flickr-setId: 72157705611464735
 
 primary-hashtag: accenture
 subhashtags:
