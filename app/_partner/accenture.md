@@ -1,7 +1,7 @@
 ---
 layout: partner
 lang: en
-permalink: /accenture/
+permalink: /acn/
 
 id: accenture
 name: accenture
