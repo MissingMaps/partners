@@ -8,7 +8,7 @@ name: hp
 logo:
 contact:
 
-flickr: https://www.flickr.com/
+flickr: 
 twitter: https://twitter.com/HP
 facebook:
 hoursname:
@@ -19,7 +19,8 @@ flickr-apikey:
 flickr-setId:
 
 primary-hashtag: hp
-subhashtags: hpinspiresgiving
+subhashtags: 
+  - hpinspiresgiving
 
 tm-projects:
   - id: 4644
