@@ -18,7 +18,7 @@ links:
   - title: Register your Mapathon
     link: https://www.surveymonkey.com/r/MMCmapping
   - title: Intro Presentation
-    link: http://cdn.hotosm.org/MMC+Mapathon+Introduction+Presentation.pptx
+    link: http://cdn.hotosm.org/MMC+Mapathon+Introduction+Presentation_1.0.pptx
   - title: Trainer Presentation
     link: 
 
