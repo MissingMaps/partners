@@ -19,8 +19,6 @@ links:
     link: https://www.surveymonkey.com/r/MMCmapping
   - title: Intro Presentation
     link: http://cdn.hotosm.org/MMC+Mapathon+Introduction+Presentation_1.0.pptx
-  - title: Trainer Presentation
-    link: 
 
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
 flickr-setId: 72157676557584408
