@@ -33,14 +33,14 @@
     <div class = "HOT-Nav">
       <div class = "HOT-Nav-Projects"></div>
     </div>
+    {% if page.links %}
     <div class = "Partnership-Resources">
-      {% if page.links %}
       <h3> Resources </h3>
       {% for l in page.links limit:3 %}
         <a href="{{ l.link }}" class="btn btn-blue">{{ l.title }}</a>
       {% endfor %}
-      {% endif %}
     </div>
+    {% endif %}
   </div>
   <div class = "GetInvolved">
 
