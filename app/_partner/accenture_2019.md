@@ -22,7 +22,7 @@ subhashtags:
   - acn*
 
 tm-projects:
-  - id: 5262
-    desc: "On 2018 August 1st, the Ministry of Health has announced the 10th Ebola outbreak in the Democratic Republic of the Congo. This task aims to update the inhabited areas and map visible infrastructures in the villages north of Lubero."
+- id: 5682
+    desc: "Although Thailand has made significant progress in reaching the government's goal of Malaria elimination by 2024, cases are still persistent in the border regions. By tracing structures you will help those on the ground to better understand settlement patterns, estimate the number of households in a village, target interventions, and better plan for control operations."
 
 ---
