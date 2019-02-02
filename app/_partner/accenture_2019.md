@@ -23,6 +23,6 @@ subhashtags:
 
 tm-projects:
 - id: 5682
-    desc: "Although Thailand has made significant progress in reaching the government's goal of Malaria elimination by 2024, cases are still persistent in the border regions. By tracing structures you will help those on the ground to better understand settlement patterns, estimate the number of households in a village, target interventions, and better plan for control operations."
+  desc: "Although Thailand has made significant progress in reaching the government's goal of Malaria elimination by 2024, cases are still persistent in the border regions. By tracing structures you will help those on the ground to better understand settlement patterns, estimate the number of households in a village, target interventions, and better plan for control operations."
 
 ---
