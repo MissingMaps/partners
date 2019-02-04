@@ -37,7 +37,7 @@
     <div class = "Partnership-Resources">
       <h3> Resources </h3>
       {% for l in page.links limit:3 %}
-        <a href="{{ l.link }}" class="btn btn-blue">{{ l.title }}</a>
+        <a href="{{ l.link }}" target="_blank" class="btn btn-blue">{{ l.title }}</a>
       {% endfor %}
     </div>
     {% endif %}
