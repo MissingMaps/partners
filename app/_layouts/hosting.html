@@ -59,7 +59,7 @@ var PT = { lang: '{{page.lang}}' };
         <li>Establish method for capturing who attended the event (ex. Setup a registration table using a log sheet)</li>
         <li>Pick a task from the <a href="{{ site.path_prefix }}/microsoft/">Microsoft Missing Maps Partner Page</a></li>
         <li>Identify a group hashtag to track event progress</li>
-        <li>Print mapathon resources including <a href="{{ site.path_prefix }}/assets/docs/Step-by-step guide to hosting a mapathon_msft.pdf" download>step-by-step mapping guide<a/> and <a href="{{ site.path_prefix }}/assets/docs/Project number and hashtag handout.docx" download>project number and hashtag handout</a></li>
+        <li>Print mapathon resources including <a href="{{ site.path_prefix }}/assets/docs/Step-by-step guide to hosting a mapathon.pdf" download>step-by-step mapping guide<a/> and <a href="{{ site.path_prefix }}/assets/docs/Project number and hashtag handout.docx" download>project number and hashtag handout</a></li>
         <li>Order snacks (optional)</li>
       </ul>
     </div>
@@ -113,7 +113,7 @@ var PT = { lang: '{{page.lang}}' };
     </div>
     <div class="right">
       <ul>
-        <li><a href="{{ site.path_prefix }}/assets/docs/Step-by-step guide to hosting a mapathon_msft.pdf" download>Step-by-Step Guide to Hosting a Mapathon</a></li>
+        <li><a href="{{ site.path_prefix }}/assets/docs/Step-by-step guide to hosting a mapathon.pdf" download>Step-by-Step Guide to Hosting a Mapathon</a></li>
         <li><a href="{{ site.path_prefix }}/assets/docs/Invitation template.docx" download>Invitation template</a></li>
         <li><a href="{{ site.path_prefix }}/assets/docs/Guide for using hashtags and the leaderboard (MSFT).pdf" download>Guide to using hashtags and the leaderboard</a></li>
         <li><a href="https://arcmaps.s3.amazonaws.com/share/Missing%20Maps%20Presentations/FacilitationDeckv102018MSFT.pptx" download>Missing Maps presentation</a></li>
@@ -143,4 +143,148 @@ var PT = { lang: '{{page.lang}}' };
 </section>
 
 {% include footer_msft.html %}
+
+{% elsif page.name == "aws" %}
+
+{% include header_aws.html %}
+
+<script>
+// creates PT object for each page. Including lang for future use
+var PT = { lang: '{{page.lang}}' };
+</script>
+
+<section id="Title">
+  <div class="Primary_Container">
+    <h1>Hosting a Mapathon</h1>
+  </div>
+</section>
+
+<section id="About">
+  <div class="Primary_Container">
+    <p>A mapathon allows volunteers the opportunity to digitally connect and map the most vulnerable places in the developing world.  As Microsoft employees, our work with Missing Maps helps local and international Non-Governmental Organizations (NGOs) get the data they need to better respond to crises affecting these areas. Up to date maps are important for the success of many humanitarian organizations around the world in responding to disasters. Your time spent volunteering with Missing Maps can have a real impact on the delivery of healthcare in the field.</p>
+  </div>
+</section>
+
+<section id="Steps">
+  <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/msft/123.jpg">
+</section>
+
+<section id="GetStarted">
+  <div class="Primary_Container">
+    <h1>Get Started</h1>
+    <p>As a mapathon host your role is to plan and execute the event.  You will be the one to choose the date, time, and location, invite attendees, invite a facilitator, and follow up with volunteers after the event.</p>
+  </div>
+  <div class="video">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/njxePdKn1pI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div>
+    <a href="#PlanningChecklist" class="btn btn-blue">Planning Checklist</a>
+    <a href="#EventDayChecklist" class="btn btn-blue">Event Day Checklist</a>
+    <a href="#PostEventChecklist" class="btn btn-blue">Post Event Checklist</a>
+    <a href="#Materials" class="btn btn-blue">Materials</a>
+  </div>
+</section>
+
+<section id="PlanningChecklist" class="checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/msft/planning_checklist.png" width="75">
+      <h2>Planning Checklist</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Choose a date and time for your event</li>
+        <li>Recruit volunteers to help plan and facilitate</li>
+        <li>Book a space or conference call</li>
+        <li>Invite employees and remind them to bring their laptops (required) and mice (optional)</li>
+        <li>Establish registration method</li>
+        <li>Establish method for capturing who attended the event (ex. Setup a registration table using a log sheet)</li>
+        <li>Pick a task from the <a href="{{ site.path_prefix }}/aws/">AWS Missing Maps Partner Page</a></li>
+        <li>Identify a group hashtag to track event progress</li>
+        <li>Print mapathon resources including <a href="{{ site.path_prefix }}/assets/docs/Step-by-step guide to hosting a mapathon.pdf" download>step-by-step mapping guide<a/> and <a href="{{ site.path_prefix }}/assets/docs/Project number and hashtag handout.docx" download>project number and hashtag handout</a></li>
+        <li>Order snacks (optional)</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+<section id="EventDayChecklist" class="checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/msft/event_day_checklist.png" width="75">
+      <h2>Event Day Checklist</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Capture attendance information</li>
+        <li>Put out printed resources </li>
+        <li>Load <a href="https://arcmaps.s3.amazonaws.com/share/Missing%20Maps%20Presentations/FacilitationDeckv102018MSFT.pptx" download>Missing Maps presentation</a> and demo pages for the <a href="{{ site.path_prefix }}/aws/">AWS Missing Maps Partner Page</a> and your chosen task</li>
+        <li>Set up snacks</li>
+        <li>Have fun mapping!</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+<section id="PostEventChecklist" class="checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/msft/post_event_checklist.png" width="75">
+      <h2>Post Event Checklist</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Send <a href="{{ site.path_prefix }}/assets/docs/Post event email template_aws.docx" download>recap, thank you mail</a> to attendees</li>
+        <li>Include link to match time for participants who didn’t log at the event</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+<section id="Materials" class="checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/msft/resources.png" width="75">
+      <h2>Training &amp; Event Materials</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="{{ site.path_prefix }}/assets/docs/Step-by-step guide to hosting a mapathon.pdf" download>Step-by-Step Guide to Hosting a Mapathon</a></li>
+        <li><a href="{{ site.path_prefix }}/assets/docs/Invitation template.docx" download>Invitation template</a></li>
+        <li><a href="{{ site.path_prefix }}/assets/docs/Guide for using hashtags and the leaderboard (MSFT).pdf" download>Guide to using hashtags and the leaderboard</a></li>
+        <li><a href="https://arcmaps.s3.amazonaws.com/share/Missing%20Maps%20Presentations/FacilitationDeckv102018MSFT.pptx" download>Missing Maps presentation</a></li>
+        <li><a href="{{ site.path_prefix }}/assets/docs/table_top.jpg" download>Step-by-step mapping handout</a></li>
+        <li><a href="{{ site.path_prefix }}/assets/docs/Project number and hashtag handout.docx" download>Project number and hashtag handout</a></li>
+        <li><a href="https://www.youtube.com/watch?v=MEU9c3NkMg0">Introduction Video – How to Map</a></li>
+        <li><a href="{{ site.path_prefix }}/assets/docs/Missing Maps - FAQs.pdf" download>Mapping FAQs</a></li>
+        <li><a href="{{ site.path_prefix }}/assets/docs/Post event email template_aws.docx" download>Post event email template</a></li>
+        <li><a href="{{ site.path_prefix }}/assets/docs/Missing Maps media guide.pdf" download>Missing Maps media guide</a></li>
+        <li><a href="{{ site.path_prefix }}/assets/docs/staying_engaged.pdf" download>Staying engaged with your American Red Cross &amp; Missing Maps</a></li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+<section id="MapathonSupport">
+  <div class="Primary_Container">
+    <h1>Mapathon Support</h1>
+    <p>The Missing Maps team can support you in several ways. Please reach out to our contacts at the American Red Cross for help with task selection, in-person mapathon facilitation or if you have any questions.</p>
+    <ul>
+      <li><a href="mailto:colin.peterson@redcross.org">Colin Peterson</a></li>
+      <li><a href="mailto:morgan.beach@redcross.org">Morgan Beach</a></li>
+    </ul>
+    <p>In a remote office?  Volunteer mapathon supporters are located around the globe! <a href="http://www.missingmaps.org/host/#helper-map-contents">Check for a volunteer in your area.</a></p>
+  </div>
+</section>
+
+{% include footer_aws.html %}
+
 {% endif %}
