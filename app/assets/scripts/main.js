@@ -232,7 +232,7 @@ function setupGraphs () {
     bldngGraph.parentNode.removeChild(bldngGraph);
     roadsGraph.parentNode.removeChild(roadsGraph);
   }
-  const moreBtn = $('.btn.invert-btn-grn.teams-btn');
+
   const teamLabel = $('.Team-Graph-Title .left');
   const teamUserLabel = $('.Team-User-Graph-Title .left');
   // Sets Users button to Selected, loads Users graphs, hides
@@ -242,9 +242,7 @@ function setupGraphs () {
     $('#Select-Users-Graph').addClass('Selected');
     teamLabel.text('User');
     teamUserLabel.text('User');
-    moreBtn.animate({opacity: 0}, 500, function () {
-      moreBtn.css('display', 'none');
-    });
+
     // Remove existing graphs
     removeExistingGraphs();
     // Gets main hashtag on each partner page via team.html
@@ -258,9 +256,6 @@ function setupGraphs () {
     $('#Select-Teams-Graph').addClass('Selected');
     teamLabel.text('Team');
     teamUserLabel.text('Team');
-    if (PT.subHashtags.length > 10) {
-      moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
-    }
     // Remove existing graphs
     removeExistingGraphs();
     // Gets hashtag array on each partner page via team.html
