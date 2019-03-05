@@ -417,20 +417,7 @@ function Barchart (data, targetElement) {
     // for panning up and down the length of svg bar graph
     const offset = -((data.length - 10) * (barPadding + barHeight)) - 12;
     let expanded = false;
-    $('.teams-btn')
-      .css('display', 'initial')
-      .click(function () {
-        const graphs = $('.Team-User-Graph > svg');
-        if (!expanded) {
-          $('.teams-btn').html('Show initial teams');
-          graphs.animate({marginTop: offset}, 300);
-          expanded = true;
-        } else if (expanded) {
-          $('.teams-btn').html('Show more teams');
-          graphs.animate({marginTop: 0}, 300);
-          expanded = false;
-        }
-      });
+
   }
 
   // Define scales
