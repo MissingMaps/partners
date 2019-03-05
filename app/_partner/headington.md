@@ -21,7 +21,9 @@ primary-hashtag: headingtonschooloxford
 subhashtags:
 
 tm-projects:
-  - id: 5647
-    desc: "Tanzania has a very high incidence of Female Genital Mutilation, extreme poverty, early marriage and Gender Based Violence. NGOs on the ground need better maps to facilitate their outreach work and protect girls at risk of FGM. The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises: disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur."
+  - id: 5696
+    desc: "This project supports efforts to eliminate malaria and other interventions. Your mapping contribution will help prevent the suffering and loss of life this disease causes!"
+  - id: 5650
+    desc: "Tanzania has a very high incidence of Female Genital Mutilation, extreme poverty, early marriage and Gender Based Violence. NGOs on the ground need better maps to facilitate their outreach work and protect girls at risk of FGM."
     
 ---
