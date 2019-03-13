@@ -1,9 +1,9 @@
 ---
 layout: partner
 lang: en
-permalink: /blackrock_2018/
+permalink: /blackrock/
 
-id: blackrock_2018
+id: blackrock
 name: BlackRock
 logo: blackrock.png
 contact: rebecca@hotosm.org
@@ -19,26 +19,35 @@ flickr-setId: 72157667905063518
 
 primary-hashtag: blackrock
 subhashtags:
-  - blackrocksanfrancisco
-  - blackrockseattle
-  - blackrockmilan
-  - blackrockbudapest
-  - blackrocknewyork
-  - blackrockwilmington
-  - blackrockzurich
-  - blackrockgeneva
-  - blackrockfrankfurt
-  - blackrockmunich
-  - blackrockparis
-  - blackrockgurgaon
-  - blackrockmumbai
-  - blackrockhongkong
-  - blackrockmexicocity
-  - blackrocklondon
-  - blackrockedinburgh
-  - blackrockprinceton
-  - blackrocktokyo
-  - blackrocksydney
+  - blackrocksanfrancisco19
+  - blackrockseattle19
+  - blackrockmilan19
+  - blackrockbudapest19
+  - blackrocknyc19
+  - blackrockwilmington19
+  - blackrockzurich19
+  - blackrockgeneva19
+  - blackrockfrankfurt19
+  - blackrockmunich19
+  - blackrockparis19
+  - blackrockgurgaon19
+  - blackrockmumbai19
+  - blackrockhongkong19
+  - blackrockmexicocity19
+  - blackrockmexico19
+  - blackrocklondon19
+  - blackrockedinburgh19
+  - blackrockprinceton19
+  - blackrocktokyo19
+  - blackrocksydney19
+  - blackrockstockholm19
+  - blackrocktoronto19
+  - blackrocksantamonica19
+  - blackrockseoul19
+  - blackrockboston19
+  - blackrocktaipei19
+  - blackrockdenver19
+  - blackrockcopenhagen19
 
 tm-projects:
   - id: 4425
