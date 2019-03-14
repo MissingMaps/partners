@@ -10,7 +10,7 @@ contact:
 
 flickr: https://www.flickr.com/photos/162530214@N08/sets/72157690093115983
 twitter: https://twitter.com/youthmappers
-facebook: 
+facebook: http://www.youthmappers.org/
 hoursname:
 hourslink:
 
