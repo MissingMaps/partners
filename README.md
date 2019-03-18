@@ -42,6 +42,15 @@ These default to MissingMaps properties, and can be left as is if the partner do
 | facebook | Link to Facebook link for the Partner. |
 | benevity | Link to Benevity link for the Partner. |
 
+**Custom links**
+If you want to create a custom link, you can do so with the following code.
+
+```
+links:
+  - title: Website
+    link: http://www.youthmappers.org
+```
+
 **Community**
 
 | Field         | Changes  |
