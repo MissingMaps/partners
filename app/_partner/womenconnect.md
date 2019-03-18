@@ -18,7 +18,8 @@ flickr-apikey: b4f0178b524610373b2b65bda51979ba
 flickr-setId: 72157690093115983
 
 primary-hashtag: youthmapperswomenconnect
-subhashtags:
+subhashtags: 
+  - youthmapperswomenconnect
 
 tm-projects:
   - id: 5756
