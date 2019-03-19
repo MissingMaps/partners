@@ -1,0 +1,502 @@
+@charset "UTF-8";
+body.aws {
+  background-color: white;
+  font-family: 'SegoeUI', 'Open Sans', sans-serif;
+}
+
+body.aws ul,
+body.aws li,
+body.aws ol,
+body.aws p,
+body.aws h1,
+body.aws h1,
+body.aws .titlewhite,
+body.aws .titlewhite p,
+body.aws .GetInvolved h3 {
+  font-family: 'SegoeUI', 'Open Sans', sans-serif;
+}
+
+body.aws a,
+body.aws .nav-dropdown {
+  color: #0078d7;
+}
+
+body.aws header,
+body.aws #Primary,
+body.aws .footer-mm {
+  background-color: black;
+}
+
+body.aws section#Primary {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(75%, black), color-stop(75%, white), to(white));
+  background: linear-gradient(to bottom, black 0%, black 75%, white 75%, white 100%);
+}
+
+body.aws section#Primary .Primary_Container {
+  width: 50%;
+}
+
+body.aws section#Primary h1,
+body.aws section#Primary p {
+  color: white;
+}
+
+body.aws section#Primary h1 {
+  font-weight: 300;
+  font-size: 32px;
+  margin-top: 5px;
+}
+
+body.aws section#Primary p {
+  margin-bottom: 10px;
+}
+
+body.aws section#Primary .video {
+  border: 5px solid white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 315px;
+  width: 560px;
+  position: relative;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+body.aws section#Primary .video .videoPlaceholder {
+  height: 100%;
+  min-width: 100%;
+  max-width: none;
+}
+
+body.aws section#Primary .video .play {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  height: 36px;
+  width: 36px;
+}
+
+body.aws section#Stats {
+  background-color: white;
+  padding-top: 0;
+}
+
+body.aws section#Stats .Primary-stats {
+  float: none;
+}
+
+body.aws section#Stats .Stat-Item {
+  margin: 3em;
+}
+
+body.aws section#Stats .Stat-Item .emphasizedNumber {
+  color: black;
+  font-size: 1.6em;
+}
+
+body.aws section#Stats .Stat-Item .title {
+  color: black;
+  font-size: 1em;
+}
+
+body.aws section.Current-Projects {
+  background-color: black;
+  text-align: center;
+}
+
+body.aws section.Current-Projects h1 {
+  color: white;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+body.aws section.Current-Projects h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+body.aws section.Current-Projects h3 b {
+  font-weight: 700;
+}
+
+body.aws section.Current-Projects p {
+  color: white;
+  font-size: 0.8em;
+}
+
+body.aws section.Current-Projects .HOT-Container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  overflow: hidden;
+}
+
+body.aws section.Current-Projects .HOT-Container h3 {
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+body.aws section.Current-Projects .HOT-Container p {
+  text-align: center;
+}
+
+body.aws section.Current-Projects .HOT-Map {
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #EEEEEE;
+}
+
+body.aws section.Current-Projects .HOT-Progress {
+  background-color: #333;
+  height: 5px;
+  margin: 10px 0;
+}
+
+body.aws section.Current-Projects .HOT-Progress:before {
+  background-color: #0078d7;
+}
+
+body.aws section.Current-Projects .HOT-Progress p {
+  display: none;
+}
+
+body.aws section.Current-Projects .HOT-Map,
+body.aws section.Current-Projects .HOT-Details {
+  float: none;
+}
+
+body.aws section.Current-Projects .flex-control-nav {
+  bottom: -20px;
+}
+
+body.aws section.Current-Projects .flex-direction-nav a {
+  color: white;
+  opacity: 1;
+  top: 30%;
+  -webkit-transition: none;
+  transition: none;
+}
+
+body.aws section.Current-Projects .flex-direction-nav a:hover {
+  opacity: 1;
+}
+
+body.aws section.Current-Projects .flexslider .flex-direction-nav .flex-prev,
+body.aws section.Current-Projects .flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 1;
+  left: 20%;
+}
+
+body.aws section.Current-Projects .flexslider .flex-direction-nav .flex-next,
+body.aws section.Current-Projects .flexslider:hover .flex-direction-nav .flex-next {
+  opacity: 1;
+  right: 20%;
+}
+
+body.aws section.Current-Projects .flex-direction-nav a:before {
+  font-family: 'SegoeUI', 'Open Sans', sans-serif;
+  content: '‹';
+}
+
+body.aws section.Current-Projects .flex-direction-nav a.flex-next:before {
+  font-family: 'SegoeUI', 'Open Sans', sans-serif;
+  content: '›';
+}
+
+body.aws section.Get-Started {
+  background-color: #ddd;
+}
+
+body.aws section.Get-Started .Primary_Container {
+  width: 40%;
+}
+
+body.aws section.Get-Started h1 {
+  color: black;
+  font-weight: 300;
+}
+
+body.aws section.Get-Started h4 {
+  color: black;
+  font-weight: 300;
+}
+
+body.aws section.Get-Started .left,
+body.aws section.Get-Started .right {
+  margin: 0;
+  width: 50%;
+}
+
+body.aws section.Get-Started .left div,
+body.aws section.Get-Started .right div {
+  padding-top: 30px;
+}
+
+body.aws section.Get-Started .left div {
+  border-right: 1px solid #979797;
+}
+
+body.aws section.Event {
+  background-image: url("/partners/assets/graphics/msft/event.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 500px;
+}
+
+body.aws section.Log-Time {
+  background: -webkit-gradient(linear, right top, left top, from(#0078d7), to(#92cbca));
+  background: linear-gradient(to left, #0078d7, #92cbca);
+}
+
+body.aws section.Log-Time .Primary_Container {
+  width: 50%;
+}
+
+body.aws section.Log-Time h1 {
+  color: white;
+  font-weight: 300;
+  text-align: center;
+}
+
+body.aws section.Log-Time p {
+  color: white;
+  margin-bottom: 20px;
+}
+
+body.aws section.Teams {
+  background-color: white;
+}
+
+body.aws section.Teams h3 {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+body.aws section.Teams p {
+  color: black;
+  font-size: 0.9em;
+}
+
+body.aws section.Teams .Team-User-Nav a {
+  color: black;
+}
+
+body.aws section.Teams .Team-User-Graph {
+  overflow-y: scroll;
+}
+
+body.aws section.Community {
+  background-color: black;
+}
+
+body.aws section.Community .Primary_Container {
+  width: 50%;
+}
+
+body.aws section.Community h1 {
+  color: white;
+  font-weight: 300;
+}
+
+body.aws section.Community p {
+  color: white;
+}
+
+body.aws section.Community .Community-Links {
+  margin: 1.5em 0;
+}
+
+body.aws section#Title {
+  background-color: black;
+}
+
+body.aws section#Title .Primary_Container {
+  height: 200px;
+  width: 50%;
+}
+
+body.aws section#Title h1 {
+  color: white;
+  font-weight: 300;
+  margin-top: 90px;
+}
+
+body.aws section#About .Primary_Container {
+  width: 50%;
+}
+
+body.aws section#GetStarted .Primary_Container {
+  width: 50%;
+}
+
+body.aws section#GetStarted h1 {
+  color: black;
+  font-weight: 300;
+}
+
+body.aws section#GetStarted p {
+  color: black;
+}
+
+body.aws .checklist h2 {
+  color: black;
+  font-weight: 300;
+}
+
+body.aws .checklist .left, body.aws .checklist .right {
+  margin: 0;
+  text-align: left;
+}
+
+body.aws .checklist .shim {
+  float: left;
+  width: 15%;
+}
+
+body.aws .checklist .left {
+  width: 25%;
+}
+
+body.aws .checklist .right {
+  width: 60%;
+}
+
+body.aws .checklist ul {
+  list-style-image: url("/partners/assets/graphics/msft/check.svg");
+  text-align: left;
+}
+
+body.aws section#MapathonSupport {
+  background-color: #2b2d3e;
+}
+
+body.aws section#MapathonSupport .Primary_Container {
+  width: 50%;
+}
+
+body.aws section#MapathonSupport h1 {
+  color: white;
+  font-weight: 300;
+}
+
+body.aws section#MapathonSupport p {
+  color: white;
+}
+
+body.aws section#MapathonSupport ul {
+  margin: 20px;
+}
+
+body.aws section#MapathonSupport ul li {
+  font-weight: bold;
+}
+
+body.aws .nav-item {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+body.aws .btn {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 0;
+  color: white;
+  padding: 4px 30px;
+  text-transform: none;
+}
+
+body.aws .btn-blue {
+  background-color: #0078d7;
+  border: 0;
+}
+
+body.aws .invert-btn-grn {
+  color: black;
+  border: 1px solid black;
+}
+
+body.aws .flex-control-nav li {
+  margin: 4px;
+}
+
+body.aws .flex-control-paging li a {
+  background-color: #999;
+  height: 4px;
+  width: 4px;
+}
+
+body.aws .flex-control-paging li a.flex-active {
+  background-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  body.aws section#Primary .Primary_Container {
+    width: 80%;
+  }
+  body.aws section.Get-Started .Primary_Container {
+    width: 80%;
+  }
+  body.aws section.Current-Projects .HOT-Container {
+    width: 60%;
+  }
+  body.aws section.Current-Projects .flexslider .flex-direction-nav .flex-prev,
+  body.aws section.Current-Projects .flexslider:hover .flex-direction-nav .flex-prev {
+    left: 10%;
+  }
+  body.aws section.Current-Projects .flexslider .flex-direction-nav .flex-next,
+  body.aws section.Current-Projects .flexslider:hover .flex-direction-nav .flex-next {
+    right: 10%;
+  }
+  body.aws section.Log-Time .Primary_Container {
+    width: 80%;
+  }
+  body.aws section.Community .Community-Container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body.aws section#Primary .Primary_Container {
+    width: calc(100% - 40px);
+  }
+  body.aws section.Get-Started .Primary_Container {
+    width: calc(100% - 40px);
+  }
+  body.aws section.Current-Projects .HOT-Container {
+    width: calc(100% - 80px);
+  }
+  body.aws section.Current-Projects .flexslider .flex-direction-nav .flex-prev,
+  body.aws section.Current-Projects .flexslider:hover .flex-direction-nav .flex-prev {
+    left: 0;
+  }
+  body.aws section.Current-Projects .flexslider .flex-direction-nav .flex-next,
+  body.aws section.Current-Projects .flexslider:hover .flex-direction-nav .flex-next {
+    right: 13px;
+  }
+  body.aws section.Log-Time .Primary_Container {
+    width: calc(100% - 40px);
+  }
+  body.aws section.Community .Community-Container {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=aws.css.map */
