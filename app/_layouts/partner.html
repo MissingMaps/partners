@@ -45,6 +45,37 @@ layout: default
 </section>
 
 {% include footer_msft.html %}
+{% elsif page.name == "aws" %}
+{% include header_aws.html %}
+
+<script>
+  // creates PT object for each page. Including lang for future use
+  var PT = { lang: '{{page.lang}}' };
+</script>
+
+<h1>{{ page.name }}</h1>
+
+<section id = "Primary">
+  {% include intro_aws.html %}
+</section>
+
+<section id = "Stats">
+  {% include stats_aws.html %}
+</section>
+
+<section class="Get-Started">
+  {% include get_started_aws.html %}
+</section>
+
+<section class = "Current-Projects">
+  {% include projects_aws.html %}
+</section>
+
+<section class = "Teams">
+  {% include teams_aws.html %}
+</section>
+
+{% include footer_aws.html %}
 {% else %}
 {% include header.html %}
 
