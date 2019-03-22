@@ -19,7 +19,7 @@ flickr-setId: 72157667905063518
 
 primary-hashtag: blackrock
 subhashtags:
-  - blackrocksanfrancisco19
+  - blackrocksanfran19
   - blackrockseattle19
   - blackrockmilan19
   - blackrockbudapest19
@@ -40,9 +40,6 @@ subhashtags:
   - blackrockprinceton19
   - blackrocktokyo19
   - blackrocksydney19
-  - blackrockstockholm19
-  - blackrocktoronto19
-  - blackrocksantamonica19
   - blackrockseoul19
   - blackrockboston19
   - blackrocktaipei19
