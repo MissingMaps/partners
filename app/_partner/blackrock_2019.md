@@ -34,7 +34,6 @@ subhashtags:
   - blackrockmumbai19
   - blackrockhongkong19
   - blackrockmexicocity19
-  - blackrockmexico19
   - blackrocklondon19
   - blackrockedinburgh19
   - blackrockprinceton19
