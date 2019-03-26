@@ -44,6 +44,8 @@ subhashtags:
   - blackrocktaipei19
   - blackrockdenver19
   - blackrockcopenhagen19
+  -blackrockdc19
+  -blackrockmontreal19
 
 tm-projects:
   - id: 4425
