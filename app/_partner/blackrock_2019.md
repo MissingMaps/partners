@@ -4,7 +4,7 @@ lang: en
 permalink: /blackrock/
 
 id: blackrock
-name: BlackRock
+name: blackrock
 logo: blackrock.png
 contact: rebecca@hotosm.org
 
