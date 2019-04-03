@@ -49,8 +49,11 @@ subhashtags:
   - blackrockdc19
 
 tm-projects:
+ - id: 5871
+    desc: "The Sila region in Chad is an extremely vulnerable area in the east of the country. MSF teams working here to respond to a variety of different health needs. These include emergency response to disease outbreaks across the area such as measles outbreaks. Accurate maps of the area will assist the teams with epidemiological analysis, disease surveillance and logistical planning. Take a look at this Pinterest board with images of the Sila region."
+  - id: 5888
+    desc: "The Sila region in Chad is an extremely vulnerable area in the east of the country. MSF teams working here to respond to a variety of different health needs. These include emergency response to disease outbreaks across the area such as measles outbreaks. Accurate maps of the area will assist the teams with epidemiological analysis, disease surveillance and logistical planning. Take a look at this Pinterest board with images of the Sila region."
   - id: 5870
     desc: "The Salamat region in Chad is an extremely vulnerable area in the east of the country. MSF teams working here to respond to a variety of different health needs. These include emergency response to disease outbreaks across the area such as measles outbreaks. Accurate maps of the area will assist the teams with epidemiological analysis, disease surveillance and logistical planning. Take a look at this Pinterest board with images of the eastern regions of Chad."
-  - id: 5871
-    desc: "The Sila region in Chad is an extremely vulnerable area in the east of the country. MSF teams working here to respond to a variety of different health needs. These include emergency response to disease outbreaks across the area such as measles outbreaks. Accurate maps of the area will assist the teams with epidemiological analysis, disease surveillance and logistical planning. Take a look at this Pinterest board with images of the Sila region."
+ 
 ---
