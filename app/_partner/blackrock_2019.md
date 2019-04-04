@@ -49,6 +49,12 @@ subhashtags:
   - blackrockdc19
 
 tm-projects:
+  - id: 5798
+    desc: "MSF is launching a new maternal and child health support program in the health district of Moissala in Chad. The first activity will be a community survey to appreciate more in detail the health conditions of women and children. The mapping will help MSF to have an overview of all households (represented by roofs) and draw a sample of the population to carry out the survey. The data will also help in better programming health activities."
+  - id: 5799   
+    desc: "MSF is launching a new maternal and child health support program in the health district of Moissala in Chad. The first activity will be a community survey to appreciate more in detail the health conditions of women and children. The mapping will help MSF to have an overview of all households (represented by roofs) and draw a sample of the population to carry out the survey. The data will also help in better programming health activities."
+  - id: 5800 
+    desc: "MSF is launching a new maternal and child health support program in the health district of Moissala in Chad. The first activity will be a community survey to appreciate more in detail the health conditions of women and children. The mapping will help MSF to have an overview of all households (represented by roofs) and draw a sample of the population to carry out the survey. The data will also help in better programming health activities."  
   - id: 5871
     desc: "The Sila region in Chad is an extremely vulnerable area in the east of the country. MSF teams working here to respond to a variety of different health needs. These include emergency response to disease outbreaks across the area such as measles outbreaks. Accurate maps of the area will assist the teams with epidemiological analysis, disease surveillance and logistical planning. Take a look at this Pinterest board with images of the Sila region."
   - id: 5888
