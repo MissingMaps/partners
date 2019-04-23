@@ -21,6 +21,7 @@ flickr-setId:
 
 primary-hashtag: awsmapathon
 subhashtags:
+  - awstechweek
   - awssea
   - awsiad
   - awsnyc
