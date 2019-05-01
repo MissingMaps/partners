@@ -42,6 +42,10 @@ subhashtags:
   - awscn
 
 tm-projects:
+- id: 5650
+  desc: "Tanzania has a very high incidence of Female Genital Mutilation, extreme poverty, early marriage and Gender Based Violence. NGOs on the ground need better maps to facilitate their outreach work and protect girls at risk of FGM. The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises: disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur."
+- id: 5651
+  desc: "Tanzania has a very high incidence of Female Genital Mutilation, extreme poverty, early marriage and Gender Based Violence. NGOs on the ground need better maps to facilitate their outreach work and protect girls at risk of FGM. The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises: disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur."
 - id: 5844
   desc: "Médecins Sans Frontières (MSF) has activated to support disaster relief operations of the Civil Protection Unit and other partners dealing with floods and the approaching impact of Cyclone Idai in the region. This project is to digitize roads and waterways in Chimanimani Rural district, Zimbabwe which has been affected by floods. These areas include Wards 11; 12; 15; 22."
 - id: 4765
