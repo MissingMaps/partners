@@ -40,6 +40,7 @@ subhashtags:
   - awsbra
   - awsin
   - awscn
+  - awstechweek
 
 tm-projects:
 - id: 5650
