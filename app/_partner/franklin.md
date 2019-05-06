@@ -19,6 +19,7 @@ flickr-setId:
 
 primary-hashtag: ftmaps
 subhashtags:
+  -#ftmaps2019
 
 tm-projects:
   - id: 3976
