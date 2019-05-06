@@ -5,7 +5,7 @@ permalink: /franklin/
 
 id: ftmaps
 name: ftmaps
-logo: ftinvest.png
+logo: FT_logo_neg_0119.png
 contact:
 
 flickr:
