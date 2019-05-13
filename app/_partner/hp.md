@@ -5,7 +5,7 @@ permalink: /hp/
 
 id: hp
 name: hp
-logo:
+logo: hp.svg
 contact:
 
 flickr: 
