@@ -18,9 +18,9 @@ hourslink: https://hp.benevity.org/user/login
 flickr-apikey:
 flickr-setId:
 
-primary-hashtag: hp
+primary-hashtag: hpinspiresgiving
 subhashtags: 
-  - hpinspiresgiving
+  - hp
 
 tm-projects:
   - id: 4758
