@@ -20,6 +20,7 @@ flickr-setId: 72157705611464735
 primary-hashtag: accenture
 subhashtags:
   - acn*
+  - #dublinacn19
 
 tm-projects:
 - id: 5649
