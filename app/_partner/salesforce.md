@@ -57,10 +57,6 @@ subhashtags:
 
 
 tm-projects:
-  - id: 5696
-    desc: "This project supports efforts to eliminate malaria and other interventions. Your mapping contribution will help prevent the suffering and loss of life this disease causes! Although Thailand has made significant progress in reaching the government's goal of Malaria elimination by 2024, cases are still persistent in the border regions. By tracing structures you will help those on the ground to better understand settlement patterns, estimate the number of households in a village, target interventions, and better plan for control operations."
-  - id: 5678
-    desc: "This project supports efforts to eliminate malaria and other interventions. Your mapping contribution will help prevent the suffering and loss of life this disease causes! Although Thailand has made significant progress in reaching the government's goal of Malaria elimination by 2024, cases are still persistent in the border regions. By tracing structures you will help those on the ground to better understand settlement patterns, estimate the number of households in a village, target interventions, and better plan for control operations."
   - id: 5681
     desc: "This project supports efforts to eliminate malaria and other interventions. Your mapping contribution will help prevent the suffering and loss of life this disease causes! Although Thailand has made significant progress in reaching the government's goal of Malaria elimination by 2024, cases are still persistent in the border regions. By tracing structures you will help those on the ground to better understand settlement patterns, estimate the number of households in a village, target interventions, and better plan for control operations."
   - id: 4647
