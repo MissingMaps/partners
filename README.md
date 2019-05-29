@@ -110,9 +110,9 @@ To set up the development environment for this website, you'll need to install t
 - Ruby and [Bundler](http://bundler.io/), preferably through something like [rvm](https://rvm.io/)
 - Gulp installed globally
 
-The environment requires ruby 2.3.1 or later.
+The environment requires ruby 2.4.1 or later.
 ```
-$ rvm use 2.3.1
+$ rvm use 2.4.1
 ```
 
 After these basic requirements are met, run the following commands in the website's folder:
