@@ -11,8 +11,8 @@ contact:
 flickr: https://www.flickr.com/
 twitter: https://twitter.com/hpe
 facebook:
-hoursname:
-hourslink:
+hoursname: Benevity
+hourslink: https:/hpe.benevity.org/cause/840-530196605/project/2L7JKHRBB5
 
 
 flickr-apikey:

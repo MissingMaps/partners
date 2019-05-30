@@ -290,4 +290,83 @@ var PT = { lang: '{{page.lang}}' };
 
 {% include footer_aws.html %}
 
+{% elsif page.name == "hpe" %}
+
+{% include header_hpe.html %}
+
+<script>
+// creates PT object for each page. Including lang for future use
+var PT = { lang: '{{page.lang}}' };
+</script>
+
+<section id="Title">
+  <div class="Primary_Container">
+    <h1>Hosting a Mapathon</h1>
+  </div>
+</section>
+
+<section id="PlanningChecklist" class="checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/before_event.png" width="75">
+      <h2>Before event</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Choose a date and time for your event, we recommend a 90 minute to 2 hour event as a best practice</li>
+        <li>Confirm an HPE Missing Maps Champion can facilitate your mapping event</li>
+        <li><a href="https://americanredcross.wufoo.com/forms/k12xoqku0jnb5ja/">Register your event with the Red Cross</a> so they can track impact and HPE mapping data</li>
+        <li>Book a space or online meeting</li>
+        <li>Invite employees using the <a href="{{ site.path_prefix }}/assets/docs/HPE email templates.docx">email template</a></li> 
+        <li>Send a reminder 1-2 days before your event, reminding attendees to <a href="www.openstreetmap.org/user/new">register a mapping user ID</a> in advance and to bring their laptops (required in person) and mice (optional)</li>
+        <li>Pick a task from the <a href="http://www.missingmaps.org/partners/hpe">HPE Missing Maps Partner Page</a></li>
+        <li>Identify a group hashtag to track event progress</li>
+        <li>Order snacks (optional)</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+<section id="EventDayChecklist" class="checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/during_event.png" width="75">
+      <h2>During event</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Set up presentation technology needed for your HPE Missing Maps Champion facilitator early and fix any audio/visual issues</li>
+        <li>Capture attendance information</li>
+        <li>In-person events: Put out any printed resources, plug in extra power strips, and set up snacks/swag</li>
+        <li>Online events: Share important links like the <a href="http://www.missingmaps.org/partners/hpe/">HPE Missing Maps Partner Page</a> and <a href="http://www.openstreetmap.org/user/new"> mapping user registration page</a> in a common chat or online meeting lobby</li>
+        <li>Load <a href="...">Missing Maps presentation</a> and demo pages for the <a href="http://www.missingmaps.org/partners/hpe/">HPE Missing Maps Partner Page</a> and your chosen task</li>
+        <li>Have fun mapping!</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+<section id="PostEventChecklist" class="checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/after_event.png" width="75">
+      <h2>After event</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Send <a href="{{ site.path_prefix }}/assets/docs/HPE email templates.docx" download>recap, thank you mail</a> to attendees</li>
+        <li>Host another mapathon again soon!</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+{% include footer.html %}
+
 {% endif %}

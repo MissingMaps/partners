@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-
+<!-- # # # # # # # # -->
+<!-- custom microsoft page -->
+<!-- # # # # # # # # -->
 {% if page.name == "microsoft" %}
 {% include header_msft.html %}
 
@@ -45,6 +47,10 @@ layout: default
 </section>
 
 {% include footer_msft.html %}
+
+<!-- # # # # # # # # -->
+<!-- custom aws page -->
+<!-- # # # # # # # # -->
 {% elsif page.name == "aws" %}
 {% include header_aws.html %}
 
@@ -76,6 +82,42 @@ layout: default
 </section>
 
 {% include footer_aws.html %}
+
+<!-- # # # # # # # # -->
+<!-- custom hpe page -->
+<!-- # # # # # # # # -->
+{% elsif page.name == "hpe" %}
+{% include header_hpe.html %}
+
+<script>
+  // creates PT object for each page. Including lang for future use
+  var PT = { lang: '{{page.lang}}' };
+</script>
+
+<h1>{{ page.name }}</h1>
+
+<section id = "Primary">
+  {% include intro.html %}
+</section>
+
+<section class="Get-Started">
+  {% include get_started_hpe.html %}
+</section>
+
+<section class = "Current-Projects">
+  {% include projects_hpe.html %}
+</section>
+
+<section class = "Teams">
+  {% include teams.html %}
+</section>
+
+<section class = "Community">
+  {% include community.html %}
+</section>
+
+{% include footer.html %}
+
 {% else %}
 {% include header.html %}
 
