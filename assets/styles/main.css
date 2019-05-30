@@ -2854,7 +2854,7 @@ body.mmc .Primary-logo img {
 }
 
 .invert-btn-grn {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid #71a333;
   color: #71a333;
 }
@@ -2882,24 +2882,24 @@ body.mmc .Primary-logo img {
 .invert-btn-white {
   padding-top: 15px;
   color: #23bcc1;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border: #23bcc1 1px solid;
 }
 
 .invert-btn-white:hover {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid white;
 }
 
 .invert-btn-white:active {
   color: white;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid white;
 }
 
 .invert-btn-white:focus {
   color: white;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid white;
 }
 
@@ -3287,7 +3287,7 @@ html[xmlns] .flexslider .slides {
 /* Projects Section */
 .Projects-slider {
   width: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border: 0;
 }
 
@@ -3367,7 +3367,7 @@ html[xmlns] .flexslider .slides {
 
 .photo-width-fix {
   width: 80%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .photo-width-fix .flex-control-nav {
@@ -3376,7 +3376,7 @@ html[xmlns] .flexslider .slides {
   width: 80%;
   margin: 0 auto 1em auto;
   margin-bottom: 2em;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .flex-direction-nav .flex-prev {
