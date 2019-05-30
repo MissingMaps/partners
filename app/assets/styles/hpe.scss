@@ -1,0 +1,553 @@
+body.hpe {
+  // background-color: white;
+  // 
+  // font-family: 'SegoeUI', 'Open Sans', sans-serif;
+  // ul,
+  // li,
+  // ol,
+  // p,
+  // h1,
+  // h1,
+  // .titlewhite,
+  // .titlewhite p,
+  // .GetInvolved h3 {
+  //   font-family: 'SegoeUI', 'Open Sans', sans-serif;
+  // }
+  // 
+  // a,
+  // .nav-dropdown {
+  //   color: #0078d7;
+  // }
+  // 
+  // header,
+  // #Primary,
+  // .footer-mm {
+  //   background-color: black;
+  // }
+  // 
+  // section#Primary {
+  //   background: linear-gradient(
+  //     to bottom,
+  //     black 0%,
+  //     black 75%,
+  //     white 75%,
+  //     white 100%
+  //   );
+  // 
+  //   .Primary_Container {
+  //     width: 50%;
+  //   }
+  // 
+  //   h1,
+  //   p {
+  //     color: white;
+  //   }
+  // 
+  //   h1 {
+  //     font-weight: 300;
+  //     font-size: 32px;
+  //     margin-top: 5px;
+  //   }
+  // 
+  //   p {
+  //     margin-bottom: 10px;
+  //   }
+  // 
+  //   .video {
+  //     border: 5px solid white;
+  //     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //     margin-top: 50px;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //     height: 315px;
+  //     width: 560px;
+  //     position: relative;
+  //     max-width: 100%;
+  //     box-sizing: border-box;
+  //     overflow: hidden;
+  // 
+  //     .videoPlaceholder {
+  //       height: 100%;
+  //       min-width: 100%;
+  //       max-width: none;
+  //     }
+  // 
+  //     .play {
+  //       position: absolute;
+  //       top: 45%;
+  //       left: 50%;
+  //       height: 36px;
+  //       width: 36px;
+  //     }
+  //   }
+  // }
+  // 
+  // section#Stats {
+  //   background-color: white;
+  //   padding-top: 0;
+  // 
+  //   .Primary-stats {
+  //     float: none;
+  //   }
+  // 
+  //   .Stat-Item {
+  //     margin: 3em;
+  // 
+  //     .emphasizedNumber {
+  //       color: black;
+  //       font-size: 1.6em;
+  //     }
+  // 
+  //     .title {
+  //       color: black;
+  //       font-size: 1em;
+  //     }
+  //   }
+  // }
+  // 
+  section.Current-Projects {
+  //   background-color: black;
+    text-align: center;
+    .Projects-Container {
+      text-align: center;
+    }
+  // 
+    h1 {
+      // color: white;
+      // font-weight: 300;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  // 
+  //   h3 {
+  //     font-size: 1.2em;
+  //     font-weight: 700;
+  // 
+  //     b {
+  //       font-weight: 700;
+  //     }
+  //   }
+  // 
+  //   p {
+  //     color: white;
+  //     font-size: 0.8em;
+  //   }
+  // 
+    .HOT-Container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      overflow: hidden;
+  // 
+  //     h3 {
+  //       color: white;
+  //       font-weight: 600;
+  //       margin-top: 20px;
+  //       margin-bottom: 10px;
+  //       text-align: center;
+  //     }
+  // 
+  //     p {
+  //       text-align: center;
+  //     }
+    }
+  // 
+    .HOT-Map {
+      height: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #EEEEEE;
+    }
+    .HOT-Title {
+      text-align: center;
+      p {
+        width: 100%;
+      }
+    }
+    .Mapping-Link {
+      text-align: center;
+    }
+  // 
+  //   .HOT-Progress {
+  //     background-color: #333;
+  //     height: 5px;
+  //     margin: 10px 0;
+  // 
+  //     &:before {
+  //       background-color: #0078d7;
+  //     }
+  // 
+  //     p {
+  //       display: none;
+  //     }
+  //   }
+  // 
+  //   .HOT-Map,
+  //   .HOT-Details {
+  //     float: none;
+  //   }
+  // 
+    .flex-control-nav {
+      bottom: -20px;
+    }
+  
+    .flex-direction-nav a {
+      // color: white;
+      // margin-top: -90px;
+      opacity: 0.6;
+      top: 30%;
+      transition: none;
+      line-height: 1;
+      
+  
+      &:hover {
+        opacity: 1;
+      }
+    }
+  
+    .flexslider .flex-direction-nav .flex-prev,
+    .flexslider:hover .flex-direction-nav .flex-prev {
+      // opacity: 1;
+      left: 20%;
+    }
+  
+    .flexslider .flex-direction-nav .flex-next,
+    .flexslider:hover .flex-direction-nav .flex-next {
+      // opacity: 1;
+      right: 20%;
+    }
+  // 
+  //   .flex-direction-nav a:before {
+  //     font-family: 'SegoeUI', 'Open Sans', sans-serif;
+  //     content: '‹';
+  //   }
+  // 
+  //   .flex-direction-nav a.flex-next:before {
+  //     font-family: 'SegoeUI', 'Open Sans', sans-serif;
+  //     content: '›';
+  //   }
+  }
+
+  section.Get-Started {
+    background-color: #ddd;
+
+    .Primary_Container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 12px;
+    }
+    // 
+    // h4 {
+    //   color: black;
+    //   font-weight: 300;
+    // }
+
+    .item1,
+    .item2,
+    .item3 {
+      display: inline-block;
+      margin: 0;
+      width: 30%;
+
+      div {
+        padding-top: 30px;
+      }
+    }
+
+    .item1 div,
+    .item2 div {
+      border-right: 1px solid #979797;
+    }
+  }
+
+//   section.Event {
+//     background-image: url('/partners/assets/graphics/msft/event.jpg');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: 50% 50%;
+//     height: 500px;
+//   }
+// 
+//   section.Log-Time {
+//     background: linear-gradient(to left, #0078d7, #92cbca);
+// 
+//     .Primary_Container {
+//       width: 50%;
+//     }
+// 
+//     h1 {
+//       color: white;
+//       font-weight: 300;
+//       text-align: center;
+//     }
+// 
+//     p {
+//       color: white;
+//       margin-bottom: 20px;
+//     }
+//   }
+// 
+  section.Teams {
+      background-color: #ddd;
+    
+      #grid1Label {
+        text-align: center;
+      }
+//     background-color: white;
+// 
+//     h3 {
+//       color: black;
+//       font-size: 1.2em;
+//       font-weight: 300;
+//       margin-bottom: 20px;
+//     }
+// 
+//     p {
+//       color: black;
+//       font-size: 0.9em;
+//     }
+// 
+//     .Team-User-Nav a {
+//       color: black;
+//     }
+// 
+    .Team-User-Graph {
+      overflow-y: scroll;
+      background-color: #f2f2f2;
+    }
+  }
+// 
+//   section.Community {
+//     background-color: black;
+// 
+//     .Primary_Container {
+//       width: 50%;
+//     }
+// 
+//     h1 {
+//       color: white;
+//       font-weight: 300;
+//     }
+// 
+//     p {
+//       color: white;
+//     }
+// 
+//     .Community-Links {
+//       margin: 1.5em 0;
+//     }
+//   }
+// 
+  section#Title {
+    // background-color: black;
+
+    .Primary_Container {
+      // height: 200px;
+      width: 50%;
+    }
+
+    h1 {
+      // color: white;
+      // font-weight: 300;
+      margin-top: 90px;
+    }
+  }
+// 
+//   section#About {
+//     .Primary_Container {
+//       width: 50%;
+//     }
+//   }
+// 
+  // section#GetStarted {
+//     .Primary_Container {
+//       width: 50%;
+//     }
+// 
+//     h1 {
+//       color: black;
+//       font-weight: 300;
+//     }
+// 
+//     p {
+//       color: black;
+//     }
+//   }
+// 
+  .checklist {
+    h2 {
+      color: black;
+      font-weight: 300;
+    }
+
+    .left, .right {
+      margin: 0;
+      text-align: left;
+    }
+
+    .shim {
+      float: left;
+      width: 10%;
+    }
+
+    .left {
+      width: 20%;
+    }
+
+    .right {
+      width: 70%;
+    }
+
+    ul {
+      list-style: none;
+      li:before {
+        content: "\2714 ";
+        margin-right: 6px;
+      }
+    }
+  }
+// 
+//   section#MapathonSupport {
+//     background-color: #2b2d3e;
+// 
+//     .Primary_Container {
+//       width: 50%;
+//     }
+// 
+//     h1 {
+//       color: white;
+//       font-weight: 300;
+//     }
+// 
+//     p {
+//       color: white;
+//     }
+// 
+//     ul {
+//       margin: 20px;
+// 
+//       li {
+//         font-weight: bold;
+//       }
+//     }
+//   }
+// 
+//   .nav-item {
+//     font-size: 1em;
+//     font-weight: 600;
+//   }
+// 
+//   .btn {
+//     background: transparent;
+//     border: 1px solid white;
+//     border-radius: 0;
+//     color: white;
+//     padding: 4px 30px;
+//     text-transform: none;
+//   }
+// 
+//   .btn-blue {
+//     background-color: #0078d7;
+//     border: 0;
+//   }
+// 
+//   .invert-btn-grn {
+//     color: black;
+//     border: 1px solid black;
+//   }
+// 
+//   .flex-control-nav li {
+//     margin: 4px;
+//   }
+// 
+//   .flex-control-paging li a {
+//     background-color: #999;
+//     height: 4px;
+//     width: 4px;
+// 
+//     &.flex-active {
+//       background-color: white;
+//     }
+//   }
+// }
+// 
+// @media screen and (max-width: 1024px) {
+//   body.microsoft {
+//     section#Primary {
+//       .Primary_Container {
+//           width: 80%;
+//         }
+//     }
+//     section.Get-Started {
+//       .Primary_Container {
+//         width: 80%;
+//       }
+//     }
+//     section.Current-Projects {
+//       .HOT-Container {
+//         width: 60%;
+//       }
+//       .flexslider .flex-direction-nav .flex-prev,
+//       .flexslider:hover .flex-direction-nav .flex-prev {
+//         left: 10%;
+//       }
+//       .flexslider .flex-direction-nav .flex-next,
+//       .flexslider:hover .flex-direction-nav .flex-next {
+//         right: 10%;
+//       }
+//     } 
+//     section.Log-Time {
+//       .Primary_Container {
+//         width: 80%;
+//       }
+//     }
+//     section.Community {
+//       .Community-Container {
+//         width: 80%;
+//         margin: 0 auto;
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: 560px) {
+//   body.microsoft {
+//     section#Primary {
+//       .Primary_Container {
+//           width: calc(100% - 40px);
+//         }
+//     }
+//     section.Get-Started {
+//       .Primary_Container {
+//         width: calc(100% - 40px);
+//       }
+//     }
+//     section.Current-Projects {
+//       .HOT-Container {
+//         width: calc(100% - 80px);
+//       }
+//       .flexslider .flex-direction-nav .flex-prev,
+//       .flexslider:hover .flex-direction-nav .flex-prev {
+//         left: 0;
+//       }
+//       .flexslider .flex-direction-nav .flex-next,
+//       .flexslider:hover .flex-direction-nav .flex-next {
+//         right: 13px;
+//       }
+//     } 
+//     section.Log-Time {
+//       .Primary_Container {
+//         width: calc(100% - 40px);
+//       }
+//     }
+//     section.Community {
+//       .Community-Container {
+//         width: calc(100% - 40px);
+//         margin: 0 auto;
+//       }
+//     }
+//   }
+}
