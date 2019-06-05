@@ -54,7 +54,7 @@ subhashtags:
   - CSGEMEAUKI
   - CSGEMEADelivery
   - SalesforceCBU
-  - Accelerateemea
+  - accelerateemea
 
 
 tm-projects:
