@@ -55,6 +55,7 @@ subhashtags:
   - CSGEMEADelivery
   - SalesforceCBU
   - accelerateemea
+  - salesforce-TxS-EMEA
 
 
 tm-projects:
