@@ -56,7 +56,7 @@ subhashtags:
   - SalesforceCBU
   - accelerateemea
   - salesforce-TxS-EMEA
-
+  - emea-ms-training
 
 tm-projects:
   - id: 5681
