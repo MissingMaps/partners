@@ -311,7 +311,7 @@ h1 {
     margin: .5em;
   }
   &.placeholder {
-    background-image: url('/assets/graphics/content/logos/MMlogo-Outlined.svg');
+    background-image: url('/partners/assets/graphics/content/logos/MMlogo-Outlined.svg');
     background-color: $lightgrey;
     background-repeat: no-repeat;
     background-position: center;
@@ -452,6 +452,10 @@ h1 {
   border-bottom: 1px solid #dbdbda;
 }
 
+.Partnership-Resources {
+  padding: 10px 0 8px 0;
+}
+
 /*----------------------------------------------*/
 /* EVENTS */
 /*----------------------------------------------*/
@@ -499,10 +503,13 @@ h1 {
 .Team-User-Nav {
   width: 80%;
   height: 36px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   clear: both;
   text-align: left;
+  menuitem {
+    cursor: pointer;
+  }
+  
   p {
     display: inline-block;
     float: initial;
@@ -786,4 +793,17 @@ img{
   line-height: 50px;
   color: $lightgrey;
   background-color: $darkestgrey;
+}
+
+/*----------------------------------------------*/
+/* Custom Partners */
+/*----------------------------------------------*/
+
+body.mmc {
+  .Primary-logo-container{
+    width: 350px;
+  }
+  .Primary-logo img {
+    max-width: 350px;
+  }
 }

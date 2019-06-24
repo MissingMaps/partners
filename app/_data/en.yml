@@ -2,9 +2,15 @@
 ## HEADER CONTENT ##
 ####################
 
+home:             ""
+
 nav:
   - text:         "CONTRIBUTE"
-    url:          "/contribute/"
+    links:
+      - text:     "LEARN TO MAP"
+        url:      "/learn/"
+      - text:     "LEARN TO VALIDATE"
+        url:      "/validate/"
   - text:         "EVENTS"
     links:
       - text:     "CURRENT EVENTS"
@@ -13,10 +19,13 @@ nav:
         url:      "/host/"
   - text:         "ABOUT"
     url:          "/about/"
+  - text:         "BLOG"
+    url:          "/blog/"
   - text:         "DISCOVER"
     links:
       - text:     "USER PROFILES"
         url:      "http://www.missingmaps.org/users/"
       - text:     "LEADERBOARDS"
         url:      "http://www.missingmaps.org/leaderboards/"
-
+      - text:     "OSMSTATS"
+        url:      "/osmstats/"
