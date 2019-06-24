@@ -5,13 +5,13 @@ permalink: /hpe/
 
 id: hpe
 name: hpe
-logo:
+logo: hpe.png
 contact:
 
 flickr: https://www.flickr.com/
 twitter: https://twitter.com/hpe
 facebook:
-hoursname: Benevity
+hoursname: HPE Gives
 hourslink: https:/hpe.benevity.org/cause/840-530196605/project/2L7JKHRBB5
 
 
@@ -20,6 +20,7 @@ flickr-setId:
 
 primary-hashtag: hpe
 subhashtags:
+  - hpegives
 
 tm-projects:
   - id: 4758
