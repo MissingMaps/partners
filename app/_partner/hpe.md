@@ -18,9 +18,11 @@ hourslink: https:/hpe.benevity.org/cause/840-530196605/project/2L7JKHRBB5
 flickr-apikey:
 flickr-setId:
 
-primary-hashtag: hpe
+primary-hashtag: hpegives
 subhashtags:
-  - hpegives
+  - hpe
+  - hpepaloalto
+  - hpehouston
 
 tm-projects:
   - id: 4758
