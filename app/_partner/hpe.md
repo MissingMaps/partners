@@ -20,6 +20,7 @@ flickr-setId:
 
 primary-hashtag: hpegives
 subhashtags:
+  - hpegives
   - hpe
   - hpepaloalto
   - hpehouston
