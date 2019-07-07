@@ -4,8 +4,8 @@ lang: en
 permalink: /hpe/
 
 id: hpe
-name: hpe
-logo: hpe.png
+name: hpegives
+logo: hpe_foundation.png
 contact:
 
 flickr: https://www.flickr.com/
