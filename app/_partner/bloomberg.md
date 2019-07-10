@@ -14,17 +14,16 @@ facebook:
 hoursname:
 hourslink:
 
-
-primary-hashtag: Bloomberg
+primary-hashtag: bloomberg
 subhashtags:
-  - BloombergNewYork
-  - BloombergLondon
-  - BloombergHongKong
-  - BloombergSingapore
-  - BloombergTokyo
-  - BloombergMumbai
-  - BloombergSanFrancisco 
-  - BloombergSaoPaulo
+  - bloombergnewyork
+  - bloomberglondon
+  - bloomberghongkong
+  - bloombergsingapore
+  - bloombergtokyo
+  - bloombergmumbai
+  - bloombergsanfrancisco 
+  - bloombergsaopaulo
 
 tm-projects:
   - id: 6163
