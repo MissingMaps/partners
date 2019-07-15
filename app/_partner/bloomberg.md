@@ -8,7 +8,7 @@ name: bloomberg
 logo: bloomberg.png
 contact: jessica.bergmann@hotosm.org
 
-flickr: 
+flickr: https://www.flickr.com/gp/140736557@N04/a54MxS
 twitter: 
 facebook: 
 hoursname:
