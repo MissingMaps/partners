@@ -14,6 +14,9 @@ facebook:
 hoursname:
 hourslink:
 
+flickr-apikey: b4f0178b524610373b2b65bda51979ba
+flickr-setId: 72157709649329127
+
 primary-hashtag: bloomberg
 subhashtags:
   - bloombergnewyork
