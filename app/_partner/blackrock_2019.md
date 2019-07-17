@@ -46,9 +46,10 @@ subhashtags:
   - blackrockcopenhagen19
   - blackrockmontreal19
   - blackrockmumbai19
-  - blackrockdc19
+  - blackrockwdc19
   - blackrockstockholm19
   - blackrocktoronto19
+  - blackrocksingapore19
 
 tm-projects:
   - id: 5798
