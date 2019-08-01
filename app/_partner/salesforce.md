@@ -57,6 +57,7 @@ subhashtags:
   - accelerateemea
   - salesforce-TxS-EMEA
   - emea-ms-training
+  - salesforceemeapmm
 
 tm-projects:
   - id: 6268
