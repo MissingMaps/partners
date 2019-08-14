@@ -15,8 +15,8 @@ hoursname:
 hourslink:
 
 links:
-  - title: Register your Mapathon
-    link: https://missingmaps.org/
+  - title: Register a Mapping Event
+    link: https://contact.aig.net/ToolsandApps/_layouts/AIG.CCS.ZSO/LinksRedirector.aspx?link=GDG
   - title: Intro Presentation
     link: https://missingmaps.org/
   - title: Mapathon Best Practices
