@@ -32,6 +32,7 @@ subhashtags:
   - avivasg
   - avivavn
   - avivaasia
+  - avivauk
 
 tm-projects:
   - id: 4983
