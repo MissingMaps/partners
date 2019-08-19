@@ -20,7 +20,7 @@ links:
   - title: Intro Presentation
     link: https://cdn.hotosm.org/MMC+Mapathon+Introduction+Presentation_3.0.pptx
   - title: Mapathon Best Practices
-    link: https://colleagueconnect.mmc.com/en-us/Documents/MMC%20Worldwide/Enterprise%20Functions/CSR/Mapathon%20Planning%20Best%20Practices.pdf
+    link: https://colleagueconnect.mmc.com/en-us/mmcworldwide/EnterpriseFunctions/CSR/Lists/TabbedDocument/Mapathon%20Planning%20Best%20Practices.pdf
 
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
 flickr-setId: 72157676557584408
