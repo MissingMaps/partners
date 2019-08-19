@@ -58,6 +58,7 @@ subhashtags:
   - salesforce-TxS-EMEA
   - emea-ms-training
   - salesforceemeapmm
+  - salesforcemcsr
 
 tm-projects:
   - id: 6268
