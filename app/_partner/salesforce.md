@@ -59,6 +59,7 @@ subhashtags:
   - emea-ms-training
   - salesforceemeapmm
   - salesforcemcsr
+  - salesforcenyc
 
 tm-projects:
   - id: 6268
