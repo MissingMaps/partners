@@ -31,7 +31,6 @@ subhashtags:
   - mercercares
   - guycarpentercares
   - ow4s
-  - mmc*
 
 tm-projects:
   - id: 6303
