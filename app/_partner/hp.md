@@ -4,14 +4,14 @@ lang: en
 permalink: /hp/
 
 id: hp
-name: hp
-logo: hp.svg
+name: hpinspiresgiving
+logo: HPBlue.png
 contact:
 
 flickr: 
 twitter: https://twitter.com/HP
 facebook:
-hoursname: Benevity
+hoursname: HP Volunteering & Giving
 hourslink: https://hp.benevity.org/user/login
 
 
