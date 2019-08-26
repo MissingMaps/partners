@@ -8,7 +8,7 @@ name: mmcimpact
 logo: mmc.png
 contact: rebecca.firth@hotosm.org
 
-flickr: https://www.flickr.com/photos/162530214@N08/sets/72157676557584408
+flickr: https://www.flickr.com/photos/140736557@N04/albums/72157710548005558
 twitter: https://www.twitter.com/
 facebook:
 hoursname:
@@ -23,7 +23,7 @@ links:
     link: https://colleagueconnect.mmc.com/en-us/mmcworldwide/EnterpriseFunctions/CSR/Lists/TabbedDocument/Mapathon%20Planning%20Best%20Practices%20(3).pdf
 
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
-flickr-setId: 72157676557584408
+flickr-setId: 72157710548005558
 
 primary-hashtag: mmcimpact
 subhashtags:
