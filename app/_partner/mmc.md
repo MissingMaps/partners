@@ -31,6 +31,12 @@ subhashtags:
   - mercercares
   - guycarpentercares
   - ow4s
+  - *mmcmarsh
+  - *mmcmercer
+  - *mmcguycarpenter
+  - *mmcow4s
+  - mmcphilippines
+  
 
 tm-projects:
   - id: 6303
