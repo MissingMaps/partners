@@ -36,6 +36,8 @@ subhashtags:
   - *mmcguycarpenter
   - *mmcow4s
   - mmcphilippines
+  - mmcgooddaymtl2019
+  - gooddaymtl2019
   
 
 tm-projects:
