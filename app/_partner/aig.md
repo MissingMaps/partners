@@ -22,9 +22,9 @@ links:
   - title: Mapathon Best Practices
     link: https://missingmaps.org/
 
-primary-hashtag: AIG
+primary-hashtag: aig
 subhashtags:
-  - AIG*
+  - aig*
 
 tm-projects:
   - id: 6267
