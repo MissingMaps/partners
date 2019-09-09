@@ -18,9 +18,7 @@ links:
   - title: Register a Mapping Event
     link: https://contact.aig.net/ToolsandApps/_layouts/AIG.CCS.ZSO/LinksRedirector.aspx?link=GDG
   - title: Intro Presentation
-    link: https://missingmaps.org/
-  - title: Mapathon Best Practices
-    link: https://missingmaps.org/
+    link: https://cdn.hotosm.org/AIG+Mapathon+Introduction+Presentation.pptx
 
 primary-hashtag: aig
 subhashtags:
