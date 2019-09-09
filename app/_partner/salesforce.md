@@ -63,10 +63,8 @@ subhashtags:
   - salesforcebvs
 
 tm-projects:
-  - id: 6268
-    desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
-  - id: 6269
-    desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
+  - id: 6665
+    desc: "As the political situation in Venezuela continues to decline and migration across the world increases, Colombia has seen an influx of refugees moving through the country. Along the border regions are dense forests and remote areas, where refugees and migrants could walk for days without reaching a town for supplies like food and water. Fundacion OpenStreetMap Colombia is mapping these border areas to understand population movements and needs."
   - id: 5681
     desc: "This project supports efforts to eliminate malaria and other interventions. Your mapping contribution will help prevent the suffering and loss of life this disease causes! Although Thailand has made significant progress in reaching the government's goal of Malaria elimination by 2024, cases are still persistent in the border regions. By tracing structures you will help those on the ground to better understand settlement patterns, estimate the number of households in a village, target interventions, and better plan for control operations."
   - id: 5682
