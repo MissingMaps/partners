@@ -17,7 +17,9 @@ hourslink:
 links:
   - title: Register a Mapping Event
     link: https://contact.aig.net/ToolsandApps/_layouts/AIG.CCS.ZSO/LinksRedirector.aspx?link=GDG
-  - title: Intro Presentation
+  - title: Individual Mapping Materials
+    link: https://cdn.hotosm.org/AIG+Mapathon+Introduction+Presentation.pptx
+  - title: Mapathon Event Materials
     link: https://cdn.hotosm.org/AIG+Mapathon+Introduction+Presentation.pptx
 
 primary-hashtag: aig
