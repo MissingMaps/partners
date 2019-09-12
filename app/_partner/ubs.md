@@ -22,7 +22,7 @@ links:
   - title: Mapathon Event Materials
     link: https://missingmaps.org
 
-primary-hashtag: #ubs
+primary-hashtag: ubs
 subhashtags:
   - *ubs
 
