@@ -22,9 +22,9 @@ links:
   - title: Mapathon Event Materials
     link: https://missingmaps.org
 
-primary-hashtag: 
+primary-hashtag: #ubs
 subhashtags:
-  - 
+  - *ubs
 
 tm-projects:
   - id: 6267
