@@ -21,6 +21,7 @@ primary-hashtag: accenture
 subhashtags:
   - acn*
   - #dublinacn19
+  - #acngraddublin19
 
 tm-projects:
 - id: 6267
