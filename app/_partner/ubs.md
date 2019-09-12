@@ -15,8 +15,8 @@ hoursname:
 hourslink:
 
 links:
-  - title: Register a Mapping Event
-    link: https://missingmaps.org
+  - title: Contact UBS to Register Your Activity
+    link: mailto:sh-global-employeevolunteering@ubs.com
   - title: Individual Mapping Materials
     link: https://missingmaps.org
   - title: Mapathon Event Materials
