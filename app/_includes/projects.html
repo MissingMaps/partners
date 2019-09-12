@@ -39,6 +39,9 @@
       {% for l in page.links limit:3 %}
         <a href="{{ l.link }}" target="_blank" class="btn btn-blue">{{ l.title }}</a>
       {% endfor %}
+      {% if page.links-subtitle %}
+      <p> {{ page.links-subtitle }} </p>
+      {% endif %}
     </div>
     {% endif %}
   </div>
