@@ -16,7 +16,7 @@ hourslink:
 
 links:
   - title: Contact UBS to Register Your Activity
-    link: mailto:sh-global-employeevolunteering@ubs.com
+    link: mailto:Sh-globalvolunteering@ubs.com
   - title: Individual Mapping Materials
     link: https://missingmaps.org
   - title: Mapathon Event Materials
