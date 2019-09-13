@@ -29,8 +29,7 @@ subhashtags:
 tm-projects:
   - id: 6267
     desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
-  - id: 6303
+  - id: 6268
     desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
-  - id: 6301
-    desc: "Following a prolonged rainy season, Honduras is seeing a sharp increase in cases of dengue fever, with children particularly affected. To help bring the epidemic under control MSF is supporting community prevention efforts in one of the most affected regions as well as pediatric care at the Mario Catarino Rivas Hospital in San Pedro Sula, the second largest city in the country."
+
 ---
