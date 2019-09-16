@@ -15,11 +15,11 @@ hoursname:
 hourslink:
 
 links:
-  - title: Contact UBS to Register Your Activity
+  - title: Let UBS Know You Are Taking Part
     link: mailto:Sh-globalvolunteering@ubs.com
-  - title: Individual Mapping Materials
+  - title: Map as an Individual
     link: https://missingmaps.org
-  - title: Mapathon Event Materials
+  - title: Host a Team Mapping Event
     link: https://missingmaps.org
 
 links-subtitle: Please do not share any client identifying data on this site or during any of your volunteer activities.
