@@ -18,9 +18,9 @@ links:
   - title: Let UBS Know You Are Taking Part
     link: mailto:Sh-globalvolunteering@ubs.com
   - title: Map as an Individual
-    link: https://missingmaps.org
+    link: https://cdn.hotosm.org/UBS_Individual_Mapping_Materials.zip
   - title: Host a Team Mapping Event
-    link: https://missingmaps.org
+    link: https://cdn.hotosm.org/UBS_Mapathon_Materials.zip
 
 links-subtitle: Please do not share any client identifying data on this site or during any of your volunteer activities.
 
