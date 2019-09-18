@@ -16,7 +16,7 @@ hourslink:
 
 links:
   - title: Let UBS Know You Are Taking Part
-    link: mailto:sh-communityaffairs@ubs.com
+    link: mailto:sh-globalvolunteering@ubs.com
   - title: Map as an Individual
     link: https://cdn.hotosm.org/UBS_Individual_Mapping_Materials.zip
   - title: Host a Team Mapping Event
