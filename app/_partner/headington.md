@@ -19,11 +19,25 @@ flickr-setId: 72157702471739282
 
 primary-hashtag: headingtonschooloxford
 subhashtags:
+  - hsoyoc
+  - hsou3db
+  - hsou3pmw
+  - hsou3rmh
+  - hsou3mzb
+  - hsou3hr
+  - hsol4vc
+  - hsol4exs
+  - hsol4td
+  - hsol4amb
+  - hsou4elr
+  - hsou4kh
+  - hsou4ll
+  - hsou4lp
+  - hsou4nm
+  - hsou4vv
 
 tm-projects:
-  - id: 5696
-    desc: "This project supports efforts to eliminate malaria and other interventions. Your mapping contribution will help prevent the suffering and loss of life this disease causes!"
-  - id: 5650
-    desc: "Tanzania has a very high incidence of Female Genital Mutilation, extreme poverty, early marriage and Gender Based Violence. NGOs on the ground need better maps to facilitate their outreach work and protect girls at risk of FGM."
+  - id: 6679
+    desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is working with schools and universities to identify under-represented social issues, and then investigate, map and share them with state organisations and promote change."
     
 ---
