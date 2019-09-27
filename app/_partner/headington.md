@@ -37,6 +37,10 @@ subhashtags:
   - hsou4vv
 
 tm-projects:
+  - id: 6149
+    desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is working with schools and universities to identify under-represented social issues, and then investigate, map and share them with state organisations and promote change."
+  - id: 6143
+    desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is working with schools and universities to identify under-represented social issues, and then investigate, map and share them with state organisations and promote change."
   - id: 6679
     desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is working with schools and universities to identify under-represented social issues, and then investigate, map and share them with state organisations and promote change."
     
