@@ -30,4 +30,13 @@ subhashtags:
 tm-projects:
   - id: 6735
     desc: "The Philippines is ranked the third most disaster-prone country in the world, consistently experiencing natural disasters like typhoons, earthquakes, and volcanic eruptions. Currently, many disaster-prone communities within the Philippines are poorly mapped, making it difficult to both prepare for and respond to natural disasters."
+  - id: 6212
+    desc: "The Philippines is ranked the third most disaster-prone country in the world, consistently experiencing natural disasters like typhoons, earthquakes, and volcanic eruptions. Currently, many disaster-prone communities within the Philippines are poorly mapped, making it difficult to both prepare for and respond to natural disasters."
+  - id: 6907
+    desc: "In and around Bossangoa in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 6267
+    desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
+  - id: 4928
+    desc: "To better model disasters that could affect informal settlement areas in Kabul, the Global Facility for Disaster Risk Reduction and Recovery is seeking to have all buildings mapped. This is to directly map the most vulnerable populations in Kabul."
+    
 ---
