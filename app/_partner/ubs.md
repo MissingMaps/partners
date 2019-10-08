@@ -21,6 +21,8 @@ links:
     link: https://cdn.hotosm.org/UBS_Individual_Mapping_Materials.zip
   - title: Host a Team Mapping Event
     link: https://cdn.hotosm.org/UBS_Mapathon_Materials.zip
+  - title: Watch the Training Video
+    link: https://cdn.hotosm.org/UBS+Mapathon+Training.mp4
 
 links-subtitle: Please do not share any client identifying data on this site or during any of your volunteer activities.
 
