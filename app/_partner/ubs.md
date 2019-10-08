@@ -30,9 +30,9 @@ subhashtags:
 
 tm-projects:
   - id: 6732
-    desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
+    desc: "The evolving Ebola situation makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages along border communities in Uganda. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
   - id: 6303
-    desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
+    desc: "The evolving Ebola situation makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages along border communities in Uganda. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
 
 
 ---
