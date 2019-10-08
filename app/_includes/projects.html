@@ -36,7 +36,7 @@
     {% if page.links %}
     <div class = "Partnership-Resources">
       <h3> Resources </h3>
-      {% for l in page.links limit:3 %}
+      {% for l in page.links limit:5 %}
         <a href="{{ l.link }}" target="_blank" class="btn btn-blue">{{ l.title }}</a>
       {% endfor %}
       {% if page.links-subtitle %}
