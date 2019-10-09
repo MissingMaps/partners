@@ -19,6 +19,7 @@ flickr-setId: 72157702897347191
 
 primary-hashtag: telia
 subhashtags:
+  - telia*
   - teliasweden
   - teliafinland
   - telialithuania
