@@ -28,7 +28,7 @@ links-subtitle: Please do not share any client identifying data on this site or 
 
 primary-hashtag: ubs
 subhashtags:
-  - *ubs
+  - ubs*
   - #evidencelabinnovations 
 
 tm-projects:
