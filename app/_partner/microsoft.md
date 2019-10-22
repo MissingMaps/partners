@@ -37,4 +37,6 @@ tm-projects:
   desc: "Large-scale epidemics and pandemics pose a serious threat not only to global health security but also to countries, communities and individuals in their efforts to achieve resilience. Epidemics and pandemics affect all sectors, impacting routine health services, economic and food security, trade, education, civil order, communication, transportation, and many other areas of life. - note: this is a roads task!"
 - id: 6839
   desc: "The data contributed will be used by the Red Cross to assist in forecasting future disaster impacts, by knowing in advance what is likely to be impacted. The information will help implementation of early action activities to take place before a disaster strikes, contributing to reduce risk, prepare for effective response and ultimately to strength community resilience."
+- id: 6898
+  desc: "Large-scale epidemics and pandemics pose a serious threat not only to global health security but also to countries, communities and individuals in their efforts to achieve resilience. Epidemics and pandemics affect all sectors, impacting routine health services, economic and food security, trade, education, civil order, communication, transportation, and many other areas of life." 
 ---
