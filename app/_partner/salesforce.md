@@ -61,7 +61,8 @@ subhashtags:
   - salesforcemcsr
   - salesforcenyc
   - salesforcebvs
-  - #emeapmmvto
+  - emeapmmvto
+  - salesforcedfwbiztech
 
 tm-projects:
 - id: 6729
