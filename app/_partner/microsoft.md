@@ -27,16 +27,12 @@ subhashtags:
   - msft*
 
 tm-projects:
-- id: 4765
-  desc: "In the lake basin region of Chad, the influx of the displaced population is exerting pressure over scarce essential resources. This has resulted in a sharp increase of humanitarian needs in food, healthcare and water, hygiene and sanitation for both IDPs and host communities."
-- id: 4832
-  desc: "Large-scale epidemics and pandemics pose a serious threat not only to global health security but also to countries, communities and individuals in their efforts to achieve resilience. Epidemics and pandemics affect all sectors, impacting routine health services, economic and food security, trade, education, civil order, communication, transportation, and many other areas of life."
-- id: 5408
-  desc: "Large-scale epidemics and pandemics pose a serious threat not only to global health security but also to countries, communities and individuals in their efforts to achieve resilience. Epidemics and pandemics affect all sectors, impacting routine health services, economic and food security, trade, education, civil order, communication, transportation, and many other areas of life. The threat of emerging infectious diseases, including those of zoonotic origin, and the increasing prevalence of diseases previously controlled by antimicrobials and vaccination efforts, is a cause for concern to the global health community."
 - id: 5409
   desc: "Large-scale epidemics and pandemics pose a serious threat not only to global health security but also to countries, communities and individuals in their efforts to achieve resilience. Epidemics and pandemics affect all sectors, impacting routine health services, economic and food security, trade, education, civil order, communication, transportation, and many other areas of life. - note: this is a roads task!"
 - id: 6839
   desc: "The data contributed will be used by the Red Cross to assist in forecasting future disaster impacts, by knowing in advance what is likely to be impacted. The information will help implementation of early action activities to take place before a disaster strikes, contributing to reduce risk, prepare for effective response and ultimately to strength community resilience."
 - id: 6898
   desc: "Large-scale epidemics and pandemics pose a serious threat not only to global health security but also to countries, communities and individuals in their efforts to achieve resilience. Epidemics and pandemics affect all sectors, impacting routine health services, economic and food security, trade, education, civil order, communication, transportation, and many other areas of life." 
+- id: 6920
+  desc: "The Red Cross Climate Centre, Indonesian Red Cross (Palang Merah Indonesia/PMI), IFRC, British Red Cross and Australian Red Cross are implementing a programme where the data contributed will be used by the Red Cross to assist in forecasting future disaster impacts, by knowing in advance what is likely to be impacted and its exposure and vulnerability. The information will help implementation of early action activities to take place before a disaster strikes, contributing to reduce risk, prepare for effective response and ultimately to strengthen community resilience." 
 ---
