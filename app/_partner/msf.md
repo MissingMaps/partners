@@ -34,6 +34,10 @@ subhashtags:
 
 
 tm-projects:
-  - id: 6161
-    desc: "Following a prolonged rainy season, Honduras is seeing a sharp increase in cases of dengue fever, with children particularly affected. To help bring the epidemic under control MSF is supporting community prevention efforts in one of the most affected regions as well as pediatric care at the Mario Catarino Rivas Hospital in San Pedro Sula, the second largest city in the country."
+  - id: 7016
+    desc: "After the deadly civil war that took place in 2013-2014, the Central African Republic (CAR) enjoyed a period of relative calm. However, tensions between numerous armed groups exploded again at the end of 2016, throwing the country into a renewed spiral of violence. The conflict raged on throughout 2017 and into 2018. Violent attacks in several locations aggravated the already dire health needs of the population, 15 percent of whom - or close to 700,000 people - are displaced."
+  - id: 7041
+    desc: "After the deadly civil war that took place in 2013-2014, the Central African Republic (CAR) enjoyed a period of relative calm. However, tensions between numerous armed groups exploded again at the end of 2016, throwing the country into a renewed spiral of violence. The conflict raged on throughout 2017 and into 2018. Violent attacks in several locations aggravated the already dire health needs of the population, 15 percent of whom - or close to 700,000 people - are displaced."
+  - id: 7042
+    desc: "After the deadly civil war that took place in 2013-2014, the Central African Republic (CAR) enjoyed a period of relative calm. However, tensions between numerous armed groups exploded again at the end of 2016, throwing the country into a renewed spiral of violence. The conflict raged on throughout 2017 and into 2018. Violent attacks in several locations aggravated the already dire health needs of the population, 15 percent of whom - or close to 700,000 people - are displaced."
 ---
