@@ -31,6 +31,7 @@ subhashtags:
   - MSFPrague2019
   - MSFSeoul2019
   - MSFSydney2019
+  - MSFNewYork2019
 
 
 tm-projects:
