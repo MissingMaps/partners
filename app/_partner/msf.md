@@ -14,6 +14,10 @@ facebook:
 hoursname:
 hourslink:
 
+links:
+  - title: Log Your Volunteer Hours
+    link: https://cdn.hotosm.org/leaderboard/Missing+Maps_Tracking+Time+Guide_11082019.pptx
+
 
 primary-hashtag: MSFglobalmapathon2019
 subhashtags:
