@@ -21,6 +21,8 @@ links:
     link: https://teams.microsoft.com/_#/files/Missing%20Maps?threadId=19%3Aa82d49a625ec4b2796fb596b99403cf7%40thread.skype&ctx=channel&context=Training%2520Materials%252FMap%2520as%2520an%2520individual
   - title: Host a Mapathon Event
     link: https://teams.microsoft.com/_#/files/Missing%20Maps?threadId=19%3Aa82d49a625ec4b2796fb596b99403cf7%40thread.skype&ctx=channel&context=Training%2520Materials%252FHost%2520a%2520mapathon
+  - title: Log Your Volunteer Hours
+    link: https://cdn.hotosm.org/leaderboard/Missing+Maps_Tracking+Time+Guide_11082019.pptx
 
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
 flickr-setId: 72157705611464735
