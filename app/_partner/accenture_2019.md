@@ -34,6 +34,10 @@ subhashtags:
   - #acngraddublin19
 
 tm-projects:
+- id: 6143
+  desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is working with schools and universities to identify under-represented social issues, and then investigate, map and share them with state organisations and promote change."
+- id: 6149
+  desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is working with schools and universities to identify under-represented social issues, and then investigate, map and share them with state organisations and promote change."
 - id: 6733
   desc: "The Philippines is ranked the third most disaster-prone country in the world, consistently experiencing natural disasters like typhoons, earthquakes, and volcanic eruptions. Currently, many disaster-prone communities within the Philippines are poorly mapped, making it difficult to both prepare for and respond to natural disasters."
 - id: 6267
