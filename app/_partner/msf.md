@@ -17,21 +17,21 @@ hourslink:
 
 primary-hashtag: MSFglobalmapathon2019
 subhashtags:
-  - MSFAmsterdam2019
-  - MSFBarcelona2019
-  - MSFBrasil2019
-  - MSFBrussels2019
-  - MSFGeneva2019
-  - MSFLondon2019
-  - MSFLux2019
-  - MSFMexico2019
-  - MSFMontreal2019
-  - MSFNairobi2019
-  - MSFParis2019 
-  - MSFPrague2019
-  - MSFSeoul2019
-  - MSFSydney2019
-  - MSFNewYork2019
+  - msfamsterdam2019
+  - msfbarcelona2019
+  - msfbrasil2019
+  - msfbrussels2019
+  - msfgeneva2019
+  - msflondon2019
+  - msflux2019
+  - msfmexico2019
+  - msfmontreal2019
+  - msfnairobi2019
+  - msfparis2019 
+  - msfprague2019
+  - msfseoul2019
+  - msfsydney2019
+  - msfnewyork2019
 
 
 tm-projects:
