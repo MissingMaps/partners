@@ -64,6 +64,7 @@ subhashtags:
   - emeapmmvto
   - salesforcedfwbiztech
   - salesforce-success-cloud
+  - salesforceindy
 
 tm-projects:
 - id: 6729
