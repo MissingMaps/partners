@@ -15,7 +15,7 @@ hoursname:
 hourslink:
 
 
-primary-hashtag: MSFglobalmapathon2019
+primary-hashtag: msfglobalmapathon2019
 subhashtags:
   - msfamsterdam2019
   - msfbarcelona2019
