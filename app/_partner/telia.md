@@ -17,7 +17,7 @@ hourslink:
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
 flickr-setId: 72157702897347191
 
-primary-hashtag: telia*
+primary-hashtag: telia
 subhashtags:
   - telia*
   - teliasweden
