@@ -2,6 +2,7 @@
 layout: partner
 lang: en
 permalink: /telia/
+published: false
 
 id: telia
 name: telia
