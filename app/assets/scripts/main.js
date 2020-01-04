@@ -2,6 +2,8 @@
  --------------- Add HOT Project Carousel ----------------
  -------------------------------------------------------*/
 
+const statsApi = 'https://osm-stats-prod-api.azurewebsites.net'
+
 // Fetch Project data from Tasking Manager API
 function getProjects (projects) {
   // Add Flexslider to Projects Section
@@ -271,7 +273,7 @@ function generateUserUrl (userName) {
 
 function getUserActivityStats (hashtag) {
   // Connect hashtags to /top-users/ Missing Maps API endpoint
-  const url = 'https://osm-stats-production-api.azurewebsites.net/top-users/' + hashtag;
+  const url = statsApi + '/top-users/' + hashtag;
 
   $.getJSON(url, function (userData) {
     // For each user, collect the total edits across all categories
@@ -315,7 +317,7 @@ function generateHashtagUrl (hashtag) {
 function getGroupActivityStats (hashtags, primaryHashtag) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
-  const url = 'https://osm-stats-production-api.azurewebsites.net/group-summaries/' + hashtagsString;
+  const url = statsApi + '/group-summaries/' + hashtagsString;
 
   $.getJSON(url, function (hashtagData) {
     // If no hashtags contain data, remove the partner graphs entirely
@@ -323,7 +325,7 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
                    'metrics according to the Missing Maps endpoint at ' +
-                   'https://osm-stats-production-api.azurewebsites.net/group-summaries/' +
+                   statsApi + '/group-summaries/' +
                    hashtagsString + '. The partner graphs will not be displayed.');
     } else {
       const primaryData = hashtagData[primaryHashtag];
@@ -582,7 +584,7 @@ function statsSum ( obj ) {
 function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
-  const url = 'https://osm-stats-production-api.azurewebsites.net/group-summaries/' + hashtagsString;
+  const url = statsApi + '/group-summaries/' + hashtagsString;
 
   $.getJSON(url, function (hashtagData) {
     // If no hashtags contain data, remove the partner graphs entirely
@@ -590,7 +592,7 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
                    'metrics according to the Missing Maps endpoint at ' +
-                   'https://osm-stats-production-api.azurewebsites.net/group-summaries/' +
+                   statsApi + '/group-summaries/' +
                    hashtagsString + '. The partner graphs will not be displayed.');
     } else {
       const primaryData = hashtagData[primaryHashtag];
