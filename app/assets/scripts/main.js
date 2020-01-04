@@ -2,7 +2,8 @@
  --------------- Add HOT Project Carousel ----------------
  -------------------------------------------------------*/
 
-const statsApi = 'https://osm-stats-prod-api.azurewebsites.net'
+const statsApi = 'https://osm-stats-prod-api.azurewebsites.net';
+const tasksApi = 'https://tasks.hotosm.org/api/v1';
 
 // Fetch Project data from Tasking Manager API
 function getProjects (projects) {
@@ -23,7 +24,7 @@ function getProjects (projects) {
   }
 
   projects.forEach(function (project, i) {
-    const url = `https://tasks.hotosm.org/api/v1/project/${project}/summary`;
+    const url = tasksApi + `/project/${project}/summary`;
     $.getJSON(url, function (projectData) {
       makeProject(projectData, i + 2);
     })
@@ -82,7 +83,7 @@ function makePlaceholderProject (projectId, projectOrder) {
  page variable settings.`;
 
   // Add explanatory error text
-  const errorHtml = `Uh oh, it looks like <a href="https://tasks.hotosm.org/api/v1/project/${project};${projectId}"
+  const errorHtml = `Uh oh, it looks like <a href="` + tasksApi + `/project/${project};${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
  <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
  &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
@@ -129,7 +130,7 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = `https://tasks.hotosm.org/api/v1/project/${projectId}`;
+  const endpoint = tasksApi + `/project/${projectId}`;
   $.getJSON(endpoint, function (taskData) {
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
