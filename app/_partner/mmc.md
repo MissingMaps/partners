@@ -31,10 +31,10 @@ subhashtags:
   - mercercares
   - guycarpentercares
   - ow4s
-  - *mmcmarsh
-  - *mmcmercer
-  - *mmcguycarpenter
-  - *mmcow4s
+  - *marsh
+  - *mercer
+  - *guycarpenter
+  - *ow4s
   - mmcphilippines
   - mmcgooddaymtl2019
   - gooddaymtl2019
