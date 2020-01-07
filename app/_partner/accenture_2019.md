@@ -34,6 +34,8 @@ subhashtags:
   - #acngraddublin19
 
 tm-projects:
+- id: 7372
+  desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is working with schools and universities to identify under-represented social issues, and then investigate, map and share them with state organisations and promote change."
 - id: 6143
   desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is working with schools and universities to identify under-represented social issues, and then investigate, map and share them with state organisations and promote change."
 - id: 6149
