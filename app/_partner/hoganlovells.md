@@ -32,8 +32,8 @@ subhashtags:
   
 
 tm-projects:
-  - id: 6732
-    desc: "The ongoing Ebola outbreak makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area in Uganda available to those involved in the fight to contain the potential outbreak. Please work with those of us on the ground to collect this potentially life-saving information by remotely tracing infrastructure."
+  - id: 7372
+    desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is training local high school students in Cusco to identify under-represented social issues, and then investigate, map and share them. To date, groups of school girls in Cusco have created campaigns that use maps of sexist publicity and behavior, presenting them as part of an international festival and to local government representatives, as well as peers and the broader school community. GAL will train 150 youth in mapping gendered issues, and work with local mayors in the Cusco region to better understand the experiences of girls in society."
   
     
 ---
