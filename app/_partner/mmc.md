@@ -27,14 +27,11 @@ flickr-setId: 72157710548005558
 
 primary-hashtag: mmcimpact
 subhashtags:
+  - *mmc
   - marshcares
   - mercercares
   - guycarpentercares
   - ow4s
-  - *marsh
-  - *mercer
-  - *guycarpenter
-  - *ow4s
   - mmcphilippines
   - mmcgooddaymtl2019
   - gooddaymtl2019
