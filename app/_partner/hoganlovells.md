@@ -15,7 +15,7 @@ hoursname:
 hourslink:
 
 links:
-  - title: Host a Mapathon Event
+  - title: Hosting Your Mapathon
     link: https://cdn.hotosm.org/leaderboard/hoganlovells/HL_Resources.zip
   - title: Guidelines for Participation
     link: https://cdn.hotosm.org/leaderboard/hoganlovells/2020-01-Missing-Maps-Guidelines.pdf
