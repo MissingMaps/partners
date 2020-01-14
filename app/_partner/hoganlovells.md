@@ -6,11 +6,19 @@ permalink: /hoganlovells/
 id: hoganlovells
 name: hoganlovells
 logo: hoganlovells.jpg
-contact: 
+contact: kellyanne.brophy@hoganlovells.com
 
-<!-- links:
-  - title: 
-    link:  -->
+flickr: 
+twitter: https://twitter.com/HLCitizenship
+facebook: 
+hoursname:
+hourslink:
+
+links:
+  - title: Host a Mapathon Event
+    link: https://cdn.hotosm.org/leaderboard/hoganlovells/HL_Resources.zip
+  - title: Guidelines for Participation
+    link: https://cdn.hotosm.org/leaderboard/hoganlovells/2020-01-Missing-Maps-Guidelines.pdf
 
 primary-hashtag: hoganlovells
 subhashtags:
