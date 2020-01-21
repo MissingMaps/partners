@@ -17,6 +17,12 @@ hourslink:
 flickr-apikey: 
 flickr-setId: 
 
+links:
+  - title: Log Your Volunteer Hours
+    link: https://cisco.brightfunds.org/login
+  - title: Mapping Training Resources
+    link: 
+    
 primary-hashtag: ciscoglobal
 subhashtags:
 
