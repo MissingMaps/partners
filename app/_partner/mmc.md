@@ -27,7 +27,10 @@ flickr-setId: 72157710548005558
 
 primary-hashtag: mmcimpact
 subhashtags:
-  - mmcmercer*
+  - mercer*
+  - marsh*
+  - guycarpenter*
+  - oliverwyman*
   - marshcares
   - mercercares
   - guycarpentercares
