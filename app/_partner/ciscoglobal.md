@@ -25,7 +25,7 @@ links:
     
 primary-hashtag: ciscoglobal
 subhashtags:
-  - #cx-engineering
+  - cx-engineering
 
 tm-projects:
   - id: 6916
