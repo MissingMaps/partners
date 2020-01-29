@@ -25,7 +25,7 @@ links:
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
 flickr-setId: 72157710548005558
 
-primary-hashtag: mmcimpact
+primary-hashtag: ourimpact
 subhashtags:
   - mmcmercer*
   - marshcares
