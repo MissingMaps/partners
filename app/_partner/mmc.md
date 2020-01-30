@@ -18,11 +18,11 @@ links:
   - title: Register your Mapathon
     link: https://www.surveymonkey.com/r/MMCmapping
   - title: Mapathon Event Materials
-    link: https://cdn.hotom.org/leaderboard/MMC/Archive.zip
+    link: https://cdn.hotosm.org/leaderboard/MMC/Archive.zip
   - title: Mapathon Best Practices
     link: https://colleagueconnect.mmc.com/en-us/mmcworldwide/EnterpriseFunctions/CSR/Lists/TabbedDocument/Mapathon%20Planning%20Best%20Practices%20(3).pdf
   - title: Map as an Individual
-    link: https://cdn.hotom.org/leaderboard/MMC/MMC_+Detailed+Mapping+Guide.pdf
+    link: https://cdn.hotosm.org/leaderboard/MMC/MMC_+Detailed+Mapping+Guide.pdf
  
 
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
