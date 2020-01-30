@@ -2,7 +2,7 @@
  --------------- Add HOT Project Carousel ----------------
  -------------------------------------------------------*/
 
-const statsApi = 'https://osm-stats-prod-api.azurewebsites.net';
+const statsApi = 'https://osm-stats-production-api.azurewebsites.net';
 const tasksApi = 'https://tasks.hotosm.org/api/v1';
 
 // Fetch Project data from Tasking Manager API
