@@ -343,6 +343,11 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
         $('#stats-buildingCount').html((primaryBuildingCount + 245546).toLocaleString());
         $('#stats-usersCount').html((primaryData.users + 999).toLocaleString());
         $('#stats-editsCount').html((primaryData.edits + 348243).toLocaleString());
+      } else if (primaryHashtag == 'ourimpact') {
+        $('#stats-roadCount').html((primaryRoadCount + 485).toLocaleString());
+        $('#stats-buildingCount').html((primaryBuildingCount + 147356).toLocaleString());
+        $('#stats-usersCount').html((primaryData.users + 1238).toLocaleString());
+        $('#stats-editsCount').html((primaryData.edits + 153575).toLocaleString());
       } else {
         $('#stats-roadCount').html(primaryRoadCount.toLocaleString());
         $('#stats-buildingCount').html(primaryBuildingCount.toLocaleString());
