@@ -16,9 +16,9 @@ hourslink:
 
 links:
   - title: Hosting Your Mapathon
-    link: https://cdn.hotosm.org/leaderboard/hoganlovells/HL_Resources.zip
+    link: https://cdn.hotosm.org/leaderboard/hoganlovells/Hogan_Lovells+Updated+Resources+(2%3A7%3A2020).zip
   - title: Guidelines for Participation
-    link: https://cdn.hotosm.org/leaderboard/hoganlovells/2020-01-Missing-Maps-Guidelines.pdf
+    link: https://cdn.hotosm.org/leaderboard/hoganlovells/2020-02+Missing+Maps+Guidelines.pdf
 
 primary-hashtag: hoganlovells
 subhashtags:
@@ -37,11 +37,13 @@ subhashtags:
   - hoganlovellssv
   - hoganlovellsit
   - hoganlovellsmiami
+  - hoganlovellsmexico
+  - hoganlovellscs
   
 
 tm-projects:
   - id: 7372
-    desc: "Peru has a very unequal society, and whilst parts of Peru are well mapped, these tend to be urban, wealthy areas that reflect the inter-sectional power relations at play in the country. GAL School Peru is training local high school students in Cusco to identify under-represented social issues, and then investigate, map and share them. To date, groups of school girls in Cusco have created campaigns that use maps of sexist publicity and behavior, presenting them as part of an international festival and to local government representatives, as well as peers and the broader school community. GAL will train 150 youth in mapping gendered issues, and work with local mayors in the Cusco region to better understand the experiences of girls in society."
+    desc: "In parts of Cusco, over 75% of children under 3 years old suffer from anaemia. This means that their brains will not develop as quickly as other children, and once they start going to preschool and later school, they will often be tired, unable to concentrate or to learn effectively. The regions which suffer most from anaemia are usually the most remote, hardest to reach areas, where data available to local authorities and NGOs is minimal and access to health services for women and their children are limited. The Regional Government in Cusco wants to combat this by geo-locating where children under 3 live in order to improve the medical attention that they receive."
   
     
 ---
