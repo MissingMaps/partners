@@ -21,7 +21,7 @@ links:
   - title: Log Your Volunteer Hours
     link: https://cisco.brightfunds.org/login
   - title: Mapping Training Resources
-    link: 
+    link: https://cdn.hotosm.org/leaderboard/Cisco/Archive.zip
     
 primary-hashtag: ciscoglobal
 subhashtags:
