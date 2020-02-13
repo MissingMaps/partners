@@ -20,7 +20,7 @@ links:
   - title: Mapathon Event Materials
     link: https://cdn.hotosm.org/leaderboard/MMC/Archive.zip
   - title: Mapathon Best Practices
-    link: https://colleagueconnect.mmc.com/en-us/mmcworldwide/EnterpriseFunctions/CSR/Lists/TabbedDocument/Mapathon%20Planning%20Best%20Practices%20(3).pdf
+    link: https://colleagueconnect.mmc.com/en-us/mmcworldwide/EnterpriseFunctions/CSR/Lists/TabbedDocument/Mapathon%20Planning%20Best%20Practices.pdf
   - title: Map as an Individual
     link: https://cdn.hotosm.org/leaderboard/MMC/MMC_+Detailed+Mapping+Guide.pdf
  
