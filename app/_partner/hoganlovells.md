@@ -32,7 +32,7 @@ subhashtags:
   - hoganlovellsdenver
   - hoganlovellsnova
   - hoganlovellsbtsl
-  - hoganlovellsSF
+  - hoganlovellssf
   - hoganlovellsphilly
   - hoganlovellssv
   - hoganlovellsit
