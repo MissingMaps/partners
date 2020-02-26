@@ -19,7 +19,7 @@ flickr-setId:
 
 links:
   - title: Log Your Volunteer Hours
-    link: https://cisco.brightfunds.org/login
+    link: https://cisco.brightfunds.org/organizations/humanitarian-openstreetmap-team
   - title: Mapping Training Resources
     link: https://cdn.hotosm.org/leaderboard/Cisco/Cisco+Mapping+Training.zip
     
