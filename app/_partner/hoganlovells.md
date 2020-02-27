@@ -16,7 +16,7 @@ hourslink:
 
 links:
   - title: Hosting Your Mapathon
-    link: https://cdn.hotosm.org/leaderboard/hoganlovells/Hogan_Lovells+Updated+Resources+(2%3A7%3A2020).zip
+    link: https://cdn.hotosm.org/leaderboard/hoganlovells/HL+Mapathon+Trainings+(2%3A27%3A2020).zip
   - title: Guidelines for Participation
     link: https://cdn.hotosm.org/leaderboard/hoganlovells/2020-02+Missing+Maps+Guidelines.pdf
 
@@ -42,8 +42,10 @@ subhashtags:
   
 
 tm-projects:
-  - id: 7372
-    desc: "In parts of Cusco, over 75% of children under 3 years old suffer from anaemia. This means that their brains will not develop as quickly as other children, and once they start going to preschool and later school, they will often be tired, unable to concentrate or to learn effectively. The regions which suffer most from anaemia are usually the most remote, hardest to reach areas, where data available to local authorities and NGOs is minimal and access to health services for women and their children are limited. The Regional Government in Cusco wants to combat this by geo-locating where children under 3 live in order to improve the medical attention that they receive."
+  - id: 8054
+    desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
+  - id: 8013
+    desc: "The Humanitarian OpenStreetMap Team (HOT) Philippines, in partnership with the Pacific Disaster Center (PDC), and the Office of Civil Defense (OCD) is leading a new local installation of DisasterAWARE in the Philippines called PhilAWARE. PhilAWARE is a disaster risk reduction and integrated early warning and decision support system that incorporates many data layers from OpenStreetMap. This platform aims to support the unique disaster preparedness and response needs of the Philippines."
   
     
 ---
