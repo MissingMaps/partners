@@ -44,7 +44,7 @@ subhashtags:
 tm-projects:
   - id: 8054
     desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
-  - id: 8013
+  - id: 8036
     desc: "The Humanitarian OpenStreetMap Team (HOT) Philippines, in partnership with the Pacific Disaster Center (PDC), and the Office of Civil Defense (OCD) is leading a new local installation of DisasterAWARE in the Philippines called PhilAWARE. PhilAWARE is a disaster risk reduction and integrated early warning and decision support system that incorporates many data layers from OpenStreetMap. This platform aims to support the unique disaster preparedness and response needs of the Philippines."
   
     
