@@ -11,17 +11,17 @@ contact:
 flickr: 
 twitter: 
 facebook: 
-hoursname: 
-hourslink: 
+hoursname: BrightFunds
+hourslink: https://cisco.brightfunds.org/volunteering/individual_times/new?organization_id=301063
 
 flickr-apikey: 
 flickr-setId: 
 
 links:
-  - title: Log Your Volunteer Hours
-    link: https://cisco.brightfunds.org/volunteering/individual_times/new?organization_id=301063
   - title: Mapping Training Resources
     link: https://cdn.hotosm.org/leaderboard/Cisco/Cisco+Mapping+Training.zip
+  - title: Donate
+    link: https://cisco.brightfunds.org/outside_transactions/new?organization_id=301063
     
 primary-hashtag: ciscoglobal
 subhashtags:
