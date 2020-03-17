@@ -66,6 +66,7 @@ subhashtags:
   - salesforce-success-cloud
   - salesforceindy
   - SalesforceBellevueDi
+  - dallashub
 
 tm-projects:
 - id: 6729
