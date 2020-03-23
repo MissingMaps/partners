@@ -69,6 +69,10 @@ subhashtags:
   - dallashub
 
 tm-projects:
+- id: 8073
+  desc: "India is home to one of the largest populations, with more than 4.1 million girls outside the classroom. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
+- id: 8072
+  desc: "India is home to one of the largest populations, with more than 4.1 million girls outside the classroom. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
 - id: 6729
   desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
 - id: 6269
