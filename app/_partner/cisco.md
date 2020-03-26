@@ -19,6 +19,7 @@ flickr-setId: 72157655209554272
 
 primary-hashtag: cisco
 subhashtags:
+  - Ciscoecnrtp
   - ciscortp
   - ciscosv
   - cisco_ops
