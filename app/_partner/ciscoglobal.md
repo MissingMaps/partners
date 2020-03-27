@@ -25,7 +25,7 @@ links:
     
 primary-hashtag: ciscoglobal
 subhashtags:
-  - cx-engineering
+  - ciscoglobal
   - cx-americas
   - cx-centers
   - cx-cms
