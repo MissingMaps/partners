@@ -26,15 +26,6 @@ links:
 primary-hashtag: ciscoglobal
 subhashtags:
   - ciscoglobal
-  - cx-engineering
-  - cx-americas
-  - cx-centers
-  - cx-cms
-  - cx-apjc
-  - cx-pm
-  - cx-ops-renewals
-  - cx-ecosystem
-  - cx-comms
 
 tm-projects:
   - id: 8092
