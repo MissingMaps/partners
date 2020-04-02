@@ -19,13 +19,14 @@ flickr-setId:
 
 links:
   - title: Mapping Training Resources
-    link: https://cdn.hotosm.org/leaderboard/Cisco/Cisco+Mapping+Training.zip
+    link: https://cdn.hotosm.org/leaderboard/Cisco/Cisco_Training_Resources.zip
   - title: Donate
     link: https://cisco.brightfunds.org/outside_transactions/new?organization_id=301063
     
 primary-hashtag: ciscoglobal
 subhashtags:
   - ciscoglobal
+
 
 tm-projects:
   - id: 8092
