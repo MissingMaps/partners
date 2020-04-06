@@ -4642,4 +4642,36 @@ body.hpegives .checklist ul li:before {
   margin-right: 6px;
 }
 
+.hosting-checklist h2 {
+  color: black;
+  font-weight: 300;
+}
+
+.hosting-checklist .left, .hosting-checklist .right {
+  margin: 0;
+  text-align: left;
+}
+
+.hosting-checklist .shim {
+  float: left;
+  width: 10%;
+}
+
+.hosting-checklist .left {
+  width: 20%;
+}
+
+.hosting-checklist .right {
+  width: 70%;
+}
+
+.hosting-checklist ul {
+  list-style: none;
+}
+
+.hosting-checklist ul li:before {
+  content: "\2714 ";
+  margin-right: 6px;
+}
+
 /*# sourceMappingURL=main.css.map */
