@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<script>
+// creates PT object for each page. Including lang for future use
+var PT = { lang: '{{page.lang}}' };
+</script>
+
+
+
+<section style="margin-top:100px;">
+  <div class="Primary_Container center-text">
+      <h1 class="">Hosting A Mapathon</h1>
+  </div>  
+</section>
+
+<section id="PlanningChecklist" class="hosting-checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/before_event.png" width="75">
+      <h2>Before event</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Choose a date and time for your event, we recommend a 90 minute to 2 hour event as a best practice</li>
+        <li>Confirm an <a href="https://hpe.sharepoint.com/sites/F6/MC/corporate-affairs/hpegives/Pages/hpe-missing-maps.aspx">HPE Missing Maps Champion</a> can facilitate your mapping event </li>
+        <li>Create a volunteer opportunity for your event on <a href="https://hpe.benevity.org/cause/840-530196605/project/2l7jkhrbb5https://hpe.benevity.org/cause/840-530196605/project/2L7JKHRBB5">HPE Gives</a> so employees can sign up and track their time</li>
+        <li><a href="https://americanredcross.wufoo.com/forms/k12xoqku0jnb5ja/">Register your event with the Red Cross</a> so they can track impact and HPE mapping data</li>
+        <li>Book a space or online meeting via HPE MyRoom</li>
+        <li>Invite employees using the <a href="{{ site.path_prefix }}/assets/docs/HPE_email_templates.docx">email template</a></li> 
+        <li>Send a reminder 1-2 days before your event, reminding attendees to <a href="https://www.openstreetmap.org/user/new">register a mapping user ID</a> in advance and to bring their laptops (required in person) and mice (optional)</li>
+        <li>Pick a task from the <a href="http://www.missingmaps.org/partners/hpe">HPE Missing Maps Partner Page</a></li>
+        <li>Use #HPEGives and consider creating a hashtag for your site or event to track your progress</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+<section id="EventDayChecklist" class="hosting-checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/during_event.png" width="75">
+      <h2>During event</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Set up presentation technology needed for your HPE Missing Maps Champion facilitator early and fix any audio/visual issues</li>
+        <li>Capture attendance information</li>
+        <li>In-person events: Put out any printed resources, plug in extra power strips, and set up snacks/swag</li>
+        <li>Online events: Share important links like the <a href="http://www.missingmaps.org/partners/hpe/">HPE Missing Maps Partner Page</a> and <a href="http://www.openstreetmap.org/user/new"> mapping user registration page</a> in a common chat or online meeting lobby</li>
+        <li>Load <a href="https://arcmaps.s3.amazonaws.com/share/Exchange%20Resources/MM%20Slides%20April%202019%20%28compressed%29.pptx" download>Missing Maps presentation</a> and demo pages for the <a href="http://www.missingmaps.org/partners/hpe/">HPE Missing Maps Partner Page</a> and your chosen task</li>
+        <li>Have fun mapping!</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+<section id="PostEventChecklist" class="hosting-checklist">
+  <div class="Primary_Container">
+    <div class="shim">&nbsp;</div>
+    <div class="left">
+      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/after_event.png" width="75">
+      <h2>After event</h2>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Send <a href="{{ site.path_prefix }}/assets/docs/HPE_email_templates.docx" download>recap, thank you mail</a> to attendees</li>
+        <li>Share your experience in the <a href="https://www.yammer.com/hpe.com/#/threads/inGroup?type=in_group&feedId=8850263">HPE Gives Awards Group</a></li>
+        <li>Host another mapathon again soon!</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+{% include footer.html %}
