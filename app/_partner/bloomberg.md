@@ -19,16 +19,12 @@ flickr-setId: 72157709649329127
 
 primary-hashtag: bloomberg
 subhashtags:
-  - bloombergnewyork
-  - bloomberglondon
-  - bloomberghongkong
-  - bloombergsingapore
-  - bloombergtokyo
-  - bloombergmumbai
-  - bloombergsanfrancisco 
-  - bloombergsaopaulo
+  - globalevents
+  - corporatephilanthropy
 
 tm-projects:
+  - id: 8249
+    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
   - id: 6161
     desc: "Following a prolonged rainy season, Honduras is seeing a sharp increase in cases of dengue fever, with children particularly affected. To help bring the epidemic under control MSF is supporting community prevention efforts in one of the most affected regions as well as pediatric care at the Mario Catarino Rivas Hospital in San Pedro Sula, the second largest city in the country."
   - id: 6160
