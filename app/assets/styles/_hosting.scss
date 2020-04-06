@@ -1,0 +1,32 @@
+.hosting-checklist {
+  h2 {
+    color: black;
+    font-weight: 300;
+  }
+
+  .left, .right {
+    margin: 0;
+    text-align: left;
+  }
+
+  .shim {
+    float: left;
+    width: 10%;
+  }
+
+  .left {
+    width: 20%;
+  }
+
+  .right {
+    width: 70%;
+  }
+
+  ul {
+    list-style: none;
+    li:before {
+      content: "\2714 ";
+      margin-right: 6px;
+    }
+  }
+}
