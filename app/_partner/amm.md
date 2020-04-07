@@ -11,18 +11,28 @@ contact:
 flickr: 
 twitter: 
 facebook: 
-hoursname:
-hourslink:
+hoursname: Benevity
+hourslink: https://apple.benevity.org/search/volunteer/list?page=1&query=missing%20maps&layout=list
 
 flickr-apikey: 
 flickr-setId: 
 
 primary-hashtag: amm
 subhashtags:
-  - amm1
+  - ammg20
 
 tm-projects:
-  - id: 6920
-    desc: "The Red Cross Climate Centre, Indonesian Red Cross (Palang Merah Indonesia/PMI), IFRC, British Red Cross and Australian Red Cross are implementing a programme where the data contributed will be used by the Red Cross to assist in forecasting future disaster impacts, by knowing in advance what is likely to be impacted and its exposure and vulnerability. The information will help implementation of early action activities to take place before a disaster strikes, contributing to reduce risk, prepare for effective response and ultimately to strengthen community resilience."
+  - id: 7709
+    desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!" 
+  - id: 7711
+    desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"     
+  - id: 7708
+    desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"     
+  - id: 7706
+    desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!" 
+  - id: 7659
+    desc: "GREAT FOR INTERMEDIATE MAPPERS! Help map roads in Indonesia in area area at risk of climate change related disasters."   
+  - id: 7707
+    desc: "Help validate! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"     
     
 ---
