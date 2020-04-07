@@ -118,6 +118,37 @@ layout: default
 
 {% include footer.html %}
 
+<!-- # # # # # # # # -->
+<!-- custom hpe page -->
+<!-- # # # # # # # # -->
+{% elsif page.name == "amm" %}
+{% include header_amm.html %}
+
+<script>
+  // creates PT object for each page. Including lang for future use
+  var PT = { lang: '{{page.lang}}' };
+</script>
+
+<h1>{{ page.name }}</h1>
+
+<section id = "Primary">
+  {% include intro.html %}
+</section>
+
+<section class="Get-Started">
+  {% include get_started_amm.html %}
+</section>
+
+<section class = "Current-Projects">
+  {% include projects_amm.html %}
+</section>
+
+<section class = "Teams">
+  {% include teams.html %}
+</section>
+
+
+{% include footer.html %}
 
 <!-- # # # # # # # # -->
 <!-- default page -->

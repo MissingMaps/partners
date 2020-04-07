@@ -1,0 +1,181 @@
+.hosting-checklist {
+  h2 {
+    color: black;
+    font-weight: 300;
+  }
+
+  .left, .right {
+    margin: 0;
+    text-align: left;
+  }
+
+  .shim {
+    float: left;
+    width: 10%;
+  }
+
+  .left {
+    width: 20%;
+  }
+
+  .right {
+    width: 70%;
+  }
+
+  ul {
+    list-style: none;
+    li:before {
+      content: "\2714 ";
+      margin-right: 6px;
+    }
+  }
+}
+
+body.amm {
+
+  section.Current-Projects {
+    text-align: center;
+    .Projects-Container {
+      text-align: center;
+    }
+    h1 {
+
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .HOT-Container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      overflow: hidden;
+    }
+    .HOT-Map {
+      height: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #EEEEEE;
+    }
+    .HOT-Title {
+      text-align: center;
+      p {
+        width: 100%;
+      }
+    }
+    .Mapping-Link {
+      text-align: center;
+    }
+    .flex-control-nav {
+      bottom: -20px;
+    }
+  
+    .flex-direction-nav a {
+      opacity: 0.6;
+      top: 30%;
+      transition: none;
+      line-height: 1;
+      
+  
+      &:hover {
+        opacity: 1;
+      }
+    }
+  
+    .flexslider .flex-direction-nav .flex-prev,
+    .flexslider:hover .flex-direction-nav .flex-prev {
+      left: 20%;
+    }
+  
+    .flexslider .flex-direction-nav .flex-next,
+    .flexslider:hover .flex-direction-nav .flex-next {
+      right: 20%;
+    }
+
+  }
+
+  section.Get-Started {
+    background-color: #ddd;
+
+    .Primary_Container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 12px;
+    }
+
+    .item1,
+    .item2,
+    .item3 {
+      display: inline-block;
+      margin: 0;
+      width: 30%;
+
+      div {
+        padding-top: 30px;
+      }
+    }
+
+    .item1 div,
+    .item2 div {
+      border-right: 1px solid #979797;
+    }
+  }
+
+  section.Teams {
+      background-color: #ddd;
+    
+      #grid1Label {
+        text-align: center;
+      }
+
+    .Team-User-Graph {
+      overflow-y: scroll;
+      background-color: #f2f2f2;
+    }
+  }
+
+  section#Title {
+    .Primary_Container {
+      width: 50%;
+    }
+
+    h1 {
+      margin-top: 90px;
+    }
+  }
+  .checklist {
+    h2 {
+      color: black;
+      font-weight: 300;
+    }
+
+    .left, .right {
+      margin: 0;
+      text-align: left;
+    }
+
+    .shim {
+      float: left;
+      width: 10%;
+    }
+
+    .left {
+      width: 20%;
+    }
+
+    .right {
+      width: 70%;
+    }
+
+    ul {
+      list-style: none;
+      li:before {
+        content: "\2714 ";
+        margin-right: 6px;
+      }
+    }
+  }
+}
