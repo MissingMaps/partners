@@ -20,6 +20,9 @@ flickr-setId:
 primary-hashtag: amm
 subhashtags:
   - ammg20
+  - ammg
+  - ammg18
+  - ammg19
 
 tm-projects:
   - id: 7709

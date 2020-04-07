@@ -5,76 +5,111 @@ layout: default
 {% include header.html %}
 
 <script>
-// creates PT object for each page. Including lang for future use
-var PT = { lang: '{{page.lang}}' };
+    // creates PT object for each page. Including lang for future use
+    var PT = {
+        lang: '{{page.lang}}'
+    };
+
 </script>
 
+<section style="margin-top:50px;">
 
+    <br>
+    <div class="textbox center-text">
+        <h1>Welcome!</h1><br>
+        <div style="font-size:20px;">To learn how to map, watch the videos below.<br>To learn how to host a remote mapathon, scroll down to <a href="#hosting">Hosting a Mapathon</a></div>
+    </div><br>
 
-<section style="margin-top:100px;">
-  <div class="Primary_Container center-text">
-      <h1 class="">Hosting A Mapathon</h1>
-  </div>  
+    <a name="learn"></a>
+
+    <div class="container">
+        <div class="center-text">
+            <h1>Learn to Map</h1>
+        </div>
+    </div>
+    <h2>1. Create an OpenStreetMap account</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/suk8uRpIBQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Learn how to sign up for an OpenStreetMap account. Using your personal email address is probably easier.</p><br>
+
+    <div style="display:inline-block;">
+        <h2>2. Learn to use the Tasking Manager</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Pus2iFZphDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Learn how to find and select a task to edit, start mapping and more.<br> We are working on tasks from the <a href="http://www.missingmaps.org/partners/amm">AMM Missing Maps page</a>.</p>
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <div style="display:inline-block;"><br>
+        <h2>3. Learn to map buildings</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/E1YJV6I_rhY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Learn how to find and select a task to edit, start mapping and more.<br>&nbsp;</p>
+    </div>
+
 </section>
 
+<a name="hosting"></a>
+
 <section id="PlanningChecklist" class="hosting-checklist">
-  <div class="Primary_Container">
-    <div class="shim">&nbsp;</div>
-    <div class="left">
-      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/before_event.png" width="75">
-      <h2>Before event</h2>
+    <div class="Primary_Container">
+        <div class="center-text">
+            <h1>Hosting A Mapathon</h1>
+        </div>
+        <div class="shim">&nbsp;</div>
+        <div class="left">
+            <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/before_event.png" width="75">
+            <h2>Before the event</h2>
+        </div>
+        <div class="right">
+            <ul>
+                <li>Choose a date and time for your event. We recommend a 90 minute to 2 hour event as a best practice</li>
+                <li>Set up a page for your event on Benevity, the Employee Giving Portal. You may need to talk to the Volunteer Champion at your location for this.</li>
+                <li>Send out a Calendar invite in advance with Virtual Conference as the location (which will generate WebEx call-in information) or use whatever videoconferencing tool your team is used to. </li>
+                <li>You'll need a facilitator or two to train mappers and lead the event.</li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702; If you have not participated in Missing Maps before or haven’t organized a mapathon before, the organizer or event leader should watch the tutorial videos <a href="#learn">above</a> to get a sense of how it works so you can answer questions and make sure mappers are contributing the right way. Then try mapping for 30 minutes to an hour to get a hang of it.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702; If more than one person can watch the tutorial videos and do some mapping before the event, that’s even better! More people to help out.
+                <li>Send a reminder 1-2 days before your event, reminding attendees to <a href="https://www.openstreetmap.org/user/new">register a mapping user ID</a> in advance</li>
+                <li>Pick a task from the <a href="http://www.missingmaps.org/partners/amm">AMM Missing Maps page</a>. The Red Cross asked us for help with these projects, which are all good for beginners, and we keep the list up to date.</li>
+                <li>Use #amm and consider creating a hashtag for your site or event to track your progress</li>
+                <li>If you have any questions, email <a href=mailto:andrew_wiseman@apple.com>Andrew</a>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
     </div>
-    <div class="right">
-      <ul>
-        <li>Choose a date and time for your event, we recommend a 90 minute to 2 hour event as a best practice</li>
-        <li>Set up a page for your event on Benevity, the Employee Giving Portal. You may need to talk to the Volunteer Champion at your location for this.</li>
-        <li>Send out a Calendar invite in advance with Virtual Conference as the location (which will generate WebEx call-in information) or use whatever videoconferencing tool your team is used to. FaceTime is ok for chatting but not ideal for sharing your computer screen.</li>
-        <li>You'll need a facilitator or two to train mappers and lead the event.</li>
-        <ul>
-          <li>If you have not participated in Missing Maps before or haven’t organized a mapathon before, the organizer or event leader should <a href="https://www.youtube.com/playlist?list=PLb9506_-6FMHp2nE9QrSGAVFe6sS7OzFp" target="_blank">watch the tutorial videos</a> to get a sense of how it works so you can answer questions and make sure mappers are contributing the right way. Then try mapping for 30 minutes to an hour to get a hang of it.</li>
-          <li>If more than one person can watch the tutorial videos and do some mapping before the event, that’s even better! More people to help out.</li>
-        </ul>
-        <li>Send a reminder 1-2 days before your event, reminding attendees to <a href="https://www.openstreetmap.org/user/new">register a mapping user ID</a> in advance</li>
-        <li>Pick a task from the <a href="http://www.missingmaps.org/partners/amm">AMM Missing Maps page</a>. The Red Cross asked us for help with these projects and we keep the list up to date. </li>
-        <li>Use #amm and consider creating a hashtag for your site or event to track your progress</li>
-        <li>If you have any questions, email <a href=mailto:andrew_wiseman@apple.com>Andrew</a>
-      </ul>
-    </div>
-    <div class="clearfix"></div>
-  </div>
 </section>
 
 <section id="EventDayChecklist" class="hosting-checklist">
-  <div class="Primary_Container">
-    <div class="shim">&nbsp;</div>
-    <div class="left">
-      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/during_event.png" width="75">
-      <h2>During event</h2>
+    <div class="Primary_Container">
+        <div class="shim">&nbsp;</div>
+        <div class="left">
+            <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/during_event.png" width="75">
+            <h2>During the event</h2>
+        </div>
+        <div class="right">
+            <ul>
+                <li>Online events: Share important links like the <a href="http://www.missingmaps.org/partners/amm/">AMM Missing Maps page</a> and <a href="http://www.openstreetmap.org/user/new"> mapping user registration page</a> in a common chat or online meeting lobby</li>
+                <li>Make sure to remind mappers which projects to work on. They are listed on <a href="http://www.missingmaps.org/partners/amm">this page</a>. The Red Cross asked us for help with these projects, which are all good for beginners, and we keep the list up to date.</li>
+                <li>Remind mappers to square the corners of their buildings by clicking q on your keyboard after mapping it.</li>
+                <li>Have fun mapping!</li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
     </div>
-    <div class="right">
-      <ul>
-        <li>Online events: Share important links like the <a href="http://www.missingmaps.org/partners/amm/">AMM Missing Maps page</a> and <a href="http://www.openstreetmap.org/user/new"> mapping user registration page</a> in a common chat or online meeting lobby</li>
-        <li>Have fun mapping!</li>
-      </ul>
-    </div>
-    <div class="clearfix"></div>
-  </div>
 </section>
 
 <section id="PostEventChecklist" class="hosting-checklist">
-  <div class="Primary_Container">
-    <div class="shim">&nbsp;</div>
-    <div class="left">
-      <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/after_event.png" width="75">
-      <h2>After event</h2>
+    <div class="Primary_Container">
+        <div class="shim">&nbsp;</div>
+        <div class="left">
+            <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/after_event.png" width="75">
+            <h2>After event</h2>
+        </div>
+        <div class="right">
+            <ul>
+                <li>Check the stats for your hashtag at <a href="http://www.missingmaps.org/leaderboards/#/missingmaps">the Missing Maps leaderboard page</a>. </li>
+                <li>Send out a recap to the participants with stats, a thank you and whatever else you see fit.</li>
+                <li>Host another mapathon again soon!</li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
     </div>
-    <div class="right">
-      <ul>
-        <li>Host another mapathon again soon!</li>
-      </ul>
-    </div>
-    <div class="clearfix"></div>
-  </div>
 </section>
 
 {% include footer.html %}
