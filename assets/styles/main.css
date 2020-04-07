@@ -4674,4 +4674,156 @@ body.hpegives .checklist ul li:before {
   margin-right: 6px;
 }
 
+body.amm section.Current-Projects {
+  text-align: center;
+}
+
+body.amm section.Current-Projects .Projects-Container {
+  text-align: center;
+}
+
+body.amm section.Current-Projects h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body.amm section.Current-Projects .HOT-Container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  overflow: hidden;
+}
+
+body.amm section.Current-Projects .HOT-Map {
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #EEEEEE;
+}
+
+body.amm section.Current-Projects .HOT-Title {
+  text-align: center;
+}
+
+body.amm section.Current-Projects .HOT-Title p {
+  width: 100%;
+}
+
+body.amm section.Current-Projects .Mapping-Link {
+  text-align: center;
+}
+
+body.amm section.Current-Projects .flex-control-nav {
+  bottom: -20px;
+}
+
+body.amm section.Current-Projects .flex-direction-nav a {
+  opacity: 0.6;
+  top: 30%;
+  -webkit-transition: none;
+  transition: none;
+  line-height: 1;
+}
+
+body.amm section.Current-Projects .flex-direction-nav a:hover {
+  opacity: 1;
+}
+
+body.amm section.Current-Projects .flexslider .flex-direction-nav .flex-prev,
+body.amm section.Current-Projects .flexslider:hover .flex-direction-nav .flex-prev {
+  left: 20%;
+}
+
+body.amm section.Current-Projects .flexslider .flex-direction-nav .flex-next,
+body.amm section.Current-Projects .flexslider:hover .flex-direction-nav .flex-next {
+  right: 20%;
+}
+
+body.amm section.Get-Started {
+  background-color: #ddd;
+}
+
+body.amm section.Get-Started .Primary_Container {
+  text-align: center;
+}
+
+body.amm section.Get-Started h1 {
+  margin-top: 12px;
+}
+
+body.amm section.Get-Started .item1,
+body.amm section.Get-Started .item2,
+body.amm section.Get-Started .item3 {
+  display: inline-block;
+  margin: 0;
+  width: 30%;
+}
+
+body.amm section.Get-Started .item1 div,
+body.amm section.Get-Started .item2 div,
+body.amm section.Get-Started .item3 div {
+  padding-top: 30px;
+}
+
+body.amm section.Get-Started .item1 div,
+body.amm section.Get-Started .item2 div {
+  border-right: 1px solid #979797;
+}
+
+body.amm section.Teams {
+  background-color: #ddd;
+}
+
+body.amm section.Teams #grid1Label {
+  text-align: center;
+}
+
+body.amm section.Teams .Team-User-Graph {
+  overflow-y: scroll;
+  background-color: #f2f2f2;
+}
+
+body.amm section#Title .Primary_Container {
+  width: 50%;
+}
+
+body.amm section#Title h1 {
+  margin-top: 90px;
+}
+
+body.amm .checklist h2 {
+  color: black;
+  font-weight: 300;
+}
+
+body.amm .checklist .left, body.amm .checklist .right {
+  margin: 0;
+  text-align: left;
+}
+
+body.amm .checklist .shim {
+  float: left;
+  width: 10%;
+}
+
+body.amm .checklist .left {
+  width: 20%;
+}
+
+body.amm .checklist .right {
+  width: 70%;
+}
+
+body.amm .checklist ul {
+  list-style: none;
+}
+
+body.amm .checklist ul li:before {
+  content: "\2714 ";
+  margin-right: 6px;
+}
+
 /*# sourceMappingURL=main.css.map */
