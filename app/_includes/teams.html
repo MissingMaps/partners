@@ -2,8 +2,12 @@
   <h1 id="grid1Label">Activity</h1>
   <menu class="Team-User-Nav">
     <p class="null">VIEW BY:</p>
+    {% if page.subhashtags != '' %}
+    <menuitem id="Select-Users-Graph" class="Selected">USERS</menuitem>
+    {% else %}
     <menuitem id="Select-Teams-Graph" class="Selected">TEAMS</menuitem>
     <menuitem id="Select-Users-Graph">USERS</menuitem>
+    {% endif %}
   </menu>
   <div class="Team-User-Stats" role="grid" aria-labelledby="grid1Label">
     <div class="Team-User-Stat-Item">

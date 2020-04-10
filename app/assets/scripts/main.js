@@ -262,7 +262,7 @@ function setupGraphs () {
     // Remove existing graphs
     removeExistingGraphs();
     // Gets hashtag array on each partner page via team.html
-    getGroupActivityStats(PT.subHashtags);
+    getGroupActivityStats(PT.subHashtags, PT.mainHashtag);
   });
 }
 
@@ -718,6 +718,9 @@ setupGraphs();
 // Populates hero + initial groups graph via Missing Maps API
 if (PT.mainHashtag == 'salesforcels' || PT.mainHashtag == 'americangeo') {
   getGroupActivityStatsSubHashtag(PT.subHashtags, PT.mainHashtag);
+// if partner doesn't use subhashtags, set the subhashtag to the main hashtag
+} else if (PT.subHashtags[0] == PT.mainHashtag) {
+  getUserActivityStats(PT.mainHashtag);
 } else {
   getGroupActivityStats(PT.subHashtags, PT.mainHashtag);
 }
