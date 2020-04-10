@@ -31,6 +31,8 @@ subhashtags:
 tm-projects:
   - id: 8053
     desc: "Across the globe, millions of girls are still excluded from school because of their gender. India is home to one of the largest such populations, with more than 4.1 million girls outside the classroom. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
+  - id: 8289
+    desc: "Across the globe, millions of girls are still excluded from school because of their gender. India is home to one of the largest such populations, with more than 4.1 million girls outside the classroom. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
   - id: 8092
     desc: "The Philippines is ranked the third most disaster-prone country in the world, consistently experiencing natural disasters like typhoons, earthquakes, and volcanic eruptions. Currently, many disaster-prone communities within the Philippines are poorly mapped, making it difficult to both prepare for and respond to natural disasters."
   - id: 8086
