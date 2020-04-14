@@ -30,9 +30,9 @@ tm-projects:
   - id: 7711
     desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"     
   - id: 7708
-    desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"     
+    desc: "GREAT FOR INTERMEDIATE MAPPERS! Help validate! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"     
   - id: 7706
-    desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!" 
+    desc: "GREAT FOR INTERMEDIATE MAPPERS! Help validate! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!" 
   - id: 7659
     desc: "GREAT FOR INTERMEDIATE MAPPERS! Help map roads in Indonesia in area area at risk of climate change related disasters."   
   - id: 7707
