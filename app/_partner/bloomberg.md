@@ -19,8 +19,10 @@ flickr-setId: 72157709649329127
 
 primary-hashtag: bloomberg
 subhashtags:
-  - globalevents
-  - corporatephilanthropy
+  - emea
+  - apac
+  - amer
+  - latam
 
 tm-projects:
   - id: 8249
