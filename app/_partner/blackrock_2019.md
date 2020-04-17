@@ -19,50 +19,42 @@ flickr-setId: 72157667905063518
 
 primary-hashtag: blackrock
 subhashtags:
-  - blackrocksanfran19
-  - blackrockseattle19
-  - blackrockmilan19
-  - blackrockbudapest19
-  - blackrocknyc19
-  - blackrockwilmington19
-  - blackrockzurich19
-  - blackrockgeneva19
-  - blackrockfrankfurt19
-  - blackrockmunich19
-  - blackrockparis19
-  - blackrockgurgaon19
-  - blackrockmumbai19
-  - blackrockhongkong19
-  - blackrockmexicocity19
-  - blackrocklondon19
-  - blackrockedinburgh19
-  - blackrockprinceton19
-  - blackrocktokyo19
-  - blackrocksydney19
-  - blackrockseoul19
-  - blackrockboston19
-  - blackrocktaipei19
-  - blackrockdenver19
-  - blackrockcopenhagen19
-  - blackrockmontreal19
-  - blackrockmumbai19
-  - blackrockwdc19
-  - blackrockstockholm19
-  - blackrocktoronto19
-  - blackrocksingapore19
+  - blackrocksanfran20
+  - blackrockseattle20
+  - blackrockmilan20
+  - blackrockbudapest20
+  - blackrocknyc20
+  - blackrockwilmington20
+  - blackrockzurich20
+  - blackrockgeneva20
+  - blackrockfrankfurt20
+  - blackrockmunich20
+  - blackrockparis20
+  - blackrockgurgaon20
+  - blackrockmumbai20
+  - blackrockhongkong20
+  - blackrockmexicocity20
+  - blackrocklondon20
+  - blackrockedinburgh20
+  - blackrockprinceton20
+  - blackrocktokyo20
+  - blackrocksydney20
+  - blackrockseoul20
+  - blackrockboston20
+  - blackrocktaipei20
+  - blackrockdenver20
+  - blackrockcopenhagen20
+  - blackrockmontreal20
+  - blackrockmumbai20
+  - blackrockwdc20
+  - blackrockstockholm20
+  - blackrocktoronto20
+  - blackrocksingapore20
 
 tm-projects:
-  - id: 5798
-    desc: "MSF is launching a new maternal and child health support program in the health district of Moissala in Chad. The first activity will be a community survey to appreciate more in detail the health conditions of women and children. The mapping will help MSF to have an overview of all households (represented by roofs) and draw a sample of the population to carry out the survey. The data will also help in better programming health activities."
-  - id: 5871
-    desc: "The Sila region in Chad is an extremely vulnerable area in the east of the country. MSF teams working here to respond to a variety of different health needs. These include emergency response to disease outbreaks across the area such as measles outbreaks. Accurate maps of the area will assist the teams with epidemiological analysis, disease surveillance and logistical planning. Take a look at this Pinterest board with images of the Sila region."
-  - id: 5888
-    desc: "The Sila region in Chad is an extremely vulnerable area in the east of the country. MSF teams working here to respond to a variety of different health needs. These include emergency response to disease outbreaks across the area such as measles outbreaks. Accurate maps of the area will assist the teams with epidemiological analysis, disease surveillance and logistical planning. Take a look at this Pinterest board with images of the Sila region."
-  - id: 5870
-    desc: "The Salamat region in Chad is an extremely vulnerable area in the east of the country. MSF teams working here to respond to a variety of different health needs. These include emergency response to disease outbreaks across the area such as measles outbreaks. Accurate maps of the area will assist the teams with epidemiological analysis, disease surveillance and logistical planning. Take a look at this Pinterest board with images of the eastern regions of Chad."
-  - id: 5799   
-    desc: "MSF is launching a new maternal and child health support program in the health district of Moissala in Chad. The first activity will be a community survey to appreciate more in detail the health conditions of women and children. The mapping will help MSF to have an overview of all households (represented by roofs) and draw a sample of the population to carry out the survey. The data will also help in better programming health activities."
-  - id: 5800 
-    desc: "MSF is launching a new maternal and child health support program in the health district of Moissala in Chad. The first activity will be a community survey to appreciate more in detail the health conditions of women and children. The mapping will help MSF to have an overview of all households (represented by roofs) and draw a sample of the population to carry out the survey. The data will also help in better programming health activities."  
+  - id: 8186
+    desc: "In the Mbomou province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8337
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
  
 ---
