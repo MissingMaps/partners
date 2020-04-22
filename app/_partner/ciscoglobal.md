@@ -29,6 +29,10 @@ subhashtags:
 
 
 tm-projects:
+  - id: 8280
+    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
+  - id: 8281
+    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
   - id: 8053
     desc: "Across the globe, millions of girls are still excluded from school because of their gender. India is home to one of the largest such populations, with more than 4.1 million girls outside the classroom. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
   - id: 8289
