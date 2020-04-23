@@ -17,7 +17,7 @@ hourslink:
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
 flickr-setId: 72157667905063518
 
-primary-hashtag: blackrock
+primary-hashtag: blackrock20
 subhashtags:
   - blackrocksanfran20
   - blackrockseattle20
@@ -50,6 +50,12 @@ subhashtags:
   - blackrockstockholm20
   - blackrocktoronto20
   - blackrocksingapore20
+  - blackrockbelgrade20
+  - blackrockamsterdam20
+  - blackrockgermany20
+  - blackrockdublin20
+  - blackrockatlanta20
+  - blackrock1BLK20
 
 tm-projects:
   - id: 8186
