@@ -17,7 +17,7 @@ hourslink:
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
 flickr-setId: 72157667905063518
 
-primary-hashtag: blackrock
+primary-hashtag: blackrock20
 subhashtags:
   - blackrocksanfran20
   - blackrockseattle20
@@ -50,11 +50,23 @@ subhashtags:
   - blackrockstockholm20
   - blackrocktoronto20
   - blackrocksingapore20
+  - blackrockbelgrade20
+  - blackrockamsterdam20
+  - blackrockgermany20
+  - blackrockdublin20
+  - blackrockatlanta20
+  - blackrock1BLK20
 
 tm-projects:
   - id: 8186
     desc: "In the Mbomou province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
   - id: 8337
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8339
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8340
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8341
     desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
  
 ---
