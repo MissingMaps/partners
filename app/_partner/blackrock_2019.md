@@ -68,5 +68,17 @@ tm-projects:
     desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
   - id: 8341
     desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8342
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8343
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8345
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8346
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8347
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8387
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
  
 ---
