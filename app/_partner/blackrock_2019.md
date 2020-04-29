@@ -59,8 +59,6 @@ subhashtags:
   - blackrockbelgrad20
 
 tm-projects:
-  - id: 8389
-    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
   - id: 8390
     desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
   - id: 8391
@@ -76,6 +74,10 @@ tm-projects:
   - id: 8402
     desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
   - id: 8404
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8541
+    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
+  - id: 8542
     desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
  
 ---
