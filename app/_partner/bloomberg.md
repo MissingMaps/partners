@@ -25,6 +25,8 @@ subhashtags:
   - latam
 
 tm-projects:
+  - id: 8572
+    desc: "HOT has been requested by the Botswana Institute of Geomatics (BIG) to map buildings in the Greater Gaborone area in Botswana. This data will provide a basemap for COVID-19 monitoring tools used by the Government of Botswana. Please join our global effort to help control this disease by mapping on this project."
   - id: 8274
     desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
   - id: 8275
@@ -33,4 +35,5 @@ tm-projects:
     desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
   - id: 8409
     desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
+
 ---
