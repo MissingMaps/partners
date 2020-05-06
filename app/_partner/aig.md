@@ -18,9 +18,9 @@ links:
   - title: Register a Mapping Event
     link: https://contact.aig.net/ToolsandApps/_layouts/AIG.CCS.ZSO/LinksRedirector.aspx?link=GDG
   - title: Individual Mapping Materials
-    link: https://cdn.hotosm.org/AIG_Individual_Mapping_Materials.zip
+    link: https://cdn.hotosm.org/leaderboard/AIG/TM4_Individual_Mapping_Materials.zip
   - title: Mapathon Event Materials
-    link: https://cdn.hotosm.org/AIG_Mapathon_Event_Materials.zip
+    link: https://cdn.hotosm.org/leaderboard/AIG/TM4_Mapathon_Resources.zip
 
 primary-hashtag: aig
 subhashtags:
