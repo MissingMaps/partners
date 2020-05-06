@@ -19,7 +19,7 @@ flickr-setId:
 
 links:
   - title: Mapping Training Resources
-    link: https://cdn.hotosm.org/leaderboard/Cisco/Cisco_Training_Resources.zip
+    link: https://cdn.hotosm.org/leaderboard/Cisco/Cisco+TM4+Mapping+Materials.zip
   - title: Start here
     link: https://sharevideo.cisco.com/#/videos/72ff2ce6-7959-4cfb-804b-d99fe745bc74
     
