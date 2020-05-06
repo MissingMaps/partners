@@ -3,7 +3,7 @@
  -------------------------------------------------------*/
 
 const statsApi = 'https://osm-stats-production-api.azurewebsites.net';
-const tasksApi = 'https://tasks.hotosm.org/api/v1';
+const tasksApi = 'https://tasking-manager-tm4-production-api.hotosm.org/api/v2';
 
 // Fetch Project data from Tasking Manager API
 function getProjects (projects) {
@@ -24,7 +24,7 @@ function getProjects (projects) {
   }
 
   projects.forEach(function (project, i) {
-    const url = tasksApi + `/project/${project}/summary`;
+    const url = tasksApi + `/projects/${project}/queries/summary/`;
     $.getJSON(url, function (projectData) {
       makeProject(projectData, i + 2);
     })
@@ -53,7 +53,7 @@ function makeProject (project, projectOrder) {
   }
 
   // Adds Project variables to the cards
-  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.name}</b>`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.projectInfo.name}</b>`);
   $(`ul li:nth-child(${projectOrder}) .title`).html(`${project.name} (#${project.projectId})`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
@@ -83,7 +83,7 @@ function makePlaceholderProject (projectId, projectOrder) {
  page variable settings.`;
 
   // Add explanatory error text
-  const errorHtml = `Uh oh, it looks like <a href="` + tasksApi + `/project/${project};${projectId}"
+  const errorHtml = `Uh oh, it looks like <a href="` + tasksApi + `/projects/${project};${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
  <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
  &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
@@ -130,7 +130,7 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = tasksApi + `/project/${projectId}`;
+  const endpoint = tasksApi + `/projects/${projectId}`;
   $.getJSON(endpoint, function (taskData) {
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
