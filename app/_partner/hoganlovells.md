@@ -16,7 +16,7 @@ hourslink:
 
 links:
   - title: Hosting Your Mapathon
-    link: https://cdn.hotosm.org/leaderboard/hoganlovells/HL+Mapathon+Trainings+(2%3A27%3A2020).zip
+    link: https://cdn.hotosm.org/leaderboard/hoganlovells/Hogan+Lovells+TM4+Mapping+Materials.zip
   - title: Guidelines for Participation
     link: https://cdn.hotosm.org/leaderboard/hoganlovells/2020-02+Missing+Maps+Guidelines.pdf
 
