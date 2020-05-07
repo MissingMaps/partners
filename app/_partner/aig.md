@@ -5,7 +5,7 @@ permalink: /aig/
 
 id: aig
 name: aig
-logo: AIG.png
+logo: AIG_core_rgb.png
 contact: jessica.bergmann@hotosm.org
 
 flickr: 
