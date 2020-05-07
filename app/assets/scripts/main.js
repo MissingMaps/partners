@@ -130,7 +130,7 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = tasksApi + `/projects/${projectId}`;
+  const endpoint = tasksApi + `/projects/${projectId}/`;
   $.getJSON(endpoint, function (taskData) {
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
