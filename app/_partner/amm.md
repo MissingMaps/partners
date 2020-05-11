@@ -27,6 +27,8 @@ subhashtags:
 tm-projects:
   - id: 7711
     desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"  
+  - id: 7710
+    desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"    
   - id: 5377
     desc: "GREAT FOR NEW MAPPERS! The Ayeyarwady Delta area in Myanmar is at high risk of floods and other issues so the Red Cross is working on a disaster preparedness program. Help map buildings to reduce risk and help response."
   - id: 4713
