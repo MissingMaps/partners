@@ -17,6 +17,10 @@ hourslink:
 flickr-apikey: 09023a48037b7882a3683cb1c2043c50
 flickr-setId: 72157655209554272
 
+links:
+  - title: Individual Mapping Materials
+    link: https://cdn.hotosm.org/leaderboard/JPMC/TM4+Individual+Mapping+Materials.zip
+
 primary-hashtag: jpmc
 subhashtags:
   - tyk2wd
