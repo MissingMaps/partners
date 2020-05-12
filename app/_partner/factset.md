@@ -52,6 +52,7 @@ subhashtags:
   - factset20sydney
   - factset20tokyo
   - factsetgermany
+  - factsetfrance
 
 tm-projects:
   - id: 8585
