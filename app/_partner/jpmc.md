@@ -44,14 +44,16 @@ subhashtags:
   - glas-3
 
 tm-projects:
+  - id: 8419
+    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
+  - id: 8455
+    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
   - id: 8454
     desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
-  - id: 8277
-    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
-  - id: 8278
-    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
-  - id: 8279
-    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
+  - id: 8688
+    desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
+  - id: 8690
+    desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
   - id: 6303
     desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
   - id: 1965
