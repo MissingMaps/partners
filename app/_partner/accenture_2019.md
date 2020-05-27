@@ -34,7 +34,9 @@ subhashtags:
   - #acngraddublin19
 
 tm-projects:
-  - id: 8583
+  - id: 8706
+    desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
+  - id: 8707
     desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
   - id: 8584
     desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
