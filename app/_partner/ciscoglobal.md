@@ -36,16 +36,12 @@ tm-projects:
     desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
   - id: 8417
     desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
-  - id: 8281
-    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
   - id: 8053
     desc: "Across the globe, millions of girls are still excluded from school because of their gender. India is home to one of the largest such populations, with more than 4.1 million girls outside the classroom. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
   - id: 8289
     desc: "Across the globe, millions of girls are still excluded from school because of their gender. India is home to one of the largest such populations, with more than 4.1 million girls outside the classroom. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
   - id: 8092
     desc: "The Philippines is ranked the third most disaster-prone country in the world, consistently experiencing natural disasters like typhoons, earthquakes, and volcanic eruptions. Currently, many disaster-prone communities within the Philippines are poorly mapped, making it difficult to both prepare for and respond to natural disasters."
-  - id: 8418
-    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
   - id: 8008
     desc: "The Humanitarian OpenStreetMap Team (HOT) Philippines, in partnership with the Pacific Disaster Center (PDC), and the Office of Civil Defense (OCD) is leading a new local installation of DisasterAWARE in the Philippines called PhilAWARE. PhilAWARE is a disaster risk reduction and integrated early warning and decision support system that incorporates many data layers from OpenStreetMap."
     
