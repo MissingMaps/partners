@@ -44,8 +44,6 @@ tm-projects:
     desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
   - id: 8397
     desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
-  - id: 6916
-    desc: "The Philippines is ranked the third most disaster-prone country in the world, consistently experiencing natural disasters like typhoons, earthquakes, and volcanic eruptions. Currently, many disaster-prone communities within the Philippines are poorly mapped, making it difficult to both prepare for and respond to natural disasters."
   - id: 8174
     desc: "India is home to one of the largest populations, with more than 4.1 million girls outside the classroom. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
 
