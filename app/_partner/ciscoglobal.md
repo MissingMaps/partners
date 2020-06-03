@@ -22,6 +22,8 @@ links:
     link: https://cdn.hotosm.org/leaderboard/Cisco/Cisco+TM4+Mapping+Materials.zip
   - title: Start here
     link: https://tasks-stage.hotosm.org/learn
+  - title: Support email
+    link: mailto:cisco-support@hotosm.org
     
 primary-hashtag: ciscoglobal
 subhashtags:
