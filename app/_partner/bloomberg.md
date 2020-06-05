@@ -27,15 +27,7 @@ subhashtags:
 tm-projects:
   - id: 8701
     desc: "HOT has been requested by the Botswana Institute of Geomatics (BIG) to map buildings in the Greater Gaborone area in Botswana. This data will provide a basemap for COVID-19 monitoring tools used by the Government of Botswana. Please join our global effort to help control this disease by mapping on this project."
-  - id: 8582
-    desc: "HOT has been requested by the Botswana Institute of Geomatics (BIG) to map buildings in the Greater Gaborone area in Botswana. This data will provide a basemap for COVID-19 monitoring tools used by the Government of Botswana. Please join our global effort to help control this disease by mapping on this project."
-  - id: 8580
-    desc: "HOT has been requested by the Botswana Institute of Geomatics (BIG) to map buildings in the Greater Gaborone area in Botswana. This data will provide a basemap for COVID-19 monitoring tools used by the Government of Botswana. Please join our global effort to help control this disease by mapping on this project."
-  - id: 8572
-    desc: "HOT has been requested by the Botswana Institute of Geomatics (BIG) to map buildings in the Greater Gaborone area in Botswana. This data will provide a basemap for COVID-19 monitoring tools used by the Government of Botswana. Please join our global effort to help control this disease by mapping on this project."
   - id: 8731
     desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. She will have a smaller, healthier family and will be 50% more likely to immunize her kids."
-  - id: 8408
-    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
 
 ---
