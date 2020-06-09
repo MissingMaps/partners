@@ -44,10 +44,6 @@ subhashtags:
   - glas-3
 
 tm-projects:
-  - id: 8455
-    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
-  - id: 8454
-    desc: "HOT is mapping Cusco region in Peru at the request of regional government to support their COVID-19 response efforts. The maps will be used to provide cash transfers to families who are prevented from working by the quarantine and State of Emergency in Peru, and to provide nutrition and sanitation assistance."
   - id: 8688
     desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
   - id: 8690
