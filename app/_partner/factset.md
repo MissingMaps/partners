@@ -53,6 +53,8 @@ subhashtags:
   - factset20tokyo
   - factsetgermany
   - factsetfrance
+  - factset20hr
+  - factset20finance
 
 tm-projects:
   - id: 8763
