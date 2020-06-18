@@ -25,8 +25,6 @@ subhashtags:
   - latam
 
 tm-projects:
-  - id: 8701
-    desc: "HOT has been requested by the Botswana Institute of Geomatics (BIG) to map buildings in the Greater Gaborone area in Botswana. This data will provide a basemap for COVID-19 monitoring tools used by the Government of Botswana. Please join our global effort to help control this disease by mapping on this project."
   - id: 8768
     desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
   - id: 8731
