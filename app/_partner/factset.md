@@ -55,6 +55,7 @@ subhashtags:
   - factsetfrance
   - factset20hr
   - factset20finance
+  - factset20newbies
 
 tm-projects:
   - id: 8763
