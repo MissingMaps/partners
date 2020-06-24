@@ -6,7 +6,7 @@ permalink: /microsoft/
 id: microsoft
 name: microsoft
 logo:
-contact: jubalh@microsoft.com
+contact: colin.peterson@redcross.org
 
 flickr:
 twitter: https://twitter.com/microsoft
