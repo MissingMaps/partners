@@ -23,6 +23,7 @@ subhashtags:
   - hpe
   - hpepaloalto
   - hpehouston
+  - HPEBSIG
 
 tm-projects:
   - id: 4758
