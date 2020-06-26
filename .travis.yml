@@ -27,9 +27,12 @@ before_script:
   - npm install
 script:
 - npm run build-prod
+- npm run test
 deploy:
   provider: script
   skip_cleanup: true
   script: ".build_scripts/deploy.sh"
   on:
     branch: "${DEPLOY_BRANCH}"
+
+cache: bundler

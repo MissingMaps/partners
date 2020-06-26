@@ -23,7 +23,7 @@
     "build-stage": "gulp stage",
     "build-prod": "gulp prod",
     "lint": "semistandard app/assets/scripts/**/*.js",
-    "test": "echo NO TESTS YET",
+    "test": "bundle exec htmlproofer --disable-external --assume-extension ./_site",
     "install": "bundle install --path bundle/cache",
     "publish": "gh-pages -d _site -b gh-pages"
   },

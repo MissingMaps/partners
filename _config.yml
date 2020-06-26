@@ -1,6 +1,7 @@
 # Site settings
 title: mm-partner
 safe:           false
+strict_front_matter: true
 source:         app
 exclude:
   - assets/scripts
