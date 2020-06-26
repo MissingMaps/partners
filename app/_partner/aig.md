@@ -25,6 +25,12 @@ links:
 primary-hashtag: aig
 subhashtags:
   - aig*
+  - bostonMercator
+  - bostonRobinson
+  - bostonDyMaxion
+  - bostonPeters
+  - bostonLambert
+  - bostonCassini
 
 tm-projects:
   - id: 8767
