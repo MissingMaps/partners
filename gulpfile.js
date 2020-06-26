@@ -105,8 +105,10 @@ gulp.task('jekyll', function (done) {
       break;
   }
 
-  return cp.spawn('bundle', args, {stdio: 'inherit'})
-    .on('close', done);
+  return cp.exec(cp.spawn('bundle', args, {stdio: 'inherit'}), function(error, stdout, stderror) {
+    return callback(error !== null ? 'ERROR: Jekyll process exited with code: '+error.code : null);
+  }).on('close', done);
+
 });
 
 // Copies fonts
