@@ -14,12 +14,12 @@ facebook:
 hoursname:
 hourslink:
 
-primary-hashtag: PIMCO
+primary-hashtag: pimco
 subhashtags:
-  - PIMCO-TeamAPAC
-  - PIMCO-TeamEMEA
-  - PIMCO-TeamAmericas
-  - PIMCO-SummerInterns
+  - pimco-teamapac
+  - pimco-teamemea
+  - pimco-teamamericas
+  - pimco-summerinterns
 
 tm-projects:
   - id: 8894
