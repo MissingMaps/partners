@@ -42,9 +42,5 @@ tm-projects:
     desc: "Across the globe, millions of girls are still excluded from school because of their gender. India is home to one of the largest such populations, with more than 4.1 million girls outside the classroom. Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping and validating villages in rural India."
   - id: 8745
     desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. She will have a smaller, healthier family and will be 50% more likely to immunize her kids."
-  - id: 8092
-    desc: "The Philippines is ranked the third most disaster-prone country in the world, consistently experiencing natural disasters like typhoons, earthquakes, and volcanic eruptions. Currently, many disaster-prone communities within the Philippines are poorly mapped, making it difficult to both prepare for and respond to natural disasters."
-  - id: 8008
-    desc: "The Humanitarian OpenStreetMap Team (HOT) Philippines, in partnership with the Pacific Disaster Center (PDC), and the Office of Civil Defense (OCD) is leading a new local installation of DisasterAWARE in the Philippines called PhilAWARE. PhilAWARE is a disaster risk reduction and integrated early warning and decision support system that incorporates many data layers from OpenStreetMap."
     
 ---
