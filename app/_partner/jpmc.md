@@ -20,6 +20,8 @@ flickr-setId: 72157655209554272
 links:
   - title: Individual Mapping Materials
     link: https://cdn.hotosm.org/leaderboard/JPMC/TM4+Individual+Mapping+Materials.zip
+  - title: Mapathon Event Materials
+    link: https://cdn.hotosm.org/leaderboard/JPMC/TM4+Mapathon+Event+Materials.zip
 
 primary-hashtag: jpmc
 subhashtags:
