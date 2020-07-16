@@ -79,6 +79,14 @@ subhashtags:
   - emeamaps17
   - emeamaps18
   - emeamaps19
+  - msapac1
+  - msapac2
+  - msapac3
+  - msapac4
+  - msapac5
+  - msapac6
+  - msapac7
+  - msapac8
   
 tm-projects:
   - id: 8741
