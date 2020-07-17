@@ -508,6 +508,7 @@ h1 {
   text-align: left;
   menuitem {
     cursor: pointer;
+    margin-right: 1.5rem;
   }
   
   p {
@@ -516,7 +517,7 @@ h1 {
     margin: 0 1.5em 0 0;
     @media screen and (min-width: 800px) {
       float: left;
-      margin-right: 3em;
+      font-weight: 600;
     }
   }
   @media screen and (min-width: 800px) {
