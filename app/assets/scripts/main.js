@@ -130,7 +130,7 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = tasksApi + `/projects/${projectId}/`;
+  const endpoint = tasksApi + `/projects/${projectId}/tasks/`;
   $.getJSON(endpoint, function (taskData) {
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
@@ -141,14 +141,14 @@ function addMap (projectId) {
 
     // Add tile layer
     L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
-      attribution: '<a href="http://mapbox.com">Mapbox</a>'
+      attribution: '<a href="http://mapbox.com">Mapbox</a> | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
     // Remove 'Leaflet' attribution
     map.attributionControl.setPrefix('');
 
     // Add feature layer
-    const featureLayer = L.geoJson(taskData.tasks, {
+    const featureLayer = L.geoJson(taskData, {
       onEachFeature: onEachFeature
     }).addTo(map);
 
