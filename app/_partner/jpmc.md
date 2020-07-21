@@ -49,6 +49,7 @@ subhashtags:
   - jpmcnarminterngiveback
   - jpmcemeainterngiveback
   - jpmcapacinterngiveback
+  - jpmcsummerhire-narm
   
 tm-projects:
   - id: 8967
