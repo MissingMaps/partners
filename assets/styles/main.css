@@ -2450,6 +2450,7 @@ h1 {
 
 .Team-User-Nav menuitem {
   cursor: pointer;
+  margin-right: 1.5rem;
 }
 
 .Team-User-Nav p {
@@ -2461,7 +2462,7 @@ h1 {
 @media screen and (min-width: 800px) {
   .Team-User-Nav p {
     float: left;
-    margin-right: 3em;
+    font-weight: 600;
   }
 }
 
