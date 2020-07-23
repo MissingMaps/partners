@@ -30,8 +30,6 @@ subhashtags:
   - hpbuenosaires
 
 tm-projects:
-  - id: 4758
-    desc: "In the lake basin region of Chad, the influx of the displaced population is exerting pressure over scarce essential resources. This has resulted in a sharp increase of humanitarian needs in food, healthcare and water, hygiene and sanitation for both IDPs and host communities. Moreover, around 780 unaccompanied children require protection, psychosocial support and recreational activities."
   - id: 4834
     desc: "Large-scale epidemics and pandemics pose a serious threat not only to global health security but also to countries, communities and individuals in their efforts to achieve resilience. Epidemics and pandemics affect all sectors, impacting routine health services, economic and food security, trade, education, civil order, communication, transportation, and many other areas of life."
   - id: 5409
