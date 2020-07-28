@@ -22,6 +22,8 @@ links:
     link: https://cdn.hotosm.org/leaderboard/JPMC/TM4+Individual+Mapping+Materials.zip
   - title: Mapathon Event Materials
     link: https://cdn.hotosm.org/leaderboard/JPMC/TM4+Mapathon+Event+Materials.zip
+  - title: Stronger Together SG
+    link: https://cdn.hotosm.org/leaderboard/JPMC/StrongerTogetherSG.zip
 
 primary-hashtag: jpmc
 subhashtags:
