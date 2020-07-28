@@ -14,6 +14,10 @@ facebook:
 hoursname:
 hourslink:
 
+links:
+  - title: Individual Mapping Materials
+    link: https://cdn.hotosm.org/leaderboard/morganstanley/IndividualMappingMaterials.zip
+
 primary-hashtag: msgivesback
 subhashtags:
   - mscampus
