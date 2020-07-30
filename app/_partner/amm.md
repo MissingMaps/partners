@@ -40,8 +40,6 @@ tm-projects:
   - id: 7711
     desc: "FOR EXPERIENCED MAPPERS: Help validate! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"        
   - id: 8672  
-    desc: "FOR EXPERIENCED MAPPERS: Help the Red Cross prepare for climate change related disasters by mapping roads in Ciamis, Indonesia. We are helping reduce risk with each road we map!"          
-  - id: 7659
-    desc: "GREAT FOR INTERMEDIATE MAPPERS! Help map roads in Indonesia in area area at risk of climate change related disasters."      
+    desc: "FOR EXPERIENCED MAPPERS: Help the Red Cross prepare for climate change related disasters by mapping roads in Ciamis, Indonesia. We are helping reduce risk with each road we map!"              
     
 ---
