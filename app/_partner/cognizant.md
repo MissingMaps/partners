@@ -16,9 +16,7 @@ hourslink:
 
 primary-hashtag: cognizant
 subhashtags:
-  - cognizantapac
-  - cognizantemea
-  - cognizantamer
+  - cognizant*
 
 tm-projects:
   - id: 8977
