@@ -4,11 +4,11 @@ lang: en
 permalink: /experian/
 
 id: experian
-name: experian
+name: experianglobal
 logo: Experian.png
 contact: Holly.O'Keeffe@experian.com
 
-primary-hashtag: experian
+primary-hashtag: experianglobal
 subhashtags:
   - experianapac
   - experianna
@@ -17,6 +17,7 @@ subhashtags:
   - experianukihr
   - experianbulgaria
   - experianemea
+  - experian
 
 tm-projects:
   - id: 8987
