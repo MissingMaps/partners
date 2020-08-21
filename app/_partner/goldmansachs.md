@@ -36,7 +36,5 @@ subhashtags:
 tm-projects:
   - id: 8972
     desc: "Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping villages in rural India."
-  - id: 8973
-    desc: "Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping villages in rural India."
     
 ---
