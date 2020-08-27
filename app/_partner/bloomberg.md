@@ -6,7 +6,7 @@ permalink: /bloomberg/
 id: bloomberg
 name: bloomberg
 logo: bloomberg.png
-contact: jessica.bergmann@hotosm.org
+contact: sam.colchester@hotosm.org
 
 flickr: https://www.flickr.com/photos/140736557@N04/albums/72157709649329127
 twitter: 
