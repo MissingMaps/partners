@@ -24,6 +24,8 @@ links:
     link: https://cdn.hotosm.org/leaderboard/JPMC/TM4+Mapathon+Event+Materials.zip
   - title: Stronger Together SG
     link: https://cdn.hotosm.org/leaderboard/JPMC/StrongerTogetherSG.zip
+  - title: Register your Mapathon
+    link: https://www.surveymonkey.co.uk/r/S3V6Y5X
 
 primary-hashtag: jpmc
 subhashtags:
