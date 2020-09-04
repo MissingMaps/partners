@@ -22,6 +22,8 @@ links:
     link: https://cdn.hotosm.org/leaderboard/JPMC/TM4+Individual+Mapping+Materials.zip
   - title: Mapathon Event Materials
     link: https://cdn.hotosm.org/leaderboard/JPMC/TM4+Mapathon+Event+Materials.zip
+  - title: Register your Mapathon
+    link: https://www.surveymonkey.co.uk/r/S3V6Y5X
 
 primary-hashtag: jpmc
 subhashtags:
