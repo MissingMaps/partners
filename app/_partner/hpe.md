@@ -32,6 +32,4 @@ tm-projects:
     desc: "The Red Cross is mapping the Ayeyarwady Delta area in Myanmar as part of a multi-year mapping and data readiness activity to better understand where critical infrastructure and roads are to inform decision making during potential disasters. As recently as 2008 a cyclone killed at least 77,000 people with over 55,900 missing, and left about 2.5 million homeless."
   - id: 8592
     desc: "The Red Cross Climate Centre, Indonesian Red Cross (Palang Merah Indonesia/PMI), IFRC, British Red Cross and Australian Red Cross are implementing a programme where the data contributed will be used by the Red Cross to assist in forecasting future disaster impacts, by knowing in advance what is likely to be impacted and its exposure and vulnerability."
-  - id: 6920
-    desc: "The Red Cross Climate Centre, Indonesian Red Cross (Palang Merah Indonesia/PMI), IFRC, British Red Cross and Australian Red Cross are implementing a programme where the data contributed will be used by the Red Cross to assist in forecasting future disaster impacts, by knowing in advance what is likely to be impacted and its exposure and vulnerability."
 ---
