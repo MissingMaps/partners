@@ -4,13 +4,17 @@ lang: en
 permalink: /verizon/
 
 id: verizon
-name: verizon20
+name: verizonmedia
 logo: verizon.jpg
 contact: amy.velez@verizonmedia.com
 
-primary-hashtag: verizon20
+primary-hashtag: verizonmedia
 subhashtags:
-  - verizonapac
+  - verizonmediaapac
+  - verizonmediaemea
+  - verizonmediausa
+  - verizonmediacan
+  - verizonmedialatam
 
 tm-projects:
   - id: 8987
