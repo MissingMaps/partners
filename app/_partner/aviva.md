@@ -30,6 +30,7 @@ subhashtags:
   - avivalt
   - avivapl
   - avivasg
+  - avivatr
   - avivavn
   - avivaasia
   - avivauk
