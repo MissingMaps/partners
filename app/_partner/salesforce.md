@@ -69,8 +69,6 @@ subhashtags:
   - dallashub
 
 tm-projects:
-- id: 8740
-  desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. She will have a smaller, healthier family and will be 50% more likely to immunize her kids."
 - id: 6729
   desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
 - id: 6269
