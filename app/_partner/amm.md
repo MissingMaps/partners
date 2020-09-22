@@ -25,6 +25,8 @@ subhashtags:
   - ammg19
 
 tm-projects:  
+  - id: 8557
+    desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"  
   - id: 7710
     desc: "GREAT FOR NEW MAPPERS! Help the Red Cross prepare for climate change related disasters by mapping buildings in Indonesia. We are helping reduce risk with each building we map!"   
   - id: 8360
