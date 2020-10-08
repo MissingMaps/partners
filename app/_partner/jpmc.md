@@ -56,6 +56,18 @@ subhashtags:
   - jpmcnextgenph1
   - jpmcnextgenph2
   - jpmcnextgenph3
+  - oct20gwau
+  - oct20gwcn
+  - oct20gwin
+  - oct20gwid
+  - oct20gwjp
+  - oct20gwkr
+  - oct20gwmy
+  - oct20gwph
+  - oct20gwsg
+  - oct20gwtw
+  - oct20gwvn
+  - oct20gwhk
   
 tm-projects:
   - id: 8967
