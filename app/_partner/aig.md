@@ -6,7 +6,7 @@ permalink: /aig/
 id: aig
 name: aig
 logo: AIG_core_rgb.png
-contact: jessica.bergmann@hotosm.org
+contact: sam.colchester@hotosm.org
 
 flickr: 
 twitter: https://twitter.com/AIGinsurance?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
@@ -35,7 +35,7 @@ subhashtags:
 tm-projects:
   - id: 9414
     desc: "The 2020 Atlantic Hurricane Season began June 1st. HOT has been requested by disaster preparedness and response actors to map buildings in Caribbean countries and other surrounding countries impacted by the hurricane season and the ongoing COVID-19 Pandemic. Please join our global effort by mapping on this project."
-  - id: 8734
-    desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. She will have a smaller, healthier family and will be 50% more likely to immunize her kids."
+  - id: 9472
+    desc: "The 2020 Atlantic Hurricane Season began June 1st. HOT has been requested by disaster preparedness and response actors to map buildings in Caribbean countries and other surrounding countries impacted by the hurricane season and the ongoing COVID-19 Pandemic. Please join our global effort by mapping on this project."
 
 ---
