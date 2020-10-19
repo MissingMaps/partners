@@ -84,11 +84,5 @@ tm-projects:
     desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
   - id: 9407
     desc: "The 2020 Atlantic Hurricane Season began June 1st. HOT has been requested by disaster preparedness and response actors to map buildings in Caribbean countries and other surrounding countries impacted by the hurricane season and the ongoing COVID-19 Pandemic. Please join our global effort by mapping on this project."
-  - id: 9443
-    desc: "Help implementation of early action activities in response to a forecasted drought, before it occurs, contributing to reduce risk, prepare for effective response and ultimately to strengthen community resilience."
-  - id: 9471
-    desc: "Help implementation of early action activities in response to a forecasted drought, before it occurs, contributing to reduce risk, prepare for effective response and ultimately to strengthen community resilience."
-  - id: 9586
-    desc: "Help implementation of early action activities in response to a forecasted drought, before it occurs, contributing to reduce risk, prepare for effective response and ultimately to strengthen community resilience."
 
 ---
