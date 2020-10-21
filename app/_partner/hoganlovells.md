@@ -39,7 +39,7 @@ subhashtags:
   - hoganlovellsmiami
   - hoganlovellsmexico
   - hoganlovellscs
-  - hoganlovellsapme
+  - hoganlovellsapac
   - hoganlovellslondon
   - hoganlovellsce
   - hoganlovellsbirmingham
