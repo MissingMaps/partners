@@ -41,7 +41,7 @@ subhashtags:
   - hoganlovellscs
   - hoganlovellsapac
   - hoganlovellslondon
-  - hoganlovellsce
+  - hoganlovellsemea
   - hoganlovellsbirmingham
   - hoganlovellssa
   
