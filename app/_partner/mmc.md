@@ -56,8 +56,6 @@ tm-projects:
     desc: "MapBeks is mapping out buildings and roads in 24 unmapped towns in the country. These 24 municipalities do not have a single building footprint on OpenStreetMap."
   - id: 9246
     desc: "MapBeks is mapping out buildings and roads in 24 unmapped towns in the country. These 24 municipalities do not have a single building footprint on OpenStreetMap."
-  - id: 9321
-    desc: "MapBeks is mapping out buildings and roads in 24 unmapped towns in the country. These 24 municipalities do not have a single building footprint on OpenStreetMap."
   - id: 9406
     desc: "The 2020 Atlantic Hurricane Season began June 1st. HOT has been requested by disaster preparedness and response actors to map buildings in Caribbean countries and other surrounding countries impacted by the hurricane season and the ongoing COVID-19 Pandemic. Please join our global effort by mapping on this project."
   - id: 8054
