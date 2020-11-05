@@ -67,6 +67,7 @@ subhashtags:
   - salesforceindy
   - SalesforceBellevueDi
   - dallashub
+  - salesforcetableau
 
 tm-projects:
 - id: 9598
