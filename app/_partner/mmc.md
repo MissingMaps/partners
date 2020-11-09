@@ -48,8 +48,6 @@ subhashtags:
   
 
 tm-projects:
-  - id: 9247
-    desc: "MapBeks is mapping out buildings and roads in 24 unmapped towns in the country. These 24 municipalities do not have a single building footprint on OpenStreetMap."
   - id: 9249
     desc: "MapBeks is mapping out buildings and roads in 24 unmapped towns in the country. These 24 municipalities do not have a single building footprint on OpenStreetMap."
   - id: 9240
