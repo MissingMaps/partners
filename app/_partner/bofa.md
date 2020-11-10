@@ -4,16 +4,21 @@ lang: en
 permalink: /bofa/
 
 id: bankofamerica
-name: bankofamerica
+name: bofa
 logo: bofa.png
 contact: jack.e.doyle@bofa.com
 
-primary-hashtag: bankofamerica
+primary-hashtag: bofa
 subhashtags:
-  - bankofamericaemea
+  - teamcao
+  - teamcto
+  - teamdublin
+  - teamgts
+  - teamglobalrisk
+  - teamgfo
 
 tm-projects:
-  - id: 5522
-    desc: "Mapping project in response to 2018 Flooding in India Thrissur , Kerala, India Building Footprint Improvement."
+  - id: 9580
+    desc: "The 2020 Atlantic Hurricane Season began June 1st. HOT has been requested by disaster preparedness and response actors to map buildings in Caribbean countries and other surrounding countries impacted by the hurricane season and the ongoing COVID-19 Pandemic."
     
 ---
