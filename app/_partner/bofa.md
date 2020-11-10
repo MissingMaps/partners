@@ -10,12 +10,7 @@ contact: jack.e.doyle@bofa.com
 
 primary-hashtag: bofa
 subhashtags:
-  - teamcao
-  - teamcto
-  - teamdublin
-  - teamgts
-  - teamglobalrisk
-  - teamgfo
+  - bofateam*
 
 tm-projects:
   - id: 9580
