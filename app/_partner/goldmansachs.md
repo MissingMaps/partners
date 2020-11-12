@@ -38,7 +38,5 @@ tm-projects:
     desc: "Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping villages in rural India."
   - id: 8970
     desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income."
-  - id: 9654
-    desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
 
 ---
