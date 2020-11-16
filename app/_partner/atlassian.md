@@ -13,7 +13,7 @@ subhashtags:
   - atlassianemea
 
 tm-projects:
-  - id: 5522
-    desc: "Mapping project in response to 2018 Flooding in India Thrissur , Kerala, India Building Footprint Improvement."
+  - id: 9875
+    desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
     
 ---
