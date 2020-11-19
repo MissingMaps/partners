@@ -68,6 +68,12 @@ subhashtags:
   - SalesforceBellevueDi
   - dallashub
   - salesforcetableau
+  - sfsemap1
+  - sfsemap2
+  - sfsemap3
+  - sfsemap4
+  - sfsemap5
+  - sfsemap6
 
 tm-projects:
 - id: 9882
