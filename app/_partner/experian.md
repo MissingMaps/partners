@@ -18,6 +18,56 @@ subhashtags:
   - experianbulgaria
   - experianemea
   - experian
+  - map1million
+  - mapemea
+  - mapapac
+  - mapspanishlatam
+  - mapuki
+  - mapna
+  - mapbrazil
+  - colombiaexperian
+  - peruexperian
+  - chileexperian
+  - mexicoexperian
+  - argentinaexperian
+  - brazilexperian
+  - unitedkingdomexperian
+  - irelandexperian
+  - austriaexperian
+  - botswanaexperian
+  - bulgariaexperian
+  - denmarkexperian
+  - franceexperian
+  - germanyexperian
+  - greeceexperian
+  - italyexperian
+  - lesothoexperian
+  - monacoexperian
+  - mozambiqueexperian
+  - namibiaexperian
+  - netherlandsexperian
+  - norwayexperian
+  - polandexperian
+  - romaniaexperian
+  - russiaexperian
+  - southafricaexperian
+  - spainexperian
+  - switzerlandexperian
+  - turkeyexperian
+  - ugandaexperian
+  - unitedarabemiratesexperian
+  - experiansingapore
+  - experiananz
+  - experianjapan
+  - experianchina
+  - experianmalaysia
+  - experianhongkong
+  - experianvietnam
+  - experianindia
+  - experianindonesia
+  - experianthailand
+  - experianindia
+  - experiankorea
 
 tm-projects:
   - id: 8966
