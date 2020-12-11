@@ -4,7 +4,7 @@ lang: en
 permalink: /experian/
 
 id: experian
-name: experianglobal
+name: Map1million
 logo: Experian.png
 contact: Holly.O'Keeffe@experian.com
 
@@ -58,16 +58,16 @@ subhashtags:
   - unitedarabemiratesexperian
   - experiansingapore
   - experiananz
-  - experianjapan
-  - experianchina
-  - experianmalaysia
-  - experianhongkong
-  - experianvietnam
-  - experianindia
-  - experianindonesia
-  - experianthailand
-  - experianindia
-  - experiankorea
+  - japanexperian
+  - chinaexperian
+  - malaysiaexperian
+  - hongkongexperian
+  - vietnamexperian
+  - indiaexperian
+  - indonesiaexperian
+  - thailandexperian
+  - indiaexperian
+  - koreaexperian
   - ukiexperian
 
 tm-projects:
