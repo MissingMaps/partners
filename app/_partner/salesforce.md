@@ -80,8 +80,6 @@ tm-projects:
   desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
 - id: 9966
   desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
-- id: 6729
-  desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
 - id: 6732
   desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
 
