@@ -35,7 +35,5 @@ tm-projects:
     desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. She will have a smaller, healthier family and will be 50% more likely to immunize her kids."
   - id: 8744
     desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. She will have a smaller, healthier family and will be 50% more likely to immunize her kids."
-  - id: 8971
-    desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. She will have a smaller, healthier family and will be 50% more likely to immunize her kids."
 
 ---
