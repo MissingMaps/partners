@@ -10,8 +10,8 @@ contact:
 
 twitter: https://twitter.com/flexintl
 
-primary-hashtag: flexvolunteering2020
-subhashtags:
+primary-hashtag: flexvolunteering
+subhashtags:flexvolunteering2020
   - 
 
 tm-projects:
