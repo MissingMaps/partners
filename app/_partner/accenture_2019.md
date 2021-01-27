@@ -36,11 +36,13 @@ subhashtags:
 tm-projects:
   - id: 10067
     desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 8730
-    desc: "For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. She will have a smaller, healthier family and will be 50% more likely to immunize her kids."
-  - id: 5458
-    desc: "In the Philippines, many areas lack the infrastructure to support local agriculture. Help us map these priority areas where Food Security is influenced by poverty and access to infrastructure and vulnerable to natural disasters, and climate change."
-  - id: 9592
-    desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
+  - id: 10090
+    desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
+  - id: 10091
+    desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
+  - id: 10093
+    desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
+  - id: 10094
+    desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
 
 ---
