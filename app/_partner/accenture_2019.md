@@ -40,9 +40,5 @@ tm-projects:
     desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 10091
     desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 10093
-    desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 10094
-    desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
 
 ---
