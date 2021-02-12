@@ -12,7 +12,7 @@ flickr:
 twitter: https://twitter.com/hashtag/HPEGives?src=hash
 facebook:
 hoursname: HPE Gives
-hourslink: https:/hpe.benevity.org/cause/840-530196605/project/2L7JKHRBB5
+hourslink: https://hpe.benevity.org/cause/840-530196605/project/2L7JKHRBB5
 
 
 flickr-apikey:
