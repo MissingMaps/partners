@@ -706,7 +706,7 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
  --------------------- Setup Project ---------------------
  -------------------------------------------------------*/
 // Global Mapbox variables
-const mbToken = 'pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q';
+const mbToken = 'pk.eyJ1IjoiYW1lcmljYW5yZWRjcm9zcyIsImEiOiJjaXF0MGpqY3AwMDFmZnJqNndodTYxNjZiIn0.2erhHFDW7G5Cvauho3vLMw';
 const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 // Populate project carousel via HOTOSM Tasking Manager API
