@@ -143,7 +143,9 @@ function addMap (projectId) {
 
     // Add tile layer
     L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
-      attribution: '<a href="http://mapbox.com">Mapbox</a> | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
+      tileSize: 512,
+      zoomOffset: -1
     }).addTo(map);
 
     // Remove 'Leaflet' attribution
@@ -707,7 +709,7 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
  -------------------------------------------------------*/
 // Global Mapbox variables
 const mbToken = 'pk.eyJ1IjoiYW1lcmljYW5yZWRjcm9zcyIsImEiOiJjaXF0MGpqY3AwMDFmZnJqNndodTYxNjZiIn0.2erhHFDW7G5Cvauho3vLMw';
-const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
+const mbBasemapUrl = 'https://api.mapbox.com/styles/v1/americanredcross/ckl71lzvm0xh717nn6j10rmyt/tiles/{z}/{x}/{y}';
 
 // Populate project carousel via HOTOSM Tasking Manager API
 getProjects(PT.hotProjects);
