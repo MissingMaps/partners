@@ -8,6 +8,10 @@ name: salesforce
 logo: Salesforce.svg
 contact: ahigginbottom@salesforce.com
 
+links:
+  - title: Individual Mapping Materials
+    link: https://cdn.hotosm.org/leaderboard/Salesforce/Salesforce+Mapping+how+to+guide.pdf
+
 flickr: https://www.flickr.com/photos/140736557@N04/sets/72157666872027428
 twitter: https://www.twitter.com/SalesforceOrg
 facebook:
