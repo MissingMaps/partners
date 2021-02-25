@@ -23,6 +23,7 @@ flickr-setId:
 
 primary-hashtag: factset21
 subhashtags:
+  - factset21*
   - factset20remoteworkers
   - factset20austin
   - factset20boston
