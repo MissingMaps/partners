@@ -4,6 +4,7 @@ lang: en
 permalink: /accenture/
 
 id: accenture2019
+title: Accenture
 name: accenture
 logo: accenture.png
 contact: sabrina.bals@accenture.com
