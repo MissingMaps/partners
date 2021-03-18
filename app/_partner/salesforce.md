@@ -84,7 +84,5 @@ tm-projects:
   desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
 - id: 10094
   desc: "This remote mapping of buildings and roads will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-- id: 6732
-  desc: "The evolving Ebola situation in the DRC makes it a priority to map all tracks, pathways, health facilities and other infrastructure in towns and villages serving the borders. There is a severe lack of up-to-date and detailed maps of this area available to those involved in the fight to contain the potential outbreak."
 
 ---
