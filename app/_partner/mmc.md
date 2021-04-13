@@ -4,6 +4,7 @@ lang: en
 permalink: /mmc/
 
 id: mmcimpact
+title: Marsh McLennan
 name: ourimpact
 logo: mmc.png
 contact: rebecca.firth@hotosm.org
