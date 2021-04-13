@@ -1,7 +1,7 @@
 ---
 layout: partner
 lang: en
-permalink: /mmc/
+permalink: /marshmclennan/
 
 id: mmcimpact
 title: Marsh McLennan
