@@ -2,6 +2,7 @@
 layout: partner
 lang: en
 permalink: /marshmclennan/
+redirect_from: "/mmc/"
 
 id: mmcimpact
 title: Marsh McLennan
