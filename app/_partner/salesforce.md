@@ -80,9 +80,9 @@ subhashtags:
   - sfsemap6
 
 tm-projects:
-- id: 10104
-  desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
 - id: 10145
+  desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
+- id: 10731
   desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
 
 ---
