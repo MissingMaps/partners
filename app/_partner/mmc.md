@@ -1,7 +1,7 @@
 ---
 layout: partner
 lang: en
-permalink: /partners/marshmclennan/
+permalink: /marshmclennan/
 redirect_from: "/mmc/"
 
 id: mmcimpact
