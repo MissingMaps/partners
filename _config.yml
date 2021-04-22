@@ -14,6 +14,8 @@ domain:         https://www.missingmaps.org
 path_prefix:    /partners
 
 default_partner: all
+gems:
+  - jekyll-redirect-from
 
 collections:
   partner:
