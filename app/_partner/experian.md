@@ -72,8 +72,6 @@ subhashtags:
   - dachexperian
 
 tm-projects:
-  - id: 10115
-    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 10135
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 8966
