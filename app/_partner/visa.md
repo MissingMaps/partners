@@ -17,9 +17,9 @@ hourslink: https://visa.benevity.org/user/login
 flickr-apikey:
 flickr-setId:
 
-primary-hashtag: VisaMappers
+primary-hashtag: visamappers
 subhashtags:
- - VisaMappers  
+ - visamappers  
 
 tm-projects:
   - id: 9377
