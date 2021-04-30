@@ -19,7 +19,6 @@ flickr-setId:
 
 primary-hashtag: visamappers
 subhashtags:
- - visamappers  
 
 tm-projects:
   - id: 9377
