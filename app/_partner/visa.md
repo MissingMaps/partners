@@ -4,7 +4,7 @@ lang: en
 permalink: /visa/
 
 id: visa
-name: visa
+name: visamappers
 logo: visa.png
 contact:
 
