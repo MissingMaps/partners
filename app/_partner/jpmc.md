@@ -68,6 +68,7 @@ subhashtags:
   - oct20gwtw
   - oct20gwvn
   - oct20gwhk
+  - commercialcard
   
 tm-projects:
   - id: 10408
