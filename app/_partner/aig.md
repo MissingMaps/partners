@@ -33,8 +33,6 @@ subhashtags:
   - bostonCassini
 
 tm-projects:
-  - id: 10096
-    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 10420
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 9869
