@@ -72,8 +72,6 @@ subhashtags:
   - jpmccentralflorida
   
 tm-projects:
-  - id: 10408
-    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 10705
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 8976
