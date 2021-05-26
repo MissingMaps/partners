@@ -357,6 +357,11 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
         $('#stats-buildingCount').html((primaryBuildingCount + 79849).toLocaleString());
         $('#stats-usersCount').html((primaryData.users + 753).toLocaleString());
         $('#stats-editsCount').html((primaryData.edits + 96041).toLocaleString());
+      } else if (primaryHashtag == 'dhl') {
+        $('#stats-roadCount').html((primaryRoadCount + 27).toLocaleString());
+        $('#stats-buildingCount').html((primaryBuildingCount + 37435).toLocaleString());
+        $('#stats-usersCount').html((primaryData.users + 360).toLocaleString());
+        $('#stats-editsCount').html((primaryData.edits + 37639).toLocaleString());
       } else {
         $('#stats-roadCount').html(primaryRoadCount.toLocaleString());
         $('#stats-buildingCount').html(primaryBuildingCount.toLocaleString());
