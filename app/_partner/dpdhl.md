@@ -3,7 +3,7 @@ layout: partner
 lang: en
 permalink: /dpdhl/
 
-id: dpdhl
+id: dhl
 name: DPDHL
 logo: dpdhl.png
 contact: julia.mueller4@dpdhl.com
@@ -14,11 +14,12 @@ links:
   - title: Mapathon Event Materials
     link: https://cdn.hotosm.org/leaderboard/DPDHL/DPDHL+-+Mapathon+Event+Materials.zip
 
-primary-hashtag: dpdhl
+primary-hashtag: dhl
 subhashtags:
   - dhl-ap
   - dhl-emea
   - dhl-am
+  - dpdhl
 
 tm-projects:
   - id: 10812
