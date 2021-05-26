@@ -20,6 +20,12 @@ subhashtags:
   - pimco-teamemea
   - pimco-teamamericas
   - pimco-summerinterns
+  - pimco-zeus
+  - pimco-venus
+  - pimco-apollo
+  - pimco-atlas
+  - pimco-orion
+  - pimco-troy
 
 tm-projects:
   - id: 8979
