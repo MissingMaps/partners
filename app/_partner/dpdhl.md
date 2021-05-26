@@ -3,8 +3,8 @@ layout: partner
 lang: en
 permalink: /dpdhl/
 
-id: dhl
-name: DPDHL
+id: dpdhl
+name: DHL
 logo: dpdhl.png
 contact: julia.mueller4@dpdhl.com
 
