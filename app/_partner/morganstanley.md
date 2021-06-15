@@ -91,6 +91,10 @@ subhashtags:
   - msapac6
   - msapac7
   - msapac8
+  - msmapathonemea
+  - msmapathonapac
+  - msmapathonjapan
+  - msmapathonamericas
   
 tm-projects:
   - id: 8969
