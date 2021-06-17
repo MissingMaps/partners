@@ -17,7 +17,7 @@ subhashtags:
   - atlassianemea
 
 tm-projects:
-  - id: 10810
+  - id: 9970
     desc: "HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
     
 ---
