@@ -9,9 +9,9 @@ logo: dpdhl.png
 contact: julia.mueller4@dpdhl.com
 
 links:
-  - title: Individual Mapping Materials
+  - title: Toolkit for Volunteers
     link: https://cdn.hotosm.org/leaderboard/DPDHL/DPDHL+Detailed+Mapping+how+to+guide.pdf
-  - title: Mapathon Event Materials
+  - title: Toolkit for Trainers
     link: https://cdn.hotosm.org/leaderboard/DPDHL/DPDHL+-+Mapathon+Event+Materials.zip
 
 primary-hashtag: dhl
