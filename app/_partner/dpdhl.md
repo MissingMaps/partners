@@ -10,9 +10,9 @@ contact: julia.mueller4@dpdhl.com
 
 links:
   - title: Toolkit for Volunteers
-    link: https://cdn.hotosm.org/leaderboard/DPDHL/DPDHL+Detailed+Mapping+how+to+guide.pdf
+    link: https://cdn.hotosm.org/leaderboard/DPDHL/DPDHL+-+Toolkit+for+Volunteers.zip
   - title: Toolkit for Trainers
-    link: https://cdn.hotosm.org/leaderboard/DPDHL/DPDHL+-+Mapathon+Event+Materials.zip
+    link: https://cdn.hotosm.org/leaderboard/DPDHL/DPDHL+-+Toolkit+for+Trainers.zip
 
 primary-hashtag: dhl
 subhashtags:
