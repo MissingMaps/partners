@@ -97,8 +97,6 @@ subhashtags:
   - msmapathonamericas
   
 tm-projects:
-  - id: 10135
-    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 10407
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 8969
