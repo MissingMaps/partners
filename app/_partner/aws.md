@@ -46,5 +46,7 @@ subhashtags:
 tm-projects:
   - id: 8975
     desc: "Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping villages in rural India."
+  - id: 11128
+    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."   
 
 ---
