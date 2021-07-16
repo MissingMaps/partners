@@ -11,8 +11,8 @@ contact:
 flickr:
 twitter:
 facebook:
-hoursname: "Give an hour, be the change."
-hourslink: https://visa.benevity.org/user/login
+hoursname: "Put the world’s vulnerable people on the map."
+hourslink: https://visa.benevity.org/volunteer/2029
 
 flickr-apikey:
 flickr-setId:
