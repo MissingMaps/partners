@@ -75,6 +75,21 @@ subhashtags:
   - morganstanleyteam49
   - morganstanleyteam50
   - morganstanleyteam51
+  - emeamapathon1
+  - emeamapathon2
+  - emeamapathon3
+  - emeamapathon4
+  - emeamapathon5
+  - emeamapathon6
+  - emeamapathon7
+  - emeamapathon8
+  - emeamapathon9
+  - emeamapathon10
+  - emeamapathon11
+  - emeamapathon12
+  - emeamapathon13
+  - emeamapathon14
+  - emeamapathon15
   - msmapathonemea
   - msmapathonapac
   - msmapathonjapan
