@@ -34,8 +34,6 @@ subhashtags:
   - gsee
   
 tm-projects:
-  - id: 10135
-    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 8972
     desc: "Educate Girls are supporting 1.6 million girls in rural India to gain access to education, and you can help them by mapping villages in rural India."
 
