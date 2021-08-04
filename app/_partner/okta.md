@@ -14,7 +14,9 @@ links:
 
 primary-hashtag: okta
 subhashtags:
-  - okta-test
+  - oktaemea
+  - oktaapac
+  - oktaamer
 
 tm-projects:
   - id: 11202
