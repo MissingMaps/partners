@@ -16,14 +16,12 @@ hoursname:
 hourslink:
 
 links:
-  - title: Sign Up to Participate
-    link: https://teams.microsoft.com/l/entity/26bc2873-6023-480c-a11b-76b66605ce8c/_djb2_msteams_prefix_3511410082?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3Aa82d49a625ec4b2796fb596b99403cf7%40thread.skype%22%7D&groupId=850f4fb3-b038-4438-b589-e01b89277e21&tenantId=e0793d39-0939-496d-b129-198edd916feb
-  - title: Map as an Individual
-    link: https://teams.microsoft.com/_#/files/Missing%20Maps?threadId=19%3Aa82d49a625ec4b2796fb596b99403cf7%40thread.skype&ctx=channel&context=Training%2520Materials%252FMap%2520as%2520an%2520individual
+  - title: Connect on MS Teams
+    link: https://teams.microsoft.com/l/channel/19%3aa82d49a625ec4b2796fb596b99403cf7%40thread.skype/Missing%2520Maps?groupId=850f4fb3-b038-4438-b589-e01b89277e21&tenantId=e0793d39-0939-496d-b129-198edd916feb
   - title: Host a Mapathon Event
-    link: https://teams.microsoft.com/_#/files/Missing%20Maps?threadId=19%3Aa82d49a625ec4b2796fb596b99403cf7%40thread.skype&ctx=channel&context=Training%2520Materials%252FHost%2520a%2520mapathon
+    link: https://teams.microsoft.com/l/entity/26bc2873-6023-480c-a11b-76b66605ce8c/_djb2_msteams_prefix_3511410082?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3Aa82d49a625ec4b2796fb596b99403cf7%40thread.skype%22%7D&groupId=850f4fb3-b038-4438-b589-e01b89277e21&tenantId=e0793d39-0939-496d-b129-198edd916feb
   - title: Log Your Volunteer Hours
-    link: https://cdn.hotosm.org/leaderboard/Missing+Maps_Tracking+Time+Guide_11082019.pptx
+    link: https://in.accenture.com/corporatecitizenship/volunteering-opportunity/virtual-volunteering/
   - title: Support Email
     link: mailto:accenturesupport@hotosm.org
 
