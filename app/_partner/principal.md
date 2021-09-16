@@ -9,10 +9,10 @@ logo: principal.png
 contact: coleman.jesse.c@principal.com 
 
 links:
+  - title: Individual Mapping Materials
+    link: https://cdn.hotosm.org/leaderboard/Principal/Principal+Mapping+how+to+guide.pdf
   - title: Mapathon Event Materials
     link: https://cdn.hotosm.org/leaderboard/Principal/Mapathon+Event+Materials.zip
-  - title: Website
-    link: https://www.principal.com/
     
 primary-hashtag: principal
 subhashtags:
