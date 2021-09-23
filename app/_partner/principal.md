@@ -16,7 +16,7 @@ links:
     
 primary-hashtag: principal
 subhashtags:
-  - principalhongkong
+  - principal*
 
 tm-projects:
   - id: 11406
