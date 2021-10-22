@@ -39,5 +39,7 @@ subhashtags:
 tm-projects:
   - id: 10772
     desc: "The Bangladesh Red Crescent Society (BDRCS) in partnership with the German Red Cross, Red Cross Red Crescent Climate Centre, Department of Disaster Management and Flood Forecasting Warning Centre are implementing a project aimed at enabling communities prepare for the impacts of floods. The first step towards achieving this level of preparedness is understanding who/what is likely to be impacted and its exposure and vulnerability. This information will help BDRCS in identification of where and what early action should be implemented before a disaster strikes contributing towards reducing risks and saving lives."    
+  - id: 11338
+    desc: "The Red Cross Climate Centre, Indonesian Red Cross (Palang Merah Indonesia/PMI), IFRC, British Red Cross and Australian Red Cross are implementing a programme where the data contributed will be used by the Red Cross to assist in forecasting future disaster impacts, by knowing in advance what is likely to be impacted and its exposure and vulnerability. The information will help implementation of early action activities to take place before a disaster strikes, contributing to reduce risk, prepare for effective response and ultimately to strengthen community resilience."    
     
 ---
