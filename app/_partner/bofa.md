@@ -17,6 +17,7 @@ links:
 primary-hashtag: bofa
 subhashtags:
   - bofateam*
+  - bofavolunteers
 
 tm-projects:
   - id: 9884
