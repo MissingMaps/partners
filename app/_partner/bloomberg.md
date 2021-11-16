@@ -33,8 +33,8 @@ tm-projects:
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 11763
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 8055
-    desc: "INTERMEDIATE: For every year that a girl is enrolled in school, she is more likely to avoid early marriage and to survive childbirth. She will be less likely to suffer domestic violence, or be trafficked, and will have a higher future income. She will have a smaller, healthier family and will be 50% more likely to immunize her kids."
+  - id: 11804
+    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 9658
     desc: "INTERMEDIATE: HOT has been requested to map areas in Botswana susceptible to, or identified as impacted, by the COVID-19 outbreak. Please join our global effort to help control this disease by mapping on this project."
 
