@@ -74,6 +74,7 @@ subhashtags:
   - jpmc_brm
   - jpmccoo-deiag
   - awm-fbm
+  - ccbopsindphl
   
 tm-projects:
   - id: 11888
@@ -82,7 +83,7 @@ tm-projects:
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities"
   - id: 11869
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities"
-  - id: 11866
+  - id: 11889
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities" 
 
 ---
