@@ -4,20 +4,18 @@ lang: en
 permalink: /act/
 
 id: act
-name: ACTHOTpilot21
+name: acthotpilot21
 logo: 
 contact: rhoadk@amazon.com
 
 
-primary-hashtag: ACTHOTpilot21
+primary-hashtag: acthotpilot21
 subhashtags:
-  - AWSMapathon
-  - ACTHOT
-
-  
+  - awsmapathon
+  - acthot
 
 tm-projects:
-  - id: 5522
-    desc: ""
+  - id: 11891
+    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
     
 ---
