@@ -35,9 +35,9 @@ subhashtags:
   - #acngraddublin19
 
 tm-projects:
-  - id: 11796
+  - id: 11930
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 11715
+  - id: 11931
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 11910
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
