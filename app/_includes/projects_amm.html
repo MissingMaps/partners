@@ -1,37 +1,45 @@
 <div class = "Projects-Container">
-  <h1>Current Projects</h1>
-  <!-- <div class = "Projects-Container-Leftside"> -->
-    <div class = "flexslider Projects-slider">
-      <ul class = "slides project-slide">
-        {% for p in page.tm-projects limit:20 %}
-        <li id = Project-{{ p.id }}>
-          <div class = "HOT-Container">
-            <div class = "HOT-Map">
-              <div class="spinner big">
-                <div class="bounce1 big"></div>
-                <div class="bounce2 big"></div>
-                <div class="bounce3 big"></div>
+  {% if page.tm-projects.size > 0 %}
+    <h1>Current Projects</h1>
+      <div class = "flexslider Projects-slider">
+        <ul class = "slides project-slide">
+          {% for p in page.tm-projects limit:20 %}
+          <li id = Project-{{ p.id }}>
+            <div class = "HOT-Container">
+              <div class = "HOT-Map">
+                <div class="spinner big">
+                  <div class="bounce1 big"></div>
+                  <div class="bounce2 big"></div>
+                  <div class="bounce3 big"></div>
+                </div>
               </div>
-            </div>
-            <div class = "HOT-Details">
-              <div class = "HOT-Title" id = "HOT-Title-{{ p.id }}">
-                <p><b></b></p>
-              </div>
-              
-              <div class = "HOT-Progress">
-                <p></p>
-              </div>
-              <div class = "HOT-Description">
-                <p> {{ p.desc | truncatewords: 40}} <a href= "https://tasks.hotosm.org/project/{{ p.id }}"> read more.</a>
-                </p>
-                <div class = "Mapping-Link"><a href="https://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">START MAPPING</a> </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
+              <div class = "HOT-Details">
+                <div class = "HOT-Title" id = "HOT-Title-{{ p.id }}">
+                  <p><b></b></p>
+                </div>
 
-  <!-- </div> -->
+                <div class = "HOT-Progress">
+                  <p></p>
+                </div>
+                <div class = "HOT-Description">
+                  <p> {{ p.desc | truncatewords: 40}} <a href= "https://tasks.hotosm.org/project/{{ p.id }}"> read more.</a>
+                  </p>
+                  <div class = "Mapping-Link"><a href="https://tasks.hotosm.org/project/{{ p.id }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">START MAPPING</a> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% else %}
+      <div class="Primary_Container">
+        {% if page.no-projects-message.size > 0 %}
+          <div> {{ page.no-projects-message }} </div>
+        {% else %}
+        <h1>Start Mapping</h1>
+          <p style="font-size: 1em;">Check out the <a href="https://tasks.hotosm.org/explore">HOT Tasking Manager</a> for projects that currently need mapping!</p>
+        {% endif %}
+      </div>
+    {% endif %}
 </div>
