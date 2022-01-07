@@ -45,12 +45,12 @@ function makeProject (project, projectOrder) {
   $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
   // modifies start mapping button if project is not published
-  if (project.status !== "PUBLISHED") {
-    $(`ul li:nth-child(${projectOrder}) .HOT-Title a`).html(`${project.status}`);
-    $(`ul li:nth-child(${projectOrder}) .HOT-Title a`).attr('href',`#`);
-    $(`ul li:nth-child(${projectOrder}) .HOT-Title a`).addClass(`disabled`);
-    $(`ul li:nth-child(${projectOrder}) .HOT-Description a`).remove();
-  }
+  // if (project.status !== "PUBLISHED") {
+  //   $(`ul li:nth-child(${projectOrder}) .HOT-Title a`).html(`${project.status}`);
+  //   $(`ul li:nth-child(${projectOrder}) .HOT-Title a`).attr('href',`#`);
+  //   $(`ul li:nth-child(${projectOrder}) .HOT-Title a`).addClass(`disabled`);
+  //   $(`ul li:nth-child(${projectOrder}) .HOT-Description a`).remove();
+  // }
 
   // Adds Project variables to the cards
   $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.projectInfo.name}</b>`);
