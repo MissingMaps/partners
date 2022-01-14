@@ -37,6 +37,10 @@ subhashtags:
   - cisco_gspo
 
 tm-projects:
+  - id: 11967
+    desc: "In reference to the promoting growth of the OSM Community in Uganda, MapUganda is taking an initiative to remotely map districts at parish level on OpenStreetMap."
+  - id: 11966
+    desc: "In reference to the promoting growth of the OSM Community in Uganda, MapUganda is taking an initiative to remotely map districts at parish level on OpenStreetMap."    
 
 no-projects-message:
 
