@@ -27,5 +27,9 @@ subhashtags:
   - msft*
 
 tm-projects:
+  - id: 11966
+    desc: "In reference to the promoting growth of the OSM Community in Uganda, MapUganda is taking an initiative to remotely map districts at parish level on OpenStreetMap."    
+  - id: 11589
+    desc: "The Red Cross Climate Centre, Indonesian Red Cross (Palang Merah Indonesia/PMI), IFRC, British Red Cross and Australian Red Cross are implementing a programme where the data contributed will be used by the Red Cross to assist in forecasting future disaster impacts, by knowing in advance what is likely to be impacted and its exposure and vulnerability."
 
 ---
