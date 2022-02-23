@@ -21,7 +21,7 @@ hourslink:
 flickr-apikey: 
 flickr-setId: 
 
-primary-hashtag: factset21
+primary-hashtag: factset22
 subhashtags:
   - factset21*
   - factset22*
