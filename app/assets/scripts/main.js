@@ -352,11 +352,11 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
         $('#stats-buildingCount').html((primaryBuildingCount + 147356).toLocaleString());
         $('#stats-usersCount').html((primaryData.users + 1238).toLocaleString());
         $('#stats-editsCount').html((primaryData.edits + 153575).toLocaleString());
-      } else if (primaryHashtag == 'factset21') {
-        $('#stats-roadCount').html((primaryRoadCount + 1992).toLocaleString());
-        $('#stats-buildingCount').html((primaryBuildingCount + 79849).toLocaleString());
-        $('#stats-usersCount').html((primaryData.users + 753).toLocaleString());
-        $('#stats-editsCount').html((primaryData.edits + 96041).toLocaleString());
+      } else if (primaryHashtag == 'factset22') {
+        $('#stats-roadCount').html((primaryRoadCount + 2074).toLocaleString());
+        $('#stats-buildingCount').html((primaryBuildingCount + 110152).toLocaleString());
+        $('#stats-usersCount').html((primaryData.users + 1083).toLocaleString());
+        $('#stats-editsCount').html((primaryData.edits + 127170).toLocaleString());
       } else if (primaryHashtag == 'dhl') {
         $('#stats-roadCount').html((primaryRoadCount + 27).toLocaleString());
         $('#stats-buildingCount').html((primaryBuildingCount + 37435).toLocaleString());
