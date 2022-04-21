@@ -8,6 +8,11 @@ name: DocuSign
 logo: docusign_logo.png
 contact: shana.soltani@docusign.com
 
+links:
+  - title: Individual Mapping Materials
+    link: https://cdn.hotosm.org/leaderboard/DocuSign/DocuSign+Mapping+how+to+guide.pdf
+  - title: Mapathon Event Slides
+    link: https://cdn.hotosm.org/leaderboard/DocuSign/DocuSign+Mapathon+Introduction+Presentation.pptx
 
 primary-hashtag: docusign
 subhashtags:
