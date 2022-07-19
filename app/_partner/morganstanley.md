@@ -94,6 +94,21 @@ subhashtags:
   - msmapathonapac
   - msmapathonjapan
   - msmapathonamericas
+  - msemeasummer1
+  - msemeasummer2
+  - msemeasummer3
+  - msemeasummer4
+  - msemeasummer5
+  - msemeasummer6
+  - msemeasummer7
+  - msemeasummer8
+  - msemeasummer9
+  - msemeasummer10
+  - msemeasummer11
+  - msemeasummer12
+  - msemeasummer13
+  - msemeasummer14
+  - msemeasummer15
   
 tm-projects:
   - id: 12964
