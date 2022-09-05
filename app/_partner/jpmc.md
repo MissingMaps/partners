@@ -75,7 +75,7 @@ subhashtags:
   - ccbopsindphl
   - jpmc-caocommunity
   - deicw22gw
-  - deicwgwph
+  - deicw22gwph
   - jpmcphilippine2022
   
 tm-projects:
