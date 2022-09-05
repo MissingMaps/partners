@@ -74,9 +74,9 @@ subhashtags:
   - awm-fbm
   - ccbopsindphl
   - jpmc-caocommunity
-  - DEICW22gw
-  - DEICW22gwPH
-  - JPMCPhilippine2022
+  - deicw22gw
+  - deicwgwph
+  - jpmcphilippine2022
   
 tm-projects:
   - id: 13327
