@@ -33,6 +33,8 @@ subhashtags:
   - acn*
   - dublinacn19
   - acngraddublin19
+  - acnfy22
+  - acnfy23
 
 tm-projects:
   - id: 12792
