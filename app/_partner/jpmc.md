@@ -77,6 +77,7 @@ subhashtags:
   - deicw22gw
   - deicw22gwph
   - jpmcphilippine2022
+  - eawin2022
   
 tm-projects:
   - id: 13327
