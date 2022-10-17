@@ -35,5 +35,7 @@ tm-projects:
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 13155
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
+  - id: 13432
+    desc: "This remote mapping of buildings will support the implementation of post census activities, such as data visualization, preparation of the Census Atlases, as well as dynamic web maps for data dissemination."
 
 ---
