@@ -79,6 +79,9 @@ subhashtags:
   - jpmcphilippine2022
   - eawin2022
   - jpmcrccsept22   
+  - jpmcpbmapathon2022
+  - jpmcpbito
+  - jpmcpbukteam
   
 tm-projects:
   - id: 13414
