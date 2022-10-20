@@ -37,11 +37,7 @@ subhashtags:
   - cisco_gspo
 
 tm-projects:
-  - id: 11967
-    desc: "In reference to the promoting growth of the OSM Community in Uganda, MapUganda is taking an initiative to remotely map districts at parish level on OpenStreetMap."
-  - id: 11966
-    desc: "In reference to the promoting growth of the OSM Community in Uganda, MapUganda is taking an initiative to remotely map districts at parish level on OpenStreetMap."    
 
-no-projects-message:
+no-projects-message: "<p>Thank you for all your mapping and all the mapathons you may have joined or led in our first phase of engagement with Missing Maps! Mappers like you, have helped shape how the world’s most vulnerable communities receive critical relief following disasters big and small. Together we have made such incredible progress tracing roads and buildings through Mapathon events that the preliminary work is now mostly complete.</p><br><p>American Red Cross is excited for a new phase of mapping, which will strengthen remote tracing, address evolving data needs, and integrate emerging technologies.</p><br><p>MapSwipe is a quick-to-learn mobile app, available on both iOS and Android, where you will be guided through a series of actions that will improve map data quality. More details will be available soon on how you can get involved in MapSwipe and complete new challenges that will help amplify the impact of humanitarian mapping.</p>"
 
 ---
