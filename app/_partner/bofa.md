@@ -20,8 +20,6 @@ subhashtags:
   - bofavolunteers
 
 tm-projects:
-  - id: 13164
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
   - id: 13186
     desc: "This remote mapping of buildings will support the identification and charac
     terization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
