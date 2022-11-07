@@ -30,11 +30,7 @@ tm-projects:
   - id: 13016
     desc: "GREAT FOR NEW MAPPERS! This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 11233
-    desc: "FOR EXPERIENCED MAPPERS: This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."    
-  - id: 13177
-    desc: "FOR EXPERIENCED MAPPERS: This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."  
-  - id: 13181
-    desc: "FOR EXPERIENCED MAPPERS: This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."  
+    desc: "FOR EXPERIENCED MAPPERS: This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."     
   - id: 13369
     desc: "GREAT FOR NEW MAPPERS! This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 12741
