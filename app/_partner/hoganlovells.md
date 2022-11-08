@@ -46,8 +46,6 @@ subhashtags:
   - hoganlovellssa
   
 tm-projects:
-  - id: 13435
-    desc: "This remote mapping of buildings will support the implementation of post census activities, such as data visualization, preparation of the Census Atlases, as well as dynamic web maps for data dissemination."
   - id: 13436
     desc: "This remote mapping of buildings will support the implementation of post census activities, such as data visualization, preparation of the Census Atlases, as well as dynamic web maps for data dissemination."
   - id: 13697
