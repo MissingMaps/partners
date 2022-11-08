@@ -82,6 +82,10 @@ subhashtags:
   - jpmcpbmapathon2022
   - jpmcpbito
   - jpmcpbukteam
+  - blrgwoct22
+  - hydgw2022
+  - mumgw22
+
   
 tm-projects:
   - id: 13415
