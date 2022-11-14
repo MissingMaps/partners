@@ -25,8 +25,6 @@ subhashtags:
   - ammg19
 
 tm-projects:
-  - id: 12846
-    desc: "GREAT FOR NEW MAPPERS! This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 13016
     desc: "GREAT FOR NEW MAPPERS! This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 11233
@@ -36,8 +34,6 @@ tm-projects:
   - id: 12741
     desc: "GREAT FOR NEW MAPPERS! This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 12789
-    desc: "GREAT FOR NEW MAPPERS! This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 13183
     desc: "GREAT FOR NEW MAPPERS! This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
 
 ---
