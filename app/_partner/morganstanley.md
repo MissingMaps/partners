@@ -111,14 +111,6 @@ subhashtags:
   - msemeasummer15
   
 tm-projects:
-  - id: 13318
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 12960 
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 12961
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 13116
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
   - id: 13761
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
 
