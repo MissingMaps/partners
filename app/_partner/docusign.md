@@ -19,9 +19,9 @@ subhashtags:
   - docusign-sample
 
 tm-projects:
-  - id: 13412
+  - id: 13839
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 13413
+  - id: 13841
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
     
 ---
