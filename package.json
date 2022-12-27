@@ -65,7 +65,7 @@
     "babel-core": "^6.26.3",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "semistandard": "^11.0.0"
   }
