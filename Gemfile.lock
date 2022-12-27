@@ -51,7 +51,7 @@ DEPENDENCIES
   sass-css-importer (~> 1.0.0.beta.0)
 
 RUBY VERSION
-   ruby 2.4.1p111
+   ruby 2.7.4p191
 
 BUNDLED WITH
    2.2.13
