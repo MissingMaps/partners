@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.4.1
+  - 2.7.4
 env:
   global:
   - TRAVIS_NODE_VERSION="v8"
