@@ -19,9 +19,9 @@ jobs:
             npm install 
       - run:
           name: script
-          command: npm run build-prod > workspace/run-build
+          command: npm run build-prod > ~/repo/run-build
       - persist_to_workspace:
-          root: workspace
+          root: ~/repo
           paths:
             - run-build
 
@@ -31,7 +31,7 @@ jobs:
       - image: circleci/ruby:2.7
     steps:
       - attach_workspace:
-          at: /tmp/workspace     
+          at: ~/repo/run-build 
       - run:  
           name: deploy
           command: ".build_scripts/deploy.sh"
