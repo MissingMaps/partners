@@ -1,34 +1,23 @@
 version: 2.1
-workflows:
-  version: 2
-  gh-pages-build:
-    jobs:
-      - build-site:
-        filters:
-          branches:
-            only: update/travis-to-circle-ci
-      - deploy-site:
-        filters:
-          branches:
-            only: update/travis-to-circle-ci
+executors:
+  mm-default-executor:
+    docker:
+      - image: cimg/node:lts
+        auth:
+          # ensure you have first added these secrets
+          # visit app.circleci.com/settings/project/github/MissingMaps/partners/environment-variables
+          username: $DOCKER_HUB_USER
+          password: $DOCKER_HUB_PASSWORD
 jobs:
-  build-site:
-    docker:
-      - image: cimg/node:lts
+  simple-echo:
+
+    executor: mm-default-executor
     steps:
       - checkout
-      - setup_remote_docker
-      - run:
-          command: |
-            echo "Hello, World"
-            npm install
-            npm run build-prod
-  deploy-site:
-    docker:
-      - image: cimg/node:lts
-    steps:
-      - checkout
-      - setup_remote_docker
-      - run:
-          command: |
-            echo "Deployment Step"
+      - run: |
+          echo Hello, World!
+
+workflows:
+  my-custom-workflow:
+    jobs:
+      - simple-echo
