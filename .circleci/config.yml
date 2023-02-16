@@ -1,49 +1,34 @@
-defaults: &defaults
-  working_directory: ~/repo
 version: 2.1
-
-jobs:
-  build:
-    docker:
-      - image: circleci/ruby:2.7
-    steps:
-      - run:
-          name: before_install
-          command: 'chmod +x ./.build_scripts/deploy.sh'
-      - run:
-          name: before_script
-          command: |
-            . $HOME/.nvm/nvm.sh
-            nvm install $TRAVIS_NODE_VERSION
-            nvm use $TRAVIS_NODE_VERSION
-            npm install 
-      - run:
-          name: script
-          command: npm run build-prod > ~/repo/run-build
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - run-build
-
-
-  deploy:
-    docker:
-      - image: circleci/ruby:2.7
-    steps:
-      - attach_workspace:
-          at: ~/repo/run-build 
-      - run:  
-          name: deploy
-          command: ".build_scripts/deploy.sh"
-
 workflows:
   version: 2
-  test_deploy:
+  gh-pages-build:
     jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: ${DEPLOY_BRANCH} 
+      - build-site:
+        filters:
+          branches:
+            only: update/travis-to-circle-ci
+      - deploy-site:
+        filters:
+          branches:
+            only: update/travis-to-circle-ci
+jobs:
+  build-site:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          command: |
+            echo "Hello, World"
+            npm install
+            npm run build-prod
+  deploy-site:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          command: |
+            echo "Deployment Step"
