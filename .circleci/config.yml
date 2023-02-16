@@ -1,51 +1,49 @@
 defaults: &defaults
   working_directory: ~/repo
+version: 2.1
 
-  version: 2
+jobs:
   build:
-    jobs:
-     build:
-        <<: *defaults
-        docker:
-          - image: circleci/ruby:2.7
-        
-  jobs:
-    build:
-      working_directory: ~/repo 
+    docker:
+      - image: circleci/ruby:2.7
     steps:
-      run:
-        name: before_install
-        command: 'chmod +x ./.build_scripts/deploy.sh'
-      run:
-        name: before_script
-        command: |
-          . $HOME/.nvm/nvm.sh
-          nvm install $TRAVIS_NODE_VERSION
-          nvm use $TRAVIS_NODE_VERSION
-          npm install
-      run:
-        name: script
-        command: npm run build-prod
+      - run:
+          name: before_install
+          command: 'chmod +x ./.build_scripts/deploy.sh'
+      - run:
+          name: before_script
+          command: |
+            . $HOME/.nvm/nvm.sh
+            nvm install $TRAVIS_NODE_VERSION
+            nvm use $TRAVIS_NODE_VERSION
+            npm install 
+      - run:
+          name: script
+          command: npm run build-prod > workspace/run-build
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - run-build
+
 
   deploy:
+    docker:
+      - image: circleci/ruby:2.7
     steps:
-      run:  
-        name: deploy
-        requires: script
-        skip_cleanup: true
-        script: ".build_scripts/deploy.sh"
-        filters:
-              branches:
-                only: "${DEPLOY_BRANCH}" 
+      - attach_workspace:
+          at: /tmp/workspace     
+      - run:  
+          name: deploy
+          command: ".build_scripts/deploy.sh"
 
-  workflows:
-    version: 2
-    test_deploy:
-      jobs:
-        - build
-        - deploy
+workflows:
+  version: 2
+  test_deploy:
+    jobs:
+      - build
+      - deploy:
           requires:
             - build
-            filters:
-              branches:
-                only: ${DEPLOY_BRANCH} 
+          filters:
+            branches:
+              only: ${DEPLOY_BRANCH} 
