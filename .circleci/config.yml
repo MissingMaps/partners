@@ -18,6 +18,7 @@ jobs:
           echo Hello, World!
 
 workflows:
+  version: 2
   my-custom-workflow:
     jobs:
       - simple-echo
