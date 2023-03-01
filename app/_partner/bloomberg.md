@@ -27,16 +27,16 @@ subhashtags:
 tm-projects:
   - id: 13155
     desc: "MAP ME FIRST! This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 13432
-    desc: "MAP ME FIRST! This remote mapping of buildings will support the implementation of post census activities, such as data visualization, preparation of the Census Atlases, as well as dynamic web maps for data dissemination."
   - id: 13750
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
+    desc: "MAP ME FIRST! This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
   - id: 13934
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
+    desc: "MAP ME FIRST! This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
   - id: 13749
     desc: "MAP ME FIRST! This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
   - id: 14075
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
+    desc: "MAP ME FIRST! This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
+  - id: 14093
+    desc: "MAP ME LAST! This remote mapping of buildings will support the implementation of post census activities, such as data visualization, preparation of the Census Atlases, as well as dynamic web maps for data dissemination."
 
  
 ---
