@@ -4,11 +4,11 @@ jobs:
   build-deploy:
     docker:
     # Primary container image where all steps run.
-      - image: cimg/ruby-2.7.6
-        environment:
-          NODE_VERSION: 8.1.2
+      - image: cimg/ruby-2.7.5-node
     steps:
       - checkout
+      - run: ruby --version
+      - run: node --version
       - run:
           name: Build Node v8 nvm
           command: nvm install v8.1.2
