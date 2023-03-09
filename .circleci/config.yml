@@ -4,7 +4,7 @@ jobs:
   build-deploy:
     docker:
     # Primary container image where all steps run.
-      - image: cimg/ruby-2.7.5-node
+      - image: cimg/ruby:2.7.5-node
         auth:
             username: $DOCKER_HUB_USER
             password: $DOCKER_HUB_PASSWORD 
