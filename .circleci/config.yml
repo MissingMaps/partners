@@ -4,7 +4,7 @@ jobs:
   build-deploy:
     docker:
     # Primary container image where all steps run.
-      - image: ruby-2.7.4
+      - image: cimg/ruby-2.7.6
         environment:
           NODE_VERSION: 8.1.2
     steps:
