@@ -16,7 +16,8 @@ jobs:
           name: Install nvm
           command: |
             curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-            export NVM_DIR="$HOME/.nvm"
+            echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV
+            echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
       - run:
           name: Build Node v8 nvm
           command: nvm install v8.1.2
