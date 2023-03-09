@@ -5,9 +5,9 @@ jobs:
     docker:
     # Primary container image where all steps run.
       - image: cimg/ruby-2.7.5-node
-      auth:
-          username: $DOCKER_HUB_USER
-          password: $DOCKER_HUB_PASSWORD 
+        auth:
+            username: $DOCKER_HUB_USER
+            password: $DOCKER_HUB_PASSWORD 
     steps:
       - checkout
       - run: ruby --version
