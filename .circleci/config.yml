@@ -1,0 +1,51 @@
+version: 2.1
+# Define the jobs we want to run for this project
+jobs:
+  build-deploy:
+    docker:
+    # Primary container image where all steps run.
+      - image: cimg/ruby:2.7.5-node
+        auth:
+            username: $DOCKER_HUB_USER
+            password: $DOCKER_HUB_PASSWORD 
+    steps:
+      - checkout
+      - run: ruby --version
+      - run: node --version
+      - run: 
+          name: Install nvm
+          command: |
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+            echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV
+            echo 'source ${NVM_DIR}/nvm.sh' --install >> $BASH_ENV
+      - run:
+          name: Build Node v8 nvm
+          command: nvm install v8.1.2
+      - run: 
+          name: Install dependencies
+          command: |
+            sudo apt-get update
+            sudo apt-get install git
+            sudo apt install g++
+      - run: 
+          name: Before install
+          command: chmod +x ./.build_scripts/deploy.sh
+      - run:
+          name: Before script
+          command: |
+            . $HOME/.nvm/nvm.sh
+            nvm install $NODE_VERSION
+            nvm use $NODE_VERSION
+            npm install
+      - run:
+          name: Run Build
+          command: npm run build-prod
+      - deploy:
+          name: Deploy
+          command: ./.build_scripts/deploy.sh
+# Orchestrate our job run sequence
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build-deploy
