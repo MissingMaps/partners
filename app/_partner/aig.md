@@ -31,6 +31,7 @@ subhashtags:
   - bostonPeters
   - bostonLambert
   - bostonCassini
+  - aigindiana
 
 tm-projects:
   - id: 14049
