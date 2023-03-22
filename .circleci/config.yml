@@ -20,7 +20,7 @@ jobs:
             echo 'source ${NVM_DIR}/nvm.sh' --install >> $BASH_ENV
       - run:
           name: Build Node v8 nvm
-          command: nvm install v8.1.2
+          command: nvm install v1.1.2
       - run: 
           name: Install dependencies
           command: |
