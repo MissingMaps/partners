@@ -49,3 +49,6 @@ workflows:
   build_and_deploy:
     jobs:
       - build-deploy
+notify:
+  webhooks:
+    - url: https://api.opsgenie.com/v1/json/circleci?apiKey=$OPSGENIE_API
