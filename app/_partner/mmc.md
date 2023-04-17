@@ -22,7 +22,7 @@ links:
   - title: Mapathon Event Materials
     link: https://cdn.hotosm.org/leaderboard/MMC/MMC+TM4+-+Mapathon+Event+Materials.zip
   - title: Mapathon Best Practices
-    link: [https://colleagueconnect.mmc.com/en-us/mmcworldwide/EnterpriseFunctions/CSR/Lists/TabbedDocument/Mapathon%20Planning%20Best%20Practices.pdf] (https://mmcglobal.sharepoint.com/sites/SocialImpact/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FSocialImpact%2FShared%20Documents%2FColleague%20In%2Dperson%20Mapathon%20Planning%20Guide%2Epdf&parent=%2Fsites%2FSocialImpact%2FShared%20Documents
+    link: https://colleagueconnect.mmc.com/en-us/mmcworldwide/EnterpriseFunctions/CSR/Lists/TabbedDocument/Mapathon%20Planning%20Best%20Practices.pdf] (https://mmcglobal.sharepoint.com/sites/SocialImpact/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FSocialImpact%2FShared%20Documents%2FColleague%20In%2Dperson%20Mapathon%20Planning%20Guide%2Epdf&parent=%2Fsites%2FSocialImpact%2FShared%20Documents
   - title: Map as an Individual
     link: https://cdn.hotosm.org/leaderboard/MMC/MMC+TM4+-+Individual+Mapping+Materials.zip
   - title: Log your Volunteer hours
