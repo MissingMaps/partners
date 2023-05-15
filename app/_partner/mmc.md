@@ -49,11 +49,11 @@ subhashtags:
   - wfhmercercares
   
 tm-projects:
-  - id: 14553
+  - id: 14712
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 14592
+  - id: 14713
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 14591
+  - id: 14714
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
   - id: 14591
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
