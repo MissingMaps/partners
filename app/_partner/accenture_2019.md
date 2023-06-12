@@ -37,8 +37,6 @@ subhashtags:
   - acnfy23
 
 tm-projects:
-  - id: 14139
-    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 14755
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   - id: 14718
