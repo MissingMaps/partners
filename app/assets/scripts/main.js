@@ -339,13 +339,6 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
 
 
       // Spawn a chart function with listening events for each of the metrics
-      for(const x of totalSum.keys()){
-        if (totalSum[x]["value"] === 0){
-          totalSum.splice(x,x)
-          bldngSum.splice(x,x)
-          roadsSum.splice(x,x)
-        }
-      }
       var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
       var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
       var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');  
