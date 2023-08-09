@@ -246,7 +246,7 @@ function setupGraphs () {
 
 // Returns svg link to Missing Maps leaderboard endpoint
 function generateHashtagUrl (hashtag) {
-  const hashtagUrl = 'https://demo.contributions-stats.ohsome.org/dashboard#hashtags=' + hashtag;
+  const hashtagUrl = 'https://stats.now.ohsome.org/dashboard#hashtags=' + hashtag;
   return `<a xlink:href="${hashtagUrl}" target="_blank" style="text-decoration: none">#${hashtag}</a>`;
 }
 
