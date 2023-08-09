@@ -1,7 +1,7 @@
 /* -------------------------------------------------------
  --------------- Add HOT Project Carousel ----------------
  -------------------------------------------------------*/
-const statsApi = 'https://demo.contributions-stats.ohsome.org/api';
+const statsApi = 'https://stats.now.ohsome.org/api';
 const tasksApi = 'https://tasking-manager-tm4-production-api.hotosm.org/api/v2';
 
 // Fetch Project data from Tasking Manager API
