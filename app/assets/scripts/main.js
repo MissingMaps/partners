@@ -253,10 +253,11 @@ function generateHashtagUrl (hashtag) {
 function getGroupActivityStats (hashtags, primaryHashtag) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
-  const url = statsApi + '/stats/' + hashtagsString;
+  const url = statsApi + '/stats/' + hashtagsString + '?ohsomeFormat=true';
 
-  $.getJSON(url, function (hashtagData) {
+  $.getJSON(url, function (response) {
     // If no hashtags contain data, remove the partner graphs entirely
+    var hashtagData = response["result"]
     if ($.isEmptyObject(hashtagData)) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
@@ -527,10 +528,11 @@ function statsSum ( obj ) {
 function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
-  const url = statsApi + '/stats/' + hashtagsString;
+  const url = statsApi + '/stats/' + hashtagsString + '?ohsomeFormat=true';
 
-  $.getJSON(url, function (hashtagData) {
+  $.getJSON(url, function (response) {
     // If no hashtags contain data, remove the partner graphs entirely
+    var hashtagData = response.result
     if ($.isEmptyObject(hashtagData)) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
