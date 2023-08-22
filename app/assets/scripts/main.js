@@ -257,7 +257,7 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
 
   $.getJSON(url, function (response) {
     // If no hashtags contain data, remove the partner graphs entirely
-    var hashtagData = response["result"]
+    var hashtagData = response.result
     if ($.isEmptyObject(hashtagData)) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
