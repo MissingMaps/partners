@@ -253,7 +253,7 @@ function generateHashtagUrl (hashtag) {
 function getGroupActivityStats (hashtags, primaryHashtag) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
-  const url = statsApi + '/stats/hashtags/' + hashtagsString + '?ohsomeFormat=true';
+  const url = statsApi + '/stats/hashtags/' + hashtagsString;
 
   $.getJSON(url, function (response) {
     // If no hashtags contain data, remove the partner graphs entirely
