@@ -23,9 +23,5 @@ nav:
     url:          "/blog/"
   - text:         "DISCOVER"
     links:
-      - text:     "USER PROFILES"
-        url:      "http://www.missingmaps.org/users/"
-      - text:     "LEADERBOARDS"
-        url:      "http://www.missingmaps.org/leaderboards/"
       - text:     "OSMSTATS"
         url:      "/osmstats/"
