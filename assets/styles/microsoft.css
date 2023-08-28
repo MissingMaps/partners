@@ -293,10 +293,6 @@ body.microsoft section.Teams p {
   font-size: 0.9em;
 }
 
-body.microsoft section.Teams .Team-User-Nav a {
-  color: black;
-}
-
 body.microsoft section.Teams .Team-User-Graph {
   overflow-y: scroll;
 }

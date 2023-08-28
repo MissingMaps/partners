@@ -293,10 +293,6 @@ body.aws section.Teams p {
   font-size: 0.9em;
 }
 
-body.aws section.Teams .Team-User-Nav a {
-  color: black;
-}
-
 body.aws section.Teams .Team-User-Graph {
   overflow-y: scroll;
 }

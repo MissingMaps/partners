@@ -3785,10 +3785,6 @@ body.microsoft section.Teams p {
   font-size: 0.9em;
 }
 
-body.microsoft section.Teams .Team-User-Nav a {
-  color: black;
-}
-
 body.microsoft section.Teams .Team-User-Graph {
   overflow-y: scroll;
 }
@@ -4283,10 +4279,6 @@ body.aws section.Teams h3 {
 body.aws section.Teams p {
   color: black;
   font-size: 0.9em;
-}
-
-body.aws section.Teams .Team-User-Nav a {
-  color: black;
 }
 
 body.aws section.Teams .Team-User-Graph {
