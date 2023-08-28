@@ -1,8 +1,7 @@
 /* -------------------------------------------------------
  --------------- Add HOT Project Carousel ----------------
  -------------------------------------------------------*/
-
-const statsApi = 'https://osm-stats-production-api.azurewebsites.net';
+const statsApi = 'https://stats.now.ohsome.org/api';
 const tasksApi = 'https://tasking-manager-tm4-production-api.hotosm.org/api/v2';
 
 // Fetch Project data from Tasking Manager API
@@ -231,37 +230,11 @@ function eventsFunctionality () {
  -------------------------------------------------------*/
 
 function setupGraphs () {
-  function removeExistingGraphs () {
-    const totalGraph = document.querySelector('#Team-User-Total-Graph svg');
-    const bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
-    const roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
-    totalGraph.parentNode.removeChild(totalGraph);
-    bldngGraph.parentNode.removeChild(bldngGraph);
-    roadsGraph.parentNode.removeChild(roadsGraph);
-  }
-
-  const teamLabel = $('.Team-Graph-Title .left');
-  const teamUserLabel = $('.Team-User-Graph-Title .left');
-  // Sets Users button to Selected, loads Users graphs, hides
-  // "Show More Teams" button
-  $('#Select-Users-Graph').click(function () {
-    $('#Select-Teams-Graph').removeClass('Selected');
-    $('#Select-Users-Graph').addClass('Selected');
-    teamLabel.text('User');
-    teamUserLabel.text('User');
-
-    // Remove existing graphs
-    removeExistingGraphs();
-    // Gets main hashtag on each partner page via team.html
-    getUserActivityStats(PT.mainHashtag);
-  });
-
   // Sets Teams button to Selected, loads Teams graphs, reveals
   // "Show More Teams" button if applicable
   $('#Select-Teams-Graph').click(function () {
     $('#Select-Users-Graph').removeClass('Selected');
     $('#Select-Teams-Graph').addClass('Selected');
-    teamLabel.text('Team');
     teamUserLabel.text('Team');
     // Remove existing graphs
     removeExistingGraphs();
@@ -270,78 +243,33 @@ function setupGraphs () {
   });
 }
 
-// Returns svg link to Missing Maps user endpoint
-function generateUserUrl (userName) {
-  const userUrl = 'http://www.missingmaps.org/users/#/' + userName;
-  return `<a xlink:href="${userUrl}" target="_blank" style="text-decoration:none">${userName}</a>`;
-}
-
-function getUserActivityStats (hashtag) {
-  // Connect hashtags to /top-users/ Missing Maps API endpoint
-  const url = statsApi + '/top-users/' + hashtag;
-
-  $.getJSON(url, function (userData) {
-    // For each user, collect the total edits across all categories
-    const totalSum = Object.keys(userData).map(function (user) {
-      const totalEdits = Math.round(Number(userData[user].all_edits));
-      return {name: user, decorate: generateUserUrl, value: totalEdits};
-    }).sort((a, b) => b.value - a.value);
-
-    // For each user, sum the total building edits
-    const bldngSum = Object.keys(userData).map(function (user) {
-      const bldngEdits = Math.round(Number(userData[user].buildings));
-      return {name: user, decorate: generateUserUrl, value: bldngEdits};
-    }).sort((a, b) => b.value - a.value);
-
-    // For each user, sum the total road kilometers edited
-    const roadsSum = Object.keys(userData).map(function (user) {
-      const roadsEdits = Math.round(Number(userData[user].road_kms));
-      return {name: user, decorate: generateUserUrl, value: roadsEdits};
-    }).sort((a, b) => b.value - a.value);
-
-    // Spawn a chart function with listening events for each of the metrics
-    var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
-    var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
-    var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
-
-    // On window resize, run window resize function on each chart
-    d3.select(window).on('resize', function () {
-      c1.resize();
-      c2.resize();
-      c3.resize();
-    });
-  });
-}
 
 // Returns svg link to Missing Maps leaderboard endpoint
 function generateHashtagUrl (hashtag) {
-  const hashtagUrl = 'http://www.missingmaps.org/leaderboards/#/' + hashtag;
+  const hashtagUrl = 'https://stats.now.ohsome.org/dashboard#hashtags=' + hashtag;
   return `<a xlink:href="${hashtagUrl}" target="_blank" style="text-decoration: none">#${hashtag}</a>`;
 }
 
 function getGroupActivityStats (hashtags, primaryHashtag) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
-  const url = statsApi + '/group-summaries/' + hashtagsString;
+  const url = statsApi + '/stats/hashtags/' + hashtagsString;
 
-  $.getJSON(url, function (hashtagData) {
+  $.getJSON(url, function (response) {
     // If no hashtags contain data, remove the partner graphs entirely
+    var hashtagData = response.result
     if ($.isEmptyObject(hashtagData)) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
-                   'metrics according to the Missing Maps endpoint at ' +
-                   statsApi + '/group-summaries/' +
+                   'metrics according to the ohsomeNow endpoint at ' +
+                   statsApi + '/stats/hashtags/' +
                    hashtagsString + '. The partner graphs will not be displayed.');
     } else {
       const primaryData = hashtagData[primaryHashtag];
-      const primaryBuildingCount = primaryData.building_count_add + primaryData.building_count_mod;
-      const primaryRoadCount = Math.round(primaryData.road_km_add + primaryData.road_km_mod);
+      const primaryBuildingCount = primaryData.buildings;
+      const primaryRoadCount = Math.round(primaryData.roads);
 
       // update the top-level stats in the hero
-      // $('#stats-roadCount').html(primaryRoadCount.toLocaleString());
-      // $('#stats-buildingCount').html(primaryBuildingCount.toLocaleString());
-      // $('#stats-usersCount').html(primaryData.users.toLocaleString());
-      // $('#stats-editsCount').html(primaryData.edits.toLocaleString());
       if (primaryHashtag == 'aviva') {
         $('#stats-roadCount').html((primaryRoadCount + 7464).toLocaleString());
         $('#stats-buildingCount').html((primaryBuildingCount + 245546).toLocaleString());
@@ -368,6 +296,11 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
         $('#stats-usersCount').html(primaryData.users.toLocaleString());
         $('#stats-editsCount').html(primaryData.edits.toLocaleString());
       }
+      for (const [key, value] of Object.entries(hashtagData)) {
+        if (value.edits === 0){
+          delete hashtagData[key]
+        }
+      }
 
       // For each hashtag, sum the total edits across all categories,
       // skipping over hashtags if there are no metrics (this shouldn't
@@ -380,13 +313,7 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
       const totalSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
-          const sum = Math.round(vals.building_count_add +
-                      vals.building_count_mod +
-                      vals.road_km_add +
-                      vals.road_km_mod +
-                      vals.waterway_count_add +
-                      vals.poi_count_add);
-          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: Math.round(vals.edits)});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -395,10 +322,8 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
       // skipping over hashtags if there are no metrics
       const bldngSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
-        if (!$.isEmptyObject(vals)) {
-          const sum = vals.building_count_add +
-                      vals.building_count_mod;
-          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+        if (!$.isEmptyObject(vals)) {                      
+          acc.push({name: ht, decorate: generateHashtagUrl, value: vals.buildings});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -408,17 +333,16 @@ function getGroupActivityStats (hashtags, primaryHashtag) {
       const roadsSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
-          const sum = Math.round(vals.road_km_add +
-                      vals.road_km_mod);
-          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: Math.round(vals.roads)});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
 
+
       // Spawn a chart function with listening events for each of the metrics
       var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
       var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
-      var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+      var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');  
 
       // On window resize, run window resize function on each chart
       d3.select(window).on('resize', function () {
@@ -604,15 +528,16 @@ function statsSum ( obj ) {
 function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
   // Connect hashtags to /group-summaries/ Missing Maps API endpoint
   const hashtagsString = [primaryHashtag].concat(hashtags).join(',');
-  const url = statsApi + '/group-summaries/' + hashtagsString;
+  const url = statsApi + '/stats/hashtags/' + hashtagsString;
 
-  $.getJSON(url, function (hashtagData) {
+  $.getJSON(url, function (response) {
     // If no hashtags contain data, remove the partner graphs entirely
+    var hashtagData = response.result
     if ($.isEmptyObject(hashtagData)) {
       $('.Team-User-Container').css('display', 'none');
       console.warn('WARNING >> None of the secondary hashtags contain any ' +
-                   'metrics according to the Missing Maps endpoint at ' +
-                   statsApi + '/group-summaries/' +
+                   'metrics according to the ohsomeNow endpoint at ' +
+                   statsApi + '/stats/hashtags/' +
                    hashtagsString + '. The partner graphs will not be displayed.');
     } else {
       const primaryData = hashtagData[primaryHashtag];
@@ -629,13 +554,7 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
       const totalSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
-          const sum = Math.round(vals.building_count_add +
-                      vals.building_count_mod +
-                      vals.road_km_add +
-                      vals.road_km_mod +
-                      vals.waterway_count_add +
-                      vals.poi_count_add);
-          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: Math.round(vals.edits)});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -645,9 +564,7 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
       const bldngSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
-          const sum = vals.building_count_add +
-                      vals.building_count_mod;
-          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: vals.buildings});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -660,9 +577,7 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
       const roadsSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
-          const sum = Math.round(vals.road_km_add +
-                      vals.road_km_mod);
-          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: Math.round(vals.roads)});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -673,8 +588,7 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
       const usersSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
-          const sum = vals.users;
-          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: vals.users});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -684,8 +598,7 @@ function getGroupActivityStatsSubHashtag (hashtags, primaryHashtag) {
       const contributionsSum = hashtags.reduce(function (acc, ht) {
         const vals = hashtagData[ht];
         if (!$.isEmptyObject(vals)) {
-          const sum = vals.edits;
-          acc.push({name: ht, decorate: generateHashtagUrl, value: sum});
+          acc.push({name: ht, decorate: generateHashtagUrl, value: vals.edits});
         }
         return acc;
       }, []).sort((a, b) => b.value - a.value);
@@ -762,9 +675,7 @@ showAlternatePoster();
    if (response.countryCode === 'US') {
      $('#world').hide()
      $('#usa').show()
-     console.log("USA USA")
    } else {
-     console.log("world")
      $('#world').show()
      $('#usa').hide()
    }
