@@ -492,7 +492,6 @@ h1 {
     width: 80%;
     text-align: left;
     @media screen and (min-width: $MaxWidth) {
-      float: left;
       width: 100%;
       margin-left: 5px;
       text-align: initial;
