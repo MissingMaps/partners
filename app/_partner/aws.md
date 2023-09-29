@@ -46,9 +46,9 @@ subhashtags:
 tm-projects:
   - id: 15003
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 15041
+  - id: 15104
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 15098
+  - id: 15105
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
     
 ---
