@@ -22,9 +22,5 @@ subhashtags:
   - dpdhl
 
 tm-projects:
-  - id: 15072
-    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 15077
-    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
     
 ---
