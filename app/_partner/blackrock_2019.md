@@ -59,9 +59,5 @@ subhashtags:
   - blackrockbelgrad20
 
 tm-projects:
-  - id: 8205
-    desc: In the Mbomou province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
-  - id: 8521
-    desc: "In the Ouaka province in the Central African Republic, MSF teams provide consultations in hospitals and health centres, and support a network of community health workers. A better map of the region will help the teams to understand the exact situation in the area and will allow them to make rough population estimations."
  
 ---
