@@ -80,8 +80,6 @@ subhashtags:
   - sfsemap6
 
 tm-projects:
-- id: 15151
-  desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
 - id: 13296
   desc: "FOR EXPERIENCED MAPPERS: This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   
