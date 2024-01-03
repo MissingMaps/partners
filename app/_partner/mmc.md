@@ -16,7 +16,7 @@ facebook:
 hoursname:
 hourslink:
 
-links:
+links: 
   - title: Register your Mapathon
     link: https://www.surveymonkey.com/r/MMCmapping
   - title: Mapathon Event Materials
