@@ -16,7 +16,7 @@ hoursname:
 hourslink:
 
 links:
-  - title: Connect on MS Teams
+  - title: Connect on MS Teams 
     link: https://teams.microsoft.com/l/channel/19%3aa82d49a625ec4b2796fb596b99403cf7%40thread.skype/Missing%2520Maps?groupId=850f4fb3-b038-4438-b589-e01b89277e21&tenantId=e0793d39-0939-496d-b129-198edd916feb
   - title: Host a Mapathon Event
     link: https://teams.microsoft.com/l/entity/26bc2873-6023-480c-a11b-76b66605ce8c/_djb2_msteams_prefix_3511410082?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3Aa82d49a625ec4b2796fb596b99403cf7%40thread.skype%22%7D&groupId=850f4fb3-b038-4438-b589-e01b89277e21&tenantId=e0793d39-0939-496d-b129-198edd916feb
