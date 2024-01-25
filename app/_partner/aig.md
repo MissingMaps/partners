@@ -6,7 +6,7 @@ permalink: /aig/
 id: aig
 name: aig
 logo: AIG_core_rgb.png
-contact: sam.colchester@hotosm.org
+contact: nicole.siggins@hotosm.org
 
 flickr: 
 twitter: https://twitter.com/AIGinsurance?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
@@ -15,8 +15,6 @@ hoursname:
 hourslink:
 
 links:
-  - title: Register a Mapping Event
-    link: https://contact.aig.net/ToolsandApps/_layouts/AIG.CCS.ZSO/LinksRedirector.aspx?link=GDG
   - title: Individual Mapping Materials
     link: https://cdn.hotosm.org/leaderboard/AIG/TM4+Individual+Mapping+Materials+v2.zip
   - title: Mapathon Event Materials
