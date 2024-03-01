@@ -5,7 +5,7 @@ permalink: /aws/
 
 id: aws
 name: aws
-logo:
+logo: AWS_logo_RGB_REV.png
 contact: 
 
 flickr:
