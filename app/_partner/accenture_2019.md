@@ -35,7 +35,6 @@ subhashtags:
   - acngraddublin19
   - acnfy22
   - acnfy23
-  - acnfy24iwdmobility
 
 tm-projects:
   - id: 16149
