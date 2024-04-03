@@ -42,6 +42,7 @@ subhashtags:
   - awsin
   - awscn
   - awstechweek
+  - aws*
 
 tm-projects:
   - id: 15320
