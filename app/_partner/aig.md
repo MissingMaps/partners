@@ -32,9 +32,9 @@ subhashtags:
   - aigindiana
 
 tm-projects:
-  - id: 15325
+  - id: 16248
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 15350
+  - id: 16249
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
     
 ---
