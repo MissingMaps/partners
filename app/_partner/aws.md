@@ -45,11 +45,11 @@ subhashtags:
   - aws*
 
 tm-projects:
-  - id: 16265
+  - id: 16271
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 16266
+  - id: 16274
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 15333
+  - id: 16276
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
 
     
