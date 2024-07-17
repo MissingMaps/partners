@@ -17,8 +17,6 @@ hoursname:
 hourslink:
 
 links: 
-  - title: Register your Mapathon
-    link: https://www.surveymonkey.com/r/MMCmapping
   - title: Mapathon Event Materials
     link: https://cdn.hotosm.org/leaderboard/MMC/MMC+TM4+-+Mapathon+Event+Materials.zip
   - title: Mapathon Best Practices
