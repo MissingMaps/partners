@@ -46,7 +46,7 @@ subhashtags:
   - hoganlovellssa
   
 tm-projects:
-  - id: 17145
+  - id: 17152
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
   - id: 17146
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
