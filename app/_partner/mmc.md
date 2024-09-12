@@ -11,7 +11,7 @@ logo: mmc.png
 contact: rebecca.firth@hotosm.org
 
 flickr: https://www.flickr.com/photos/140736557@N04/albums/72157710548005558
-twitter: https://www.twitter.com/
+twitter: https://www.twitter.com/MarshMcLennan
 facebook:
 hoursname:
 hourslink:
