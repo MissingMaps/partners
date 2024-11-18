@@ -86,6 +86,10 @@ tm-projects:
    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
  - id: 17789
    desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
+ - id: 17841
+   desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
+ - id: 17894
+   desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
   
 ---
 
