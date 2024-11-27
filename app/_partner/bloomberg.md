@@ -25,7 +25,7 @@ subhashtags:
   - latam
 
 tm-projects:
-  - id: 17781
+  - id: 17972
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
   - id: 17967
     desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
