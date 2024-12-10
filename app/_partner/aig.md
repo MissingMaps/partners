@@ -34,7 +34,7 @@ subhashtags:
 tm-projects:
   - id: 18020
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
-  - id: 17895
+  - id: 18021
     desc: "This remote mapping of buildings will support the implementation of planned activities and largely the generation of data for humanitarian activities in the identified provinces."
     
 ---
