@@ -17,10 +17,6 @@ hoursname:
 hourslink:
 
 links:
-  - title: Individual Mapping Materials
-    link: https://cdn.hotosm.org/leaderboard/AIG/TM4+Individual+Mapping+Materials+v2.zip
-  - title: Mapathon Event Materials
-    link: https://cdn.hotosm.org/leaderboard/AIG/TM4+Mapathon+Resources+v2.zip
 
 primary-hashtag: aig
 subhashtags:
