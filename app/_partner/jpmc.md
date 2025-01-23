@@ -3,7 +3,7 @@ layout: partner
 lang: en
 permalink: /jpmc/
 
-no-projects-message: Thank you for all your mapping over the past years on the HOT Tasking Manager! Mappers like you have helped shape how the world’s most vulnerable communities receive critical relief following disasters big and small.<br> Please head over to <a href="https://tasks.hotosm.org/partners/jpmc/stats/mapswipe">JPMC's new partnership page</a> to continue your mapping journey using <a href="https://web.mapswipe.org/" target="_blank">MapSwipe4Web</a>.
+no-projects-message: <p>Thank you for all your mapping over the past years on the HOT Tasking Manager! Mappers like you have helped shape how the world’s most vulnerable communities receive critical relief following disasters big and small.</p><br> <p>Please head over to <a href="https://tasks.hotosm.org/partners/jpmc/stats/mapswipe">JPMC's new partnership page</a> to continue your mapping journey using <a href="https://web.mapswipe.org/" target="_blank">MapSwipe4Web</a>.</p>
 
 id: jpmc
 name: jpmc
