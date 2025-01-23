@@ -4,6 +4,15 @@ lang: en
 permalink: /marshmclennan/
 redirect_from: "/mmc/"
 
+no-projects-message: <p><strong>This page is moving to a new home!</p><br> <p><strong>Please head over to <a href="https://tasks.hotosm.org/partners/marshmclennan/stats/">Marsh McLennan's new partnership page</a> to continue your mapping journey.</strong><p>
+
+<p><strong?You can also view Marsh McLennan’s <a href=”https://web.mapswipe.org/”> MapSwipe</a> stats <a href=”https://tasks.hotosm.org/partners/marshmclennan/stats/mapswipe”> here</a>.</strong><p>
+
+Join the Marsh McLennan group from your <a href="https://web.mapswipe.org/#/en/profile" target="_blank">profile page</a> (you must be logged in first!) on MapSwipe to have your contributions counted on the new page.</strong></p><br>
+
+<p><strong>Happy Mapping!</strong></p>
+
+
 id: mmcimpact
 title: Marsh McLennan
 name: ourimpact
@@ -17,15 +26,6 @@ hoursname:
 hourslink:
 
 links: 
-  - title: Mapathon Event Materials
-    link: https://cdn.hotosm.org/leaderboard/MMC/MMC+TM4+-+Mapathon+Event+Materials.zip
-  - title: Mapathon Best Practices
-    link: https://mmcglobal.sharepoint.com/sites/SocialImpact/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FSocialImpact%2FShared%20Documents%2FColleague%20In%2Dperson%20Mapathon%20Planning%20Guide%2Epdf&parent=%2Fsites%2FSocialImpact%2FShared%20Documents
-  - title: Map as an Individual
-    link: https://cdn.hotosm.org/leaderboard/MMC/MMC+TM4+-+Individual+Mapping+Materials.zip
-  - title: Log your Volunteer hours
-    link: https://mmc.benevity.org/volunteer/1143
- 
 
 flickr-apikey: b4f0178b524610373b2b65bda51979ba
 flickr-setId: 72157710548005558
@@ -47,11 +47,5 @@ subhashtags:
   - wfhmercercares
   
 tm-projects:
-  - id: 18023
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 18031
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
-  - id: 18024
-    desc: "This remote mapping of buildings will support the identification and characterization of settlements, as well as the implementation of planned activities and largely the generation of data for humanitarian activities."
 
 ---
