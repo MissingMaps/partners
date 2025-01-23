@@ -3,7 +3,7 @@ layout: partner
 lang: en
 permalink: /bloomberg/
 
-no-projects-message: <p><strong>Thank you for all your mapping over the past years on the HOT Tasking Manager!<br> Mappers like you have helped shape how the world’s most vulnerable communities receive critical relief following disasters big and small.</p><br> <p>Please head over to <a href="https://tasks.hotosm.org/partners/bloomberg/stats/mapswipe">Bloombergs's new partnership page</a> to continue your mapping journey using <a href="https://web.mapswipe.org/" target="_blank">MapSwipe4Web</a>.</strong></p>
+no-projects-message: <p><strong>Thank you for all your mapping over the past years on the HOT Tasking Manager!<br> Mappers like you have helped shape how the world’s most vulnerable communities receive critical relief following disasters big and small.</p><br> <p>Please head over to <a href="https://tasks.hotosm.org/partners/bloomberg/stats/mapswipe">Bloombergs's new partnership page</a> to continue your mapping journey using <a href="https://web.mapswipe.org/" target="_blank">MapSwipe4Web</a>.</strong></p><br><p>Please be sure to join the Bloomberg group from your profile page on MapSwipe to have your contributions counted on the new page.</p><br><p>Happy Mapping!</p>
 
 id: bloomberg
 name: bloomberg
