@@ -3,7 +3,7 @@ layout: partner
 lang: en
 permalink: /salesforce/
 
-no-projects-message: <p><strong>This page is moving to a new home!</p><br> <p><strong>Please head over to <a href="https://tasks.hotosm.org/partners/salesforce/stats/">Accenture's new partnership page</a> to continue your mapping journey.</strong><p>
+no-projects-message: <p><strong>This page is moving to a new home!</p><br> <p><strong>Please head over to <a href="https://tasks.hotosm.org/partners/salesforce/stats/">Saleforce's new partnership page</a> to continue your mapping journey.</strong><p>
 
 id: salesforce
 name: salesforce
