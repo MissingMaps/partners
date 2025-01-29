@@ -3,14 +3,13 @@ layout: partner
 lang: en
 permalink: /salesforce/
 
+no-projects-message: <p><strong>This page is moving to a new home!</p><br> <p><strong>Please head over to <a href="https://tasks.hotosm.org/partners/salesforce/stats/">Accenture's new partnership page</a> to continue your mapping journey.</strong><p>
+
 id: salesforce
 name: salesforce
 logo: Salesforce.svg
 contact: ahigginbottom@salesforce.com
 
-links:
-  - title: Individual Mapping Materials
-    link: https://cdn.hotosm.org/leaderboard/Salesforce/Salesforce+Mapping+how+to+guide.pdf
 
 flickr: https://www.flickr.com/photos/140736557@N04/sets/72157666872027428
 twitter: https://www.twitter.com/SalesforceOrg
