@@ -7,7 +7,8 @@ no-projects-message: <p><strong>This page is moving to a new home!</p><br> <p><s
 
 id: salesforce
 name: salesforce
-logo: Salesforce.svg contact: ahigginbottom@salesforce.com
+logo: Salesforce.svg 
+contact: ahigginbottom@salesforce.com
 
 
 flickr: https://www.flickr.com/photos/140736557@N04/sets/72157666872027428
