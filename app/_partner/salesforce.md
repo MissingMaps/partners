@@ -3,7 +3,7 @@ layout: partner
 lang: en
 permalink: /salesforce/
 
-no-projects-message: <p><strong>This page is moving to a new home!</p><br> <p><strong>Please head over to <a href="https://tasks.hotosm.org/partners/salesforce/stats/"> the Saleforce new partnership page</a> to continue your mapping journey.</strong><p>
+no-projects-message: <p><strong>This page is moving to a new home!</p><br> <p><strong>Please head over to <a href="https://tasks.hotosm.org/partners/salesforce/stats/"> the Saleforce new partnership page</a> to continue your mapping journey.</strong><p> <br> <p><strong>Don't forget to sign up for <a href="https://web.mapswipe.org/" target="_blank">MapSwipe4Web</a>.</strong></p><br><p> <strong>and join the Salesfore group from your <a href="https://web.mapswipe.org/#/en/profile" target="_blank">profile page</a> (you must be logged in first!) on MapSwipe to have your contributions counted on the new page.</strong></p><br><p><strong>Happy Mapping!</strong></p>
 
 id: salesforce
 name: salesforce
